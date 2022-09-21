@@ -3,6 +3,7 @@
         <component v-bind:is="layout"></component>
     </div>
 </template>
+
 <script setup>
     import { computed } from 'vue';
 

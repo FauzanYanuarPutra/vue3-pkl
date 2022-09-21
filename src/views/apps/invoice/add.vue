@@ -23,7 +23,7 @@
                             <div class="invoice-content">
                                 <div class="invoice-detail-body">
                                     <div class="invoice-detail-title">
-                                        <div class="invoice-logo">
+                                        <div class="invoice-logo text-center">
                                             <div class="upload pe-md-4">
                                                 <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
                                                 <img

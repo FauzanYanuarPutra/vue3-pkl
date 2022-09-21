@@ -65,43 +65,92 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="searchable-items">
-                                                    <template v-if="search_items.length">
-                                                        <div v-for="(item, index) in search_items" class="items" :key="index">
-                                                            <div class="user-profile">
-                                                                <img :src="require('@/assets/images/' + item.thumb)" alt="avatar" />
-                                                            </div>
-                                                            <div class="user-name">
-                                                                <p class="">{{ item.name }}</p>
-                                                            </div>
-                                                            <div class="user-email">
-                                                                <p>{{ item.email }}</p>
-                                                            </div>
-                                                            <div class="user-status">
-                                                                <span :class="item.status_class">{{ item.status }}</span>
-                                                            </div>
-                                                            <div class="action-btn">
-                                                                <p>
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        width="24"
-                                                                        height="24"
-                                                                        viewBox="0 0 24 24"
-                                                                        fill="none"
-                                                                        stroke="currentColor"
-                                                                        stroke-width="2"
-                                                                        stroke-linecap="round"
-                                                                        stroke-linejoin="round"
-                                                                        class="feather feather-more-horizontal"
-                                                                    >
-                                                                        <circle cx="12" cy="12" r="1"></circle>
-                                                                        <circle cx="19" cy="12" r="1"></circle>
-                                                                        <circle cx="5" cy="12" r="1"></circle>
-                                                                    </svg>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </template>
-                                                    <template v-else> No data found. </template>
+                                                     <table role="table" aria-busy="false" aria-colcount="5" class="table b-table table-bordered" id="__BVID__328">
+                                                <thead role="rowgroup" class="text-nowrap">
+                                                    <tr role="row" class="">
+                                                        <th role="columnheader" scope="col" aria-colindex="1" class=""><div>No</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="2" class=""><div>Nama Tambak</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="3" class=""><div>Tanggal dan jam input</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="4" class=""><div>ID alat</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="5" class=""><div>Kategori alat</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="6" class=""><div>brand</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="7" class=""><div>Tipe / Model</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="8" class=""><div>Kegunaan</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="9" class=""><div>Keterangan</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="10" class=""><div>Jumlah Unit</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="11" class=""><div>Photo</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="12" class=""><div>Internal ID</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="13" class=""><div>Perkiraan bulan dan tahun beli</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="14" class=""><div>Tenaga (HP)</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="14" class=""><div>Status</div></th>
+                                                        <th role="columnheader" scope="col" aria-colindex="15" class="text-center"><div>Action</div></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody role="rowgroup" class="text-wrap" v-if="search_items.length">
+                                                    <tr v-for="(item, index) in search_items" :key="index" role="row" class="">
+                                                        <td aria-colindex="1" role="cell" class="">{{ i + 1 }}</td>
+                                                        <td aria-colindex="2" role="cell" class="">{{ item.name_tambak }}</td>
+                                                        <td aria-colindex="3" role="cell" class="">{{ item.tanggal_input }}</td>
+                                                        <td aria-colindex="4" role="cell" class="">{{ item.id_alat }}</td>
+                                                        <td aria-colindex="5" role="cell" class="">{{ item.kategori_alat }}</td>
+                                                        <td aria-colindex="6" role="cell" class="">{{ item.brand }}</td>
+                                                        <td aria-colindex="7" role="cell" class="">{{ item.tipe_model }}</td>
+                                                        <td aria-colindex="8" role="cell" class="">{{ item.kegunaan }}</td>
+                                                        <td aria-colindex="8" role="cell" class="">{{ item.keterangan }}</td>
+
+                                                        <td aria-colindex="9" role="cell" class="">{{ item.jumlah_unit }}</td>
+                                                        <td aria-colindex="10" role="cell" class="">{{ item.photo }}</td>
+                                                        <td aria-colindex="11" role="cell" class="">{{ item.internal_id }}</td>
+                                                        <td aria-colindex="12" role="cell" class="">{{ item.perkiraan_tahun_beli }}</td>
+                                                        <td aria-colindex="13" role="cell" class="">{{ item.tenaga_hp }}</td>
+                                                        <td aria-colindex="14" role="cell" class="">{{ item.status }}</td>
+
+                                                        <td aria-colindex="15" role="cell" class="text-center">
+                                                            <ul class="table-controls">
+                                                                <router-link to="/manage-alat/edit" @click="toggleMobileMenu">
+                                                                    <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24"
+                                                                            height="24"
+                                                                            viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            stroke="currentColor"
+                                                                            stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="feather feather-edit-2"
+                                                                        >
+                                                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                                                        </svg>
+                                                                    </a>
+                                                                </router-link>
+                                                                <li to="/manage-alat/tambah" @click="toggleMobileMenu">
+                                                                    <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
+                                                                        <svg
+                                                                            xmlns="http://www.w3.org/2000/svg"
+                                                                            width="24"
+                                                                            height="24"
+                                                                            viewBox="0 0 24 24"
+                                                                            fill="none"
+                                                                            stroke="currentColor"
+                                                                            stroke-width="2"
+                                                                            stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            class="feather feather-trash-2"
+                                                                        >
+                                                                            <polyline points="3 6 5 6 21 6"></polyline>
+                                                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                                                                        </svg>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                                 </div>
                                             </div>
                                         </div>

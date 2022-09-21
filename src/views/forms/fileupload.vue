@@ -47,7 +47,6 @@
             </div>
 
             <div v-scroll-spy class="row layout-top-spacing">
-
                 <div id="fuMultipleFile" class="col-lg-12 layout-spacing">
                     <div class="statbox panel box box-shadow">
                         <div class="panel-heading">
@@ -159,4 +158,11 @@ new FileUploadWithPreview('myFirstImage', {
             });
         });
     };
+
+    new FileUploadWithPreview('myFirstImage', {
+        images: {
+            baseImage: require('@/assets/images/file-preview.png'),
+            backgroundImage: '',
+        },
+    });
 </script>
