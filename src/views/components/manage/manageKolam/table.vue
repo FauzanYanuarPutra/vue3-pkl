@@ -26,13 +26,12 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/manageSaponin/create_manage_kolam" @click="toggleMobileMenu"
+                        <router-link to="/manage-kolam/create" @click="toggleMobileMenu"
                             class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="actions text-center d-flex no-wrap p-4">
-                                    <router-link to="/manageKolam/edit_manage_kolam" class="cancel"
-                                        @click="view_row(props.row)">
+                                    <router-link to="/manage-kolam/edit" class="cancel" @click="view_row(props.row)">
                                         <button type="button" class="btn btn-primary btn-sm">Edit</button>
                                     </router-link>
                                     <div class="text-center">

@@ -141,7 +141,24 @@ const routes = [
         path: '/siklus-budidaya-pakan/create',
         name: 'siklus-budidaya-pakan-create',
         component: () => import('../views/components/siklusBudidayaPakan/input.vue'),
-    }
+    },
+
+    //manageKolam
+    {
+        path: '/manage-kolam/create',
+        name: 'manage-kolam-input',
+        component: () => import('../views/components/manage/manageKolam/input.vue'),
+    },
+    {
+        path: '/manage-kolam/edit',
+        name: 'manage-kolam-edit',
+        component: () => import('../views/components/manage/manageKolam/edit.vue'),
+    },
+    {
+        path: '/manage-kolam',
+        name: 'manage-kolam-table',
+        component: () => import('../views/components/manage/manageKolam/table.vue'),
+    },
 
 ];
 

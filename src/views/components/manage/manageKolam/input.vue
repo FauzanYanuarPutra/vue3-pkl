@@ -58,14 +58,10 @@
                                 <input type="text" name="tinggi_kolam" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Jenis Kolam</label>
-                                <div>
-                                    <select id="select" class="form-select" name="jenis_kolam">
-                                        <option value="1">Kolam Tanah</option>
-                                        <option value="2">Kolam Beton</option>
-                                        <option value="2">Kolam HDPE</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Jenis Kolam</label>
+                                <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="panel-heading">
                                 <div class="row">
