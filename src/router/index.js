@@ -113,21 +113,21 @@ const routes = [
     },
     
 
-    // saponin
+    // manageSaponin
     {
         path: '/saponin',
         name: 'saponin',
-        component: () => import('../views/components/saponin/table.vue'),
+        component: () => import('../views/components/manage/manageSaponin/table.vue'),
     },
     {
         path: '/saponin/create',
         name: 'saponin-create',
-        component: () => import('../views/components/saponin/input.vue'),
+        component: () => import('../views/components/manage/manageSaponin/input.vue'),
     },
     {
         path: '/saponin/edit',
         name: 'saponin-edit',
-        component: () => import('../views/components/saponin/edit.vue'),
+        component: () => import('../views/components/manage/manageSaponin/edit.vue'),
     },
 
 
