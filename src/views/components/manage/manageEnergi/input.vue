@@ -70,11 +70,6 @@
     </div>
 </template>
 
-<style>
-    h1 {
-        background-color: red;
-    }
-</style>
 
 <script setup>
     import { onMounted, ref } from 'vue';
