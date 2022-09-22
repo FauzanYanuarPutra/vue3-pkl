@@ -159,6 +159,12 @@ const routes = [
         name: 'manage-kolam-table',
         component: () => import('../views/components/manage/manageKolam/table.vue'),
     },
+<<<<<<< HEAD
+=======
+
+    
+
+>>>>>>> d5dec40f6dcb03cbc2442c50b5b6c1ddf3c4b6e6
 ];
 
 const router = new createRouter({

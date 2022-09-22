@@ -44,13 +44,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label">Bulan:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
                                 <label class="control-label">Penggunaan Listrik:</label>
                                 <input type="number" name="id" class="form-control" />
                             </div>
@@ -70,6 +63,12 @@
         </div>
     </div>
 </template>
+
+<style>
+h1 {
+    background-color: red;
+}
+</style>
 
 <script setup>
 import { onMounted, ref } from 'vue';
