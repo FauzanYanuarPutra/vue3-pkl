@@ -116,9 +116,6 @@
                 kecerahan: 'Accountant',
                 warna: 'Tokyo',
                 suhu_air: 63,
-                jenis: '2011/07/25',
-                keterangan: 'null',
-                status: '170,750',
             },
             {
                 id: 3,
@@ -126,9 +123,6 @@
                 kecerahan: 'Junior Technical Author',
                 warna: 'San Francisco',
                 suhu_air: 66,
-                jenis: '2009/01/12',
-                keterangan: 'null',
-                status: '86,000',
             },
             {
                 id: 4,

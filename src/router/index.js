@@ -30,6 +30,16 @@ const routes = [
         component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/idealParameter/kondisiAir/parameterFisika/input.vue'),
     },
     {
+        path: '/parameter-kimia',
+        name: 'parameter-kimia',
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/idealParameter/kondisiAir/parameterKimia/table.vue'),
+    },
+    {
+        path: '/parameter-kimia/create',
+        name: 'parameter-kimia-create',
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/idealParameter/kondisiAir/parameterKimia/input.vue'),
+    },
+    {
         path: '/ideal-parameter/pertumbuhan-udang',
         name: 'pertumbuhan-udang',
         component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/idealParameter/pertumbuhanUdang/table.vue'),
@@ -47,7 +57,7 @@ const routes = [
     // {
     //     path: '/ideal-parameter/edit',
     //     name: 'ideal-parameter-edit',
-    //     component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageTambak/edit.vue'),
+    //     component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageTambak/edit.vue'),
     // },
 
 
@@ -55,51 +65,51 @@ const routes = [
     {
         path: '/manage-tambak',
         name: 'manage-tambak',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageTambak/table.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageTambak/table.vue'),
     },
     {
         path: '/manage-tambak/create',
         name: 'manage-tambak-create',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageTambak/input.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageTambak/input.vue'),
     },
     {
         path: '/manage-tambak/edit',
         name: 'manage-tambak-edit',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageTambak/edit.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageTambak/edit.vue'),
     },
 
     // manage alat
     {
         path: '/manage-alat',
         name: 'manage-alat',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageAlat/table.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageAlat/table.vue'),
     },
     {
         path: '/manage-alat/create',
         name: 'manage-alat-create',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageAlat/input.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageAlat/input.vue'),
     },
     {
         path: '/manage-alat/edit',
         name: 'manage-alat-edit',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageAlat/edit.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageAlat/edit.vue'),
     },
 
         // manage energi
     {
         path: '/manage-energi',
         name: 'manage-energi',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageEnergi/table.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageEnergi/table.vue'),
     },
     {
         path: '/manage-energi/create',
         name: 'manage-energi-create',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageEnergi/input.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageEnergi/input.vue'),
     },
     {
         path: '/manage-energi/edit',
         name: 'manage-energi-edit',
-        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manageEnergi/edit.vue'),
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/manage/manageEnergi/edit.vue'),
     },
     
 
@@ -119,6 +129,20 @@ const routes = [
         name: 'saponin-edit',
         component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/saponin/edit.vue'),
     },
+
+
+    // siklusBudidayaPakan
+{
+        path: '/siklus-budidaya-pakan',
+        name: 'siklus-budidaya-pakan',
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/siklusBudidayaPakan/table.vue'),
+    },
+    {
+        path: '/siklus-budidaya-pakan/create',
+        name: 'siklus-budidaya-pakan-create',
+        component: () => import(/* webpackChunkName: "tables-miscellaneous" */ '../views/components/siklusBudidayaPakan/input.vue'),
+    }
+
 ];
 
 const router = new createRouter({
