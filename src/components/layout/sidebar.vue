@@ -358,6 +358,33 @@
                             <router-link to="/saponin" @click="toggleMobileMenu">Saponin</router-link>
                         </li>
                         <li>
+                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                Benur
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-chevron-right"
+                                >
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+                            <ul id="kesehatan" class="collapse list-unstyled sub-submenu">
+                                <li>
+                                    <router-link to="/manage-benur" @click="toggleMobileMenu">Manage Benur </router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/scoring-benur" @click="toggleMobileMenu">Scoring Benur</router-link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <router-link to="/manage-kontent" @click="toggleMobileMenu">Kontent Edukasi</router-link>
                         </li>
                     </ul>
