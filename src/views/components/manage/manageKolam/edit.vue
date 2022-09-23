@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Manage Kolam</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Edit Manage Kolam</span>
                                 </li>
                             </ol>
                         </nav>
@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Manage Kolam</h3>
+                                <h3>Edit Manage Kolam</h3>
                             </div>
                         </div>
                     </div>
@@ -40,14 +40,10 @@
                                 <input type="text" name="nama_kolam" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Tipe Kolam</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Tandom</option>
-                                        <option value="2">Treatment</option>
-                                        <option value="2">Budidaya</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Tipe Kolam</label>
+                                <multiselect v-model="inputs['input1']" :options="options1" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Luas kolam (meter persegi)</label>
@@ -58,14 +54,10 @@
                                 <input type="text" name="tinggi_kolam" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Jenis Kolam</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Kolam Tanah</option>
-                                        <option value="2">Kolam Beton</option>
-                                        <option value="2">Kolam HDPE</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Jenis Kolam</label>
+                                <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="panel-heading">
                                 <div class="row">
@@ -75,12 +67,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Pilih Kincir</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Pilih Kincir</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Pilih Kincir</label>
+                                <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="panel-heading">
                                 <div class="row">
@@ -90,12 +80,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Pilih Pompa</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Pilih Pompa</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Pilih Pompa</label>
+                                <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="panel-heading">
                                 <div class="row">
@@ -105,25 +93,20 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Pilih Auto Feeder</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Pilih Auto Feeder</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Pilih Auto Feeder</label>
+                                <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Jumlah</label>
                                 <input type="number" name="tinggi_kolam" class="form-control" />
                             </div>
-                            <div class="mb-3">
-                                <label for="select" class="col-form-label">Status</label>
-                                <div>
-                                    <select id="select" class="form-select">
-                                        <option value="1">Aktive</option>
-                                        <option value="2">Tidak Aktive</option>
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label class="control-label">Status</label>
+                                <multiselect v-model="inputs6['input3']" :options="options6" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
@@ -163,13 +146,46 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const options1 = ref(['Tandon', 'Treatment', 'Budidaya']);
 const inputs = ref({
     input1: [],
     input2: [],
     input3: [],
-    input4: [],
-    input5: [],
+});
+
+const options2 = ref(['Kolam tanah', 'Kolam beton', 'Kolam HDPE']);
+const inputs2 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options3 = ref(['Pilih Kincir']);
+const inputs3 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options4 = ref(['Pilih Pompa']);
+const inputs4 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options5 = ref(['Pilih Auto Feeder']);
+const inputs5 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options6 = ref(['Aktive', 'Tidak Aktive']);
+const inputs6 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
 });
 
 const change_file = (event) => {
