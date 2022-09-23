@@ -384,6 +384,9 @@
                         <li>
                             <router-link to="/siklus-budidaya-pakan" @click="toggleMobileMenu">Pakan</router-link>
                         </li>
+                        <li>
+                            <router-link to="/siklus-budidaya-benur-doc" @click="toggleMobileMenu">Benur & DOC</router-link>
+                        </li>
                     </ul>
                 </li>
             </perfect-scrollbar>
