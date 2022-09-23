@@ -4,6 +4,16 @@
     </div>
 </template>
 
+<style>
+    .layout-px-spacing {
+        padding: 0px 20px 0 50px !important;
+    }
+
+    .sidebar-wrapper{
+        width: 250px;
+    }
+</style>
+
 <script setup>
     import { computed } from 'vue';
 

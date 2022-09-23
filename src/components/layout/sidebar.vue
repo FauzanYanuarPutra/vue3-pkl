@@ -4,7 +4,7 @@
         <nav ref="menu" id="sidebar">
             <div class="shadow-bottom"></div>
 
-            <perfect-scrollbar class="list-unstyled menu-categories" tag="ul" :options="{ wheelSpeed: 0.5, swipeEasing: !0, minScrollbarLength: 40, maxScrollbarLength: 300, suppressScrollX: true }">
+            <perfect-scrollbar class="list-unstyled menu-categories" tag="ul" :options="{ wheelSpeed: 0.5, swipeEasing: !0, minScrollbarLength: 40, maxScrollbarLength: 3000, suppressScrollX: true }">
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-controls="dashboard" aria-expanded="false">
                         <div class="">
@@ -122,7 +122,7 @@
                                 </svg>
                             </a>
 
-                            <ul id="appInvoice" class="collapse list-unstyled sub-submenu">
+                            <ul id="appInvoice" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/parameter-fisika" @click="toggleMobileMenu">Parameter Fisika </router-link>
                                 </li>
@@ -130,7 +130,35 @@
                                     <router-link to="/parameter-kimia" @click="toggleMobileMenu">Pamareter Kimia </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/parameter-biologi" @click="toggleMobileMenu">Parameter Biologi </router-link>
+                                    <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                        Parameter Biologi
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="13"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            class="feather feather-chevron-right"
+                                        >
+                                            <polyline points="9 18 15 12 9 6"></polyline>
+                                        </svg>
+                                    </a>
+
+                                    <ul id="parameterBiologi" class="mx-3 collapse list-unstyled sub-submenu">
+                                        <li>
+                                            <router-link to="/belum" @click="toggleMobileMenu">Filoplankton </router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to="/belum" @click="toggleMobileMenu">Vibrio TCBS </router-link>
+                                        </li>
+                                        <li>
+                                            <router-link to="/belum" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>
@@ -394,6 +422,8 @@
     </div>
     <!--  END SIDEBAR  -->
 </template>
+
+
 
 <script setup>
     import { onMounted, ref } from 'vue';
