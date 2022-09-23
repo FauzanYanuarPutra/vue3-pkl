@@ -111,6 +111,78 @@
                 </li>
 
                 <li class="menu">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#intervalPengukuran"
+                        aria-controls="intervalPengukuran" aria-expanded="false">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                            <span>{{ $t('Interval Pengukuran') }}</span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul id="intervalPengukuran" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
+                        <li>
+                            <router-link to="/interval-pengecekan/create" @click="toggleMobileMenu">Interval
+                                pengecekan kolam treatment
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/budidaya-persiapan/create" @click="toggleMobileMenu">Siklus budidaya
+                                (persiapan)
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/budidaya-benur/create" @click="toggleMobileMenu">Siklus budidaya
+                                (Benur & DOC)
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/budidaya-air/create" @click="toggleMobileMenu">Siklus
+                                budidaya
+                                (Air)</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/budidaya-udang/create" @click="toggleMobileMenu">Siklus budidaya
+                                (Udang)
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link to="/budidaya-pakan/create" @click="toggleMobileMenu">Siklus budidaya
+                                (Pakan)</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/kesehatan-benur/create" @click="toggleMobileMenu">Kesehatan
+                                benur</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/kesehatan-udang/create" @click="toggleMobileMenu">Kesehatan
+                                udang</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/panen/create" @click="toggleMobileMenu">Panen</router-link>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#manage" aria-controls="manage"
                         aria-expanded="false">
                         <div class="">
