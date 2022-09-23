@@ -100,12 +100,12 @@
                                                     class="profile-preview"
                                                     @click="$refs.fl_profile.click()"
                                                 />
-                                                <div v-else class="profile-preview upload-preview" @click="$refs.fl_profile.click()">
-                                                    <div>
+                                                <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
+                                                    <div class="my-2">
                                                         <svg
                                                             xmlns="http://www.w3.org/2000/svg"
-                                                            width="24"
-                                                            height="24"
+                                                            width="50"
+                                                            height="50"
                                                             viewBox="0 0 24 24"
                                                             fill="none"
                                                             stroke="currentColor"
