@@ -150,7 +150,7 @@
 
                                     <ul id="parameterBiologi" class="mx-3 collapse list-unstyled sub-submenu">
                                         <li>
-                                            <router-link to="/belum" @click="toggleMobileMenu">Filoplankton </router-link>
+                                            <router-link to="/parameter-biologi-fitoplankton" @click="toggleMobileMenu">Filoplankton </router-link>
                                         </li>
                                         <li>
                                             <router-link to="/belum" @click="toggleMobileMenu">Vibrio TCBS </router-link>
@@ -506,8 +506,6 @@
     </div>
     <!--  END SIDEBAR  -->
 </template>
-
-
 
 <script setup>
     import { onMounted, ref } from 'vue';

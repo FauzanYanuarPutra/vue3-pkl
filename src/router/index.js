@@ -40,6 +40,16 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterKimia/input.vue'),
     },
     {
+        path: '/parameter-biologi-fitoplankton',
+        name: 'parameter-biologi-fitoplankton',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-fitoplankton/create',
+        name: 'parameter-biologi-fitoplankton-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/input.vue'),
+    },
+    {
         path: '/ideal-parameter/pertumbuhan-udang',
         name: 'pertumbuhan-udang',
         component: () => import('../views/components/idealParameter/pertumbuhanUdang/table.vue'),
