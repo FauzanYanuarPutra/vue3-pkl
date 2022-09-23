@@ -153,7 +153,7 @@
                                             <router-link to="/parameter-biologi-fitoplankton" @click="toggleMobileMenu">Filoplankton </router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/belum" @click="toggleMobileMenu">Vibrio TCBS </router-link>
+                                            <router-link to="/parameter-biologi-vibrioTCBS" @click="toggleMobileMenu">Vibrio TCBS </router-link>
                                         </li>
                                         <li>
                                             <router-link to="/belum" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>

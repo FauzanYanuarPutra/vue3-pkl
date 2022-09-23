@@ -50,6 +50,16 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/input.vue'),
     },
     {
+        path: '/parameter-biologi-vibrioTCBS',
+        name: 'parameter-biologi-vibrioTCBS',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioTCBS/create',
+        name: 'parameter-biologi-vibrioTCBS-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/input.vue'),
+    },
+    {
         path: '/ideal-parameter/pertumbuhan-udang',
         name: 'pertumbuhan-udang',
         component: () => import('../views/components/idealParameter/pertumbuhanUdang/table.vue'),
