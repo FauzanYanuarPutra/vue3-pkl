@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Panen</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Aktual</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/aktual/create1" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/aktual/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items2" :columns="columns2" :options="table_option2">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">

@@ -105,7 +105,7 @@ const routes = [
         name: 'intervalPengukuran-table-budidaya-air',
         component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaAir/table.vue'),
     },
-    
+
     // budidayaBenur
     {
         path: '/budidaya-benur/create',
@@ -405,13 +405,13 @@ const routes = [
         component: () => import('../views/components/panen/panen/table.vue'),
     },
     {
-        path: '/panen-create',
-        name: 'panen-create1',
+        path: '/panen-create-',
+        name: 'panen-create',
         component: () => import('../views/components/panen/panen/input.vue'),
     },
     {
-        path: '/panen-edit',
-        name: 'panen-edit',
+        path: '/panen-edit1',
+        name: 'panen-edit1',
         component: () => import('../views/components/panen/panen/edit.vue'),
     },
     {
