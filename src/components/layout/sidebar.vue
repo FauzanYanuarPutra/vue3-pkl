@@ -242,7 +242,7 @@
                                 </svg>
                             </a>
 
-                            <ul id="budidaya" class="collapse list-unstyled sub-submenu">
+                            <ul id="budidaya" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/budidaya-persiapan/table" @click="toggleMobileMenu">Persiapan </router-link>
                                 </li>
@@ -278,7 +278,7 @@
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
-                            <ul id="kesehatan" class="collapse list-unstyled sub-submenu">
+                            <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/kesehatan-benur/table" @click="toggleMobileMenu">Benur </router-link>
                                 </li>
@@ -375,7 +375,7 @@
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
-                            <ul id="kesehatan" class="collapse list-unstyled sub-submenu">
+                            <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/manage-benur" @click="toggleMobileMenu">Manage Benur </router-link>
                                 </li>
