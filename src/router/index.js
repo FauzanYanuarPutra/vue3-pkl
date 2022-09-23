@@ -60,6 +60,16 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/input.vue'),
     },
     {
+        path: '/parameter-biologi-vibrioCHROMagar',
+        name: 'parameter-biologi-vibrioCHROMagar',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioCHROMagar/create',
+        name: 'parameter-biologi-vibrioCHROMagar-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/input.vue'),
+    },
+    {
         path: '/ideal-parameter/pertumbuhan-udang',
         name: 'pertumbuhan-udang',
         component: () => import('../views/components/idealParameter/pertumbuhanUdang/table.vue'),
