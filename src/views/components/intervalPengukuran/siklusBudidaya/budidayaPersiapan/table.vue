@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/intervalPengukuran/create_interval_pengukuran" @click="toggleMobileMenu"
+                        <router-link to="/budidaya-persiapan/create" @click="toggleMobileMenu"
                             class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">

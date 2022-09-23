@@ -28,13 +28,6 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Siklus budidaya (Pakan)</h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
                                 <input type="number" name="siklus_pakan" class="form-control" />
                             </div>
