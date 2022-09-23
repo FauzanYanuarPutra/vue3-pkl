@@ -388,6 +388,54 @@ const routes = [
         name: 'manage-kontent-table',
         component: () => import('../views/components/manage/manageKontent/table.vue'),
     },
+    // Panen
+    {
+        path: '/panen-',
+        name: 'panen-',
+        component: () => import('../views/components/panen/panen/table.vue'),
+    },
+    {
+        path: '/panen-create',
+        name: 'panen-create1',
+        component: () => import('../views/components/panen/panen/input.vue'),
+    },
+    {
+        path: '/panen-edit',
+        name: 'panen-edit',
+        component: () => import('../views/components/panen/panen/edit.vue'),
+    },
+    {
+        path: '/perkiraan',
+        name: 'perkiraan',
+        component: () => import('../views/components/panen/perkiraan/table.vue'),
+    },
+    {
+        path: '/perkiraan/edit',
+        name: 'perkiraan-edit',
+        component: () => import('../views/components/panen/perkiraan/edit.vue'),
+    },
+    {
+        path: '/perkiraan/create',
+        name: 'perkiraan-create',
+        component: () => import('../views/components/panen/perkiraan/input.vue'),
+    },
+    {
+        path: '/aktual',
+        name: 'aktual',
+        component: () => import('../views/components/panen/aktual/table.vue'),
+    },
+
+    {
+        path: '/aktual/create',
+        name: 'aktual-create',
+        component: () => import('../views/components/panen/aktual/input.vue'),
+    },
+
+    {
+        path: '/aktual/edit',
+        name: 'aktual-edit',
+        component: () => import('../views/components/panen/aktual/edit.vue'),
+    },
 ];
 
 const router = new createRouter({
