@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Panen</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Siklus budidaya
+                                        (Pakan)</span>
                                 </li>
                             </ol>
                         </nav>
@@ -21,21 +22,14 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Panen</h3>
+                                <h3>Siklus budidaya (Pakan)</h3>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Panen</h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <input type="number" name="panen" class="form-control" />
+                                <input type="number" name="siklus_pakan" class="form-control" />
                             </div>
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
