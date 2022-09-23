@@ -284,6 +284,38 @@ const routes = [
         component: () => import('../views/components/manage/manageUser/edit.vue'),
     },
 
+    // manageBenur
+    {
+        path: '/manage-benur',
+        name: 'manage-benur',
+        component: () => import('../views/components/manage/manageBenur/managebenur/table.vue'),
+    },
+    {
+        path: '/manage-Benur/create',
+        name: 'manage-Benur-create',
+        component: () => import('../views/components/manage/manageBenur/managebenur/input.vue'),
+    },
+    {
+        path: '/manage-Benur/edit',
+        name: 'manage-Benur-edit',
+        component: () => import('../views/components/manage/manageBenur/managebenur/edit.vue'),
+    },
+    {
+        path: '/scoring-benur',
+        name: 'scoring-benur',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/table.vue'),
+    },
+    {
+        path: '/scoring-benur/create',
+        name: 'scoring-benur-create',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/input.vue'),
+    },
+    {
+        path: '/scoring-benur/edit',
+        name: 'scoring-benur-edit',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/edit.vue'),
+    },
+
     // siklusBudidayaPakan
     {
         path: '/siklus-budidaya-pakan',
@@ -306,8 +338,6 @@ const routes = [
         name: 'siklus-budidaya-benur-doc-create',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaBenur&Doc/input.vue'),
     },
-
-    
 
     //manageKolam
     {

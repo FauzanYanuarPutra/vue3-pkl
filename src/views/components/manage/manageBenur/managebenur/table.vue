@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/manage_benur" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/manage-Benur/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -67,43 +67,6 @@
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
                                         </a>
-                                    </div>
-                                </div>
-                            </template>
-                            <template #salary="props"> ${{ props.row.salary }} </template>
-                        </v-client-table>
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Manage Tambak</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <v-client-table :data="items" :columns="columns" :options="table_option">
-                            <template #actions="props">
-                                <div class="actions text-center d-flex no-wrap p-4">
-                                    <router-link to="/manage-tambak/edit" class="cancel" @click="view_row(props.row)">
-                                        <button type="button" class="btn btn-primary btn-sm">Edit</button>
-                                    </router-link>
-                                    <div class="text-center">
-                                        <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModalRemoveAnimation">Delete</button>
-                                    </div>
-                                    <div class="modal" id="exampleModalRemoveAnimation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
-                                                    <button type="button" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close" class="btn-close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p class="modal-text">Apakah anda yakin ingin menghapus data tersebut?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn text-danger" data-dismiss="modal" data-bs-dismiss="modal"><i class="flaticon-cancel-12"></i> Cancel</button>
-                                                    <button type="button" class="btn btn-danger">Save</button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </template>
@@ -231,6 +194,95 @@
                 Asal_benur: 39,
                 Benur_batch_id: '2009/09/15',
                 usia_benur: 'null',
+            },
+        ];
+    };
+    const columns1 = ref([
+        'tanggal_dan_jam_input',
+        'Panjang_benur',
+        'Size_varian',
+        'Hepatopankreas',
+        'Necrosis',
+        'MGR',
+        'Ektoparasite',
+        'Stress_test',
+        'Vibrio_luminnescen',
+        'TVC',
+        'pH',
+        'Selisih_salinitas',
+        'DO',
+        'Suhu',
+        'TAN',
+        'Bolitas',
+        'Status',
+        'actions',
+    ]);
+    const items1 = ref([]);
+    const table_option1 = ref({
+        perPage: 10,
+        perPageValues: [5, 10, 20, 50],
+        skin: 'table table-hover',
+        columnsClasses: { actions: 'actions text-center' },
+        pagination: { nav: 'scroll', chunk: 5 },
+        texts: {
+            count: 'Showing {from} to {to} of {count}',
+            filter: '',
+            filterPlaceholder: 'Search...',
+            limit: 'Results:',
+        },
+        sortable: [
+            'tanggal_dan_jam_input',
+            'Panjang_benur',
+            'Size_varian',
+            'Hepatopankreas',
+            'Necrosis',
+            'MGR',
+            'Ektoparasite',
+            'Stress_test',
+            'Vibrio_luminnescen',
+            'TVC',
+            'pH',
+            'Selisih_salinitas',
+            'DO',
+            'Suhu',
+            'TAN',
+            'Bolitas',
+            'Status',
+            'actions',
+        ],
+        sortIcon: {
+            base: 'sort-icon-none',
+            up: 'sort-icon-asc',
+            down: 'sort-icon-desc',
+        },
+        resizableColumns: false,
+    });
+
+    onMounted(() => {
+        bind_data1();
+    });
+
+    const bind_data1 = () => {
+        items1.value = [
+            {
+                id: 1,
+                tanggal_dan_jam_input: '12',
+                Panjang_benur: '12',
+                Size_varian: 12,
+                Hepatopankreas: '12',
+                Necrosis: '2',
+                MGR: '22',
+                Ektoparasite: '10',
+                Stress_test: '33',
+                Vibrio_luminnescen: '44',
+                TVC: '22',
+                pH: '22',
+                Selisih_salinitas: '22',
+                DO: '22',
+                Suhu: '22',
+                TAN: '33',
+                Bolitas: '44',
+                Status: '55',
             },
         ];
     };
