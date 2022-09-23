@@ -420,6 +420,18 @@ const routes = [
         name: 'aktual-edit',
         component: () => import('../views/components/panen/aktual/edit.vue'),
     },
+
+    // Harga udang
+    {
+        path: '/harga-udang',
+        name: 'harga-udang',
+        component: () => import('../views/components/hargaUdang/table.vue'),
+    },
+    {
+        path: '/hargaudang/create',
+        name: 'hargaudang-creat',
+        component: () => import('../views/components/hargaUdang/input.vue'),
+    },
 ];
 
 const router = new createRouter({
