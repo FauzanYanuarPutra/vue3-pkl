@@ -159,6 +159,23 @@ const routes = [
         name: 'manage-kolam-table',
         component: () => import('../views/components/manage/manageKolam/table.vue'),
     },
+
+    //manageKolam
+    {
+        path: '/manage-kontent/create',
+        name: 'manage-kontent-input',
+        component: () => import('../views/components/manage/manageKontent/input.vue'),
+    },
+    {
+        path: '/manage-kontent/edit',
+        name: 'manage-kontent-edit',
+        component: () => import('../views/components/manage/manageKontent/edit.vue'),
+    },
+    {
+        path: '/manage-kontent',
+        name: 'manage-kontent-table',
+        component: () => import('../views/components/manage/manageKontent/table.vue'),
+    },
 ];
 
 const router = new createRouter({

@@ -154,6 +154,9 @@
                         <li>
                             <router-link to="/saponin" @click="toggleMobileMenu">Saponin</router-link>
                         </li>
+                        <li>
+                            <router-link to="/manage-kontent" @click="toggleMobileMenu">Kontent Edukasi</router-link>
+                        </li>
                     </ul>
                 </li>
 
