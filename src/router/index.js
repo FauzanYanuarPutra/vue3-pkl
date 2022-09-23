@@ -288,13 +288,26 @@ const routes = [
     {
         path: '/siklus-budidaya-pakan',
         name: 'siklus-budidaya-pakan',
-        component: () => import('../views/components/siklusBudidayaPakan/table.vue'),
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaPakan/table.vue'),
     },
     {
         path: '/siklus-budidaya-pakan/create',
         name: 'siklus-budidaya-pakan-create',
-        component: () => import('../views/components/siklusBudidayaPakan/input.vue'),
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaPakan/input.vue'),
     },
+
+    {
+        path: '/siklus-budidaya-benur-doc',
+        name: 'siklus-budidaya-benur-doc',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaBenur&Doc/table.vue'),
+    },
+    {
+        path: '/siklus-budidaya-benur-doc/create',
+        name: 'siklus-budidaya-benur-doc-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaBenur&Doc/input.vue'),
+    },
+
+    
 
     //manageKolam
     {
