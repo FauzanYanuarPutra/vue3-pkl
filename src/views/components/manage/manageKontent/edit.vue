@@ -32,18 +32,21 @@
                                 <input type="number" name="id_kontent" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Tanggal dan jam input</label>
-                                <input type="date" name="tanggal_input" class="form-control" />
+                                <label class="control-label">Tanggal Input</label>
+                                <div class="form-group mb-0">
+                                    <flat-pickr v-model="date1" name="tanggal_input"
+                                        class="form-control flatpickr active"></flat-pickr>
+                                </div>
                             </div>
                             <div class="form-group">
-                                <label for="select" class="col-form-label">Kategori</label>
-                                <div>
-                                    <select id="select" class="form-select" name="tipe_kolam">
-                                        <option value="1">Penyakit Udang</option>
-                                        <option value="2">Cara Pengecekan Kondisi Air</option>
-                                        <option value="2">Cara Pengecekan Kesehatan Udang</option>
-                                    </select>
-                                </div>
+                                <label class="control-label">Jam Input</label>
+                                <input type="text" name="jam" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Kategori</label>
+                                <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Judul</label>
@@ -154,14 +157,11 @@
                                 <label class="control-label">No. of like</label>
                                 <input type="number" name="tinggi_kolam" class="form-control" />
                             </div>
-                            <div class="mb-3">
-                                <label for="select" class="col-form-label">Status</label>
-                                <div>
-                                    <select id="select" class="form-select" name="status">
-                                        <option value="1">Aktive</option>
-                                        <option value="2">Tidak Aktive</option>
-                                    </select>
-                                </div>
+                            <div class="form-group">
+                                <label class="control-label">Status</label>
+                                <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                </multiselect>
                             </div>
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
@@ -201,13 +201,17 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const options1 = ref(['Penyakit udang', 'Cara pengecekan kondisi air', 'Cara pengecekan kesehatan udang']);
 const inputs = ref({
     input1: [],
     input2: [],
     input3: [],
-    input4: [],
-    input5: [],
+});
+
+const options2 = ref(['Aktive', 'Tidak Aktive']);
+const inputs2 = ref({
+    input1: [],
+    input2: [],
 });
 
 const change_file = (event) => {
