@@ -154,47 +154,47 @@ const routes = [
         component: () => import('../views/components/intervalPengukuran/edit/panen.vue'),
     },
     // table
-    {   
+    {
         path: '/interval-pengecekan/table',
         name: 'interval-pengukuran-table-interval-pengecekan',
         component: () => import('../views/components/intervalPengukuran/table/interval_pengecekan.vue'),
     },
-    {   
+    {
         path: '/budidaya-persiapan/table',
         name: 'budidaya-persiapan-table-budidaya-persiapan',
         component: () => import('../views/components/intervalPengukuran/table/budidaya_persiapan.vue'),
     },
-    {   
+    {
         path: '/budidaya-benur/table',
         name: '/budidaya-benur-table-budidaya-benur',
         component: () => import('../views/components/intervalPengukuran/table/budidaya_benur.vue'),
     },
-    {   
+    {
         path: '/budidaya-air/table',
         name: '/budidaya-air-table-budidaya-air',
         component: () => import('../views/components/intervalPengukuran/table/budidaya_air.vue'),
     },
-    {   
+    {
         path: '/budidaya-udang/table',
         name: '/budidaya-udang-table-budidaya-udang',
         component: () => import('../views/components/intervalPengukuran/table/budidaya_udang.vue'),
     },
-    {   
+    {
         path: '/budidaya-pakan/table',
         name: '/budidaya-pakan-table-budidaya-pakan',
         component: () => import('../views/components/intervalPengukuran/table/budidaya_pakan.vue'),
     },
-    {   
+    {
         path: '/kesehatan-benur/table',
         name: '/kesehatan-benur-table-kesehatan-benur',
         component: () => import('../views/components/intervalPengukuran/table/kesehatan_benur.vue'),
     },
-    {   
+    {
         path: '/kesehatan-udang/table',
         name: '/kesehatan-udang-table-kesehatan-udang',
         component: () => import('../views/components/intervalPengukuran/table/kesehatan_udang.vue'),
     },
-    {   
+    {
         path: '/panen/table',
         name: '/panen-table-panen',
         component: () => import('../views/components/intervalPengukuran/table/panen.vue'),
@@ -234,7 +234,7 @@ const routes = [
         component: () => import('../views/components/manage/manageAlat/edit.vue'),
     },
 
-        // manage energi
+    // manage energi
     {
         path: '/manage-energi',
         name: 'manage-energi',
@@ -250,7 +250,6 @@ const routes = [
         name: 'manage-energi-edit',
         component: () => import('../views/components/manage/manageEnergi/edit.vue'),
     },
-    
 
     // manageSaponin
     {
@@ -268,10 +267,25 @@ const routes = [
         name: 'saponin-edit',
         component: () => import('../views/components/manage/manageSaponin/edit.vue'),
     },
-
+    // manageUser
+    {
+        path: '/manage-user',
+        name: 'manage-user',
+        component: () => import('../views/components/manage/manageUser/table.vue'),
+    },
+    {
+        path: '/manage-user/create',
+        name: 'manage-user-create',
+        component: () => import('../views/components/manage/manageUser/input.vue'),
+    },
+    {
+        path: '/manage-user/edit',
+        name: 'manage-user-edit',
+        component: () => import('../views/components/manage/manageUser/edit.vue'),
+    },
 
     // siklusBudidayaPakan
-{
+    {
         path: '/siklus-budidaya-pakan',
         name: 'siklus-budidaya-pakan',
         component: () => import('../views/components/siklusBudidayaPakan/table.vue'),
