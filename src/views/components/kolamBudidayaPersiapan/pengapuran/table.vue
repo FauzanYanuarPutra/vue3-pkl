@@ -29,7 +29,7 @@
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
-                                    <div>
+                                    <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <div>
+                                    <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', "tanggal", 'pemakaian_kapur', 'keterangan', 'actions']);
+    const columns = ref(['nama_kolam', 'tanggal', 'pemakaian_kapur', 'keterangan', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,

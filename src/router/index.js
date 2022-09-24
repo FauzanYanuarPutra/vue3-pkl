@@ -143,6 +143,7 @@ const routes = [
         component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/table.vue'),
     },
 
+
     // budidayaPakan
     {
         path: '/budidaya-pakan/create',
@@ -604,6 +605,7 @@ const routes = [
 
     // akhir Kolam Budidaya Persiapan
 
+<<<<<<< HEAD
     // kolamTreatment
     {
         path: '/kolam-treatment/create',
@@ -620,6 +622,32 @@ const routes = [
         name: 'kolam-treatment-table',
         component: () => import('../views/components/kolamTreatment/table.vue'),
     },
+=======
+    // reminder
+    {
+        path: '/reminder',
+        name: 'reminder',
+        component: () => import('../views/components/reminder/table.vue'),
+    },
+    {
+        path: '/reminder/create',
+        name: 'reminder-create',
+        component: () => import('../views/components/reminder/input.vue'),
+    },
+
+    // siklus budidaya udang
+    {
+        path: '/siklus-budidaya-udang',
+        name: 'siklus-budidaya-udang',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/table.vue'),
+    },
+    {
+        path: '/siklus-budidaya-udang/create',
+        name: 'siklus-budidaya-udang-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
+    },
+
+>>>>>>> 8a30e013e879cbb776f0e5e426c9fb260322da08
 ];
 
 const router = new createRouter({
