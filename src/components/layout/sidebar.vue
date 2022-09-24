@@ -603,6 +603,81 @@
                         </li>
                     </ul>
                 </li>
+                <li class="menu">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan" aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
+                        <div class="">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-cpu"
+                            >
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                            <span>{{ $t('Kolam Budidaya (Persiapan)') }}</span>
+                        </div>
+                        <div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-right"
+                            >
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                    <ul id="kolamBudidayaPersiapan" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
+                        <li>
+                            <router-link to="/pengeringan-dasar-tambak" @click="toggleMobileMenu">Pengeringan Dasar Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pembuangan-sendimen-organik" @click="toggleMobileMenu">Pebuangan Sendimen Organik</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/sterilisasi-tambak" @click="toggleMobileMenu">Sterilisasi Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pengisian-air-dan-sterilisasi-air-tambak" @click="toggleMobileMenu">Pengisian Air Dan Sterilisasi Air Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pengapuran" @click="toggleMobileMenu">Pengapuran</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pemupukan-dan-pemberian-mineral" @click="toggleMobileMenu">Pemupukan Dan Pemberian Mineral</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pertumbuhan-plankton" @click="toggleMobileMenu">Pertumbuhan Plankton</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pertumbuhan-patogen-atau-yang-merugikan" @click="toggleMobileMenu">Pertumbuhan Patogen atau Yang Merugikan</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/probiotik" @click="toggleMobileMenu">Probiotik</router-link>
+                        </li>
+                    </ul>
+                </li>
             </perfect-scrollbar>
         </nav>
     </div>
