@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Panen</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Edit Kolam
+                                        Treatment</span>
                                 </li>
                             </ol>
                         </nav>
@@ -21,21 +22,42 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Panen</h3>
+                                <h3>Edit Kolam
+                                    Treatment</h3>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Panen</h4>
-                                    </div>
+                            <div class="form-group">
+                                <label class="control-label">Nama Kolam</label>
+                                <input type="text" name="nama_kolam" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Jam</label>
+                                <input type="text" name="jam" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Bulan:</label>
+                                <div class="form-group mb-0">
+                                    <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="number" name="panen" class="form-control" />
+                                <label class="control-label">Pro+ Air (Liter)</label>
+                                <input type="text" name="pro_air" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Pro+ Oral (ml)</label>
+                                <input type="text" name="pro_oral" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Mineral (Kg)</label>
+                                <input type="text" name="mineral" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Keterangan</label>
+                                <input type="text" name="keterangan" class="form-control" />
                             </div>
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
