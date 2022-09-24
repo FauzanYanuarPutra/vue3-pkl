@@ -143,6 +143,7 @@ const routes = [
         component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/table.vue'),
     },
 
+
     // budidayaPakan
     {
         path: '/budidaya-pakan/create',
@@ -603,6 +604,31 @@ const routes = [
     },
 
     // akhir Kolam Budidaya Persiapan
+
+    // reminder
+    {
+        path: '/reminder',
+        name: 'reminder',
+        component: () => import('../views/components/reminder/table.vue'),
+    },
+    {
+        path: '/reminder/create',
+        name: 'reminder-create',
+        component: () => import('../views/components/reminder/input.vue'),
+    },
+
+    // siklus budidaya udang
+    {
+        path: '/siklus-budidaya-udang',
+        name: 'siklus-budidaya-udang',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/table.vue'),
+    },
+    {
+        path: '/siklus-budidaya-udang/create',
+        name: 'siklus-budidaya-udang-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
+    },
+
 ];
 
 const router = new createRouter({
