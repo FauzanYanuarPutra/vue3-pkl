@@ -605,7 +605,6 @@ const routes = [
 
     // akhir Kolam Budidaya Persiapan
 
-<<<<<<< HEAD
     // kolamTreatment
     {
         path: '/kolam-treatment/create',
@@ -622,7 +621,6 @@ const routes = [
         name: 'kolam-treatment-table',
         component: () => import('../views/components/kolamTreatment/table.vue'),
     },
-=======
     // reminder
     {
         path: '/reminder',
@@ -647,7 +645,6 @@ const routes = [
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
     },
 
->>>>>>> 8a30e013e879cbb776f0e5e426c9fb260322da08
 ];
 
 const router = new createRouter({

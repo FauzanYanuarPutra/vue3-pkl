@@ -515,7 +515,7 @@
                         </li>
                     </ul>
                 </li>
-<<<<<<< HEAD
+
                 <li class="menu">
                     <router-link to="/kolam-treatment/table" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
@@ -534,28 +534,21 @@
                                 <line x1="1" y1="14" x2="4" y2="14"></line>
                             </svg>
                             <span>{{ $t('Kolam Treatment') }}</span>
-=======
+                        </div>
+                    </router-link>
+                </li>
 
                 <li class="menu">
                     <router-link to="/reminder" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-airplay"
-                            >
-                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-airplay">
+                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1">
+                                </path>
                                 <polygon points="12 15 17 21 7 21 12 15"></polygon>
                             </svg>
                             <span>{{ $t('reminder') }}</span>
->>>>>>> 8a30e013e879cbb776f0e5e426c9fb260322da08
                         </div>
                     </router-link>
                 </li>
