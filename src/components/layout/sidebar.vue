@@ -4,40 +4,24 @@
         <nav ref="menu" id="sidebar">
             <div class="shadow-bottom"></div>
 
-            <perfect-scrollbar class="list-unstyled menu-categories" tag="ul" :options="{ wheelSpeed: 0.5, swipeEasing: !0, minScrollbarLength: 40, maxScrollbarLength: 3000, suppressScrollX: true }">
+            <perfect-scrollbar class="list-unstyled menu-categories" tag="ul"
+                :options="{ wheelSpeed: 0.5, swipeEasing: !0, minScrollbarLength: 40, maxScrollbarLength: 3000, suppressScrollX: true }">
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#dashboard" aria-controls="dashboard" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#dashboard"
+                        aria-controls="dashboard" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-home"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-home">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
                             </svg>
                             <span>{{ $t('dashboard') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -58,20 +42,12 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#idealParameter" aria-controls="idealParameter" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#idealParameter"
+                        aria-controls="idealParameter" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -86,87 +62,71 @@
                             <span>{{ $t('Ideal Parameter') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
                     </a>
                     <ul id="idealParameter" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
                         <li>
-                            <a class="dropdown-toggle" href="#appInvoice" data-bs-parent="#idealParameter" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                            <a class="dropdown-toggle" href="#appInvoice" data-bs-parent="#idealParameter"
+                                data-bs-toggle="collapse" role="button" aria-expanded="false">
                                 Kondisi Air
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-chevron-right"
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
 
                             <ul id="appInvoice" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
-                                    <router-link to="/parameter-fisika" @click="toggleMobileMenu">Parameter Fisika </router-link>
+                                    <router-link to="/parameter-fisika" @click="toggleMobileMenu">Parameter Fisika
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/parameter-kimia" @click="toggleMobileMenu">Pamareter Kimia </router-link>
+                                    <router-link to="/parameter-kimia" @click="toggleMobileMenu">Pamareter Kimia
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                    <a class="dropdown-toggle" href="#parameterBiologi"
+                                        data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button"
+                                        aria-expanded="false">
                                         Parameter Biologi
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="13"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="feather feather-chevron-right"
-                                        >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-chevron-right">
                                             <polyline points="9 18 15 12 9 6"></polyline>
                                         </svg>
                                     </a>
 
                                     <ul id="parameterBiologi" class="mx-3 collapse list-unstyled sub-submenu">
                                         <li>
-                                            <router-link to="/parameter-biologi-fitoplankton" @click="toggleMobileMenu">Filoplankton </router-link>
+                                            <router-link to="/parameter-biologi-fitoplankton" @click="toggleMobileMenu">
+                                                Filoplankton </router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/parameter-biologi-vibrioTCBS" @click="toggleMobileMenu">Vibrio TCBS </router-link>
+                                            <router-link to="/parameter-biologi-vibrioTCBS" @click="toggleMobileMenu">
+                                                Vibrio TCBS </router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/parameter-biologi-vibrioCHROMagar" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
+                                            <router-link to="/parameter-biologi-vibrioCHROMagar"
+                                                @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <router-link to="/ideal-parameter/pertumbuhan-udang" @click="toggleMobileMenu">Pertumbuhan Udang</router-link>
+                            <router-link to="/ideal-parameter/pertumbuhan-udang" @click="toggleMobileMenu">Pertumbuhan
+                                Udang</router-link>
                         </li>
                         <li>
-                            <router-link to="/ideal-parameter/konsumsi-pakan" @click="toggleMobileMenu">Komsumsi Pakan </router-link>
+                            <router-link to="/ideal-parameter/konsumsi-pakan" @click="toggleMobileMenu">Komsumsi Pakan
+                            </router-link>
                         </li>
                         <li>
                             <router-link to="/ideal-parameter/benur" @click="toggleMobileMenu">Benur</router-link>
@@ -175,20 +135,12 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#intervalPengukuran" aria-controls="intervalPengukuran" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#intervalPengukuran"
+                        aria-controls="intervalPengukuran" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -203,87 +155,69 @@
                             <span>{{ $t('Interval Pengukuran') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
                     </a>
                     <ul id="intervalPengukuran" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
                         <li>
-                            <router-link to="/interval-pengecekan/table" @click="toggleMobileMenu">Interval pengecekan kolam treatment </router-link>
+                            <router-link to="/interval-pengecekan/table" @click="toggleMobileMenu">Interval pengecekan
+                                kolam treatment </router-link>
                         </li>
                         <li>
-                            <a class="dropdown-toggle" href="#budidaya" data-bs-parent="#budidaya" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                            <a class="dropdown-toggle" href="#budidaya" data-bs-parent="#budidaya"
+                                data-bs-toggle="collapse" role="button" aria-expanded="false">
                                 Siklus Budidaya
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-chevron-right"
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
 
                             <ul id="budidaya" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
-                                    <router-link to="/budidaya-persiapan/table" @click="toggleMobileMenu">Persiapan </router-link>
+                                    <router-link to="/budidaya-persiapan/table" @click="toggleMobileMenu">Persiapan
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/budidaya-benur/table" @click="toggleMobileMenu">Benur & DOC </router-link>
+                                    <router-link to="/budidaya-benur/table" @click="toggleMobileMenu">Benur & DOC
+                                    </router-link>
                                 </li>
                                 <li>
                                     <router-link to="/budidaya-air/table" @click="toggleMobileMenu">Air</router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/budidaya-udang/table" @click="toggleMobileMenu">Udang </router-link>
+                                    <router-link to="/budidaya-udang/table" @click="toggleMobileMenu">Udang
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/budidaya-pakan/table" @click="toggleMobileMenu">Pakan </router-link>
+                                    <router-link to="/budidaya-pakan/table" @click="toggleMobileMenu">Pakan
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan"
+                                data-bs-toggle="collapse" role="button" aria-expanded="false">
                                 Kesehatan
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-chevron-right"
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
                             <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
-                                    <router-link to="/kesehatan-benur/table" @click="toggleMobileMenu">Benur </router-link>
+                                    <router-link to="/kesehatan-benur/table" @click="toggleMobileMenu">Benur
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/kesehatan-udang/table" @click="toggleMobileMenu">Udang </router-link>
+                                    <router-link to="/kesehatan-udang/table" @click="toggleMobileMenu">Udang
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
@@ -294,20 +228,12 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#manage" aria-controls="manage" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#manage" aria-controls="manage"
+                        aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -322,18 +248,9 @@
                             <span>{{ $t('Manage') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -358,29 +275,23 @@
                             <router-link to="/saponin" @click="toggleMobileMenu">Saponin</router-link>
                         </li>
                         <li>
-                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan"
+                                data-bs-toggle="collapse" role="button" aria-expanded="false">
                                 Benur
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="feather feather-chevron-right"
-                                >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-chevron-right">
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
                             <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
-                                    <router-link to="/manage-benur" @click="toggleMobileMenu">Manage Benur </router-link>
+                                    <router-link to="/manage-benur" @click="toggleMobileMenu">Manage Benur
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/scoring-benur" @click="toggleMobileMenu">Scoring Benur</router-link>
+                                    <router-link to="/scoring-benur" @click="toggleMobileMenu">Scoring Benur
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
@@ -391,20 +302,12 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#siklusBudidaya" aria-controls="siklusBudidaya" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#siklusBudidaya"
+                        aria-controls="siklusBudidaya" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -419,18 +322,9 @@
                             <span>{{ $t('Siklus Budidaya') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -440,25 +334,18 @@
                             <router-link to="/siklus-budidaya-pakan" @click="toggleMobileMenu">Pakan</router-link>
                         </li>
                         <li>
-                            <router-link to="/siklus-budidaya-benur-doc" @click="toggleMobileMenu">Benur & DOC</router-link>
+                            <router-link to="/siklus-budidaya-benur-doc" @click="toggleMobileMenu">Benur & DOC
+                            </router-link>
                         </li>
                     </ul>
                 </li>
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#panen" aria-controls="panen" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#panen" aria-controls="panen"
+                        aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -473,18 +360,9 @@
                             <span>{{ $t('Panen') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -502,20 +380,12 @@
                     </ul>
                 </li>
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#hargaUdang" aria-controls="hargaUdang" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#hargaUdang"
+                        aria-controls="hargaUdang" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -530,18 +400,9 @@
                             <span>{{ $t('Harga') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -553,20 +414,12 @@
                     </ul>
                 </li>
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#warnaair" aria-controls="warnaair" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#warnaair"
+                        aria-controls="warnaair" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -581,18 +434,9 @@
                             <span>{{ $t('Warna Air') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
@@ -604,20 +448,12 @@
                     </ul>
                 </li>
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan" aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan"
+                        aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
                         <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
                                 <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
                                 <rect x="9" y="9" width="6" height="6"></rect>
                                 <line x1="9" y1="1" x2="9" y2="4"></line>
@@ -632,51 +468,70 @@
                             <span>{{ $t('Kolam Budidaya (Persiapan)') }}</span>
                         </div>
                         <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-right">
                                 <polyline points="9 18 15 12 9 6"></polyline>
                             </svg>
                         </div>
                     </a>
                     <ul id="kolamBudidayaPersiapan" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
                         <li>
-                            <router-link to="/pengeringan-dasar-tambak" @click="toggleMobileMenu">Pengeringan Dasar Tambak</router-link>
+                            <router-link to="/pengeringan-dasar-tambak" @click="toggleMobileMenu">Pengeringan Dasar
+                                Tambak</router-link>
                         </li>
                         <li>
-                            <router-link to="/pembuangan-sendimen-organik" @click="toggleMobileMenu">Pebuangan Sendimen Organik</router-link>
+                            <router-link to="/pembuangan-sendimen-organik" @click="toggleMobileMenu">Pebuangan Sendimen
+                                Organik</router-link>
                         </li>
                         <li>
-                            <router-link to="/sterilisasi-tambak" @click="toggleMobileMenu">Sterilisasi Tambak</router-link>
+                            <router-link to="/sterilisasi-tambak" @click="toggleMobileMenu">Sterilisasi Tambak
+                            </router-link>
                         </li>
                         <li>
-                            <router-link to="/pengisian-air-dan-sterilisasi-air-tambak" @click="toggleMobileMenu">Pengisian Air Dan Sterilisasi Air Tambak</router-link>
+                            <router-link to="/pengisian-air-dan-sterilisasi-air-tambak" @click="toggleMobileMenu">
+                                Pengisian Air Dan Sterilisasi Air Tambak</router-link>
                         </li>
                         <li>
                             <router-link to="/pengapuran" @click="toggleMobileMenu">Pengapuran</router-link>
                         </li>
                         <li>
-                            <router-link to="/pemupukan-dan-pemberian-mineral" @click="toggleMobileMenu">Pemupukan Dan Pemberian Mineral</router-link>
+                            <router-link to="/pemupukan-dan-pemberian-mineral" @click="toggleMobileMenu">Pemupukan Dan
+                                Pemberian Mineral</router-link>
                         </li>
                         <li>
-                            <router-link to="/pertumbuhan-plankton" @click="toggleMobileMenu">Pertumbuhan Plankton</router-link>
+                            <router-link to="/pertumbuhan-plankton" @click="toggleMobileMenu">Pertumbuhan Plankton
+                            </router-link>
                         </li>
                         <li>
-                            <router-link to="/pertumbuhan-patogen-atau-yang-merugikan" @click="toggleMobileMenu">Pertumbuhan Patogen atau Yang Merugikan</router-link>
+                            <router-link to="/pertumbuhan-patogen-atau-yang-merugikan" @click="toggleMobileMenu">
+                                Pertumbuhan Patogen atau Yang Merugikan</router-link>
                         </li>
                         <li>
                             <router-link to="/probiotik" @click="toggleMobileMenu">Probiotik</router-link>
                         </li>
                     </ul>
+                </li>
+                <li class="menu">
+                    <router-link to="/kolam-treatment/table" class="dropdown-toggle" @click="toggleMobileMenu">
+                        <div class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-cpu">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                            <span>{{ $t('Kolam Treatment') }}</span>
+                        </div>
+                    </router-link>
                 </li>
             </perfect-scrollbar>
         </nav>
@@ -685,33 +540,33 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import { useStore } from 'vuex';
-    const store = useStore();
+import { onMounted, ref } from 'vue';
+import { useStore } from 'vuex';
+const store = useStore();
 
-    const menu_collapse = ref('dashboard');
+const menu_collapse = ref('dashboard');
 
-    onMounted(() => {
-        const selector = document.querySelector('#sidebar a[href="' + window.location.pathname + '"]');
-        if (selector) {
-            const ul = selector.closest('ul.collapse');
-            if (ul) {
-                let ele = ul.closest('li.menu').querySelectorAll('.dropdown-toggle');
-                if (ele) {
-                    ele = ele[0];
-                    setTimeout(() => {
-                        ele.click();
-                    });
-                }
-            } else {
-                selector.click();
+onMounted(() => {
+    const selector = document.querySelector('#sidebar a[href="' + window.location.pathname + '"]');
+    if (selector) {
+        const ul = selector.closest('ul.collapse');
+        if (ul) {
+            let ele = ul.closest('li.menu').querySelectorAll('.dropdown-toggle');
+            if (ele) {
+                ele = ele[0];
+                setTimeout(() => {
+                    ele.click();
+                });
             }
+        } else {
+            selector.click();
         }
-    });
+    }
+});
 
-    const toggleMobileMenu = () => {
-        if (window.innerWidth < 991) {
-            store.commit('toggleSideBar', !store.state.is_show_sidebar);
-        }
-    };
+const toggleMobileMenu = () => {
+    if (window.innerWidth < 991) {
+        store.commit('toggleSideBar', !store.state.is_show_sidebar);
+    }
+};
 </script>

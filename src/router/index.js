@@ -603,6 +603,23 @@ const routes = [
     },
 
     // akhir Kolam Budidaya Persiapan
+
+    // kolamTreatment
+    {
+        path: '/kolam-treatment/create',
+        name: 'kolam-treatment-create',
+        component: () => import('../views/components/kolamTreatment/input.vue'),
+    },
+    {
+        path: '/kolam-treatment/edit',
+        name: 'kolam-treatment-edit',
+        component: () => import('../views/components/kolamTreatment/edit.vue'),
+    },
+    {
+        path: '/kolam-treatment/table',
+        name: 'kolam-treatment-table',
+        component: () => import('../views/components/kolamTreatment/table.vue'),
+    },
 ];
 
 const router = new createRouter({
