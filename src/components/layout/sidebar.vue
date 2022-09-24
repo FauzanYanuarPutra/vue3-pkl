@@ -242,7 +242,7 @@
                                 </svg>
                             </a>
 
-                            <ul id="budidaya" class="collapse list-unstyled sub-submenu">
+                            <ul id="budidaya" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/budidaya-persiapan/table" @click="toggleMobileMenu">Persiapan </router-link>
                                 </li>
@@ -278,7 +278,7 @@
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
-                            <ul id="kesehatan" class="collapse list-unstyled sub-submenu">
+                            <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/kesehatan-benur/table" @click="toggleMobileMenu">Benur </router-link>
                                 </li>
@@ -375,7 +375,7 @@
                                     <polyline points="9 18 15 12 9 6"></polyline>
                                 </svg>
                             </a>
-                            <ul id="kesehatan" class="collapse list-unstyled sub-submenu">
+                            <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
                                 <li>
                                     <router-link to="/manage-benur" @click="toggleMobileMenu">Manage Benur </router-link>
                                 </li>
@@ -552,8 +552,14 @@
                         </li>
                     </ul>
                 </li>
+<<<<<<< HEAD
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#warnaairtambak" aria-controls="warnaairtambak" aria-expanded="false">
+=======
+
+                <li class="menu">
+                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan" aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
+>>>>>>> f12dfdae527c6dc6ad2f37990c3019f185f76714
                         <div class="">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -578,7 +584,11 @@
                                 <line x1="1" y1="9" x2="4" y2="9"></line>
                                 <line x1="1" y1="14" x2="4" y2="14"></line>
                             </svg>
+<<<<<<< HEAD
                             <span>{{ $t('Warna Air') }}</span>
+=======
+                            <span>{{ $t('Kolam Budidaya (Persiapan)') }}</span>
+>>>>>>> f12dfdae527c6dc6ad2f37990c3019f185f76714
                         </div>
                         <div>
                             <svg
@@ -597,12 +607,47 @@
                             </svg>
                         </div>
                     </a>
+<<<<<<< HEAD
                     <ul id="warnaairtambak" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
                         <li>
                             <router-link to="/air-tambak" @click="toggleMobileMenu">Tambak</router-link>
                         </li>
                     </ul>
                 </li>
+=======
+                    <ul id="kolamBudidayaPersiapan" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
+                        <li>
+                            <router-link to="/pengeringan-dasar-tambak" @click="toggleMobileMenu">Pengeringan Dasar Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pembuangan-sendimen-organik" @click="toggleMobileMenu">Pebuangan Sendimen Organik</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/sterilisasi-tambak" @click="toggleMobileMenu">Sterilisasi Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pengisian-air-dan-sterilisasi-air-tambak" @click="toggleMobileMenu">Pengisian Air Dan Sterilisasi Air Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pengapuran" @click="toggleMobileMenu">Pengapuran</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pemupukan-dan-pemberian-mineral" @click="toggleMobileMenu">Pemupukan Dan Pemberian Mineral</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pertumbuhan-plankton" @click="toggleMobileMenu">Pertumbuhan Plankton</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/pertumbuhan-patogen-atau-yang-merugikan" @click="toggleMobileMenu">Pertumbuhan Patogen atau Yang Merugikan</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/probiotik" @click="toggleMobileMenu">Probiotik</router-link>
+                        </li>
+                    </ul>
+                </li>
+                <br /><br /><br /><br />
+                <br /><br /><br /><br />
+>>>>>>> f12dfdae527c6dc6ad2f37990c3019f185f76714
             </perfect-scrollbar>
         </nav>
     </div>
