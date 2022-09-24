@@ -478,6 +478,18 @@ const routes = [
         name: 'hargaudang-creat',
         component: () => import('../views/components/hargaUdang/input.vue'),
     },
+
+    // Harna air tambak
+    {
+        path: '/air-tambak',
+        name: 'air-tambak',
+        component: () => import('../views/components/warnaairtambak/table.vue'),
+    },
+    {
+        path: '/airtambak/create',
+        name: 'airtambak-creat',
+        component: () => import('../views/components/warnaairtambak/input.vue'),
+    },
 ];
 
 const router = new createRouter({
