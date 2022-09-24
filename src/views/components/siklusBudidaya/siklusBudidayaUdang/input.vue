@@ -64,7 +64,7 @@
 
                             <div class="form-group">
                                 <label class="control-label">Scoring Udang:</label>
-                                <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.00" />
+                                <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.0" />
                             </div>
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />

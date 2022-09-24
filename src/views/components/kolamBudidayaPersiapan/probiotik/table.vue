@@ -28,8 +28,8 @@
                         <router-link to="/probiotik/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
-                                <div class="table-controls d-flex no-wrap justify-content-center">
-                                    <div>
+                                 <div class="table-controls d-flex no-wrap justify-content-center">
+                                    <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@
                                             </svg>
                                         </a>
                                     </div>
-                                    <div>
+                                    <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
