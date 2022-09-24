@@ -85,7 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['WARNA_AIR_YANG_DITIMBULKAN', 'JENIS_PLANKTON', 'KECERAHAN', 'KETERANGAN', 'ACTIONS']);
+    const columns = ref(['WARNA_AIR_YANG_DITIMBULKAN', 'JENIS_PLANKTON', 'KECERAHAN', 'KETERANGAN', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
