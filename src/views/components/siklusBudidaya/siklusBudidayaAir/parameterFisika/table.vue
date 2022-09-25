@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-fisika/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/budidaya-fisika/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
