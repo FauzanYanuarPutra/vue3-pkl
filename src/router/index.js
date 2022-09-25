@@ -143,7 +143,6 @@ const routes = [
         component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/table.vue'),
     },
 
-
     // budidayaPakan
     {
         path: '/budidaya-pakan/create',
@@ -645,6 +644,27 @@ const routes = [
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
     },
 
+    // siklusBudidayaAir
+    {
+        path: '/budidaya-fisika',
+        name: 'budidaya-fisika',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterFisika/table.vue'),
+    },
+    {
+        path: '/budidaya-fisika/create',
+        name: 'budidaya-fisika-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterFisika/input.vue'),
+    },
+    {
+        path: '/budidaya-kimia',
+        name: 'budidaya-kimia',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/table.vue'),
+    },
+    {
+        path: '/budidaya-kimia/create',
+        name: 'budidaya-kimia-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/input.vue'),
+    },
 ];
 
 const router = new createRouter({
