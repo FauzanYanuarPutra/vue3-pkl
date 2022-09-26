@@ -121,12 +121,12 @@ const routes = [
         name: 'konsumsi-pakan',
         component: () => import('../views/components/idealParameter/konsumsiPakan/table.vue'),
     },
-     {
+    {
         path: '/konsumsi-pakan/create',
         name: 'konsumsi-pakan-create',
         component: () => import('../views/components/idealParameter/konsumsiPakan/input.vue'),
     },
-     {
+    {
         path: '/konsumsi-pakan/edit',
         name: 'konsumsi-pakan-edit',
         component: () => import('../views/components/idealParameter/konsumsiPakan/edit.vue'),
@@ -147,12 +147,10 @@ const routes = [
         name: 'benur-edit',
         component: () => import('../views/components/idealParameter/benur/edit.vue'),
     },
-    // {
-    //     path: '/ideal-parameter/edit',
-    //     name: 'ideal-parameter-edit',
-    //     component: () => import('../views/components/manage/manageTambak/edit.vue'),
-    // },
+    
+    // AKHIR IDEAL PARAMETER
 
+    
     //intervalPengukuran
     // intervalPengecekan
     {
