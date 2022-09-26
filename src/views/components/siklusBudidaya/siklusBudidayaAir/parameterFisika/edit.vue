@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Warna Air</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Fisika</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -15,41 +15,47 @@
         </teleport>
 
         <div class="container">
-            <div id="manageTambak" class="col-lg-12">
+            <div id="parameterFisika" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Warna Air</h4>
+                                <h4>Parameter Fisika</h4>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="form-group">
-                                <label class="control-label">ID warna kolam:</label>
-                                <input type="id" name="" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Warna air:</label>
-                                <input type="text" name="warna_air" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Upload warna air:</label>
-                                <input type="text" name="" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Jenis plankton:</label>
-                                <input type="text" name="jenis_plankton" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Kecerahan:</label>
-                                <input type="text" name="kecerahan" class="form-control" />
+                                <label class="control-label">Tinggi Air (cm):</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <input type="text" name="keterangan" class="form-control" />
+                                <label class="control-label">Kecerahan:</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Warna:</label>
+                                <div class="d-flex">
+                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Pagi" selected-label="" select-label="" deselect-label=""></multiselect>
+                                    <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Sore" selected-label="" select-label="" deselect-label=""></multiselect>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Suhu Air(cekcius):</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
@@ -90,7 +96,18 @@
         }
     };
 
-    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+    const options1 = ref([
+        'Cokelat muda',
+        'Cokelat tua',
+        'Cokelat biru',
+        'Cokelat kemerahan',
+        'Cokelat kehijauan',
+        'Cokelat kehitaman',
+        'Hijau daun muda',
+        'Hijau tua',
+        'Hijau kekuningan',
+        'Hijau ke kebiruan',
+    ]);
     const inputs = ref({
         input1: [],
         input2: [],
@@ -98,6 +115,18 @@
         input4: [],
         input5: [],
     });
+    const options2 = ref([
+        'Cokelat muda',
+        'Cokelat tua',
+        'Cokelat biru',
+        'Cokelat kemerahan',
+        'Cokelat kehijauan',
+        'Cokelat kehitaman',
+        'Hijau daun muda',
+        'Hijau tua',
+        'Hijau kekuningan',
+        'Hijau ke kebiruan',
+    ]);
 
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);
