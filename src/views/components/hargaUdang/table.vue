@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Kimia</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Harga udang</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,11 +21,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Parameter Kimia</h4>
+                                    <h4>Harga Udang</h4>
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-kimia/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/hargaudang/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -85,13 +85,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
+    const columns = ref(['Tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
     const items = ref([]);
     const table_option = ref({
-        perPage: 50,
+        perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
+        columnsClasses: { actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -99,7 +99,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'min', 'max'],
+        sortable: ['Tanggal_input', 'Ukuran_udang', 'Harga'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -115,89 +115,70 @@
     const bind_data = () => {
         items.value = [
             {
-                nama: 'pH',
-                min: 10,
-                max: 100,
+                id: 1,
+
+                Tanggal_input: '2011/04/25',
+                Ukuran_udang: '320,800',
+                Harga: '10000',
             },
             {
-                nama: 'DO (ppm)',
-                min: 10,
-                max: 100,
+                id: 2,
+                Tanggal_input: '2011/07/25',
+                Ukuran_udang: '170,750',
+                Harga: '10000',
             },
             {
-                nama: 'Salinitas (%)',
-                min: 10,
-                max: 100,
+                id: 3,
+                Tanggal_input: '2009/01/12',
+                Ukuran_udang: '86,000',
+                Harga: '10000',
             },
             {
-                nama: 'Alkalinitas (ppm)',
-                min: 10,
-                max: 100,
+                id: 4,
+                Tanggal_input: '2012/03/29',
+                Ukuran_udang: '433,060',
+                Harga: '10000',
             },
             {
-                nama: 'CO3',
-                min: 10,
-                max: 100,
+                id: 5,
+                Tanggal_input: '2008/11/28',
+                Ukuran_udang: '162,700',
+                Harga: '10000',
             },
             {
-                nama: 'HC03',
-                min: 10,
-                max: 100,
+                id: 6,
+                Tanggal_input: '2012/12/02',
+                Ukuran_udang: '372,000',
+                Harga: '10000',
             },
             {
-                nama: 'TOTAL',
-                min: 10,
-                max: 100,
+                id: 7,
+                Tanggal_input: '2012/08/06',
+                Ukuran_udang: '137,500',
+                Harga: '10000',
             },
             {
-                nama: 'Ammonium-NH4 (mg/L)',
-                min: 10,
-                max: 100,
+                id: 8,
+                Tanggal_input: '2010/10/14',
+                Ukuran_udang: '327,900',
+                Harga: '10000',
             },
             {
-                nama: 'Nitrit-NO2 (ppm)',
-                min: 10,
-                max: 100,
+                id: 9,
+                Tanggal_input: '2009/09/15',
+                Ukuran_udang: '205,500',
+                Harga: '10000',
             },
             {
-                nama: 'Nitrat-NO3 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Phosphate-PO4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Iron-Fe (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Magnesium-Mg (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Calium-Ca (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Residual Cholorin-CI',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Redox (mV)',
-                min: 10,
-                max: 100,
+                id: 10,
+                Tanggal_input: '2008/12/13',
+                Ukuran_udang: '103,600',
+                Harga: '10000',
             },
         ];
     };
 
     const view_row = (item) => {
-        alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+        alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
     };
 </script>

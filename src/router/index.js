@@ -40,6 +40,36 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterKimia/input.vue'),
     },
     {
+        path: '/parameter-biologi-fitoplankton',
+        name: 'parameter-biologi-fitoplankton',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-fitoplankton/create',
+        name: 'parameter-biologi-fitoplankton-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/input.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioTCBS',
+        name: 'parameter-biologi-vibrioTCBS',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioTCBS/create',
+        name: 'parameter-biologi-vibrioTCBS-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/input.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioCHROMagar',
+        name: 'parameter-biologi-vibrioCHROMagar',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/table.vue'),
+    },
+    {
+        path: '/parameter-biologi-vibrioCHROMagar/create',
+        name: 'parameter-biologi-vibrioCHROMagar-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/input.vue'),
+    },
+    {
         path: '/ideal-parameter/pertumbuhan-udang',
         name: 'pertumbuhan-udang',
         component: () => import('../views/components/idealParameter/pertumbuhanUdang/table.vue'),
@@ -61,143 +91,159 @@ const routes = [
     // },
 
     //intervalPengukuran
-    // input
+    // intervalPengecekan
     {
         path: '/interval-pengecekan/create',
         name: 'intervalPengukuran-create-interval-pengecekan',
-        component: () => import('../views/components/intervalPengukuran/create/interval_pengecekan.vue'),
+        component: () => import('../views/components/intervalPengukuran/intervalPengecekan/input.vue'),
     },
-    {
-        path: '/budidaya-persiapan/create',
-        name: 'interval-pengukuran-create-budidaya-persiapan',
-        component: () => import('../views/components/intervalPengukuran/create/budidaya_persiapan.vue'),
-    },
-    {
-        path: '/budidaya-benur/create',
-        name: '/interval-pengukuran-create-budidaya-benur',
-        component: () => import('../views/components/intervalPengukuran/create/budidaya_benur.vue'),
-    },
-    {
-        path: '/budidaya-air/create',
-        name: '/interval-pengukuran-create-budidaya-air',
-        component: () => import('../views/components/intervalPengukuran/create/budidaya_air.vue'),
-    },
-    {
-        path: '/budidaya-udang/create',
-        name: '/interval-pengukuran-create-budidaya-udang',
-        component: () => import('../views/components/intervalPengukuran/create/budidaya_udang.vue'),
-    },
-    {
-        path: '/budidaya-pakan/create',
-        name: '/interval-pengukuran-create-budidaya-pakan',
-        component: () => import('../views/components/intervalPengukuran/create/budidaya_pakan.vue'),
-    },
-    {
-        path: '/kesehatan-benur/create',
-        name: '/interval-pengukuran-create-kesehatan-benur',
-        component: () => import('../views/components/intervalPengukuran/create/kesehatan_benur.vue'),
-    },
-    {
-        path: '/kesehatan-udang/create',
-        name: '/interval-pengukuran-create-kesehatan-udang',
-        component: () => import('../views/components/intervalPengukuran/create/kesehatan_udang.vue'),
-    },
-    {
-        path: '/panen/create',
-        name: '/interval-pengukuran-create-panen',
-        component: () => import('../views/components/intervalPengukuran/create/panen.vue'),
-    },
-    // edit
     {
         path: '/interval-pengecekan/edit',
-        name: '/interval-pengukuran-edit-interval-pengecekan',
-        component: () => import('../views/components/intervalPengukuran/edit/interval_pengecekan.vue'),
+        name: 'intervalPengukuran-edit-interval-pengecekan',
+        component: () => import('../views/components/intervalPengukuran/intervalPengecekan/edit.vue'),
     },
     {
-        path: '/budidaya-persiapan/edit',
-        name: '/interval-pengukuran-edit-budidaya-ersiapan',
-        component: () => import('../views/components/intervalPengukuran/edit/budidaya_persiapan.vue'),
+        path: '/interval-pengecekan/table',
+        name: 'intervalPengukuran-table-interval-pengecekan',
+        component: () => import('../views/components/intervalPengukuran/intervalPengecekan/table.vue'),
     },
+
+    // siklusBudidaya
+    // budidayaAir
     {
-        path: '/budidaya-benur/edit',
-        name: '/interval-engukuran-edit-budidaya-benur',
-        component: () => import('../views/components/intervalPengukuran/edit/budidaya_benur.vue'),
+        path: '/budidaya-air/create',
+        name: 'intervalPengukuran-create-budidaya-air',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaAir/input.vue'),
     },
     {
         path: '/budidaya-air/edit',
-        name: '/interval-pengukuran-edit-budidaya-air',
-        component: () => import('../views/components/intervalPengukuran/edit/budidaya_air.vue'),
-    },
-    {
-        path: '/budidaya-udang/edit',
-        name: '/interval-pengukuran-edit-budidaya-udang',
-        component: () => import('../views/components/intervalPengukuran/edit/budidaya_udang.vue'),
-    },
-    {
-        path: '/budidaya-pakan/edit',
-        name: '/interval-pengukuran-edit-budidaya-pakan',
-        component: () => import('../views/components/intervalPengukuran/edit/budidaya_pakan.vue'),
-    },
-    {
-        path: '/kesehatan-benur/edit',
-        name: '/interval-pengukuran-edit-kesehatan-benur',
-        component: () => import('../views/components/intervalPengukuran/edit/kesehatan_benur.vue'),
-    },
-    {
-        path: '/kesehatan-udang/edit',
-        name: '/interval-pengukuran-edit-kesehatan-udang',
-        component: () => import('../views/components/intervalPengukuran/edit/kesehatan_udang.vue'),
-    },
-    {
-        path: '/panen/edit',
-        name: '/interval-pengukuran-edit-panen',
-        component: () => import('../views/components/intervalPengukuran/edit/panen.vue'),
-    },
-    // table
-    {
-        path: '/interval-pengecekan/table',
-        name: 'interval-pengukuran-table-interval-pengecekan',
-        component: () => import('../views/components/intervalPengukuran/table/interval_pengecekan.vue'),
-    },
-    {
-        path: '/budidaya-persiapan/table',
-        name: 'budidaya-persiapan-table-budidaya-persiapan',
-        component: () => import('../views/components/intervalPengukuran/table/budidaya_persiapan.vue'),
-    },
-    {
-        path: '/budidaya-benur/table',
-        name: '/budidaya-benur-table-budidaya-benur',
-        component: () => import('../views/components/intervalPengukuran/table/budidaya_benur.vue'),
+        name: 'intervalPengukuran-edit-budidaya-air',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaAir/edit.vue'),
     },
     {
         path: '/budidaya-air/table',
-        name: '/budidaya-air-table-budidaya-air',
-        component: () => import('../views/components/intervalPengukuran/table/budidaya_air.vue'),
+        name: 'intervalPengukuran-table-budidaya-air',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaAir/table.vue'),
+    },
+
+    // budidayaBenur
+    {
+        path: '/budidaya-benur/create',
+        name: 'intervalPengukuran-create-budidaya-benur',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/input.vue'),
     },
     {
-        path: '/budidaya-udang/table',
-        name: '/budidaya-udang-table-budidaya-udang',
-        component: () => import('../views/components/intervalPengukuran/table/budidaya_udang.vue'),
+        path: '/budidaya-benur/edit',
+        name: 'intervalPengukuran-edit-budidaya-benur',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/edit.vue'),
+    },
+    {
+        path: '/budidaya-benur/table',
+        name: 'intervalPengukuran-table-budidaya-benur',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaBenur/table.vue'),
+    },
+
+    // budidayaPakan
+    {
+        path: '/budidaya-pakan/create',
+        name: 'intervalPengukuran-create-budidaya-pakan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPakan/input.vue'),
+    },
+    {
+        path: '/budidaya-pakan/edit',
+        name: 'intervalPengukuran-edit-budidaya-pakan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPakan/edit.vue'),
     },
     {
         path: '/budidaya-pakan/table',
-        name: '/budidaya-pakan-table-budidaya-pakan',
-        component: () => import('../views/components/intervalPengukuran/table/budidaya_pakan.vue'),
+        name: 'intervalPengukuran-table-budidaya-pakan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPakan/table.vue'),
+    },
+
+    // budidayaPersiapan
+    {
+        path: '/budidaya-persiapan/create',
+        name: 'intervalPengukuran-create-budidaya-persiapan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPersiapan/input.vue'),
+    },
+    {
+        path: '/budidaya-persiapan/edit',
+        name: 'intervalPengukuran-edit-budidaya-persiapan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPersiapan/edit.vue'),
+    },
+    {
+        path: '/budidaya-persiapan/table',
+        name: 'intervalPengukuran-table-budidaya-persiapan',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaPersiapan/table.vue'),
+    },
+
+    // budidayaUdang
+    {
+        path: '/budidaya-udang/create',
+        name: 'intervalPengukuran-create-budidaya-udang',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaUdang/input.vue'),
+    },
+    {
+        path: '/budidaya-udang/edit',
+        name: 'intervalPengukuran-edit-budidaya-udang',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaUdang/edit.vue'),
+    },
+    {
+        path: '/budidaya-udang/table',
+        name: 'intervalPengukuran-table-budidaya-udang',
+        component: () => import('../views/components/intervalPengukuran/siklusBudidaya/budidayaUdang/table.vue'),
+    },
+
+    // kesehatan
+    // kesehatanBenur
+    {
+        path: '/kesehatan-benur/create',
+        name: 'intervalPengukuran-create-kesehatan-benur',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanBenur/input.vue'),
+    },
+    {
+        path: '/kesehatan-benur/edit',
+        name: 'intervalPengukuran-edit-kesehatan-benur',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanBenur/edit.vue'),
     },
     {
         path: '/kesehatan-benur/table',
-        name: '/kesehatan-benur-table-kesehatan-benur',
-        component: () => import('../views/components/intervalPengukuran/table/kesehatan_benur.vue'),
+        name: 'intervalPengukuran-table-kesehatan-benur',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanBenur/table.vue'),
+    },
+
+    // kesehatanUdang
+    {
+        path: '/kesehatan-udang/create',
+        name: 'intervalPengukuran-create-kesehatan-udang',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanUdang/input.vue'),
+    },
+    {
+        path: '/kesehatan-udang/edit',
+        name: 'intervalPengukuran-edit-kesehatan-udang',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanUdang/edit.vue'),
     },
     {
         path: '/kesehatan-udang/table',
-        name: '/kesehatan-udang-table-kesehatan-udang',
-        component: () => import('../views/components/intervalPengukuran/table/kesehatan_udang.vue'),
+        name: 'intervalPengukuran-table-kesehatan-udang',
+        component: () => import('../views/components/intervalPengukuran/kesehatan/kesehatanUdang/table.vue'),
+    },
+
+    // panen
+    {
+        path: '/panen/create',
+        name: 'intervalPengukuran-create-panen',
+        component: () => import('../views/components/intervalPengukuran/panen/input.vue'),
+    },
+    {
+        path: '/panen/edit',
+        name: 'intervalPengukuran-edit-panen',
+        component: () => import('../views/components/intervalPengukuran/panen/edit.vue'),
     },
     {
         path: '/panen/table',
-        name: '/panen-table-panen',
-        component: () => import('../views/components/intervalPengukuran/table/panen.vue'),
+        name: 'intervalPengukuran-table-panen',
+        component: () => import('../views/components/intervalPengukuran/panen/table.vue'),
     },
 
     // manage tambak
@@ -301,6 +347,38 @@ const routes = [
         component: () => import('../views/components/manage/manageUser/edit.vue'),
     },
 
+    // manageBenur
+    {
+        path: '/manage-benur',
+        name: 'manage-benur',
+        component: () => import('../views/components/manage/manageBenur/managebenur/table.vue'),
+    },
+    {
+        path: '/manage-Benur/create',
+        name: 'manage-Benur-create',
+        component: () => import('../views/components/manage/manageBenur/managebenur/input.vue'),
+    },
+    {
+        path: '/manage-Benur/edit',
+        name: 'manage-Benur-edit',
+        component: () => import('../views/components/manage/manageBenur/managebenur/edit.vue'),
+    },
+    {
+        path: '/scoring-benur',
+        name: 'scoring-benur',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/table.vue'),
+    },
+    {
+        path: '/scoring-benur/create',
+        name: 'scoring-benur-create',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/input.vue'),
+    },
+    {
+        path: '/scoring-benur/edit',
+        name: 'scoring-benur-edit',
+        component: () => import('../views/components/manage/manageBenur/scoringbenur/edit.vue'),
+    },
+
     // siklusBudidayaPakan
     {
         path: '/siklus-budidaya-pakan',
@@ -323,8 +401,6 @@ const routes = [
         name: 'siklus-budidaya-benur-doc-create',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaBenur&Doc/input.vue'),
     },
-
-    
 
     //manageKolam
     {
@@ -358,6 +434,253 @@ const routes = [
         path: '/manage-kontent',
         name: 'manage-kontent-table',
         component: () => import('../views/components/manage/manageKontent/table.vue'),
+    },
+    // Panen
+    {
+        path: '/panen-',
+        name: 'panen-',
+        component: () => import('../views/components/panen/panen/table.vue'),
+    },
+    {
+        path: '/panen-create-',
+        name: 'panen-create',
+        component: () => import('../views/components/panen/panen/input.vue'),
+    },
+    {
+        path: '/panen-edit1',
+        name: 'panen-edit1',
+        component: () => import('../views/components/panen/panen/edit.vue'),
+    },
+    {
+        path: '/perkiraan',
+        name: 'perkiraan',
+        component: () => import('../views/components/panen/perkiraan/table.vue'),
+    },
+    {
+        path: '/perkiraan/edit',
+        name: 'perkiraan-edit',
+        component: () => import('../views/components/panen/perkiraan/edit.vue'),
+    },
+    {
+        path: '/perkiraan/create',
+        name: 'perkiraan-create',
+        component: () => import('../views/components/panen/perkiraan/input.vue'),
+    },
+    {
+        path: '/aktual',
+        name: 'aktual',
+        component: () => import('../views/components/panen/aktual/table.vue'),
+    },
+
+    {
+        path: '/aktual/create',
+        name: 'aktual-create',
+        component: () => import('../views/components/panen/aktual/input.vue'),
+    },
+
+    {
+        path: '/aktual/edit',
+        name: 'aktual-edit',
+        component: () => import('../views/components/panen/aktual/edit.vue'),
+    },
+
+    // Harga udang
+    {
+        path: '/harga-udang',
+        name: 'harga-udang',
+        component: () => import('../views/components/hargaUdang/table.vue'),
+    },
+    {
+        path: '/hargaudang/create',
+        name: 'hargaudang-creat',
+        component: () => import('../views/components/hargaUdang/input.vue'),
+    },
+
+    // Air Tambak
+    {
+        path: '/airtambak',
+        name: 'airtambak',
+        component: () => import('../views/components/warnaairtambak/table.vue'),
+    },
+    {
+        path: '/airtambak/create',
+        name: 'airtambak-creat',
+        component: () => import('../views/components/warnaairtambak/input.vue'),
+    },
+
+    // Kolam Budidaya Persiapan
+
+    // pengeringan dasar tambak
+    {
+        path: '/pengeringan-dasar-tambak',
+        name: 'pengeringan-dasar-tambak',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/table.vue'),
+    },
+    {
+        path: '/pengeringan-dasar-tambak/create',
+        name: 'pengeringan-dasar-tambak-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/input.vue'),
+    },
+
+    // pembuangan sendimen organik
+    {
+        path: '/pembuangan-sendimen-organik',
+        name: 'pembuangan-sendimen-organik',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/table.vue'),
+    },
+    {
+        path: '/pembuangan-sendimen-organik/create',
+        name: 'pembuangan-sendimen-organik-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/input.vue'),
+    },
+
+    // sterilisasi tambak
+    {
+        path: '/sterilisasi-tambak',
+        name: 'sterilisasi-tambak',
+        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/table.vue'),
+    },
+    {
+        path: '/sterilisasi-tambak/create',
+        name: 'sterilisasi-tambak-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/input.vue'),
+    },
+
+    // pengisian air dan sterilisasi air tambak
+    {
+        path: '/pengisian-air-dan-sterilisasi-air-tambak',
+        name: 'pengisian-air-dan-sterilisasi-air-tambak',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/table.vue'),
+    },
+    {
+        path: '/pengisian-air-dan-sterilisasi-air-tambak/create',
+        name: 'pengisian-air-dan-sterilisasi-air-tambak-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/input.vue'),
+    },
+
+    // pengapuran
+    {
+        path: '/pengapuran',
+        name: 'pengapuran',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/table.vue'),
+    },
+    {
+        path: '/pengapuran/create',
+        name: 'pengapuran-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/input.vue'),
+    },
+
+    // pemupukan-dan-pemberian-mineral
+    {
+        path: '/pemupukan-dan-pemberian-mineral',
+        name: 'pemupukan-dan-pemberian-mineral',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/table.vue'),
+    },
+    {
+        path: '/pemupukan-dan-pemberian-mineral/create',
+        name: 'pemupukan-dan-pemberian-mineral-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/input.vue'),
+    },
+
+    // pertumbuhan-plankton
+    {
+        path: '/pertumbuhan-plankton',
+        name: 'pertumbuhan-plankton',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/table.vue'),
+    },
+    {
+        path: '/pertumbuhan-plankton/create',
+        name: 'pertumbuhan-plankton-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/input.vue'),
+    },
+
+    // pertumbuhan-patogen-atau-yang-merugikan
+    {
+        path: '/pertumbuhan-patogen-atau-yang-merugikan',
+        name: 'pertumbuhan-patogen-atau-yang-merugikan',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/table.vue'),
+    },
+    {
+        path: '/pertumbuhan-patogen-atau-yang-merugikan/create',
+        name: 'pertumbuhan-patogen-atau-yang-merugikan-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/input.vue'),
+    },
+
+    // probiotik
+
+    {
+        path: '/probiotik',
+        name: 'probiotik',
+        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/table.vue'),
+    },
+    {
+        path: '/probiotik/create',
+        name: 'probiotik-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/input.vue'),
+    },
+
+    // akhir Kolam Budidaya Persiapan
+
+    // kolamTreatment
+    {
+        path: '/kolam-treatment/create',
+        name: 'kolam-treatment-create',
+        component: () => import('../views/components/kolamTreatment/input.vue'),
+    },
+    {
+        path: '/kolam-treatment/edit',
+        name: 'kolam-treatment-edit',
+        component: () => import('../views/components/kolamTreatment/edit.vue'),
+    },
+    {
+        path: '/kolam-treatment/table',
+        name: 'kolam-treatment-table',
+        component: () => import('../views/components/kolamTreatment/table.vue'),
+    },
+    // reminder
+    {
+        path: '/reminder',
+        name: 'reminder',
+        component: () => import('../views/components/reminder/table.vue'),
+    },
+    {
+        path: '/reminder/create',
+        name: 'reminder-create',
+        component: () => import('../views/components/reminder/input.vue'),
+    },
+
+    // siklus budidaya udang
+    {
+        path: '/siklus-budidaya-udang',
+        name: 'siklus-budidaya-udang',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/table.vue'),
+    },
+    {
+        path: '/siklus-budidaya-udang/create',
+        name: 'siklus-budidaya-udang-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
+    },
+
+    // siklusBudidayaAir
+    {
+        path: '/budidaya-fisika',
+        name: 'budidaya-fisika',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterFisika/table.vue'),
+    },
+    {
+        path: '/budidaya-fisika/create',
+        name: 'budidaya-fisika-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterFisika/input.vue'),
+    },
+    {
+        path: '/budidaya-kimia',
+        name: 'budidaya-kimia',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/table.vue'),
+    },
+    {
+        path: '/budidaya-kimia/create',
+        name: 'budidaya-kimia-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/input.vue'),
     },
 ];
 

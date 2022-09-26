@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Kimia</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Manage Benur</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,12 +21,12 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Parameter Kimia</h4>
+                                    <h4>Scoring benur</h4>
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-kimia/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
-                        <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <router-link to="/scoring-benur/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <v-client-table :data="items1" :columns="columns1" :options="table_option1">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -85,13 +85,32 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 50,
+    const columns1 = ref([
+        'tanggal_dan_jam_input',
+        'Panjang_benur',
+        'Size_varian',
+        'Hepatopankreas',
+        'Necrosis',
+        'MGR',
+        'Ektoparasite',
+        'Stress_test',
+        'Vibrio_luminnescen',
+        'TVC',
+        'pH',
+        'Selisih_salinitas',
+        'DO',
+        'Suhu',
+        'TAN',
+        'Bolitas',
+        'Status',
+        'actions',
+    ]);
+    const items1 = ref([]);
+    const table_option1 = ref({
+        perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
+        columnsClasses: { actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -99,7 +118,26 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'min', 'max'],
+        sortable: [
+            'tanggal_dan_jam_input',
+            'Panjang_benur',
+            'Size_varian',
+            'Hepatopankreas',
+            'Necrosis',
+            'MGR',
+            'Ektoparasite',
+            'Stress_test',
+            'Vibrio_luminnescen',
+            'TVC',
+            'pH',
+            'Selisih_salinitas',
+            'DO',
+            'Suhu',
+            'TAN',
+            'Bolitas',
+            'Status',
+            'actions',
+        ],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -109,95 +147,95 @@
     });
 
     onMounted(() => {
-        bind_data();
+        bind_data1();
     });
 
-    const bind_data = () => {
-        items.value = [
+    const bind_data1 = () => {
+        items1.value = [
             {
-                nama: 'pH',
-                min: 10,
-                max: 100,
+                id: 1,
+                tanggal_dan_jam_input: '12',
+                Panjang_benur: '12',
+                Size_varian: 12,
+                Hepatopankreas: '12',
+                Necrosis: '2',
+                MGR: '22',
+                Ektoparasite: '10',
+                Stress_test: '33',
+                Vibrio_luminnescen: '44',
+                TVC: '22',
+                pH: '22',
+                Selisih_salinitas: '22',
+                DO: '22',
+                Suhu: '22',
+                TAN: '33',
+                Bolitas: '44',
+                Status: '55',
             },
             {
-                nama: 'DO (ppm)',
-                min: 10,
-                max: 100,
+                id: 2,
+                tanggal_dan_jam_input: '12',
+                Panjang_benur: '12',
+                Size_varian: 12,
+                Hepatopankreas: '12',
+                Necrosis: '2',
+                MGR: '22',
+                Ektoparasite: '10',
+                Stress_test: '33',
+                Vibrio_luminnescen: '44',
+                TVC: '22',
+                pH: '22',
+                Selisih_salinitas: '22',
+                DO: '22',
+                Suhu: '22',
+                TAN: '33',
+                Bolitas: '44',
+                Status: '55',
             },
             {
-                nama: 'Salinitas (%)',
-                min: 10,
-                max: 100,
+                id: 3,
+                tanggal_dan_jam_input: '12',
+                Panjang_benur: '12',
+                Size_varian: 12,
+                Hepatopankreas: '12',
+                Necrosis: '2',
+                MGR: '22',
+                Ektoparasite: '10',
+                Stress_test: '33',
+                Vibrio_luminnescen: '44',
+                TVC: '22',
+                pH: '22',
+                Selisih_salinitas: '22',
+                DO: '22',
+                Suhu: '22',
+                TAN: '33',
+                Bolitas: '44',
+                Status: '55',
             },
             {
-                nama: 'Alkalinitas (ppm)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'CO3',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'HC03',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'TOTAL',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Ammonium-NH4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrit-NO2 (ppm)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrat-NO3 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Phosphate-PO4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Iron-Fe (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Magnesium-Mg (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Calium-Ca (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Residual Cholorin-CI',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Redox (mV)',
-                min: 10,
-                max: 100,
+                id: 4,
+                tanggal_dan_jam_input: '12',
+                Panjang_benur: '12',
+                Size_varian: 12,
+                Hepatopankreas: '12',
+                Necrosis: '2',
+                MGR: '22',
+                Ektoparasite: '10',
+                Stress_test: '33',
+                Vibrio_luminnescen: '44',
+                TVC: '22',
+                pH: '22',
+                Selisih_salinitas: '22',
+                DO: '22',
+                Suhu: '22',
+                TAN: '33',
+                Bolitas: '44',
+                Status: '55',
             },
         ];
     };
 
     const view_row = (item) => {
-        alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+        alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
     };
 </script>

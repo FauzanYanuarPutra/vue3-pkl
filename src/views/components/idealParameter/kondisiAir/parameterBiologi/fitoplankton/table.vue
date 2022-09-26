@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Kimia</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Fitoplankton</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,11 +21,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Parameter Kimia</h4>
+                                    <h4>Fitoplankton</h4>
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-kimia/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -88,7 +88,7 @@
     const columns = ref(['nama', 'min', 'max', 'actions']);
     const items = ref([]);
     const table_option = ref({
-        perPage: 50,
+        perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
         columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
@@ -115,89 +115,49 @@
     const bind_data = () => {
         items.value = [
             {
-                nama: 'pH',
+                nama: 'Density',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'DO (ppm)',
+                nama: 'Cloro (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'Salinitas (%)',
+                nama: 'Proto (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'Alkalinitas (ppm)',
+                nama: 'Diantom (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'CO3',
+                nama: 'Dyno (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'HC03',
+                nama: 'GA (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'TOTAL',
+                nama: 'BGA (%)',
                 min: 10,
-                max: 100,
+                max: 40,
             },
             {
-                nama: 'Ammonium-NH4 (mg/L)',
+                nama: 'Other (%)',
                 min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrit-NO2 (ppm)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrat-NO3 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Phosphate-PO4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Iron-Fe (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Magnesium-Mg (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Calium-Ca (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Residual Cholorin-CI',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Redox (mV)',
-                min: 10,
-                max: 100,
+                max: 40,
             },
         ];
     };
 
     const view_row = (item) => {
-        alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+        alert('nama: ' + item.id + ', Name: ' + item.ph);
     };
 </script>

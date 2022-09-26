@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Kimia</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Fisika</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,11 +21,11 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Parameter Kimia</h4>
+                                    <h4>Parameter Fisika</h4>
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-kimia/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/budidaya-fisika/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -85,10 +85,11 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
+    const columns = ref(['nama', 'Pagi', 'Sore', 'actions']);
+
     const items = ref([]);
     const table_option = ref({
-        perPage: 50,
+        perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
         columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
@@ -99,7 +100,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'min', 'max'],
+        sortable: ['nama', 'Pagi', 'Sore'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -115,89 +116,33 @@
     const bind_data = () => {
         items.value = [
             {
-                nama: 'pH',
-                min: 10,
-                max: 100,
+                id: 1,
+                nama: 'Tinggi Air (cm)',
+                Pagi: 23,
+                Sore: 35,
             },
             {
-                nama: 'DO (ppm)',
-                min: 10,
-                max: 100,
+                id: 2,
+                nama: 'Kecerahan',
+                Pagi: 34,
+                Sore: 45,
             },
             {
-                nama: 'Salinitas (%)',
-                min: 10,
-                max: 100,
+                id: 3,
+                nama: 'Warna',
+                Pagi: 45,
+                Sore: 67,
             },
             {
-                nama: 'Alkalinitas (ppm)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'CO3',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'HC03',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'TOTAL',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Ammonium-NH4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrit-NO2 (ppm)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Nitrat-NO3 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Phosphate-PO4 (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Iron-Fe (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Magnesium-Mg (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Calium-Ca (mg/L)',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Residual Cholorin-CI',
-                min: 10,
-                max: 100,
-            },
-            {
-                nama: 'Redox (mV)',
-                min: 10,
-                max: 100,
+                id: 4,
+                nama: 'Suhu air (celcius)',
+                Pagi: 56,
+                Sore: 120,
             },
         ];
     };
 
     const view_row = (item) => {
-        alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+        alert('max: ' + item.id + ', Name: ' + item.nama);
     };
 </script>
