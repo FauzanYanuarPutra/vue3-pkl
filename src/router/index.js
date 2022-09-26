@@ -150,7 +150,7 @@ const routes = [
     
     // AKHIR IDEAL PARAMETER
 
-    
+
     //intervalPengukuran
     // intervalPengecekan
     {
@@ -582,6 +582,11 @@ const routes = [
         name: 'pengeringan-dasar-tambak-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/input.vue'),
     },
+    {
+        path: '/pengeringan-dasar-tambak/edit',
+        name: 'pengeringan-dasar-tambak-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/edit.vue'),
+    },
 
     // pembuangan sendimen organik
     {
@@ -593,6 +598,11 @@ const routes = [
         path: '/pembuangan-sendimen-organik/create',
         name: 'pembuangan-sendimen-organik-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/input.vue'),
+    },
+    {
+        path: '/pembuangan-sendimen-organik/edit',
+        name: 'pembuangan-sendimen-organik-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/edit.vue'),
     },
 
     // sterilisasi tambak
@@ -606,6 +616,11 @@ const routes = [
         name: 'sterilisasi-tambak-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/input.vue'),
     },
+    {
+        path: '/sterilisasi-tambak/edit',
+        name: 'sterilisasi-tambak-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/edit.vue'),
+    },
 
     // pengisian air dan sterilisasi air tambak
     {
@@ -617,6 +632,11 @@ const routes = [
         path: '/pengisian-air-dan-sterilisasi-air-tambak/create',
         name: 'pengisian-air-dan-sterilisasi-air-tambak-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/input.vue'),
+    },
+    {
+        path: '/pengisian-air-dan-sterilisasi-air-tambak/edit',
+        name: 'pengisian-air-dan-sterilisasi-air-tambak-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/edit.vue'),
     },
 
     // pengapuran
@@ -630,6 +650,11 @@ const routes = [
         name: 'pengapuran-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/input.vue'),
     },
+    {
+        path: '/pengapuran/edit',
+        name: 'pengapuran-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/edit.vue'),
+    },
 
     // pemupukan-dan-pemberian-mineral
     {
@@ -641,6 +666,11 @@ const routes = [
         path: '/pemupukan-dan-pemberian-mineral/create',
         name: 'pemupukan-dan-pemberian-mineral-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/input.vue'),
+    },
+    {
+        path: '/pemupukan-dan-pemberian-mineral/edit',
+        name: 'pemupukan-dan-pemberian-mineral-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/edit.vue'),
     },
 
     // pertumbuhan-plankton
@@ -654,6 +684,11 @@ const routes = [
         name: 'pertumbuhan-plankton-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/input.vue'),
     },
+    {
+        path: '/pertumbuhan-plankton/edit',
+        name: 'pertumbuhan-plankton-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/edit.vue'),
+    },
 
     // pertumbuhan-patogen-atau-yang-merugikan
     {
@@ -665,6 +700,11 @@ const routes = [
         path: '/pertumbuhan-patogen-atau-yang-merugikan/create',
         name: 'pertumbuhan-patogen-atau-yang-merugikan-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/input.vue'),
+    },
+    {
+        path: '/pertumbuhan-patogen-atau-yang-merugikan/edit',
+        name: 'pertumbuhan-patogen-atau-yang-merugikan-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/edit.vue'),
     },
 
     // probiotik
@@ -678,6 +718,11 @@ const routes = [
         path: '/probiotik/create',
         name: 'probiotik-create',
         component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/input.vue'),
+    },
+    {
+        path: '/probiotik/edit',
+        name: 'probiotik-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/edit.vue'),
     },
 
     // akhir Kolam Budidaya Persiapan
@@ -708,6 +753,11 @@ const routes = [
         path: '/reminder/create',
         name: 'reminder-create',
         component: () => import('../views/components/reminder/input.vue'),
+    },
+    {
+        path: '/reminder/edit',
+        name: 'reminder-edit',
+        component: () => import('../views/components/reminder/edit.vue'),
     },
 
     // siklus budidaya udang

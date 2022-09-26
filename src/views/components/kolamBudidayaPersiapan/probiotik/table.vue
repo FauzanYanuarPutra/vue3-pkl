@@ -28,9 +28,9 @@
                         <router-link to="/probiotik/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
-                                 <div class="table-controls d-flex no-wrap justify-content-center">
+                                <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="mx-2">
-                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/probiotik/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -45,7 +45,7 @@
                                             >
                                                 <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                                             </svg>
-                                        </a>
+                                        </router-link>
                                     </div>
                                     <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
@@ -85,7 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', "tanggal", 'pemakaian_probiotik', 'keterangan', 'actions']);
+    const columns = ref(['nama_kolam', 'tanggal', 'pemakaian_probiotik', 'keterangan', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
