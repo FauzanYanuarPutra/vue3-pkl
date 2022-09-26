@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Konsumsi Pakan</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Parameter Fisika</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -15,24 +15,47 @@
         </teleport>
 
         <div class="container">
-            <div id="konsumsiPakan" class="col-lg-12">
+            <div id="parameterFisika" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Konsumsi Pakan</h4>
+                                <h4>Parameter Fisika</h4>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="form-group">
-                                <label class="control-label">FCR (food conversion Rate):</label>
-                                <input type="number" name="fcr" class="form-control" />
+                                <label class="control-label">Tinggi Air (cm):</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                </div>
                             </div>
+
                             <div class="form-group">
-                                <label class="control-label">Scoring pakan:</label>
-                                <input type="number" name="skoring_pakan" class="form-control" />
+                                <label class="control-label">Kecerahan:</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Warna:</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">Suhu Air(cekcius):</label>
+                                <div class="d-flex">
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
@@ -73,7 +96,7 @@
         }
     };
 
-    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+    const options1 = ref(['Kincir', 'Pompa', 'Autofeeder', 'Auxiliaries']);
     const inputs = ref({
         input1: [],
         input2: [],

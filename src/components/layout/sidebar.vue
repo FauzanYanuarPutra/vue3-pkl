@@ -163,13 +163,13 @@
                             </ul>
                         </li>
                         <li>
-                            <router-link to="/ideal-parameter/pertumbuhan-udang" @click="toggleMobileMenu">Pertumbuhan Udang</router-link>
+                            <router-link to="/pertumbuhan-udang" @click="toggleMobileMenu">Pertumbuhan Udang</router-link>
                         </li>
                         <li>
-                            <router-link to="/ideal-parameter/konsumsi-pakan" @click="toggleMobileMenu">Komsumsi Pakan </router-link>
+                            <router-link to="/konsumsi-pakan" @click="toggleMobileMenu">Komsumsi Pakan </router-link>
                         </li>
                         <li>
-                            <router-link to="/ideal-parameter/benur" @click="toggleMobileMenu">Benur</router-link>
+                            <router-link to="/benur" @click="toggleMobileMenu">Benur</router-link>
                         </li>
                     </ul>
                 </li>

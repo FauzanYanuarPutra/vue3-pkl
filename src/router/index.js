@@ -30,6 +30,12 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterFisika/input.vue'),
     },
     {
+        path: '/parameter-fisika/edit',
+        name: 'parameter-fisika-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterFisika/edit.vue'),
+    },
+
+    {
         path: '/parameter-kimia',
         name: 'parameter-kimia',
         component: () => import('../views/components/idealParameter/kondisiAir/parameterKimia/table.vue'),
@@ -39,6 +45,12 @@ const routes = [
         name: 'parameter-kimia-create',
         component: () => import('../views/components/idealParameter/kondisiAir/parameterKimia/input.vue'),
     },
+    {
+        path: '/parameter-kimia/edit',
+        name: 'parameter-kimia-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterKimia/edit.vue'),
+    },
+
     {
         path: '/parameter-biologi-fitoplankton',
         name: 'parameter-biologi-fitoplankton',
@@ -50,6 +62,13 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/input.vue'),
     },
     {
+        path: '/parameter-biologi-fitoplankton/edit',
+        name: 'parameter-biologi-fitoplankton-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/edit.vue'),
+    },
+
+
+    {
         path: '/parameter-biologi-vibrioTCBS',
         name: 'parameter-biologi-vibrioTCBS',
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/table.vue'),
@@ -59,6 +78,12 @@ const routes = [
         name: 'parameter-biologi-vibrioTCBS-create',
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/input.vue'),
     },
+    {
+        path: '/parameter-biologi-vibrioTCBS/edit',
+        name: 'parameter-biologi-vibrioTCBS-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/edit.vue'),
+    },
+
     {
         path: '/parameter-biologi-vibrioCHROMagar',
         name: 'parameter-biologi-vibrioCHROMagar',
@@ -70,19 +95,57 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/input.vue'),
     },
     {
-        path: '/ideal-parameter/pertumbuhan-udang',
-        name: 'pertumbuhan-udang',
+        path: '/parameter-biologi-vibrioCHROMagar/edit',
+        name: 'parameter-biologi-vibrioCHROMagar-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/edit.vue'),
+    },
+
+    {
+        path: '/pertumbuhan-udang',
+        name: '/pertumbuhan-udang',
         component: () => import('../views/components/idealParameter/pertumbuhanUdang/table.vue'),
     },
     {
-        path: '/ideal-parameter/konsumsi-pakan',
+        path: '/pertumbuhan-udang/create',
+        name: '/pertumbuhan-udang-create',
+        component: () => import('../views/components/idealParameter/pertumbuhanUdang/input.vue'),
+    },
+    {
+        path: '/pertumbuhan-udang/edit',
+        name: '/pertumbuhan-udang-edit',
+        component: () => import('../views/components/idealParameter/pertumbuhanUdang/edit.vue'),
+    },
+
+    {
+        path: '/konsumsi-pakan',
         name: 'konsumsi-pakan',
         component: () => import('../views/components/idealParameter/konsumsiPakan/table.vue'),
     },
+     {
+        path: '/konsumsi-pakan/create',
+        name: 'konsumsi-pakan-create',
+        component: () => import('../views/components/idealParameter/konsumsiPakan/input.vue'),
+    },
+     {
+        path: '/konsumsi-pakan/edit',
+        name: 'konsumsi-pakan-edit',
+        component: () => import('../views/components/idealParameter/konsumsiPakan/edit.vue'),
+    },
+
     {
-        path: '/ideal-parameter/benur',
+        path: '/benur',
         name: 'benur',
         component: () => import('../views/components/idealParameter/benur/table.vue'),
+    },
+    {
+        path: '/benur/create',
+        name: 'benur-create',
+        component: () => import('../views/components/idealParameter/benur/input.vue'),
+    },
+    {
+        path: '/benur/edit',
+        name: 'benur-edit',
+        component: () => import('../views/components/idealParameter/benur/edit.vue'),
     },
     // {
     //     path: '/ideal-parameter/edit',
