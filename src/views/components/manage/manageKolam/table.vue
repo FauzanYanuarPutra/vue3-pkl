@@ -129,7 +129,7 @@
     const bind_data = () => {
         items.value = [
             {
-                id: 1,
+                id_kolam: 1,
                 nama_tambak: 'Tiger Nixon',
                 tanggal_input: 'System Architect',
                 id: 'Edinburgh',
