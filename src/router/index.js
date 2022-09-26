@@ -216,6 +216,23 @@ const routes = [
         name: 'manage-tambak-edit',
         component: () => import('../views/components/manage/manageTambak/edit.vue'),
     },
+    
+    // manage pakan
+    {
+        path: '/manage-pakan',
+        name: 'manage-pakan',
+        component: () => import('../views/components/manage/managePakan/table.vue'),
+    },
+    {
+        path: '/manage-pakan/create',
+        name: 'manage-pakan-create',
+        component: () => import('../views/components/manage/managePakan/input.vue'),
+    },
+    {
+        path: '/manage-pakan/edit',
+        name: 'manage-pakan-edit',
+        component: () => import('../views/components/manage/managePakan/edit.vue'),
+    },
 
     // manage alat
     {

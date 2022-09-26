@@ -324,6 +324,9 @@
                             <router-link to="/manage-tambak" @click="toggleMobileMenu">Tambak</router-link>
                         </li>
                         <li>
+                            <router-link to="/manage-pakan" @click="toggleMobileMenu">Pakan</router-link>
+                        </li>
+                        <li>
                             <router-link to="/manage-kolam" @click="toggleMobileMenu">Kolam</router-link>
                         </li>
                         <li>
