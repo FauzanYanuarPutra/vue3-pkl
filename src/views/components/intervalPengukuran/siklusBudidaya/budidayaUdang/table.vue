@@ -113,54 +113,44 @@ onMounted(() => {
 const bind_data = () => {
     items.value = [
         {
-            pro_air: 'Tiger Nixon',
-            pro_oral: 'System Architect',
-            mineral_kg: 'Edinburgh',
+            ID: 1,
+            siklus_udang: 'System Architect',
         },
         {
-            pro_air: 2,
-            pro_oral: 'Garrett Winters',
-            mineral_kg: 'Accountant',
+            ID: 2,
+            siklus_udang: 'Garrett Winters',
         },
         {
-            pro_air: 3,
-            pro_oral: 'Ashton Cox',
-            mineral_kg: 'Junior Technical Author',
+            ID: 3,
+            siklus_udang: 'Ashton Cox',
         },
         {
-            pro_air: 4,
-            pro_oral: 'Cedric Kelly',
-            mineral_kg: 'Senior Javascript Developer',
+            ID: 4,
+            siklus_udang: 'Cedric Kelly',
         },
         {
-            pro_air: 5,
-            pro_oral: 'Airi Satou',
-            mineral_kg: 'Accountant',
+            ID: 5,
+            siklus_udang: 'Airi Satou',
         },
         {
-            pro_air: 6,
-            pro_oral: 'Brielle Williamson',
-            mineral_kg: 'Integration Specialist',
+            ID: 6,
+            siklus_udang: 'Brielle Williamson',
         },
         {
-            pro_air: 7,
-            pro_oral: 'Herrod Chandler',
-            mineral_kg: 'Sales Assistant',
+            ID: 7,
+            siklus_udang: 'Herrod Chandler',
         },
         {
-            pro_air: 8,
-            pro_oral: 'Rhona Davpro_airson',
-            mineral_kg: 'Integration Specialist',
+            ID: 8,
+            siklus_udang: 'Rhona DavIDson',
         },
         {
-            pro_air: 9,
-            pro_oral: 'Colleen Hurst',
-            mineral_kg: 'Javascript Developer',
+            ID: 9,
+            siklus_udang: 'Colleen Hurst',
         },
         {
-            pro_air: 10,
-            pro_oral: 'Sonya Frost',
-            mineral_kg: 'Software Engineer',
+            ID: 10,
+            siklus_udang: 'Sonya Frost',
         },
     ];
 };
