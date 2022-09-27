@@ -25,7 +25,10 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/perkiraan/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <div class=" d-flex flex-row-reverse position-relative">
+                            <router-link to="/perkiraan/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                        </div>
+                       
                         <v-client-table :data="items1" :columns="columns1" :options="table_option1">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
