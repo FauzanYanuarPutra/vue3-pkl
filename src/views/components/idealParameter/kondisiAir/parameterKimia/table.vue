@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <router-link to="/parameter-kimia/create" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/parameter-kimia/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -200,6 +200,43 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+    new window.Swal({
+        title: '<i>Parameter Fisika</i>',
+                text: 'HALLO',
+                html: 
+                    '<p><b>Nama</b> : ' + item.nama + '</p>' +
+                    '<p><b>Min</b> : ' + item.min + '</p>'+
+                    '<p><b>Max</b> : ' + item.max + '</p>'
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+                    // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+                    // DIAKHIR TIDAK MENGGUNAKAN tanda +
+                    ,
+                showCloseButton: true,
+                focusConfirm: false,
+                confirmButtonColor: '#4361ee',
+                confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+                confirmButtonAriaLabel: 'Oke',
+
+                padding: '2em',
+            });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>

@@ -25,18 +25,13 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu"
-                            class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <div class=" d-flex flex-row-reverse position-relative">
+                            <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                        </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
-                                    <div class="px-2">
-                                        <div class=" d-flex flex-row-reverse position-relative">
-                                            <router-link to="/parameter-biologi-fitoplankton/create"
-                                                @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">
-                                                Tambah Data</router-link>
-                                        </div>
-                                    </div>
+
                                     <div class="px-2">
                                         <div @click="view_row(props.row)" style="cursor:pointer;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -47,6 +42,17 @@
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
                                         </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <router-link to="/parameter-biologi-fitoplankton/edit" data-bs-toggle="tooltip" title="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
+                                            </svg>
+                                        </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
@@ -153,6 +159,43 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('nama: ' + item.id + ', Name: ' + item.ph);
+    new window.Swal({
+        title: '<i>Parameter Fisika</i>',
+                text: 'HALLO',
+                html: 
+                    '<p><b>Nama</b> : ' + item.nama + '</p>' +
+                    '<p><b>Min</b> : ' + item.min + '</p>'+
+                    '<p><b>Max</b> : ' + item.max + '</p>'
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+                    // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+                    // DIAKHIR TIDAK MENGGUNAKAN tanda +
+                    ,
+                showCloseButton: true,
+                focusConfirm: false,
+                confirmButtonColor: '#4361ee',
+                confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+                confirmButtonAriaLabel: 'Oke',
+
+                padding: '2em',
+            });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
