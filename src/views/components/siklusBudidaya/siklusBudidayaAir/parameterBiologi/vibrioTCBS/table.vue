@@ -25,12 +25,12 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-biologi-vibrioTCBS/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/budidaya-biologi-vibrioTCBS/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <router-link to="/parameter-biologi-vibrioTCBS/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/budidaya-biologi-vibrioTCBS/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -85,7 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
+    const columns = ref(['Kuning', 'Hijau', 'Hitam', 'Nyala', 'Total_Vibrio_Count', 'actions']);
 
     const items = ref([]);
     const table_option = ref({
@@ -100,7 +100,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'min', 'max'],
+        sortable: ['Kuning', 'Hijau', 'Hitam', 'Nyala', 'Total_Vibrio_Count'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -116,29 +116,11 @@
     const bind_data = () => {
         items.value = [
             {
-                nama: 'Kuning',
-                min: 23,
-                max: 35,
-            },
-            {
-                nama: 'Hijau',
-                min: 34,
-                max: 45,
-            },
-            {
-                nama: 'Hitam',
-                min: 45,
-                max: 67,
-            },
-            {
-                nama: 'Nyala',
-                min: 56,
-                max: 120,
-            },
-            {
-                nama: 'Total Vibrio Count',
-                min: 56,
-                max: 120,
+                Kuning: '',
+                Hijau: '',
+                Hitam: '',
+                Nyala: '',
+                Total_Vibrio_Count: '',
             },
         ];
     };

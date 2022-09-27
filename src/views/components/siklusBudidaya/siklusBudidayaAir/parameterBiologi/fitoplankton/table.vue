@@ -25,12 +25,12 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/budidaya-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <router-link to="/parameter-biologi-fitoplankton/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/budidaya-biologi-fitoplankton/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -85,7 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
+    const columns = ref(['Density', 'Cloro', 'Proto', 'Diantom', 'Dyno', 'GA', 'BGA', 'Other', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -99,7 +99,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'min', 'max'],
+        sortable: ['Density', 'Cloro', 'Proto', 'Diantom', 'Dyno', 'GA', 'BGA', 'Other'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -115,44 +115,26 @@
     const bind_data = () => {
         items.value = [
             {
-                nama: 'Density',
-                min: 10,
-                max: 40,
+                id: 1,
+                Density: '100%',
+                Cloro: '23%',
+                Proto: '66%',
+                Diantom: '78%',
+                Dyno: '98%',
+                GA: '78%',
+                BGA: '89%',
+                Other: '97%',
             },
             {
-                nama: 'Cloro (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Proto (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Diantom (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Dyno (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'GA (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'BGA (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Other (%)',
-                min: 10,
-                max: 40,
+                id: 2,
+                Density: '100%',
+                Cloro: '23%',
+                Proto: '66%',
+                Diantom: '78%',
+                Dyno: '98%',
+                GA: '78%',
+                BGA: '89%',
+                Other: '97%',
             },
         ];
     };
