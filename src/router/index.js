@@ -874,6 +874,23 @@ const routes = [
         name: 'budidaya-biologi-vibrioCHROMagar-edit',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioCHROMagar/edit.vue'),
     },
+
+    // Setting
+    {
+        path: '/setting/table',
+        name: 'setting',
+        component: () => import('../views/components/setting/table.vue'),
+    },
+    {
+        path: '/setting/create',
+        name: 'setting-create',
+        component: () => import('../views/components/setting/input.vue'),
+    },
+    {
+        path: '/setting/edit',
+        name: 'setting-edit',
+        component: () => import('../views/components/setting/edit.vue'),
+    },
 ];
 
 const router = new createRouter({
