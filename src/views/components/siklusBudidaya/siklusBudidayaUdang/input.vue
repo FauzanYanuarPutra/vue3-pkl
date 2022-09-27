@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Manage Alat</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Siklus Budidaya Udang</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Manage Alat</h4>
+                                <h4>Siklus Budidaya Udang</h4>
                             </div>
                         </div>
                     </div>
