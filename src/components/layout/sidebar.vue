@@ -277,18 +277,8 @@
                             <router-link to="/saponin" @click="toggleMobileMenu">Saponin</router-link>
                         </li>
                         <li>
-<<<<<<< HEAD
                             <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan"
                                 data-bs-toggle="collapse" role="button" aria-expanded="false">
-=======
-                            <router-link to="/airtambak" @click="toggleMobileMenu">Warna Air Tambak</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/harga-udang" @click="toggleMobileMenu">Harga Udang</router-link>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan" data-bs-toggle="collapse" role="button" aria-expanded="false">
->>>>>>> c1e2833da8a2d6be113c36c3948fd5e60a0c05c3
                                 Benur
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -374,13 +364,9 @@
                                     </router-link>
                                 </li>
                                 <li>
-<<<<<<< HEAD
                                     <a class="dropdown-toggle" href="#parameterBiologi"
                                         data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button"
                                         aria-expanded="false">
-=======
-                                    <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
->>>>>>> c1e2833da8a2d6be113c36c3948fd5e60a0c05c3
                                         Parameter Biologi
                                         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -443,7 +429,6 @@
                         </li>
                     </ul>
                 </li>
-<<<<<<< HEAD
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#hargaUdang"
                         aria-controls="hargaUdang" aria-expanded="false">
@@ -512,9 +497,6 @@
                         </li>
                     </ul>
                 </li>
-=======
-
->>>>>>> c1e2833da8a2d6be113c36c3948fd5e60a0c05c3
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan"
                         aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
@@ -619,7 +601,7 @@
                 </li>
 
                 <li class="menu">
-                    <router-link to="" class="dropdown-toggle" @click="toggleMobileMenu">
+                    <router-link to="#" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
