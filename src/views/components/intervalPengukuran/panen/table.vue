@@ -112,43 +112,43 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            panen: 'System Architect',
+            panen: '43',
         },
         {
             ID: 2,
-            panen: 'Garrett Winters',
+            panen: '7',
         },
         {
             ID: 3,
-            panen: 'Ashton Cox',
+            panen: '1',
         },
         {
             ID: 4,
-            panen: 'Cedric Kelly',
+            panen: '43',
         },
         {
             ID: 5,
-            panen: 'Airi Satou',
+            panen: '54',
         },
         {
             ID: 6,
-            panen: 'Brielle Williamson',
+            panen: '1',
         },
         {
             ID: 7,
-            panen: 'Herrod Chandler',
+            panen: '12',
         },
         {
             ID: 8,
-            panen: 'Rhona DavIDson',
+            panen: '65',
         },
         {
             ID: 9,
-            panen: 'Colleen Hurst',
+            panen: '34',
         },
         {
             ID: 10,
-            panen: 'Sonya Frost',
+            panen: '54',
         },
     ];
 };

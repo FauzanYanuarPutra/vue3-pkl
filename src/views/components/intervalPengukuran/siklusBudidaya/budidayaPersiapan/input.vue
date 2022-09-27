@@ -64,9 +64,6 @@
                                 <label class="control-label">Probiotik</label>
                                 <input type="number" name="probiotik" class="form-control" />
                             </div>
-                            <div class="form-group">
-                                <input type="number" name="panen" class="form-control" />
-                            </div>
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

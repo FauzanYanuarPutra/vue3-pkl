@@ -114,43 +114,43 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            siklus_benur: 'System Architect',
+            siklus_benur: '5',
         },
         {
             ID: 2,
-            siklus_benur: 'Garrett Winters',
+            siklus_benur: '12',
         },
         {
             ID: 3,
-            siklus_benur: 'Ashton Cox',
+            siklus_benur: '66',
         },
         {
             ID: 4,
-            siklus_benur: 'Cedric Kelly',
+            siklus_benur: '23',
         },
         {
             ID: 5,
-            siklus_benur: 'Airi Satou',
+            siklus_benur: '86',
         },
         {
             ID: 6,
-            siklus_benur: 'Brielle Williamson',
+            siklus_benur: '17',
         },
         {
             ID: 7,
-            siklus_benur: 'Herrod Chandler',
+            siklus_benur: '19',
         },
         {
             ID: 8,
-            siklus_benur: 'Rhona DavIDson',
+            siklus_benur: '8',
         },
         {
             ID: 9,
-            siklus_benur: 'Colleen Hurst',
+            siklus_benur: '23',
         },
         {
             ID: 10,
-            siklus_benur: 'Sonya Frost',
+            siklus_benur: '1',
         },
     ];
 };
