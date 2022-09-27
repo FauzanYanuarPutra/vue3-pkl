@@ -479,7 +479,7 @@
                                     <router-link to="/budidaya-fisika" @click="toggleMobileMenu">Parameter Fisika </router-link>
                                 </li>
                                 <li>
-                                    <router-link to="/budidaya-fisika" @click="toggleMobileMenu">Parameter Kimia </router-link>
+                                    <router-link to="/budidaya-kimia" @click="toggleMobileMenu">Parameter Kimia </router-link>
                                 </li>
                                 <li>
                                     <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
@@ -502,13 +502,13 @@
 
                                     <ul id="parameterBiologi" class="mx-3 collapse list-unstyled sub-submenu">
                                         <li>
-                                            <router-link to="/parameter-biologi-fitoplankton" @click="toggleMobileMenu"> Filoplankton </router-link>
+                                            <router-link to="/budidaya-biologi-fitoplankton" @click="toggleMobileMenu"> Filoplankton </router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/parameter-biologi-vibrioTCBS" @click="toggleMobileMenu"> Vibrio TCBS </router-link>
+                                            <router-link to="/budidaya-biologi-vibrioTCBS" @click="toggleMobileMenu"> Vibrio TCBS </router-link>
                                         </li>
                                         <li>
-                                            <router-link to="/parameter-biologi-vibrioCHROMagar" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
+                                            <router-link to="/budidaya-biologi-vibrioCHROMagar" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
                                         </li>
                                     </ul>
                                 </li>

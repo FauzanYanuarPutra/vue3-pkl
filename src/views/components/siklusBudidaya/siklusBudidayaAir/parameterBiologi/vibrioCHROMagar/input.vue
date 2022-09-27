@@ -29,56 +29,55 @@
                             <div class="form-group">
                                 <label class="control-label">Algino:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Chlorela:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Parahaema:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Lumph:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Total Vibrio Count:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Total Bacillus Count:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Total Organic Matters (ppm):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Keterangan:</label>
+                                <div class="d-flex">
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 

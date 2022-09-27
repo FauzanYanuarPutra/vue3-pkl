@@ -29,40 +29,35 @@
                             <div class="form-group">
                                 <label class="control-label">Kuning:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Hijau:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Hitam:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Nyala:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Total Vibrio Count:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
 

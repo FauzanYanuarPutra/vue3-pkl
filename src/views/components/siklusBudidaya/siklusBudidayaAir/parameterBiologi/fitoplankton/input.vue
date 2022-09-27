@@ -29,67 +29,58 @@
                             <div class="form-group">
                                 <label class="control-label">Density:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Cloro (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Proto (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Diantom (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Dyno (%)</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">GA (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">BGA (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Other (%):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
-
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

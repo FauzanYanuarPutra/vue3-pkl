@@ -827,6 +827,53 @@ const routes = [
         name: 'budidaya-kimia-edit',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/edit.vue'),
     },
+    {
+        path: '/budidaya-biologi-fitoplankton',
+        name: 'budidaya-biologi-fitoplankton',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/fitoplankton/table.vue'),
+    },
+    {
+        path: '/budidaya-biologi-fitoplankton/create',
+        name: 'budidaya-biologi-fitoplankton-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/fitoplankton/input.vue'),
+    },
+    {
+        path: '/budidaya-biologi-fitoplankton/edit',
+        name: 'budidaya-biologi-fitoplankton-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/fitoplankton/edit.vue'),
+    },
+
+    {
+        path: '/budidaya-biologi-vibrioTCBS',
+        name: 'budidaya-biologi-vibrioTCBS',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioTCBS/table.vue'),
+    },
+    {
+        path: '/budidaya-biologi-vibrioTCBS/create',
+        name: 'budidaya-biologi-vibrioTCBS-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioTCBS/input.vue'),
+    },
+    {
+        path: '/budidaya-biologi-vibrioTCBS/edit',
+        name: 'budidaya-biologi-vibrioTCBS-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioTCBS/edit.vue'),
+    },
+
+    {
+        path: '/budidaya-biologi-vibrioCHROMagar',
+        name: 'budidaya-biologi-vibrioCHROMagar',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioCHROMagar/table.vue'),
+    },
+    {
+        path: '/budidaya-biologi-vibrioCHROMagar/create',
+        name: 'budidaya-biologi-vibrioCHROMagar-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioCHROMagar/input.vue'),
+    },
+    {
+        path: '/budidaya-biologi-vibrioCHROMagar/edit',
+        name: 'budidaya-biologi-vibrioCHROMagar-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/vibrioCHROMagar/edit.vue'),
+    },
 ];
 
 const router = new createRouter({
