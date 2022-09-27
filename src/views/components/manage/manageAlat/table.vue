@@ -27,11 +27,8 @@
 
                         </div>
                         <div class=" d-flex flex-row-reverse position-relative">
-                        
                             <router-link to="/manage-alat/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-                        
-
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -110,8 +107,6 @@
     ]);
     const items = ref([]);
     const table_option = ref({
-        perPage: 10,
-        perPageValues: [10],
         skin: 'table table-hover',
         columnsClasses: { actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
