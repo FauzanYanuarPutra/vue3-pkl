@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pertumbuhan Udang</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Pertumbuhan Udang</span>
+                                </li>
                             </ol>
                         </nav>
                     </div>
@@ -25,44 +26,32 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/pertumbuhan-udang/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/pertumbuhan-udang/create" @click="toggleMobileMenu"
+                            class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <router-link to="/pertumbuhan-udang/edit" data-bs-toggle="tooltip" title="Edit">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-edit-2"
-                                            >
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -80,206 +69,104 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['ADG', 'SR', 'scoring', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 10,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref(['ADG', 'SR', 'scoring', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    perPage: 10,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['ADG', 'SR', 'scoring'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            id: 1,
+            ADG: '43',
+            SR: '54',
+            scoring: 61,
         },
-        sortable: ['ADG', 'SR', 'scoring'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
+        {
+            id: 2,
+            ADG: '54',
+            SR: '43',
+            scoring: 63,
         },
-        resizableColumns: false,
-    });
+        {
+            id: 3,
+            ADG: '54',
+            SR: '43',
+            scoring: 66,
+        },
+        {
+            id: 4,
+            ADG: '65',
+            SR: '43',
+            scoring: 22,
+        },
+        {
+            id: 5,
+            ADG: '43',
+            SR: '75',
+            scoring: 33,
+        },
+        {
+            id: 6,
+            ADG: '43',
+            SR: '43',
+            scoring: 61,
+        },
+        {
+            id: 7,
+            ADG: '43',
+            SR: '13',
+            scoring: 59,
+        },
+        {
+            id: 8,
+            ADG: '32',
+            SR: '31',
+            scoring: 55,
+        },
+        {
+            id: 9,
+            ADG: '43',
+            SR: '54',
+            scoring: 39,
+        },
+        {
+            id: 10,
+            ADG: '43',
+            SR: '64',
+            scoring: 23,
+        },
+    ];
+};
 
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                id: 1,
-                ADG: 'Tiger Nixon',
-                SR: 'System Architect',
-                scoring: 61,
-            },
-            {
-                id: 2,
-                ADG: 'Garrett Winters',
-                SR: 'Accountant',
-                scoring: 63,
-            },
-            {
-                id: 3,
-                ADG: 'Ashton Cox',
-                SR: 'Junior Technical Author',
-                scoring: 66,
-            },
-            {
-                id: 4,
-                ADG: 'Cedric Kelly',
-                SR: 'Senior Javascript Developer',
-                scoring: 22,
-            },
-            {
-                id: 5,
-                ADG: 'Airi Satou',
-                SR: 'Accountant',
-                scoring: 33,
-            },
-            {
-                id: 6,
-                ADG: 'Brielle Williamson',
-                SR: 'Integration Specialist',
-                scoring: 61,
-            },
-            {
-                id: 7,
-                ADG: 'Herrod Chandler',
-                SR: 'Sales Assistant',
-                scoring: 59,
-            },
-            {
-                id: 8,
-                ADG: 'Rhona Davidson',
-                SR: 'Integration Specialist',
-                scoring: 55,
-            },
-            {
-                id: 9,
-                ADG: 'Colleen Hurst',
-                SR: 'Javascript Developer',
-                scoring: 39,
-            },
-            {
-                id: 10,
-                ADG: 'Sonya Frost',
-                SR: 'Software Engineer',
-                scoring: 23,
-            },
-            {
-                id: 11,
-                ADG: 'Jena Gaines',
-                SR: 'id Manager',
-                scoring: 30,
-            },
-            {
-                id: 12,
-                ADG: 'Quinn Flynn',
-                SR: 'Support Lead',
-                scoring: 22,
-            },
-            {
-                id: 13,
-                ADG: 'Charde Marshall',
-                SR: 'Regional Director',
-                scoring: 36,
-            },
-            {
-                id: 14,
-                ADG: 'Haley Kennedy',
-                SR: 'Senior Marketing Designer',
-                scoring: 43,
-            },
-            {
-                id: 15,
-                ADG: 'Tatyana Fitzpatrick',
-                SR: 'Regional Director',
-                scoring: 19,
-            },
-            {
-                id: 16,
-                ADG: 'Michael Silva',
-                SR: 'Marketing Designer',
-                scoring: 66,
-            },
-            {
-                id: 17,
-                ADG: 'Paul Byrd',
-                SR: 'Chief Financial idr (CFO)',
-                scoring: 64,
-            },
-            {
-                id: 18,
-                ADG: 'Gloria Little',
-                SR: 'Systems Administrator',
-                scoring: 59,
-            },
-            {
-                id: 19,
-                ADG: 'Bradley Greer',
-                SR: 'Software Engineer',
-                scoring: 41,
-            },
-            {
-                id: 20,
-                ADG: 'Dai Rios',
-                SR: 'Personnel Lead',
-                scoring: 35,
-            },
-            {
-                id: 21,
-                ADG: 'Jenette Caldwell',
-                SR: 'Development Lead',
-                scoring: 61,
-            },
-            {
-                id: 22,
-                ADG: 'Yuri Berry',
-                SR: 'Chief Marketing idr (CMO)',
-                scoring: 40,
-            },
-            {
-                id: 23,
-                ADG: 'Caesar Vance',
-                SR: 'Pre-Sales Support',
-                scoring: 21,
-            },
-            {
-                id: 24,
-                ADG: 'Doris Wilder',
-                SR: 'Sales Assistant',
-                scoring: 23,
-            },
-            {
-                id: 25,
-                ADG: 'Angelica Ramos',
-                SR: 'Chief Executive idr (CEO)',
-                scoring: 47,
-            },
-            {
-                id: 26,
-                ADG: 'Gavin Joyce',
-                SR: 'Developer',
-                scoring: 42,
-            },
-            {
-                id: 27,
-                ADG: 'Jennifer Chang',
-                SR: 'Regional Director',
-                scoring: 28,
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        alert('ID: ' + item.id + ', Name: ' + item.ADG);
-    };
+const view_row = (item) => {
+    alert('ID: ' + item.id + ', Name: ' + item.ADG);
+};
 </script>
