@@ -85,26 +85,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref([
-        'member_id',
-        'nama',
-        'jabatan',
-        'no_hp',
-        'password',
-        'email',
-        'photo',
-        'tgl_lahir',
-        'jenis_kelamin',
-        'status',
-        'alamat',
-        'tgl_bergabung',
-        'status',
-        'supervisor',
-        'team_tambak',
-        'akses_right',
-        'akses_terakhir',
-        'actions',
-    ]);
+    const columns = ref(['nama', 'jabatan', 'no hp', 'tgl bergabung', 'status', 'tambak', 'akses terakhir', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -118,25 +99,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: [
-            'member_id',
-            'nama',
-            'jabatan',
-            'no_hp',
-            'password',
-            'email',
-            'photo',
-            'tgl_lahir',
-            'jenis_kelamin',
-            'status',
-            'alamat',
-            'tgl_bergabung',
-            'status',
-            'supervisor',
-            'team_tambak',
-            'akses_right',
-            'akses_terakhir',
-        ],
+        sortable: ['nama', 'jabatan', 'no hp', 'tgl bergabung', 'status', 'tambak', 'akses terakhir'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
