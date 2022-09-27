@@ -114,43 +114,43 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            kesehatan_udang: 'System Architect',
+            kesehatan_udang: '32',
         },
         {
             ID: 2,
-            kesehatan_udang: 'Garrett Winters',
+            kesehatan_udang: '33',
         },
         {
             ID: 3,
-            kesehatan_udang: 'Ashton Cox',
+            kesehatan_udang: '54',
         },
         {
             ID: 4,
-            kesehatan_udang: 'Cedric Kelly',
+            kesehatan_udang: '3',
         },
         {
             ID: 5,
-            kesehatan_udang: 'Airi Satou',
+            kesehatan_udang: '4',
         },
         {
             ID: 6,
-            kesehatan_udang: 'Brielle Williamson',
+            kesehatan_udang: '21',
         },
         {
             ID: 7,
-            kesehatan_udang: 'Herrod Chandler',
+            kesehatan_udang: '12',
         },
         {
             ID: 8,
-            kesehatan_udang: 'Rhona DavIDson',
+            kesehatan_udang: '65',
         },
         {
             ID: 9,
-            kesehatan_udang: 'Colleen Hurst',
+            kesehatan_udang: '21',
         },
         {
             ID: 10,
-            kesehatan_udang: 'Sonya Frost',
+            kesehatan_udang: '54',
         },
     ];
 };

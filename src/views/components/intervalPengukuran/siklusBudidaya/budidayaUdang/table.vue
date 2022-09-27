@@ -33,7 +33,7 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <router-link to="/budidaya-udang/edit"  data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/budidaya-udang/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -114,43 +114,43 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            siklus_udang: 'System Architect',
+            siklus_udang: '7',
         },
         {
             ID: 2,
-            siklus_udang: 'Garrett Winters',
+            siklus_udang: '43',
         },
         {
             ID: 3,
-            siklus_udang: 'Ashton Cox',
+            siklus_udang: '54',
         },
         {
             ID: 4,
-            siklus_udang: 'Cedric Kelly',
+            siklus_udang: '5',
         },
         {
             ID: 5,
-            siklus_udang: 'Airi Satou',
+            siklus_udang: '6',
         },
         {
             ID: 6,
-            siklus_udang: 'Brielle Williamson',
+            siklus_udang: '75',
         },
         {
             ID: 7,
-            siklus_udang: 'Herrod Chandler',
+            siklus_udang: '1',
         },
         {
             ID: 8,
-            siklus_udang: 'Rhona DavIDson',
+            siklus_udang: '5',
         },
         {
             ID: 9,
-            siklus_udang: 'Colleen Hurst',
+            siklus_udang: '6',
         },
         {
             ID: 10,
-            siklus_udang: 'Sonya Frost',
+            siklus_udang: '9',
         },
     ];
 };
