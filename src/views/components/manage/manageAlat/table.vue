@@ -24,17 +24,30 @@
                                     <h4>Manage Alat</h4>
                                 </div>
                             </div>
-
                         </div>
-                        <div class=" d-flex flex-row-reverse position-relative div-tambah">
+                        <div class="d-flex flex-row-reverse position-relative div-tambah">
                             <router-link to="/manage-alat/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor:pointer;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                        <div @click="view_row(props.row)" style="cursor: pointer">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-eye"
+                                            >
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
                                         </div>
                                     </div>
                                     <div class="px-2">
@@ -93,27 +106,11 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref([
-        'nama_tambak',
-        'tanggal_input',
-        'id_alat',
-        'kategori_alat',
-        'brand',
-        'tipe_model',
-        'kegunaan',
-        'keterangan',
-        'jumlah_unit',
-        'photo',
-        'internal_id',
-        'perkiraan_beli',
-        'tenaga_hp',
-        'status',
-        'actions',
-    ]);
+    const columns = ref(['nama_tambak', 'tanggal_input', 'id_alat', 'kategori_alat', 'brand', 'jumlah_unit', 'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', view: 'actions text-center'},
+        columnsClasses: { actions: 'actions text-center', view: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
