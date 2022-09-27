@@ -107,7 +107,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'Tanggal_dan_jam_input', 'ID_Pakan', 'Asal_Pakan', 'Pakan_batch_id', 'actions']);
+    const columns = ref(['nama_tambak', 'tanggal_input', 'ID_Pakan', 'Asal_Pakan', 'Pakan_batch_id', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -123,7 +123,7 @@
         },
         sortable: [
             'nama_tambak',
-            'Tanggal_dan_jam_input',
+            'Tanggal_input',
             'ID_Pakan',
             'Asal_Paan',
             'Pakan_batch_id',
@@ -153,8 +153,8 @@
         items.value = [
             {
                 ID_Pakan: 1,
-                nama_tambak: 'Tiger Nixon',
-                Tanggal_dan_jam_input: 'System Architect',
+                nama_tambak: 'Tambak 1',
+                tanggal_input: '2022/01/25',
                 Asal_Pakan: 'Edinburgh',
                 Pakan_batch_id: 61,
                 Jenis_butiran: 61,
@@ -169,8 +169,8 @@
             },
             {
                 ID_Pakan: 2,
-                nama_tambak: 'Garrett Winters',
-                Tanggal_dan_jam_input: 'Accountant',
+                nama_tambak: 'Tambak 2',
+                tanggal_input: '2022/02/26',
                 Asal_Pakan: 'Tokyo',
                 Pakan_batch_id: 63,
                 Jenis_butiran: 61,
@@ -186,8 +186,9 @@
             },
             {
                 ID_Pakan: 3,
-                nama_tambak: 'Ashton Cox',
-                Tanggal_dan_jam_input: 'Junior Technical Author',
+                id: 3,
+                nama_tambak: 'Tambak 3',
+                tanggal_input: '2022/03/07',
                 Asal_Pakan: 'San Francisco',
                 Pakan_batch_id: 66,
                 Jenis_butiran: 61,
@@ -203,8 +204,8 @@
             },
             {
                 ID_Pakan: 4,
-                nama_tambak: 'Cedric Kelly',
-                Tanggal_dan_jam_input: 'Senior Javascript Developer',
+                nama_tambak: 'Tambak 4',
+                tanggal_input: '2022/03/28',
                 Asal_Pakan: 'Edinburgh',
                 Pakan_batch_id: 22,
                 Jenis_butiran: 61,
@@ -220,8 +221,8 @@
             },
             {
                 ID_Pakan: 5,
-                nama_tambak: 'Airi Satou',
-                Tanggal_dan_jam_input: 'Accountant',
+                nama_tambak: 'Tambak 5',
+                tanggal_input: '2022/04/10',
                 Asal_Pakan: 'Tokyo',
                 Pakan_batch_id: 33,
                 Jenis_butiran: 61,
@@ -237,8 +238,8 @@
             },
             {
                 ID_Pakan: 6,
-                nama_tambak: 'Brielle Williamson',
-                Tanggal_dan_jam_input: 'Integration Specialist',
+                nama_tambak: 'Tambak 6',
+                tanggal_input: '2022/05/29',
                 Asal_Pakan: 'New York',
                 Pakan_batch_id: 61,
                 Jenis_butiran: 61,
@@ -254,8 +255,8 @@
             },
             {
                 ID_Pakan: 7,
-                nama_tambak: 'Herrod Chandler',
-                Tanggal_dan_jam_input: 'Sales Assistant',
+                nama_tambak: 'Tambak 7',
+                tanggal_input: '2022/06/23',
                 Asal_Pakan: 'San Francisco',
                 Pakan_batch_id: 59,
                 Jenis_butiran: 61,
@@ -271,8 +272,8 @@
             },
             {
                 ID_Pakan: 8,
-                nama_tambak: 'Rhona Davidson',
-                Tanggal_dan_jam_input: 'Integration Specialist',
+                nama_tambak: 'Tambak 8',
+                tanggal_input: '2022/07/21',
                 Asal_Pakan: 'Tokyo',
                 Pakan_batch_id: 55,
                 Jenis_butiran: 61,
@@ -288,8 +289,8 @@
             },
             {
                 ID_Pakan: 9,
-                nama_tambak: 'Colleen Hurst',
-                Tanggal_dan_jam_input: 'Javascript Developer',
+                nama_tambak: 'Tambak 9',
+                tanggal_input: '2022/08/15',
                 Asal_Pakan: 'San Francisco',
                 Pakan_batch_id: 39,
                 Jenis_butiran: 61,
@@ -305,8 +306,8 @@
             },
             {
                 ID_Pakan: 10,
-                nama_tambak: 'Sonya Frost',
-                Tanggal_dan_jam_input: 'Software Engineer',
+                nama_tambak: 'Tambak 10',
+                tanggal_input: '2022/08/15',
                 Asal_Pakan: 'Edinburgh',
                 Pakan_batch_id: 23,
                 Jenis_butiran: 61,
