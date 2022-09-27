@@ -120,7 +120,7 @@
         }
 
         > .row > div {
-            display: flex;
+            // display: flex;
             flex-wrap: wrap;
             align-items: center;
             flex-direction: row-reverse;
@@ -157,82 +157,82 @@
             }
         }
 
-        .VuePagination {
-            margin: 0;
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-                align-items: center;
-                padding: 16px;
+        // .VuePagination {
+        //     margin: 0;
+        //     nav {
+        //         display: flex;
+        //         flex-wrap: wrap;
+        //         flex-direction: row-reverse;
+        //         justify-content: space-between;
+        //         align-items: center;
+        //         padding: 16px;
 
-                .VuePagination__pagination {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 0;
+        //         .VuePagination__pagination {
+        //             display: flex;
+        //             justify-content: center;
+        //             margin-bottom: 0;
 
-                    li.page-item {
-                        border-radius: 100%;
-                        &:not(:last-child) {
-                            margin-right: 4px;
-                        }
-                        &.disabled {
-                            opacity: 0.7;
-                            cursor: not-allowed !important;
-                        }
+        //             li.page-item {
+        //                 border-radius: 100%;
+        //                 &:not(:last-child) {
+        //                     margin-right: 4px;
+        //                 }
+        //                 &.disabled {
+        //                     opacity: 0.7;
+        //                     cursor: not-allowed !important;
+        //                 }
 
-                        &:not(.disabled):hover .page-link,
-                        &:hover .page-link {
-                            color: #4361ee;
-                        }
+        //                 &:not(.disabled):hover .page-link,
+        //                 &:hover .page-link {
+        //                     color: #4361ee;
+        //                 }
 
-                        .page-link {
-                            border-radius: 100%;
-                            padding: 8px 14px;
-                            background-color: $m-color_3;
-                            font-weight: 600;
-                            color: #3b3f5c;
-                            outline: 0;
-                            box-shadow: none;
+        //                 .page-link {
+        //                     border-radius: 100%;
+        //                     padding: 8px 14px;
+        //                     background-color: $m-color_3;
+        //                     font-weight: 600;
+        //                     color: #3b3f5c;
+        //                     outline: 0;
+        //                     box-shadow: none;
 
-                            &:hover .page-link {
-                                color: $primary;
-                            }
-                            &.active {
-                                background-color: $primary !important;
-                                border-color: $primary;
-                                color: $white !important;
-                            }
+        //                     &:hover .page-link {
+        //                         color: $primary;
+        //                     }
+        //                     &.active {
+        //                         background-color: $primary !important;
+        //                         border-color: $primary;
+        //                         color: $white !important;
+        //                     }
 
-                            .page-link.active:hover,
-                            &.active .page-link {
-                                color: $white;
-                            }
-                        }
+        //                     .page-link.active:hover,
+        //                     &.active .page-link {
+        //                         color: $white;
+        //                     }
+        //                 }
 
-                        &:not(.disabled).VuePagination__pagination-item-prev-page,
-                        &:not(.disabled).VuePagination__pagination-item-next-page {
-                            &:hover .page-link {
-                                background-color: $primary;
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-                .VuePagination__count {
-                    width: auto;
-                    margin-bottom: 0;
-                    color: #4361ee;
-                    font-weight: 600;
-                    border: 1px solid #e0e6ed;
-                    display: inline-block;
-                    padding: 10px 16px;
-                    border-radius: 6px;
-                    font-size: 13px;
-                }
-            }
-        }
+        //                 &:not(.disabled).VuePagination__pagination-item-prev-page,
+        //                 &:not(.disabled).VuePagination__pagination-item-next-page {
+        //                     &:hover .page-link {
+        //                         background-color: $primary;
+        //                         color: $white;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         .VuePagination__count {
+        //             width: auto;
+        //             margin-bottom: 0;
+        //             color: #4361ee;
+        //             font-weight: 600;
+        //             border: 1px solid #e0e6ed;
+        //             display: inline-block;
+        //             padding: 10px 16px;
+        //             border-radius: 6px;
+        //             font-size: 13px;
+        //         }
+        //     }
+        // }
 
         .VueTables__sortable {
             cursor: pointer;
@@ -296,4 +296,12 @@
             }
         }
     }
+}
+
+.tambah-data {
+    position: absolute;
+    margin-top: 17px;
+    right: 0;
+
+
 }
