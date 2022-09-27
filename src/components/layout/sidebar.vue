@@ -361,6 +361,12 @@
                             <router-link to="/saponin" @click="toggleMobileMenu">Saponin</router-link>
                         </li>
                         <li>
+                            <router-link to="/airtambak" @click="toggleMobileMenu">Warna Air Tambak</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/harga-udang" @click="toggleMobileMenu">Harga Udang</router-link>
+                        </li>
+                        <li>
                             <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan" data-bs-toggle="collapse" role="button" aria-expanded="false">
                                 Benur
                                 <svg
@@ -475,7 +481,7 @@
                                 <li>
                                     <router-link to="/budidaya-fisika" @click="toggleMobileMenu">Parameter Kimia </router-link>
                                 </li>
-                                 <li>
+                                <li>
                                     <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
                                         Parameter Biologi
                                         <svg
@@ -567,108 +573,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#hargaUdang" aria-controls="hargaUdang" aria-expanded="false">
-                        <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
-                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                                <rect x="9" y="9" width="6" height="6"></rect>
-                                <line x1="9" y1="1" x2="9" y2="4"></line>
-                                <line x1="15" y1="1" x2="15" y2="4"></line>
-                                <line x1="9" y1="20" x2="9" y2="23"></line>
-                                <line x1="15" y1="20" x2="15" y2="23"></line>
-                                <line x1="20" y1="9" x2="23" y2="9"></line>
-                                <line x1="20" y1="14" x2="23" y2="14"></line>
-                                <line x1="1" y1="9" x2="4" y2="9"></line>
-                                <line x1="1" y1="14" x2="4" y2="14"></line>
-                            </svg>
-                            <span>{{ $t('Harga') }}</span>
-                        </div>
-                        <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul id="hargaUdang" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
-                        <li>
-                            <router-link to="/harga-udang" @click="toggleMobileMenu">Udang</router-link>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#warnaair" aria-controls="warnaair" aria-expanded="false">
-                        <div class="">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-cpu"
-                            >
-                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                                <rect x="9" y="9" width="6" height="6"></rect>
-                                <line x1="9" y1="1" x2="9" y2="4"></line>
-                                <line x1="15" y1="1" x2="15" y2="4"></line>
-                                <line x1="9" y1="20" x2="9" y2="23"></line>
-                                <line x1="15" y1="20" x2="15" y2="23"></line>
-                                <line x1="20" y1="9" x2="23" y2="9"></line>
-                                <line x1="20" y1="14" x2="23" y2="14"></line>
-                                <line x1="1" y1="9" x2="4" y2="9"></line>
-                                <line x1="1" y1="14" x2="4" y2="14"></line>
-                            </svg>
-                            <span>{{ $t('Warna Air') }}</span>
-                        </div>
-                        <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul id="warnaair" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
-                        <li>
-                            <router-link to="/airtambak" @click="toggleMobileMenu">Tambak</router-link>
-                        </li>
-                    </ul>
-                </li>
+
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan" aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
                         <div class="">
