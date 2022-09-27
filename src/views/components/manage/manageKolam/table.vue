@@ -32,6 +32,25 @@
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
+                                    <div class="px-2">
+                                        <div @click="view_row(props.row)" style="cursor: pointer">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-eye"
+                                            >
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </div>
+                                    </div>
                                     <div>
                                         <router-link to="/manage-kolam/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
@@ -102,7 +121,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['id_tambak', 'id_kolam', 'nama_kolam', 'tipe_kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_kolam', 'pilih_kincir', 'pilih_pompa', 'pilih_autofeeder', 'tinggi_kolam', 'status'],
+        sortable: ['id_tambak', 'id_kolam', 'nama_kolam', 'tipe_kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_kolam'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',

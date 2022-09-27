@@ -25,32 +25,39 @@
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
+                        <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu"
+                            class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <div class=" d-flex flex-row-reverse position-relative">
-                            <router-link to="/parameter-biologi-fitoplankton/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
-                        </div>
-                                        
+                                            <router-link to="/parameter-biologi-fitoplankton/create"
+                                                @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">
+                                                Tambah Data</router-link>
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div @click="view_row(props.row)" style="cursor:pointer;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg>
+                                        </div>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -68,84 +75,84 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'min', 'max', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 10,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref(['nama', 'min', 'max', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    perPage: 10,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['nama', 'min', 'max'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            nama: 'Density',
+            min: 10,
+            max: 40,
         },
-        sortable: ['nama', 'min', 'max'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
+        {
+            nama: 'Cloro (%)',
+            min: 10,
+            max: 40,
         },
-        resizableColumns: false,
-    });
+        {
+            nama: 'Proto (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Diantom (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Dyno (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'GA (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'BGA (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Other (%)',
+            min: 10,
+            max: 40,
+        },
+    ];
+};
 
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                nama: 'Density',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Cloro (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Proto (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Diantom (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Dyno (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'GA (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'BGA (%)',
-                min: 10,
-                max: 40,
-            },
-            {
-                nama: 'Other (%)',
-                min: 10,
-                max: 40,
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        alert('nama: ' + item.id + ', Name: ' + item.ph);
-    };
+const view_row = (item) => {
+    alert('nama: ' + item.id + ', Name: ' + item.ph);
+};
 </script>
