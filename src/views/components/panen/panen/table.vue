@@ -25,6 +25,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class=" d-flex flex-row-reverse position-relative">
+                            <router-link to="/panen-create-" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                        </div>
                         <router-link to="/panen-create-" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
