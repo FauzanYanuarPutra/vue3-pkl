@@ -154,8 +154,8 @@
                                 <div class="form-group">
                                     <label class="control-label">Status</label>
                                     <multiselect
-                                        v-model="inputs['input2']"
-                                        :options="options2"
+                                        v-model="inputs['input4']"
+                                        :options="options4"
                                         :searchable="true"
                                         placeholder="Choose..."
                                         selected-label=""
