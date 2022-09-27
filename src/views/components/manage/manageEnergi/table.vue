@@ -25,14 +25,9 @@
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-                        <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/manage-energi/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
-=======
                         <div class=" d-flex flex-row-reverse position-relative">
                             <router-link to="/manage-energi/create" @click="toggleMobileMenu"
                                 class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
->>>>>>> 4d0f18d48bb6c3d473914febd1bd22b909d7d191
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
@@ -67,7 +62,7 @@
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
+                                            <path
                                                     d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
                                                 </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
@@ -214,45 +209,7 @@ const bind_data = () => {
     ];
 };
 
-<<<<<<< HEAD
-                kategori_konsumsi_listrik: '131.000 VA',
-            },
-            {
-                id: 8,
-                nama_tambak: 'Tambak8',
-                tanggal_input: '2022/02/23',
-                bulan: 'Februari',
-                penggunaan_listrik: 2768,
-
-                kategori_konsumsi_listrik: '131.000 VA',
-            },
-            {
-                id: 9,
-                nama_tambak: 'Tambak9',
-                tanggal_input: '2022/02/26',
-                bulan: 'Februari',
-                penggunaan_listrik: 2139,
-
-                kategori_konsumsi_listrik: '131.000 VA',
-            },
-            {
-                id: 10,
-                nama_tambak: 'Tambak10',
-                tanggal_input: '2022/02/29',
-                bulan: 'Febuari',
-                penggunaan_listrik: 2323,
-
-                kategori_konsumsi_listrik: '131.000 VA',
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        alert('bulan: ' + item.id + ', Name: ' + item.nama_tambak);
-    };
-=======
 const view_row = (item) => {
     alert('bulan: ' + item.id + ', Name: ' + item.nama_tambak);
 };
->>>>>>> 4d0f18d48bb6c3d473914febd1bd22b909d7d191
 </script>

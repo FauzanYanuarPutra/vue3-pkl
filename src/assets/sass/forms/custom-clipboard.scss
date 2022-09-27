@@ -24,3 +24,14 @@ textarea {
     }
   }
 }
+
+
+.form-vertical{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group{
+  width: 40%;
+}
+
