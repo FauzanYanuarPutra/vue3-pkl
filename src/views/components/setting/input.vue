@@ -26,46 +26,30 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label class="control-label">Id:</label>
                                 <input type="hidden" name="id" class="form-control" />
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label class="control-label">Kategori:</label>
                                 <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
                             </div>
+
                             <div class="form-group">
-                                <label class="control-label">Tanggal:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
-                                </div>
+                                <label class="control-label">Nama:</label>
+                                <input type="text" name="nama" class="form-control" />
                             </div>
 
                             <div class="form-group">
-                                <label class="control-label">Nama Kolam:</label>
-                                <input type="text" name="id_tambak" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">ID User:</label>
-                                <input type="text" name="id_user" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Judul:</label>
-                                <input type="text" name="judul" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <input type="text" name="keterangan" class="form-control" />
+                                <label class="control-label">Deskripsi:</label>
+                                <input type="text" name="deskripsi" class="form-control" />
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Status:</label>
-                                <input type="text" name="id_status_reminder" class="form-control" />
+                                <input type="text" name="status" class="form-control" />
                             </div>
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
@@ -106,7 +90,7 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const options1 = ref(['Language', 'Provinsi', 'Jabatan', 'Warna air tambak', 'Kategori alat', 'Merek benur', 'Merek pakan', 'Tipe pakan', 'Tipe panen', 'Tipe spv', 'Kategori kontent', 'kategori konsumen', 'Warna air tambak']);
 const inputs = ref({
     input1: [],
     input2: [],

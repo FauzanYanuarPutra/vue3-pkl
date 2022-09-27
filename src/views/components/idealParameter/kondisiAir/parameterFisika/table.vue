@@ -85,6 +85,9 @@
 import { onMounted, ref } from 'vue';
 
 import { useMeta } from '@/composables/use-meta';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 useMeta({ title: 'Default Order Sorting Table' });
 
 const columns = ref(['nama', 'min', 'max', 'actions']);
@@ -145,6 +148,43 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('max: ' + item.id + ', Name: ' + item.nama);
+    new window.Swal({
+        title: '<i>Parameter Fisika</i>',
+                text: 'HALLO',
+                html: 
+                    '<p><b>Nama</b> : ' + item.nama + '</p>' +
+                    '<p><b>Min</b> : ' + item.min + '</p>'+
+                    '<p><b>Max</b> : ' + item.max + '</p>'
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+                    // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+                    // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+                    // DIAKHIR TIDAK MENGGUNAKAN tanda +
+                    ,
+                showCloseButton: true,
+                focusConfirm: false,
+                confirmButtonColor: '#4361ee',
+                confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+                confirmButtonAriaLabel: 'Oke',
+
+                padding: '2em',
+            });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
