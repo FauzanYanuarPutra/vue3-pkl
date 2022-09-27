@@ -28,9 +28,10 @@
                             </div>
                         </div>
                         <div class=" d-flex flex-row-reverse position-relative">
-                            <router-link to="/budidaya-air/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/budidaya-air/create" @click="toggleMobileMenu"
+                                class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-                        
+
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -82,15 +83,6 @@ const columns = ref([
     'kecerahan',
     'warna',
     'ph',
-    'suhu_air',
-    'do',
-    'salinitas',
-    'alkalinitas',
-    'tom',
-    'analisa_kimia',
-    'fitoplankton',
-    'vibrio',
-    'hardness',
     'actions',
 ]);
 const items = ref([]);

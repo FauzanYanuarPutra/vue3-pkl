@@ -28,9 +28,10 @@
                             </div>
                         </div>
                         <div class=" d-flex flex-row-reverse position-relative">
-                            <router-link to="/budidaya-persiapan/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/budidaya-persiapan/create" @click="toggleMobileMenu"
+                                class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-                        
+
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -83,11 +84,6 @@ const columns = ref([
     'pembuangan_sedimen',
     'sterilisasi_tambak',
     'pengisian_air',
-    'pengapuran',
-    'pemupukan',
-    'pertumbuhan_plankton',
-    'pertumbuhan_patogen',
-    'probiotik',
     'actions',
 ]);
 const items = ref([]);
