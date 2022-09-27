@@ -2071,3 +2071,17 @@
         margin-bottom: 0.2rem;
     }
 }
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // justify-content: space-around;
+        .form-group {
+            padding: 10px;
+        }
+        .form-control-sm {
+            width: 100px;
+        }
+}

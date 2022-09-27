@@ -26,6 +26,7 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                        <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">FCR (food conversion Rate):</label>
                                 <input type="number" name="fcr" class="form-control" />
@@ -34,6 +35,8 @@
                                 <label class="control-label">Scoring pakan:</label>
                                 <input type="number" name="skoring_pakan" class="form-control" />
                             </div>
+                        </div>
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

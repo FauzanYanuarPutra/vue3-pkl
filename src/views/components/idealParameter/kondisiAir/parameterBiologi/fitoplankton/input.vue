@@ -26,6 +26,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+
+                        <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">Density:</label>
                                 <div class="d-flex">
@@ -90,6 +92,8 @@
                                 </div>
                             </div>
 
+                        </div>
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

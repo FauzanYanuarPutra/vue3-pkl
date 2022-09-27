@@ -26,6 +26,7 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                        <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">PH:</label>
                                 <div class="d-flex">
@@ -153,6 +154,8 @@
                                     <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
+                        </div>
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
