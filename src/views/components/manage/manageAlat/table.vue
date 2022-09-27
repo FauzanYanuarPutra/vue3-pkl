@@ -33,6 +33,15 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div>
+                                    <div class="px-2">
+                                        <div @click="view_row(props.row)" style="cursor:pointer;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                                            
+                                        </div>
+                                    
+                                    </div>
+                                    </div>
+                                    <div class="px-2">
                                         <router-link to="/manage-alat/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +59,7 @@
                                             </svg>
                                         </router-link>
                                     </div>
-                                    <div>
+                                    <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +97,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref([
+const columns = ref([
         'nama_tambak',
         'tanggal_input',
         'id_alat',
@@ -108,7 +117,7 @@
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
+        columnsClasses: { actions: 'actions text-center', view: 'actions text-center'},
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -608,7 +617,7 @@
         ];
     };
 
-    const view_row = (item) => {
-        alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    const view_row = (items) => {
+        alert('ID: ' + items.id + ', Name: ' + items.nama_tambak);
     };
 </script>
