@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Probiotik</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Harga udang</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,17 +21,17 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Probiotik</h4>
+                                    <h4>Harga Udang</h4>
                                 </div>
                             </div>
                         </div>
-                        <router-link to="/probiotik/create" @click="toggleMobileMenu"
+                        <router-link to="/hargaudang/create" @click="toggleMobileMenu"
                             class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
-                                    <div class="mx-2">
-                                        <router-link to="/probiotik/edit" data-bs-toggle="tooltip" title="Edit">
+                                    <div class="px-2">
+                                        <router-link to="/hargaudang/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +41,7 @@
                                             </svg>
                                         </router-link>
                                     </div>
-                                    <div class="mx-2">
+                                    <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -73,7 +73,7 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['nama_kolam', 'tanggal', 'pemakaian_probiotik', 'keterangan', 'actions']);
+const columns = ref(['Tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
@@ -87,7 +87,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['nama_kolam', 'tanggal', 'pemakaian_probiotik', 'keterangan', 'status'],
+    sortable: ['Tanggal_input', 'Ukuran_udang', 'Harga'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -103,84 +103,64 @@ onMounted(() => {
 const bind_data = () => {
     items.value = [
         {
-            ID: 1,
-            nama_kolam: 'Kolam Ikan',
-            tanggal: '2011/12/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 1,
+            Tanggal_input: '2011/04/25',
+            Ukuran_udang: '32 cm',
+            Harga: 'Rp.70000',
         },
         {
-            ID: 2,
-            nama_kolam: 'Kolam Udang',
-            tanggal: '2011/04/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 2,
+            Tanggal_input: '2011/07/25',
+            Ukuran_udang: '17 cm',
+            Harga: 'Rp.10000',
         },
         {
-            ID: 3,
-            nama_kolam: 'Kolam Benur',
-            tanggal: '2011/03/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 3,
+            Tanggal_input: '2009/01/12',
+            Ukuran_udang: '86 cm',
+            Harga: 'Rp.130000',
         },
         {
-            ID: 4,
-            nama_kolam: 'Kolam Ikan',
-            tanggal: '2011/05/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 4,
+            Tanggal_input: '2012/03/29',
+            Ukuran_udang: '43 cm',
+            Harga: 'Rp.70000',
         },
         {
-            ID: 5,
-            nama_kolam: 'Kolam Benur',
-            tanggal: '2011/08/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 5,
+            Tanggal_input: '2008/11/28',
+            Ukuran_udang: '16 cm',
+            Harga: 'Rp.50000',
         },
         {
-            ID: 6,
-            nama_kolam: 'Kolam Ikan',
-            tanggal: '2011/12/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 6,
+            Tanggal_input: '2012/12/02',
+            Ukuran_udang: '37 cm',
+            Harga: 'Rp.60000',
         },
         {
-            ID: 7,
-            nama_kolam: 'Kolam Ikan',
-            tanggal: '2011/11/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 7,
+            Tanggal_input: '2012/08/06',
+            Ukuran_udang: '13 cm',
+            Harga: 'Rp.20000',
         },
         {
-            ID: 8,
-            nama_kolam: 'Kolam Udang',
-            tanggal: '2011/04/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 8,
+            Tanggal_input: '2010/10/14',
+            Ukuran_udang: '32 cm',
+            Harga: 'Rp.50000',
         },
         {
-            ID: 9,
-            nama_kolam: 'Kolam Ikan',
-            tanggal: '2011/06/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 9,
+            Tanggal_input: '2009/09/15',
+            Ukuran_udang: '20 cm',
+            Harga: 'Rp.10000',
         },
         {
-            ID: 10,
-            nama_kolam: 'Kolam Benur',
-            tanggal: '2011/04/25',
-            pemakaian_probiotik: 'null',
-            keterangan: 'null',
-            status: 'Aktive',
+            id: 10,
+            Tanggal_input: '2008/12/13',
+            Ukuran_udang: '10 cm',
+            Harga: 'Rp.30000',
         },
     ];
 };

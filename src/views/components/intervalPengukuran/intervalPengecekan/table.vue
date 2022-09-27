@@ -32,7 +32,8 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <router-link to="/interval-pengecekan/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/interval-pengecekan/edit" data-bs-toggle="tooltip"
+                                            title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -116,54 +117,64 @@ onMounted(() => {
 const bind_data = () => {
     items.value = [
         {
-            pro_air: 'Tiger Nixon',
-            pro_oral: 'System Architect',
-            mineral_kg: 'Edinburgh',
+            ID: 1,
+            pro_air: '12',
+            pro_oral: '21',
+            mineral_kg: '45',
         },
         {
-            pro_air: 2,
-            pro_oral: 'Garrett Winters',
-            mineral_kg: 'Accountant',
+            ID: 2,
+            pro_air: '45',
+            pro_oral: '34',
+            mineral_kg: '6',
         },
         {
-            pro_air: 3,
-            pro_oral: 'Ashton Cox',
-            mineral_kg: 'Junior Technical Author',
+            ID: 3,
+            pro_air: '65',
+            pro_oral: '45',
+            mineral_kg: '7',
         },
         {
-            pro_air: 4,
-            pro_oral: 'Cedric Kelly',
-            mineral_kg: 'Senior Javascript Developer',
+            ID: 4,
+            pro_air: '3',
+            pro_oral: '53',
+            mineral_kg: '23',
         },
         {
-            pro_air: 5,
-            pro_oral: 'Airi Satou',
-            mineral_kg: 'Accountant',
+            ID: 5,
+            pro_air: '64',
+            pro_oral: '23',
+            mineral_kg: '34',
         },
         {
-            pro_air: 6,
-            pro_oral: 'Brielle Williamson',
-            mineral_kg: 'Integration Specialist',
+            ID: 6,
+            pro_air: '34',
+            pro_oral: '43',
+            mineral_kg: '23',
         },
         {
-            pro_air: 7,
-            pro_oral: 'Herrod Chandler',
-            mineral_kg: 'Sales Assistant',
+            ID: 7,
+            pro_air: '3',
+            pro_oral: '33',
+            mineral_kg: '22',
         },
         {
-            pro_air: 8,
-            pro_oral: 'Rhona Davpro_airson',
-            mineral_kg: 'Integration Specialist',
+            ID: 8,
+            pro_air: '53',
+            pro_oral: '23',
+            mineral_kg: '23',
         },
         {
-            pro_air: 9,
-            pro_oral: 'Colleen Hurst',
-            mineral_kg: 'Javascript Developer',
+            ID: 9,
+            pro_air: '21',
+            pro_oral: '21',
+            mineral_kg: '33',
         },
         {
-            pro_air: 10,
-            pro_oral: 'Sonya Frost',
-            mineral_kg: 'Software Engineer',
+            ID: 10,
+            pro_air: '53',
+            pro_oral: '32',
+            mineral_kg: '34',
         },
     ];
 };

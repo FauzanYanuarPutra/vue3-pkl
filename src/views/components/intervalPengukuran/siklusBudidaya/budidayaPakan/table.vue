@@ -114,43 +114,43 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            siklus_pakan: 'System Architect',
+            siklus_pakan: '5',
         },
         {
             ID: 2,
-            siklus_pakan: 'Garrett Winters',
+            siklus_pakan: '12',
         },
         {
             ID: 3,
-            siklus_pakan: 'Ashton Cox',
+            siklus_pakan: '66',
         },
         {
             ID: 4,
-            siklus_pakan: 'Cedric Kelly',
+            siklus_pakan: '23',
         },
         {
             ID: 5,
-            siklus_pakan: 'Airi Satou',
+            siklus_pakan: '86',
         },
         {
             ID: 6,
-            siklus_pakan: 'Brielle Williamson',
+            siklus_pakan: '17',
         },
         {
             ID: 7,
-            siklus_pakan: 'Herrod Chandler',
+            siklus_pakan: '19',
         },
         {
             ID: 8,
-            siklus_pakan: 'Rhona DavIDson',
+            siklus_pakan: '8',
         },
         {
             ID: 9,
-            siklus_pakan: 'Colleen Hurst',
+            siklus_pakan: '23',
         },
         {
             ID: 10,
-            siklus_pakan: 'Sonya Frost',
+            siklus_pakan: '1',
         },
     ];
 };

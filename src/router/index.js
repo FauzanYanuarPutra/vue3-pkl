@@ -67,7 +67,6 @@ const routes = [
         component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/edit.vue'),
     },
 
-
     {
         path: '/parameter-biologi-vibrioTCBS',
         name: 'parameter-biologi-vibrioTCBS',
@@ -147,9 +146,8 @@ const routes = [
         name: 'benur-edit',
         component: () => import('../views/components/idealParameter/benur/edit.vue'),
     },
-    
-    // AKHIR IDEAL PARAMETER
 
+    // AKHIR IDEAL PARAMETER
 
     //intervalPengukuran
     // intervalPengecekan
@@ -323,7 +321,7 @@ const routes = [
         name: 'manage-tambak-edit',
         component: () => import('../views/components/manage/manageTambak/edit.vue'),
     },
-    
+
     // manage pakan
     {
         path: '/manage-pakan',
@@ -559,34 +557,34 @@ const routes = [
     {
         path: '/harga-udang',
         name: 'harga-udang',
-        component: () => import('../views/components/hargaUdang/table.vue'),
+        component: () => import('../views/components/manage/hargaUdang/table.vue'),
     },
     {
         path: '/hargaudang/create',
         name: 'hargaudang-creat',
-        component: () => import('../views/components/hargaUdang/input.vue'),
+        component: () => import('../views/components/manage/hargaUdang/input.vue'),
     },
     {
         path: '/hargaudang/edit',
         name: 'hargaudang-edit',
-        component: () => import('../views/components/hargaUdang/edit.vue'),
+        component: () => import('../views/components/manage/hargaUdang/edit.vue'),
     },
 
     // Air Tambak
     {
         path: '/airtambak',
         name: 'airtambak',
-        component: () => import('../views/components/warnaairtambak/table.vue'),
+        component: () => import('../views/components/manage/warnaairtambak/table.vue'),
     },
     {
         path: '/airtambak/create',
         name: 'airtambak-create',
-        component: () => import('../views/components/warnaairtambak/input.vue'),
+        component: () => import('../views/components/manage/warnaairtambak/input.vue'),
     },
     {
         path: '/airtambak/edit',
         name: 'airtambak-edit',
-        component: () => import('../views/components/warnaairtambak/edit.vue'),
+        component: () => import('../views/components/manage/warnaairtambak/edit.vue'),
     },
 
     // Kolam Budidaya Persiapan
@@ -814,7 +812,6 @@ const routes = [
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterFisika/edit.vue'),
     },
 
-
     {
         path: '/budidaya-kimia',
         name: 'budidaya-kimia',
@@ -825,7 +822,7 @@ const routes = [
         name: 'budidaya-kimia-create',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/input.vue'),
     },
-     {
+    {
         path: '/budidaya-kimia/edit',
         name: 'budidaya-kimia-edit',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/edit.vue'),
