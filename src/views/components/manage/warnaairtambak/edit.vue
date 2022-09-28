@@ -26,31 +26,39 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
-                                <label class="control-label">ID warna kolam:</label>
-                                <input type="id" name="" class="form-control" />
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
+                                    <label class="control-label">ID warna kolam:</label>
+                                    <input type="id" name="" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Warna air:</label>
+                                    <input type="text" name="warna_air" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Upload warna air:</label>
+                                    <input type="text" name="" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jenis plankton:</label>
+                                    <input type="text" name="jenis_plankton" class="form-control" />
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Warna air:</label>
-                                <input type="text" name="warna_air" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Upload warna air:</label>
-                                <input type="text" name="" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Jenis plankton:</label>
-                                <input type="text" name="jenis_plankton" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Kecerahan:</label>
-                                <input type="text" name="kecerahan" class="form-control" />
-                            </div>
+                            <div class="wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Kecerahan:</label>
+                                    <input type="text" name="kecerahan" class="form-control" />
+                                </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <input type="text" name="keterangan" class="form-control" />
+                                <div class="form-group">
+                                    <label class="control-label">Keterangan:</label>
+                                    <input type="text" name="keterangan" class="form-control" />
+                                </div>
                             </div>
+                        </div>
+                            
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
