@@ -258,7 +258,7 @@
 
         ul.submenu > li {
             a.active {
-                color: #4361ee;
+                color: #1695DC;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 font-weight: 600;
@@ -270,7 +270,7 @@
         }
 
         li.menu ul.submenu > li a.active:before {
-            background-color: #4361ee;
+            background-color: #1695DC;
         }
 
         ul.submenu {
@@ -280,10 +280,10 @@
                         position: relative;
                     }
                     &:hover {
-                        color: #4361ee;
+                        color: #1695DC;
 
                         &:before {
-                            background-color: #4361ee !important;
+                            background-color: #1695DC !important;
                         }
                     }
 
@@ -297,16 +297,16 @@
             li > {
                 [data-active='true'] {
                     i {
-                        color: #4361ee;
+                        color: #1695DC;
                     }
 
                     &:before {
-                        background-color: #4361ee !important;
+                        background-color: #1695DC !important;
                     }
                 }
 
                 a[data-active='true'] {
-                    color: #4361ee;
+                    color: #1695DC;
                 }
             }
 
@@ -323,13 +323,13 @@
                 a.active {
                     color: #805dca;
                     &:before {
-                        background-color: #4361ee;
+                        background-color: #1695DC;
                     }
                 }
 
                 a {
                     &:hover {
-                        color: #4361ee;
+                        color: #1695DC;
                     }
 
                     &:before {
@@ -338,7 +338,7 @@
                 }
 
                 // &.active a:before {
-                //     background-color: #4361ee;
+                //     background-color: #1695DC;
                 // }
             }
         }
@@ -399,7 +399,7 @@
                                     color: #060818;
                                 }
                                 svg {
-                                    color: #4361ee;
+                                    color: #1695DC;
                                 }
                             }
                             > .dropdown-toggle {
@@ -413,7 +413,7 @@
                                     box-shadow: none;
                                     color: #060818;
                                     svg {
-                                        color: #4361ee;
+                                        color: #1695DC;
                                     }
                                 }
                                 svg {
@@ -422,9 +422,9 @@
                                 &:hover {
                                     background: transparent;
                                     box-shadow: none;
-                                    color: #4361ee;
+                                    color: #1695DC;
                                     svg {
-                                        color: #4361ee;
+                                        color: #1695DC;
                                     }
                                 }
                                 &.dropdown-toggle:not([data-active='true']):not([aria-expanded='true']):hover {
