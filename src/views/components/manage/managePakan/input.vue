@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Nama Tambak:</label>
                                 <input type="text" name="nama_tambak" class="form-control" />
                             </div>
@@ -58,7 +60,9 @@
                                 <label class="control-label">(kg)Ukuran/Karung:</label>
                                 <input type="text" name="(kg)Ukuran/Karung" class="form-control" />
                             </div>
-                            <div class="form-group">
+                            </div>
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Photo:</label>
                                 <div class="custom-file-container">
                                     <div class="invoice-logo">
@@ -112,6 +116,10 @@
                                 <label class="control-label">Keterangan:</label>
                                 <input type="text" name="Keterangan" class="form-control" />
                             </div>
+                            </div>
+                        </div>
+                            
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

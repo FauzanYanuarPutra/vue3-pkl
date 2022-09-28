@@ -27,7 +27,11 @@
                         </div>
                         <div class="panel-body">
                             <form class="form-vertical" action="#">
-                                <div class="form-group">
+
+                            <div class="box-wrap">
+                                
+                                <div class="wrap">
+                                     <div class="form-group">
                                     <label class="control-label">Member ID</label>
                                     <input type="id" name="member_id" class="form-control" />
                                 </div>
@@ -104,7 +108,7 @@
                                                         </svg>
                                                     </div>
                                                     <div class="mt-2">Click to Upload Picture/Logo</div>
-                                                </div>
+                                                </div><br>
                                             </div>
                                         </div>
                                     </div>
@@ -115,6 +119,7 @@
                                         <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label class="control-label">Jenis kelamin</label>
                                     <multiselect
@@ -140,8 +145,10 @@
                                         deselect-label=""
                                     ></multiselect>
                                 </div>
-
-                                <div class="form-group">
+                                </div>
+                            
+                                <div class="wrap">
+                                    <div class="form-group">
                                     <label class="control-label">Alamat rumah</label>
                                     <input type="text" name="alamat_rumah" class="form-control" />
                                 </div>
@@ -189,6 +196,14 @@
                                         <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                     </div>
                                 </div>
+                                </div>
+                            
+                            
+                            </div>
+                               
+                                
+
+                                
 
                                 <button type="submit" class="btn mt-2 btn-primary">Submit form</button>
                             </form>

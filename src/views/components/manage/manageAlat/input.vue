@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Kategori Alat:</label>
                                 <input type="text" name="kategori_alat" class="form-control" />
                             </div>
@@ -55,10 +57,15 @@
                                 <label class="control-label">Keterangan:</label>
                                 <input type="text" name="keterangan" class="form-control" />
                             </div>
+
                             <div class="form-group">
                                 <label class="control-label">Jumlah unit:</label>
                                 <input type="text" name="jumlah_unit" class="form-control" />
                             </div>
+                            </div>
+
+                            <div class="wrap">
+                            
 
                             <div class="form-group">
                                 <label class="control-label">Photo:</label>
@@ -98,6 +105,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
 
                             <div class="form-group">
@@ -116,6 +124,10 @@
                                 <label class="control-label">Tenaga(HP):</label>
                                 <input type="number" name="tenaga_hp" class="form-control" />
                             </div>
+                            </div>
+                        </div>
+                            
+                        
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
