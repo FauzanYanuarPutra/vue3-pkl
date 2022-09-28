@@ -29,7 +29,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Nama Kolam</label>
                                 <input type="text" name="nama_kolam" class="form-control" />
                             </div>
@@ -47,7 +49,10 @@
                                 <label class="control-label">Pro+ Air (Liter)</label>
                                 <input type="text" name="pro_air" class="form-control" />
                             </div>
-                            <div class="form-group">
+                            </div>
+
+                            <div class="wrap">
+                             <div class="form-group">
                                 <label class="control-label">Pro+ Oral (ml)</label>
                                 <input type="text" name="pro_oral" class="form-control" />
                             </div>
@@ -59,6 +64,10 @@
                                 <label class="control-label">Keterangan</label>
                                 <input type="text" name="keterangan" class="form-control" />
                             </div>
+                            </div>
+                        </div>
+                            
+                           
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
