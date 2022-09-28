@@ -2099,4 +2099,28 @@
     width: 60rem;
 }
 
+.tambah-data {
+    background-color: #1695DC;
+    color: white;
+    :hover {
+        background-color: #1695DC;
+    color: white;
+    }
+}
 
+.tambah-data:hover {
+    background-color: white;
+    color: #1695DC;
+    
+}
+
+
+.colorPrimaryDark {
+    background-color: #0f7c9a;
+    color: #c6f2ff;
+}
+
+.colorAccent {
+    background-color: #c6f2ff;
+    color: black;
+}
