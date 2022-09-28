@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                        <div class="wrap">
+                         <div class="form-group">
                                 <label class="control-label">Nama Kolam:</label>
                                 <input type="text" name="id_kolam" class="form-control" />
                             </div>
@@ -46,8 +48,9 @@
                                 <label class="control-label">ADG = Avg. Daily Growth (gr):</label>
                                 <input type="number" name="adg" class="form-control" min="0" step="0.01" value="0.00" />
                             </div>
-
-                            <div class="form-group">
+                        </div>
+                        <div class="wrap">
+                             <div class="form-group">
                                 <label class="control-label">SR = Survival Rate (%):</label>
                                 <input type="number" name="sr" class="form-control" min="0" step="0.01" value="0.00" />
                             </div>
@@ -66,6 +69,11 @@
                                 <label class="control-label">Scoring Udang:</label>
                                 <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.0" />
                             </div>
+                        </div>
+                        </div>
+                        
+
+                           
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

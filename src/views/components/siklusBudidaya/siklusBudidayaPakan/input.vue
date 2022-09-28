@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                        <div class="form-group">
                                 <label class="control-label">Nama Kolam</label>
                                 <input type="text" name="nama_kolam" class="form-control" />
                             </div>
@@ -52,7 +54,10 @@
                                 <label class="control-label">No. Pakan</label>
                                 <input type="text" name="pakan" class="form-control" />
                             </div>
-                            <div class="form-group">
+                            
+                                </div>
+                                <div class="wrap">
+                                <div class="form-group">
                                 <label for="select" class="col-form-label">No. Auto Feeder</label>
                                 <multiselect
                                     v-model="inputs['input3']"
@@ -64,7 +69,7 @@
                                     deselect-label=""
                                 ></multiselect>
                             </div>
-                            <div class="form-group">
+                                    <div class="form-group">
                                 <label class="control-label">Pemberian pakan (kg)</label>
                                 <input type="number" name="pemberian_pakan" class="form-control" />
                             </div>
@@ -76,6 +81,10 @@
                                 <label class="control-label">FCR (Food conversion rate)</label>
                                 <input type="number" name="fcr" class="form-control" />
                             </div>
+                                </div>
+                            </div>
+                            
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                             <div class="form-group">
                                 <label class="control-label">Density:</label>
                                 <div class="d-flex">
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
@@ -54,14 +56,19 @@
                                 </div>
                             </div>
 
+                            
+
+                            </div>
+
+                            <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">Dyno (%)</label>
                                 <div class="d-flex">
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
-
-                            <div class="form-group">
+                            
+                                <div class="form-group">
                                 <label class="control-label">GA (%):</label>
                                 <div class="d-flex">
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
@@ -81,6 +88,10 @@
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
+                            </div>
+                        </div>
+                           
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
