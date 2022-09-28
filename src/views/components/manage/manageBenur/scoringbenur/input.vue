@@ -25,13 +25,17 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="panel-body">
+                            <form class="form-vertical" action="#">
+
+                                <div class="box-wrap">
+                                    <div class="wrap">
+                                        <div class="form-group">
                             <label class="control-label">Tanggal dan jam iput:</label>
                             <div class="form-group mb-0">
                                 <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="control-label">Panjang benur (mm)</label>
                             <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
@@ -64,7 +68,9 @@
                             <label class="control-label">Vibrio luminnescen (water & fry)</label>
                             <multiselect v-model="inputs['input9']" :options="options9" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
                         </div>
-                        <div class="form-group">
+</div>
+                        <div class="wrap">
+                             <div class="form-group">
                             <label class="control-label">TVC (water)</label>
                             <multiselect v-model="inputs['input10']" :options="options10" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
                         </div>
@@ -108,6 +114,16 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        </div>
+                                    </div>
+                            
+                                
+                       
+
+                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+
+                            </form>
                         </div>
                     </div>
                 </div>
