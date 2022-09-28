@@ -6,7 +6,7 @@
                 <ul class="navbar-item theme-brand flex-row text-center">
                     <li class="nav-item theme-logo">
                         <router-link to="/">
-                            <img src="@/assets/images/logo1.svg" class="navbar-logo" alt="logo" />
+                            <img src="@/assets/images/logo2.png" class="navbar-logo" alt="logo" />
                         </router-link>
                     </li>
                     <li class="nav-item theme-text">
