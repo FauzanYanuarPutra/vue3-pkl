@@ -190,6 +190,43 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Pengapuran</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Nama Kolam</b> : ' + item.nama_kolam + '</p>' +
+            '<p><b>Tanggal</b> : ' + item.tanggal + '</p>' +
+            '<p><b>Pemakaian kapur</b> : ' + item.pemakaian_kapur + '</p>' +
+            '<p><b>Keterangan</b> : ' + item.keterangan + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
