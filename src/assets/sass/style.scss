@@ -2064,12 +2064,20 @@
 
 // tambahan
 
-.swal2-html-container#swal2-html-container {
+
+.swal2-popup {
+    max-width: 600em;
+    .swal2-html-container#swal2-html-container {
     text-align: start;
     padding: 50px 0px 30px 0px;
+    // margin: -10px;
+    // background-color: red;
+    // width: 600em;
     p {
         margin-bottom: 0.2rem;
     }
+}
+
 }
 
 .box-wrap {
@@ -2087,7 +2095,10 @@
             width: 400px;
         }
     }
+}
 
+.swal2-popup.swal2-modal.swal2-show{
+    width: 60rem;
 }
 
 

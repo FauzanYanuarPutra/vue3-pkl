@@ -285,7 +285,7 @@ const view_row = (item) => {
             '<p><b>Pengapuran</b> : ' + item.pengapuran + '</p>' +
             '<p><b>Pemupukan dan pemberian mineral</b> : ' + item.pemupukan + '</p>' +
             '<p><b>Pertumbuhan plankton</b> : ' + item.pertumbuhan_plankton + '</p>' +
-            '<p><b>Pertumbuhan patogen atau yang merugikan</b> : ' + item.pertumbuhan_patogen + '</p>' +
+            '<p><b>Pertumbuhan patogen atau yang merugikan </b> : ' + item.pertumbuhan_patogen + '</p>' +
             '<p><b>Probiotik</b> : ' + item.probiotik + '</p>'
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
