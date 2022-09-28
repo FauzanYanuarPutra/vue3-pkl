@@ -209,6 +209,7 @@ const view_row = (item) => {
 
                 padding: '2em',
             });
+
     // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>

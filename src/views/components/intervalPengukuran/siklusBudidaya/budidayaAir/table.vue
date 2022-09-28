@@ -155,6 +155,7 @@ const bind_data = () => {
             analisa_kimia: '54',
             fitoplankton: '34',
             vibrio: '54',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -171,6 +172,7 @@ const bind_data = () => {
             analisa_kimia: '56',
             fitoplankton: '4',
             vibrio: '76',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -187,6 +189,7 @@ const bind_data = () => {
             analisa_kimia: '56',
             fitoplankton: '5',
             vibrio: '97',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -203,6 +206,7 @@ const bind_data = () => {
             analisa_kimia: '2',
             fitoplankton: '75',
             vibrio: '2',
+            tbc: '12',
             hardness: '3',
         },
         {
@@ -219,6 +223,7 @@ const bind_data = () => {
             analisa_kimia: '54',
             fitoplankton: '34',
             vibrio: '54',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -235,6 +240,7 @@ const bind_data = () => {
             analisa_kimia: '54',
             fitoplankton: '34',
             vibrio: '54',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -251,6 +257,7 @@ const bind_data = () => {
             analisa_kimia: '54',
             fitoplankton: '34',
             vibrio: '54',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -267,6 +274,7 @@ const bind_data = () => {
             analisa_kimia: '16',
             fitoplankton: '8',
             vibrio: '26',
+            tbc: '12',
             hardness: '2',
         },
         {
@@ -283,6 +291,7 @@ const bind_data = () => {
             analisa_kimia: '54',
             fitoplankton: '34',
             vibrio: '54',
+            tbc: '12',
             hardness: '5',
         },
         {
@@ -299,12 +308,50 @@ const bind_data = () => {
             analisa_kimia: '2',
             fitoplankton: '75',
             vibrio: '2',
+            tbc: '12',
             hardness: '3',
         },
     ];
 };
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Siklus budidaya (Air)</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Tinggi Air (cm)</b> : ' + item.tinggi_air + '</p>' +
+            '<p><b>Kecerahan (cm)</b> : ' + item.kecerahan + '</p>' +
+            '<p><b>Warna</b> : ' + item.warna + '</p>' +
+            '<p><b>pH</b> : ' + item.ph + '</p>' +
+            '<p><b>Suhu air (celcius)</b> : ' + item.suhu_air + '</p>' +
+            '<p><b>DO (ppm)</b> : ' + item.do + '</p>' +
+            '<p><b>Salinitas (%)</b> : ' + item.salinitas + '</p>' +
+            '<p><b>Alkalinitas (ppm)</b> : ' + item.alkalinitas + '</p>' +
+            '<p><b>TOM</b> : ' + item.tom + '</p>' +
+            '<p><b>Analisa kimia</b> : ' + item.analisa_kimia + '</p>' +
+            '<p><b>Fitoplankton</b> : ' + item.fitoplankton + '</p>' +
+            '<p><b>Vibrio</b> : ' + item.vibrio + '</p>' +
+            '<p><b>TBC</b> : ' + item.tbc + '</p>' +
+            '<p><b>Hardness</b> : ' + item.hardness + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
