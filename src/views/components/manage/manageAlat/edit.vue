@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Kategori Alat:</label>
                                 <input type="text" name="kategori_alat" class="form-control" />
                             </div>
@@ -55,24 +57,60 @@
                                 <label class="control-label">Keterangan:</label>
                                 <input type="text" name="keterangan" class="form-control" />
                             </div>
+
                             <div class="form-group">
                                 <label class="control-label">Jumlah unit:</label>
                                 <input type="text" name="jumlah_unit" class="form-control" />
                             </div>
+                            </div>
+
+                            <div class="wrap">
+                            
 
                             <div class="form-group">
                                 <label class="control-label">Photo:</label>
                                 <div class="custom-file-container">
-                                    <label class="file-button">
-                                        <input type="file" class="" multiple />
-                                        <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-                                    </label>
+                                    <div class="invoice-logo">
+                                        <div class="upload pe-md-5">
+                                            <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
+                                            <img
+                                                v-if="selected_file"
+                                                :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
+                                                alt="profile"
+                                                class="profile-preview"
+                                                @click="$refs.fl_profile.click()"
+                                            />
+                                            <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
+                                                <div class="my-2">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="50"
+                                                        height="50"
+                                                        viewBox="0 0 24 24"
+                                                        fill="none"
+                                                        stroke="currentColor"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        class="feather feather-upload-cloud"
+                                                    >
+                                                        <polyline points="16 16 12 12 8 16"></polyline>
+                                                        <line x1="12" y1="12" x2="12" y2="21"></line>
+                                                        <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                                                        <polyline points="16 16 12 12 8 16"></polyline>
+                                                    </svg>
+                                                </div>
+                                                <div class="mt-2">Click to Upload Picture/Logo</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Internal ID:</label>
-                                <input type="number" placeholder="0.00" required name="price" min="0" value="0" step="0.01" class="form-control" />
+                                <input type="number" name="internal_id" class="form-control" />
                             </div>
 
                             <div class="form-group">
@@ -86,6 +124,10 @@
                                 <label class="control-label">Tenaga(HP):</label>
                                 <input type="number" name="tenaga_hp" class="form-control" />
                             </div>
+                            </div>
+                        </div>
+                            
+                        
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
@@ -115,6 +157,15 @@
     useMeta({ title: 'File Upload' });
 
     const code_arr = ref([]);
+    const selected_file = ref(null);
+
+    const toggleCode = (name) => {
+        if (code_arr.value.includes(name)) {
+            code_arr.value = code_arr.value.filter((d) => d != name);
+        } else {
+            code_arr.value.push(name);
+        }
+    };
 
     const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
     const inputs = ref({
@@ -124,4 +175,8 @@
         input4: [],
         input5: [],
     });
+
+    const change_file = (event) => {
+        selected_file.value = URL.createObjectURL(event.target.files[0]);
+    };
 </script>

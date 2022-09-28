@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
                                 <label class="control-label">Nama Kolam:</label>
                                 <input type="text" name="nama_kolam" class="form-control" />
                             </div>
@@ -54,7 +56,10 @@
                                 <label class="control-label">Berat Rataan (gram):</label>
                                 <input type="number" name="berat_rataan" class="form-control" />
                             </div>
-                            <div class="form-group">
+                                </div>
+
+                                <div class="wrap">
+                                     <div class="form-group">
                                 <label class="control-label">Jumlah Benih (ekor):</label>
                                 <input type="number" name="jumlah_benih" class="form-control" />
                             </div>
@@ -83,6 +88,10 @@
                                 <label class="control-label">Total Bio Mass:</label>
                                 <input type="number" name="total_bio_mass" class="form-control" />
                             </div>
+                                </div>
+                            </div>
+                            
+                           
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

@@ -26,20 +26,27 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="row">
-                                <label for="fullName">Tanggal iput:</label>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label for="fullName">Tanggal iput:</label>
+                                        <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Ukuran udang:</label>
+                                        <input type="text" name="nama_tambak" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group wrap">
+                                    <label class="control-label">Harga:</label>
+                                    <input type="text" name="alamat" class="form-control" />
+                                </div>
+
+                                
                             </div>
-                            <div class="form-group mb-4">
-                                <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Ukuran udang:</label>
-                                <input type="text" name="nama_tambak" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Harga:</label>
-                                <input type="text" name="alamat" class="form-control" />
-                            </div>
+                            
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Id:</label>
                                 <input type="text" name="id" class="form-control" />
                             </div>
@@ -47,8 +49,10 @@
                                 <label class="control-label">ID User:</label>
                                 <input type="text" name="id_user" class="form-control" />
                             </div>
+                            </div>   
 
-                            <div class="form-group">
+                            <div class="wrap">
+                                 <div class="form-group">
                                 <label class="control-label">Judul:</label>
                                 <input type="text" name="judul" class="form-control" />
                             </div>
@@ -63,6 +67,11 @@
                                 <input type="text" name="id_status_reminder" class="form-control" />
                             </div>
 
+                            </div>   
+                        </div>
+                            
+
+                           
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

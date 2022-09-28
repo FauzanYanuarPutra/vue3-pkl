@@ -6,8 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Interval
-                                        Pengukuran</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Input Siklus budidaya
+                                        (Udang)</span>
                                 </li>
                             </ol>
                         </nav>
@@ -22,22 +22,19 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Interval Pengukuran</h3>
+                                <h3>Input Siklus budidaya (Udang)</h3>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Siklus budidaya (Udang)</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap form-group">
+                            <label>Siklus budidaya (Udang):</label>
                                 <input type="number" name="siklus_udang" class="form-control" />
                             </div>
+                        </div>
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
