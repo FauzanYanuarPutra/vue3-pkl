@@ -26,52 +26,57 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                <div class="form-group">
-                                <label class="control-label">Id:</label>
-                                <input type="text" name="id" class="form-control" />
-                            </div>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Id:</label>
+                                        <input type="text" name="id" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Tanggal:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class="form-group mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Kolam:</label>
+                                        <input type="text" name="id_tambak" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">ID User:</label>
+                                        <input type="text" name="id_user" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Kategori:</label>
+                                        <input type="text" name="kategori" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Judul:</label>
+                                        <input type="text" name="judul" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Status:</label>
+                                        <input type="text" name="id_status_reminder" class="form-control" />
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Nama Kolam:</label>
-                                <input type="text" name="id_tambak" class="form-control" />
-                            </div>
 
-                            <div class="form-group">
-                                <label class="control-label">ID User:</label>
-                                <input type="text" name="id_user" class="form-control" />
-                            </div>
-                            </div>   
 
-                            <div class="wrap">
-                                 <div class="form-group">
-                                <label class="control-label">Judul:</label>
-                                <input type="text" name="judul" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <input type="text" name="keterangan" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Status:</label>
-                                <input type="text" name="id_status_reminder" class="form-control" />
-                            </div>
-
-                            </div>   
-                        </div>
-                            
-
-                           
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
@@ -82,44 +87,44 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
-    import '@/assets/sass/scrollspyNav.scss';
-    import '@/assets/sass/forms/file-upload-with-preview.min.css';
-    import '@suadelabs/vue3-multiselect/dist/vue3-multiselect.css';
-    import '@/assets/sass/forms/file-upload-with-preview.min.css';
-    import highlight from '@/components/plugins/highlight.vue';
+import { onMounted, ref } from 'vue';
+import '@/assets/sass/scrollspyNav.scss';
+import '@/assets/sass/forms/file-upload-with-preview.min.css';
+import '@suadelabs/vue3-multiselect/dist/vue3-multiselect.css';
+import '@/assets/sass/forms/file-upload-with-preview.min.css';
+import highlight from '@/components/plugins/highlight.vue';
 
-    import flatPickr from 'vue-flatpickr-component';
-    import 'flatpickr/dist/flatpickr.css';
+import flatPickr from 'vue-flatpickr-component';
+import 'flatpickr/dist/flatpickr.css';
 
-    import Multiselect from '@suadelabs/vue3-multiselect';
+import Multiselect from '@suadelabs/vue3-multiselect';
 
-    import FileUploadWithPreview from 'file-upload-with-preview';
+import FileUploadWithPreview from 'file-upload-with-preview';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'File Upload' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'File Upload' });
 
-    const code_arr = ref([]);
-    const selected_file = ref(null);
+const code_arr = ref([]);
+const selected_file = ref(null);
 
-    const toggleCode = (name) => {
-        if (code_arr.value.includes(name)) {
-            code_arr.value = code_arr.value.filter((d) => d != name);
-        } else {
-            code_arr.value.push(name);
-        }
-    };
+const toggleCode = (name) => {
+    if (code_arr.value.includes(name)) {
+        code_arr.value = code_arr.value.filter((d) => d != name);
+    } else {
+        code_arr.value.push(name);
+    }
+};
 
-    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
-    const inputs = ref({
-        input1: [],
-        input2: [],
-        input3: [],
-        input4: [],
-        input5: [],
-    });
+const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const inputs = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
 
-    const change_file = (event) => {
-        selected_file.value = URL.createObjectURL(event.target.files[0]);
-    };
+const change_file = (event) => {
+    selected_file.value = URL.createObjectURL(event.target.files[0]);
+};
 </script>
