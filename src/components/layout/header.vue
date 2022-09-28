@@ -86,7 +86,7 @@
                         </a>
                     </div>
 
-                    <div class="dropdown nav-item language-dropdown btn-group">
+                    <!-- <div class="dropdown nav-item language-dropdown btn-group">
                         <a href="javascript:;" id="ddllang" data-bs-toggle="dropdown" aria-expanded="false"
                             class="btn dropdown-toggle btn-icon-only nav-link">
                             <img v-if="selectedLang" :src="require(`@/assets/images/flags/${selectedLang.code}.png`)"
@@ -104,7 +104,7 @@
                                 </li>
                             </perfect-scrollbar>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="dropdown nav-item message-dropdown btn-group">
                         <a href="javascript:;" id="ddlmsg" data-bs-toggle="dropdown" aria-expanded="false"
