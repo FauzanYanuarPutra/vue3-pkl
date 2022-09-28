@@ -27,8 +27,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="wrap">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap form-group">
                                 <label>Panen:</label>
                                 <input type="number" name="panen" class="form-control" />
                             </div>
