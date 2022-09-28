@@ -181,7 +181,7 @@ const bind_data = () => {
             KETERANGAN: 'Tidak baik,air dibuang & diganti',
         },
         {
-            id: 6,
+            id: 10,
             WARNA_AIR_YANG_DITIMBULKAN: '',
             JENIS_PLANKTON: '',
             KECERAHAN: '',
@@ -191,6 +191,41 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Kolam Treament</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Warna Air yang ditimbulkan</b> : ' + item.WARNA_AIR_YANG_DITIMBULKAN + '</p>' +
+            '<p><b>Jenis Plankton</b> : ' + item.JENIS_PLANKTON + '</p>' +
+            '<p><b>Kecerahan</b> : ' + item.KECERAHAN + '</p>' +
+            '<p><b>Keterangan</b> : ' + item.KETERANGAN + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
