@@ -28,63 +28,74 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
-                                <label class="control-label">Tinggi Air (cm)</label>
-                                <input type="number" name="tinggi_air" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Kecerahan (cm)</label>
-                                <input type="number" name="kecerahan" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Warna</label>
-                                <input type="number" name="warna" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">pH</label>
-                                <input type="number" name="ph" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Suhu air (celcius)</label>
-                                <input type="number" name="suhu_air" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">DO (ppm)</label>
-                                <input type="number" name="do" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Salinitas (%)</label>
-                                <input type="number" name="salinitas" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Alkalinitas (ppm)</label>
-                                <input type="number" name="alkalinitas" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">TOM</label>
-                                <input type="number" name="tom" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Analisa kimia</label>
-                                <input type="number" name="analisa_kimia" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Fitoplankton</label>
-                                <input type="number" name="fitoplankton" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Vibrio</label>
-                                <input type="number" name="vibrio" class="form-control" />
+                        <div class="box-wrap">
+
+                            <div class="wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Tinggi Air (cm)</label>
+                                    <input type="number" name="tinggi_air" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kecerahan (cm)</label>
+                                    <input type="number" name="kecerahan" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Warna</label>
+                                    <input type="number" name="warna" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">pH</label>
+                                    <input type="number" name="ph" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Suhu air (celcius)</label>
+                                    <input type="number" name="suhu_air" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">DO (ppm)</label>
+                                    <input type="number" name="do" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Salinitas (%)</label>
+                                    <input type="number" name="salinitas" class="form-control" />
+                                </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">TBC</label>
-                                <input type="number" name="tbc" class="form-control" />
+                            <div class="wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Alkalinitas (ppm)</label>
+                                    <input type="number" name="alkalinitas" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">TOM</label>
+                                    <input type="number" name="tom" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Analisa kimia</label>
+                                    <input type="number" name="analisa_kimia" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Fitoplankton</label>
+                                    <input type="number" name="fitoplankton" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Vibrio</label>
+                                    <input type="number" name="vibrio" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">TBC</label>
+                                    <input type="number" name="tbc" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Hardness</label>
+                                    <input type="number" name="hardness" class="form-control" />
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Hardness</label>
-                                <input type="number" name="hardness" class="form-control" />
-                            </div>
+                        
+                        </div>
+                            
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
