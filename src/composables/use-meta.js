@@ -12,5 +12,5 @@ export const usePageTitle = (pageTitle) =>
     );
 
 export const useMeta = (data) => {
-    return useHead({ ...data, title: `${data.title} | CORK - Multipurpose Bootstrap Dashboard Template` });
+    return useHead({ ...data, title: `Maxmar Operational Management System` });
 };
