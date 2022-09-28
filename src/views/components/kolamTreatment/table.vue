@@ -235,7 +235,7 @@ const view_row = (item) => {
         html:
             '<p><b>Nama Kolam</b> : ' + item.nama_kolam + '</p>' +
             '<p><b>Tanggal</b> : ' + item.tanggal_input + '</p>' +
-            '<p><b>Pro+ Air (Liter) (Kg)</b> : ' + item.pro_air + '</p>' +
+            '<p><b>Pro+ Air (Liter)</b> : ' + item.pro_air + '</p>' +
             '<p><b>Pro+ Oral (ml)</b> : ' + item.pro_oral + '</p>' +
             '<p><b>Mineral (Kg)</b> : ' + item.mineral_kg + '</p>' +
             '<p><b>Keterangan</b> : ' + item.keterangan + '</p>'

@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Manage Kolam</h3>
+                                <h4>Input Manage Kolam</h4>
                             </div>
                         </div>
                     </div>
@@ -59,41 +59,20 @@
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
                             </div>
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Pilih Kincir</h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <label class="control-label">Pilih Kincir</label>
+                                <strong><label class="control-label">Pilih Kincir</label></strong>
                                 <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
                             </div>
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Pilih Pompa</h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <label class="control-label">Pilih Pompa</label>
+                                <strong><label class="control-label">Pilih Pompa</label></strong>
                                 <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
                             </div>
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Pilih Auto Feeder</h4>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <label class="control-label">Pilih Auto Feeder</label>
+                                <strong><label class="control-label">Pilih Auto Feeder</label></strong>
                                 <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
