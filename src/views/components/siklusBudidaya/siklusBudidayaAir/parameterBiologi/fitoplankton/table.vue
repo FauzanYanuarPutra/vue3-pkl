@@ -143,6 +143,41 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('nama: ' + item.id + ', Name: ' + item.ph);
+    new window.Swal({
+        title: '<i>Fitoplankton</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Density</b> : ' + item.Density + '</p>' +
+            '<p><b>Cloro</b> : ' + item.Cloro + '</p>' +
+            '<p><b>Proto</b> : ' + item.Proto + '</p>' +
+            '<p><b>Diantom</b> : ' + item.Diantom + '</p>' +
+            '<p><b>Dyno</b> : ' + item.Dyno + '</p>' +
+            '<p><b>GA</b> : ' + item.GA + '</p>' +
+            '<p><b>BGA</b> : ' + item.BGA + '</p>' +
+            '<p><b>Other</b> : ' + item.Other + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
