@@ -273,6 +273,42 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Siklus budidaya (persiapan)</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Pengeringan dasar tambak</b> : ' + item.pengeringan_dasar + '</p>' +
+            '<p><b>Pembuangan sedimen organik</b> : ' + item.pembuangan_sedimen + '</p>' +
+            '<p><b>Sterilisasi tambak</b> : ' + item.sterilisasi_tambak + '</p>' +
+            '<p><b>Pengisian air dan sterilisasi air tambak</b> : ' + item.pengisian_air + '</p>' +
+            '<p><b>Pengapuran</b> : ' + item.pengapuran + '</p>' +
+            '<p><b>Pemupukan dan pemberian mineral</b> : ' + item.pemupukan + '</p>' +
+            '<p><b>Pertumbuhan plankton</b> : ' + item.pertumbuhan_plankton + '</p>' +
+            '<p><b>Pertumbuhan patogen atau yang merugikan</b> : ' + item.pertumbuhan_patogen + '</p>' +
+            '<p><b>Probiotik</b> : ' + item.probiotik + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
