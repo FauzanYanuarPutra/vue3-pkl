@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/scoring-benur/create" @click="toggleMobileMenu" class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/scoring-benur/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
 
                         <v-client-table :data="items1" :columns="columns1" :options="table_option1">
