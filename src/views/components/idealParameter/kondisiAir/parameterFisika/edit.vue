@@ -27,46 +27,49 @@
                     <div class="panel-body">
                     <form class="form-vertical" action="#">
 
-                    <div class="wrap">
+                    <div class="box-wrap">
 
-                     <div class="form-group">
+<div class="wrap">
+    <div class="form-group">
                                 <label class="control-label">Tinggi Air (cm):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-30 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-30" placeholder="Max" />
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="control-label">Kecerahan:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-30 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-30" placeholder="Max" />
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
+</div>
+                            
 
                 
-
-                        <div class="form-group">
+            <div class="wrap">
+                <div class="form-group">
                                 <label class="control-label">Warna:</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-30 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-30" placeholder="Max" />
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                        <div class="form-group">
                                 <label class="control-label">Suhu Air(cekcius):</label>
                                 <div class="d-flex">
-                                    <input type="number" class="form-control form-control-sm w-30 d-flex" placeholder="Min" />
-                                    <input type="number" class="form-control form-control-sm w-30" placeholder="Max" />
-                                </div>
-                            </div>
+                                    <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                    <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                        </div>
+                </div>
+            </div>
+                        
                             
                     
                     </div>
-
-                       
                         
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />

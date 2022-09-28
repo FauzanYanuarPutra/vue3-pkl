@@ -26,7 +26,10 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                 <div class="form-group">
                                 <label class="control-label">Algino:</label>
                                 <div class="d-flex">
                                     <input type="text" name="keterangan" class="form-control" />
@@ -53,8 +56,10 @@
                                     <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
+                            </div>
 
-                            <div class="form-group">
+                            <div class="wrap">
+                                 <div class="form-group">
                                 <label class="control-label">Total Vibrio Count:</label>
                                 <div class="d-flex">
                                     <input type="text" name="keterangan" class="form-control" />
@@ -80,6 +85,11 @@
                                     <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
+                            </div>
+                        </div>
+                           
+
+                           
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

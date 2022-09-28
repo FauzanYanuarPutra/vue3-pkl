@@ -26,57 +26,57 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
-                                <label class="control-label">PH:</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">PH:</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Salinitas (%):</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Salinitas (%):</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">DO (ppm):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
-                            <br />
+                                    <div class="form-group">
+                                        <label class="control-label">DO (ppm):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <div class="row">
-                                    <h6>Alkalinitas (ppm)</h6>
-                                </div>
-                            </div>
+                                        <div class="form-group">
+                                        <div class="row">
+                                            <h6>Alkalinitas (ppm)</h6>
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">CO3:</label>
-                                <div class="d-flex">
-                                    <input type="number" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">CO3:</label>
+                                        <div class="d-flex">
+                                            <input type="number" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">HC03:</label>
-                                <div class="d-flex">
-                                    <input type="number" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">HC03:</label>
+                                        <div class="d-flex">
+                                            <input type="number" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Total:</label>
-                                <div class="d-flex">
-                                    <input type="number" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            <br />
-
-                            <div class="form-group">
+                                    <div class="form-group">
+                                        <label class="control-label">Total:</label>
+                                        <div class="d-flex">
+                                            <input type="number" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+                   
+                                     <div class="form-group">
                                 <label class="control-label">Ammonium-NH4 (mg/L):</label>
                                 <div class="d-flex">
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
@@ -89,6 +89,9 @@
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
+                                         </div>
+                                
+                                <div class="wrap">
 
                             <div class="form-group">
                                 <label class="control-label">Nitrit-NO3 (mg/L):</label>
@@ -110,9 +113,8 @@
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
-                            <br />
-
-                            <div class="form-group">
+   
+                                <div class="form-group">
                                 <div class="row">
                                     <h6>Hardness</h6>
                                 </div>
@@ -137,8 +139,8 @@
                                     <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
-                            <br />
 
+                                
                             <div class="form-group">
                                 <label class="control-label">Residual Chlorin-CI:</label>
                                 <div class="d-flex">
@@ -152,6 +154,12 @@
                                     <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
+                            </div>
+
+                            </div>
+                        
+
+
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

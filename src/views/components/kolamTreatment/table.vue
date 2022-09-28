@@ -137,7 +137,7 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b1',
             tanggal_input: '2011/04/25',
             pro_air: '23',
             pro_oral: '53',
@@ -146,7 +146,7 @@ const bind_data = () => {
         },
         {
             ID: 2,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b2',
             tanggal_input: '2011/04/25',
             pro_air: '54',
             pro_oral: '43',
@@ -155,7 +155,7 @@ const bind_data = () => {
         },
         {
             ID: 3,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b3',
             tanggal_input: '2011/04/25',
             pro_air: '64',
             pro_oral: '33',
@@ -164,7 +164,7 @@ const bind_data = () => {
         },
         {
             ID: 4,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b4',
             tanggal_input: '2011/04/25',
             pro_air: '42',
             pro_oral: '54',
@@ -173,7 +173,7 @@ const bind_data = () => {
         },
         {
             ID: 5,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b5',
             tanggal_input: '2011/04/25',
             pro_air: '23',
             pro_oral: '53',
@@ -182,7 +182,7 @@ const bind_data = () => {
         },
         {
             ID: 6,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b6',
             tanggal_input: '2011/04/25',
             pro_air: '3',
             pro_oral: '64',
@@ -191,7 +191,7 @@ const bind_data = () => {
         },
         {
             ID: 7,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b7',
             tanggal_input: '2011/04/25',
             pro_air: '53',
             pro_oral: '5',
@@ -200,7 +200,7 @@ const bind_data = () => {
         },
         {
             ID: 8,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b8',
             tanggal_input: '2011/04/25',
             pro_air: '53',
             pro_oral: '42',
@@ -209,7 +209,7 @@ const bind_data = () => {
         },
         {
             ID: 9,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b9',
             tanggal_input: '2011/04/25',
             pro_air: '23',
             pro_oral: '3',
@@ -218,7 +218,7 @@ const bind_data = () => {
         },
         {
             ID: 10,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b10',
             tanggal_input: '2011/04/25',
             pro_air: '86',
             pro_oral: '86',

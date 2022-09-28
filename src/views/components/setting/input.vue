@@ -26,11 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <!-- <div class="form-group">
-                                <label class="control-label">Id:</label>
-                                <input type="hidden" name="id" class="form-control" />
-                            </div> -->
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                             <div class="form-group">
                                 <label class="control-label">Kategori:</label>
                                 <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
@@ -41,7 +39,9 @@
                                 <label class="control-label">Nama:</label>
                                 <input type="text" name="nama" class="form-control" />
                             </div>
+                            </div>
 
+                            <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">Deskripsi:</label>
                                 <input type="text" name="deskripsi" class="form-control" />
@@ -52,6 +52,11 @@
                                 <input type="text" name="status" class="form-control" />
                             </div>
 
+                            </div>
+                        </div>
+                           
+
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
