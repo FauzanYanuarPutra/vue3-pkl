@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Id kolam:</label>
                                 <input type="id" name="id_kolam" class="form-control" />
                             </div>
@@ -36,6 +38,10 @@
                             <div class="form-group mb-4">
                                 <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
                             </div>
+                            </div>
+
+                            <div class="wrap">
+                                
                             <div class="form-group">
                                 <label class="control-label">Tipe panen:</label>
                                 <multiselect
@@ -53,7 +59,11 @@
                                 <label class="control-label">DOC (Day of cultivation):</label>
                                 <input type="number" name="doc" class="form-control" />
                             </div>
-                            <br />
+                            </div>
+                        </div>
+                            
+                            
+
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>

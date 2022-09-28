@@ -26,7 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                 <div class="form-group">
                                 <label class="control-label">Nama Kolam:</label>
                                 <multiselect
                                     v-model="inputs['input1']"
@@ -44,7 +46,10 @@
                                     <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            </div>
+
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Pemakaian Pupuk dan Mineral:</label>
                                 <multiselect
                                     v-model="inputs['input2']"
@@ -60,6 +65,10 @@
                                 <label class="control-label">keterangan:</label>
                                 <input type="text" name="keterangan" class="form-control" />
                             </div>
+                            </div>
+                        </div>
+                        
+                            
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
