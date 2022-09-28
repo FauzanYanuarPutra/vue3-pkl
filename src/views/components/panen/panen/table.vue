@@ -29,8 +29,6 @@
                             <router-link to="/panen-create-" @click="toggleMobileMenu"
                                 class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-                        <router-link to="/panen-create-" @click="toggleMobileMenu"
-                            class="btn btn-primary mb-2 mx-3 my-1">Tambah Data</router-link>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
@@ -182,208 +180,43 @@ const bind_data = () => {
         },
     ];
 };
-const columns1 = ref(['ABW', 'Size', 'Total_biomassa', 'Total_populasi', 'Total_kebutuhan_pakan', 'FCR', 'SR', 'Produktivity', 'actions']);
-const items1 = ref([]);
-const table_option1 = ref({
-    perPage: 10,
-    perPageValues: [5, 10, 20, 50],
-    skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center' },
-    pagination: { nav: 'scroll', chunk: 5 },
-    texts: {
-        count: 'Showing {from} to {to} of {count}',
-        filter: '',
-        filterPlaceholder: 'Search...',
-        limit: 'Results:',
-    },
-    sortable: ['ABW', 'Size', 'Total_biomassa (Kg)', 'Total_populasi', 'Total_kebutuhan_pakan', 'FCR', 'SR', 'Produktivity'],
-    sortIcon: {
-        base: 'sort-icon-none',
-        up: 'sort-icon-asc',
-        down: 'sort-icon-desc',
-    },
-    resizableColumns: false,
-});
-
-onMounted(() => {
-    bind_data1();
-});
-
-const bind_data1 = () => {
-    items1.value = [
-        {
-            id: 1,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-        },
-        {
-            id: 2,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-        },
-        {
-            id: 3,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-        },
-        {
-            id: 4,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-        },
-        {
-            id: 5,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-        },
-    ];
-};
-const columns2 = ref([
-    'ABW',
-    'Size',
-    'Total_biomassa',
-    'Total_populasi',
-    'Total_kebutuhan_pakan',
-    'FCR',
-    'SR',
-    'Produktivity',
-    'Jumlah_udang_fresh',
-    'Jumlah_udang_molting',
-    'Jumlah_udang_broken',
-    'actions',
-]);
-const items2 = ref([]);
-const table_option2 = ref({
-    perPage: 10,
-    perPageValues: [5, 10, 20, 50],
-    skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center' },
-    pagination: { nav: 'scroll', chunk: 5 },
-    texts: {
-        count: 'Showing {from} to {to} of {count}',
-        filter: '',
-        filterPlaceholder: 'Search...',
-        limit: 'Results:',
-    },
-    sortable: ['ABW', 'Size', 'Total_biomassa', 'Total_populasi', 'Total kebutuhan_pakan', 'FCR', 'SR', 'Produktivity', 'Jumlah_udang_fresh', 'Jumlah_udang_molting', 'Jumlah_udang_broken'],
-    sortIcon: {
-        base: 'sort-icon-none',
-        up: 'sort-icon-asc',
-        down: 'sort-icon-desc',
-    },
-    resizableColumns: false,
-});
-
-onMounted(() => {
-    bind_data2();
-});
-
-const bind_data2 = () => {
-    items2.value = [
-        {
-            id: 1,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-            Jumlah_udang_fresh: '2034',
-            Jumlah_udang_molting: '213',
-            Jumlah_udang_broken: '755',
-        },
-        {
-            id: 2,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-            Jumlah_udang_fresh: '2034',
-            Jumlah_udang_molting: '213',
-            Jumlah_udang_broken: '755',
-        },
-        {
-            id: 3,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-            Jumlah_udang_fresh: '2034',
-            Jumlah_udang_molting: '213',
-            Jumlah_udang_broken: '755',
-        },
-        {
-            id: 4,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-            Jumlah_udang_fresh: '2034',
-            Jumlah_udang_molting: '213',
-            Jumlah_udang_broken: '755',
-        },
-        {
-            id: 5,
-            ABW: '2132',
-            Size: '333',
-            Total_biomassa: '4322',
-            Total_populasi: '12',
-            Total_kebutuhan_pakan: '2333',
-            FCR: '23',
-            SR: '100%',
-            Produktivity: '23',
-            Jumlah_udang_fresh: '2034',
-            Jumlah_udang_molting: '213',
-            Jumlah_udang_broken: '755',
-        },
-    ];
-};
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Kolam Treament</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Nama Kolam</b> : ' + item.Id_kolam + '</p>' +
+            '<p><b>Tanggal Panen</b> : ' + item.Tanggal_panen + '</p>' +
+            '<p><b>Tipe Panen</b> : ' + item.Tipe_panen + '</p>' +
+            '<p><b>DOC (Day of cultivation)</b> : ' + item.Doc + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
