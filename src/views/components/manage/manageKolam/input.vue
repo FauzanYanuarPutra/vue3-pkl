@@ -27,66 +27,74 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
-                                <label class="control-label">Tambak Id</label>
-                                <input type="number" name="id_tambak" class="form-control" />
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Tambak Id</label>
+                                        <input type="number" name="id_tambak" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Kolam Id</label>
+                                        <input type="number" name="id_kolam" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Kolam</label>
+                                        <input type="text" name="nama_kolam" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tipe Kolam</label>
+                                        <multiselect v-model="inputs['input1']" :options="options1" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Luas kolam (meter persegi)</label>
+                                        <input type="number" name="luas_kolam" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tinggi kolam (meter)</label>
+                                        <input type="text" name="tinggi_kolam" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                     <div class="form-group">
+                                            <label class="control-label">Jenis Kolam</label>
+                                            <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                                placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                            </multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong><label class="control-label">Pilih Kincir</label></strong>
+                                            <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                                placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                            </multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong><label class="control-label">Pilih Pompa</label></strong>
+                                            <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                                placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                            </multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <strong><label class="control-label">Pilih Auto Feeder</label></strong>
+                                            <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                                placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                            </multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Jumlah</label>
+                                            <input type="number" name="tinggi_kolam" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Status</label>
+                                            <multiselect v-model="inputs6['input3']" :options="options6" :searchable="true"
+                                                placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                            </multiselect>
+                                        </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Kolam Id</label>
-                                <input type="number" name="id_kolam" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Nama Kolam</label>
-                                <input type="text" name="nama_kolam" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Tipe Kolam</label>
-                                <multiselect v-model="inputs['input1']" :options="options1" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Luas kolam (meter persegi)</label>
-                                <input type="number" name="luas_kolam" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Tinggi kolam (meter)</label>
-                                <input type="text" name="tinggi_kolam" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Jenis Kolam</label>
-                                <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
-                            <div class="form-group">
-                                <strong><label class="control-label">Pilih Kincir</label></strong>
-                                <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
-                            <div class="form-group">
-                                <strong><label class="control-label">Pilih Pompa</label></strong>
-                                <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
-                            <div class="form-group">
-                                <strong><label class="control-label">Pilih Auto Feeder</label></strong>
-                                <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Jumlah</label>
-                                <input type="number" name="tinggi_kolam" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Status</label>
-                                <multiselect v-model="inputs6['input3']" :options="options6" :searchable="true"
-                                    placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                </multiselect>
-                            </div>
+                            
+                        
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
@@ -119,7 +127,7 @@ const selected_file = ref(null);
 
 const toggleCode = (name) => {
     if (code_arr.value.includes(name)) {
-        code_arr.value = code_arr.value.filter((d) => d != name);
+        code_arr.value = code_arr.value.fiter((d) => d != name);
     } else {
         code_arr.value.push(name);
     }

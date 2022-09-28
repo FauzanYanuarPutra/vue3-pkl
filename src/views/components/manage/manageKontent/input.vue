@@ -27,7 +27,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
                                 <label class="control-label">Id Kontent</label>
                                 <input type="number" name="id_kontent" class="form-control" />
                             </div>
@@ -87,7 +89,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                                </div>
+
+                                <div class="wrap">
+                                     <div class="form-group">
                                 <label class="control-label">Video</label>
                                 <div class="custom-file-container">
                                     <div class="invoice-logo">
@@ -163,6 +168,10 @@
                                     placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                 </multiselect>
                             </div>
+                                </div>
+                            </div>
+                            
+                           
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
