@@ -27,16 +27,13 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Kesehatan udang</h4>
-                                    </div>
+                            <div class="box-wrap">
+                                <div class="wrap form-group">
+                                <label>Kesehatan Udang: </label>
+                                <input type="number" name="kesehatan_udang" class="form-control" />
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input type="number" name="kesehatan_udang" class="form-control" />
-                            </div>
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>
