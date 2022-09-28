@@ -119,7 +119,7 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b1',
             tanggal: '2011/12/25',
             tinggi_air: '34 cm',
             pemakaian_sterilisasi: 'null',
@@ -127,7 +127,7 @@ const bind_data = () => {
         },
         {
             ID: 2,
-            nama_kolam: 'Kolam Udang',
+            nama_kolam: 'Kolam b2',
             tanggal: '2011/04/25',
             tinggi_air: '53 cm',
             pemakaian_sterilisasi: 'null',
@@ -135,7 +135,7 @@ const bind_data = () => {
         },
         {
             ID: 3,
-            nama_kolam: 'Kolam Benur',
+            nama_kolam: 'Kolam b3',
             tanggal: '2011/03/25',
             tinggi_air: '64 cm',
             pemakaian_sterilisasi: 'null',
@@ -143,7 +143,7 @@ const bind_data = () => {
         },
         {
             ID: 4,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b4',
             tanggal: '2011/05/25',
             tinggi_air: '74 cm',
             pemakaian_sterilisasi: 'null',
@@ -151,7 +151,7 @@ const bind_data = () => {
         },
         {
             ID: 5,
-            nama_kolam: 'Kolam Benur',
+            nama_kolam: 'Kolam b5',
             tanggal: '2011/08/25',
             tinggi_air: '37 cm',
             pemakaian_sterilisasi: 'null',
@@ -159,7 +159,7 @@ const bind_data = () => {
         },
         {
             ID: 6,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b6',
             tanggal: '2011/12/25',
             tinggi_air: '27 cm',
             pemakaian_sterilisasi: 'null',
@@ -167,7 +167,7 @@ const bind_data = () => {
         },
         {
             ID: 7,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b7',
             tanggal: '2011/11/25',
             tinggi_air: '36 cm',
             pemakaian_sterilisasi: 'null',
@@ -175,7 +175,7 @@ const bind_data = () => {
         },
         {
             ID: 8,
-            nama_kolam: 'Kolam Udang',
+            nama_kolam: 'Kolam b8',
             tanggal: '2011/04/25',
             tinggi_air: '83 cm',
             pemakaian_sterilisasi: 'null',
@@ -183,7 +183,7 @@ const bind_data = () => {
         },
         {
             ID: 9,
-            nama_kolam: 'Kolam Ikan',
+            nama_kolam: 'Kolam b9',
             tanggal: '2011/06/25',
             tinggi_air: '3 cm',
             pemakaian_sterilisasi: 'null',
@@ -191,7 +191,7 @@ const bind_data = () => {
         },
         {
             ID: 10,
-            nama_kolam: 'Kolam Benur',
+            nama_kolam: 'Kolam b10',
             tanggal: '2011/04/25',
             tinggi_air: '37 cm',
             pemakaian_sterilisasi: 'null',
