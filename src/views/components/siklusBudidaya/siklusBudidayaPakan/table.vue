@@ -89,7 +89,7 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['nama_kolam', 'tanggal_input', 'merek_pakan', 'pakan', 'pemberian_pakan', 'kumulative', 'fcr', 'actions']);
+const columns = ref(['nama_kolam', 'tanggal_input', 'abw', 'adg', 'sr', 'biomassa', 'ukuran_udang', 'scoring_udang', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
@@ -218,180 +218,33 @@ const bind_data = () => {
             keterangan: 'null',
             status: '103,600',
         },
-        {
-            id: 11,
-            nama_tambak: 'Jena Gaines',
-            tanggal_input: 'id Manager',
-            id: 'London',
-            kategori: 30,
-            jenis: '2008/12/19',
-            keterangan: 'null',
-            status: '90,560',
-        },
-        {
-            id: 12,
-            nama_tambak: 'Quinn Flynn',
-            tanggal_input: 'Support Lead',
-            id: 'Edinburgh',
-            kategori: 22,
-            jenis: '2013/03/03',
-            keterangan: 'null',
-            status: '342,000',
-        },
-        {
-            id: 13,
-            nama_tambak: 'Charde Marshall',
-            tanggal_input: 'Regional Director',
-            id: 'San Francisco',
-            kategori: 36,
-            jenis: '2008/10/16',
-            keterangan: 'null',
-            status: '470,600',
-        },
-        {
-            id: 14,
-            nama_tambak: 'Haley Kennedy',
-            tanggal_input: 'Senior Marketing Designer',
-            id: 'London',
-            kategori: 43,
-            jenis: '2012/12/18',
-            keterangan: 'null',
-            status: '313,500',
-        },
-        {
-            id: 15,
-            nama_tambak: 'Tatyana Fitzpatrick',
-            tanggal_input: 'Regional Director',
-            id: 'London',
-            kategori: 19,
-            jenis: '2010/03/17',
-            keterangan: 'null',
-            status: '385,750',
-        },
-        {
-            id: 16,
-            nama_tambak: 'Michael Silva',
-            tanggal_input: 'Marketing Designer',
-            id: 'London',
-            kategori: 66,
-            jenis: '2012/11/27',
-            keterangan: 'null',
-            status: '198,500',
-        },
-        {
-            id: 17,
-            nama_tambak: 'Paul Byrd',
-            tanggal_input: 'Chief Financial idr (CFO)',
-            id: 'New York',
-            kategori: 64,
-            jenis: '2010/06/09',
-            keterangan: 'null',
-            status: '725,000',
-        },
-        {
-            id: 18,
-            nama_tambak: 'Gloria Little',
-            tanggal_input: 'Systems Administrator',
-            id: 'New York',
-            kategori: 59,
-            jenis: '2009/04/10',
-            keterangan: 'null',
-            status: '237,500',
-        },
-        {
-            id: 19,
-            nama_tambak: 'Bradley Greer',
-            tanggal_input: 'Software Engineer',
-            id: 'London',
-            kategori: 41,
-            jenis: '2012/10/13',
-            keterangan: 'null',
-            status: '132,000',
-        },
-        {
-            id: 20,
-            nama_tambak: 'Dai Rios',
-            tanggal_input: 'Personnel Lead',
-            id: 'Edinburgh',
-            kategori: 35,
-            jenis: '2012/09/26',
-            keterangan: 'null',
-            status: '217,500',
-        },
-        {
-            id: 21,
-            nama_tambak: 'Jenette Caldwell',
-            tanggal_input: 'Development Lead',
-            id: 'New York',
-            kategori: 61,
-            jenis: '2011/09/03',
-            keterangan: 'null',
-            status: '345,000',
-        },
-        {
-            id: 22,
-            nama_tambak: 'Yuri Berry',
-            tanggal_input: 'Chief Marketing idr (CMO)',
-            id: 'New York',
-            kategori: 40,
-            jenis: '2009/06/25',
-            keterangan: 'null',
-            status: '675,000',
-        },
-        {
-            id: 23,
-            nama_tambak: 'Caesar Vance',
-            tanggal_input: 'Pre-Sales Support',
-            id: 'New York',
-            kategori: 21,
-            jenis: '2011/12/12',
-            keterangan: 'null',
-            status: '106,450',
-        },
-        {
-            id: 24,
-            nama_tambak: 'Doris Wilder',
-            tanggal_input: 'Sales Assistant',
-            id: 'Sidney',
-            kategori: 23,
-            jenis: '2010/09/20',
-            keterangan: 'null',
-            status: '85,600',
-        },
-        {
-            id: 25,
-            nama_tambak: 'Angelica Ramos',
-            tanggal_input: 'Chief Executive idr (CEO)',
-            id: 'London',
-            kategori: 47,
-            jenis: '2009/10/09',
-            keterangan: 'null',
-            status: '1,200,000',
-        },
-        {
-            id: 26,
-            nama_tambak: 'Gavin Joyce',
-            tanggal_input: 'Developer',
-            id: 'Edinburgh',
-            kategori: 42,
-            jenis: '2010/12/22',
-            keterangan: 'null',
-            status: '92,575',
-        },
-        {
-            id: 27,
-            nama_tambak: 'Jennifer Chang',
-            tanggal_input: 'Regional Director',
-            id: 'Singapore',
-            kategori: 28,
-            jenis: '2010/11/14',
-            keterangan: 'null',
-            status: '57,650',
-        },
     ];
 };
 
 const view_row = (item) => {
-    alert('ID: ' + item.id + ', Name: ' + item.nama_tambak);
+    new window.Swal({
+        title: '<i>Siklus budidaya (Udang)</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Nama kolam</b> : ' + item.nama_kolam + '</p>' +
+            '<p><b>Tanggal dan jam input</b> : ' + item.tanggal_input + '</p>' +
+            '<p><b>ABW = Avg. Body Weight (gr)</b> : ' + item.abw + '</p>' +
+            '<p><b>ADG = Avg. Daily Growth (gr)</b> : ' + item.adg + '</p>' +
+            '<p><b>SR = Survival rate (%)</b> : ' + item.sr + '</p>' +
+            '<p><b>Total biomassa (Kg)</b> : ' + item.biomassa + '</p>' +
+            '<p><b>Ukuran udang</b> : ' + item.ukuran_udang + '</p>' +
+            '<p><b>Scoring udang</b> : ' + item.scoring_udang + '</p>'
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>

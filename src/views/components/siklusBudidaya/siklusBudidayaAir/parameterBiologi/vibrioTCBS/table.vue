@@ -129,6 +129,37 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('max: ' + item.id + ', Name: ' + item.nama);
+    new window.Swal({
+        title: '<i>Vibrio TCBS</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Kuning</b> : ' + item.Kuning + '</p>' +
+            '<p><b>Hijau</b> : ' + item.Hijau + '</p>' +
+            '<p><b>Hitam</b> : ' + item.Hitam + '</p>' +
+            '<p><b>Nyala</b> : ' + item.Nyala + '</p>' +
+            '<p><b>Total_Vibrio_Count</b> : ' + item.Total_Vibrio_Count + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>

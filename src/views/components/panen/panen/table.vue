@@ -183,7 +183,7 @@ const bind_data = () => {
 
 const view_row = (item) => {
     new window.Swal({
-        title: '<i>Kolam Treament</i>',
+        title: '<i>Panen</i>',
         text: 'HALLO',
         html:
             '<p><b>Nama Kolam</b> : ' + item.Id_kolam + '</p>' +

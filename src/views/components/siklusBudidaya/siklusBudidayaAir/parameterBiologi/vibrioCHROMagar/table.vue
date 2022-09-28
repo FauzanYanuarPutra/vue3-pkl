@@ -133,6 +133,41 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('max: ' + item.id + ', Name: ' + item.nama);
+    new window.Swal({
+        title: '<i>Vibrio CHROMagar</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Algino</b> : ' + item.Algino + '</p>' +
+            '<p><b>Chlorela</b> : ' + item.Chlorela + '</p>' +
+            '<p><b>Parahaema</b> : ' + item.Parahaema + '</p>' +
+            '<p><b>Lumph</b> : ' + item.Lumph + '</p>' +
+            '<p><b>Total_Vibrio_Count</b> : ' + item.Total_Vibrio_Count + '</p>' +
+            '<p><b>Total_Bacillius_Count</b> : ' + item.Total_Bacillius_Count + '</p>' +
+            '<p><b>Total</b> : ' + item.Total + '</p>' +
+            '<p><b>Organic_Matters</b> : ' + item.Organic_Matters + '</p>' +
+            '<p><b>Keterangan</b> : ' + item.Keterangan + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>

@@ -156,6 +156,37 @@ const bind_data = () => {
 };
 
 const view_row = (item) => {
-    alert('salinitas: ' + item.id + ', Name: ' + item.ph);
+    new window.Swal({
+        title: '<i>Parameter Kimia</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Kuning</b> : ' + item.pH + '</p>' +
+            '<p><b>Hijau</b> : ' + item.Salinitas + '</p>' +
+            '<p><b>Hitam</b> : ' + item.DO + '</p>' +
+            '<p><b>Nyala</b> : ' + item.CO3 + '</p>' +
+            '<p><b>Total_Vibrio_Count</b> : ' + item.HC03 + '</p>' +
+            '<p><b>Nama</b> : ' + item.Total + '</p>' +
+            '<p><b>Nama</b> : ' + item.Ammonium_NH4 + '</p>' +
+            '<p><b>Nama</b> : ' + item.Nitrit_NO2 + '</p>' +
+            '<p><b>Nama</b> : ' + item.Nitrit_NO3 + '</p>' +
+            '<p><b>Nama</b> : ' + item.hosphate_PO4 + '</p>' +
+            '<p><b>Nama</b> : ' + item.Iron_Fe + '</p>' +
+            '<p><b>Nama</b> : ' + item.Magnesium_Mg + '</p>' +
+            '<p><b>Nama</b> : ' + item.Calium_Ca + '</p>' +
+            '<p><b>Nama</b> : ' + item.Total1 + '</p>' +
+            '<p><b>Nama</b> : ' + item.Residual + '</p>' +
+            '<p><b>Nama</b> : ' + item.Redox + '</p>'
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#4361ee',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
