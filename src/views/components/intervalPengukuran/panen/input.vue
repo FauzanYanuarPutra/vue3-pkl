@@ -27,9 +27,13 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                        <div class="wrap">
                             <div class="form-group">
+                                <label>Panen:</label>
                                 <input type="number" name="panen" class="form-control" />
                             </div>
+                        </div>
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

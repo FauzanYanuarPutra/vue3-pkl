@@ -26,6 +26,7 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                        <div class="box-wrap">
                         <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">ADG (Avg. Daily Growth):</label>
@@ -35,7 +36,9 @@
                                 <label class="control-label">SR (Survival Rate):</label>
                                 <input type="number" name="survival_rate" class="form-control" />
                             </div>
-                            <div class="form-group">
+                        </div>
+                            
+                            <div class=" wrap form-group">
                                 <label class="control-label">Scoring kesehatan udang:</label>
                                 <input type="number" name="scoring_kesehatan_udang" class="form-control" />
                             </div>

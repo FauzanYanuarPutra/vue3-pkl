@@ -27,9 +27,13 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="form-group">
+                            <div class="wrap">
+                                <div class="form-group">
+                                <label>Kesehatan Udang: </label>
                                 <input type="number" name="kesehatan_udang" class="form-control" />
+                                </div>
                             </div>
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

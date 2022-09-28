@@ -27,8 +27,9 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
 
-                        <div class="wrap">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Algino:</label>
                                 <div class="d-flex">
                                     <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
@@ -59,8 +60,10 @@
                                     <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
-
-                            <div class="form-group">
+                            </div>
+                            
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">Total Vibrio Count:</label>
                                 <div class="d-flex">
                                     <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
@@ -83,6 +86,8 @@
                                     <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
+                            </div>
+                            
                         </div>
                             
 

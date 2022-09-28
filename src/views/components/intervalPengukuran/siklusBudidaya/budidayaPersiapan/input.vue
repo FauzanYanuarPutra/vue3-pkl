@@ -28,6 +28,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                        <div class="box-wrap">
+                            <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">Pengeringan dasar tambak</label>
                                 <input type="number" name="pengeringan_dasar" class="form-control" />
@@ -48,6 +50,8 @@
                                 <label class="control-label">Pengapuran</label>
                                 <input type="number" name="pengapuran" class="form-control" />
                             </div>
+                        </div>
+                        <div class="wrap">
                             <div class="form-group">
                                 <label class="control-label">Pemupukan dan pemberian mineral</label>
                                 <input type="number" name="pemupukan" class="form-control" />
@@ -64,6 +68,10 @@
                                 <label class="control-label">Probiotik</label>
                                 <input type="number" name="probiotik" class="form-control" />
                             </div>
+                        </div>
+                        </div>
+                        
+                            
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />
                         </form>
                     </div>

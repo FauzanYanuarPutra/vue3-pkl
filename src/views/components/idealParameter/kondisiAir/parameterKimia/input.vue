@@ -26,8 +26,9 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="wrap">
-                            <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="wrap">
+                                <div class="form-group">
                                 <label class="control-label">PH:</label>
                                 <div class="d-flex">
                                     <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
@@ -75,7 +76,8 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            
+                                <div class="form-group">
                                 <label class="control-label">Total:</label>
                                 <div class="d-flex">
                                     <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
@@ -90,6 +92,9 @@
                                     <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
                                 </div>
                             </div>
+                                                        </div>
+
+                        <div class="wrap">
 
                             <div class="form-group">
                                 <label class="control-label">Nitrit-NO2 (ppm):</label>
@@ -115,7 +120,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                        <div class="form-group">
                                 <label class="control-label">Iron-Fe (mg/L):</label>
                                 <div class="d-flex">
                                     <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
@@ -155,6 +160,9 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
+
+                            
                             
 
                             <input type="submit" value="Submit" class="btn btn-primary mt-3" />

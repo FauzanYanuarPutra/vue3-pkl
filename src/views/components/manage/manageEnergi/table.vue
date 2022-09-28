@@ -162,6 +162,7 @@
                 penggunaan_listrik: 2066,
 
                 kategori_konsumsi_listrik: '131.000 VA',
+
             },
             {
                 id: 4,

@@ -2072,16 +2072,22 @@
     }
 }
 
-.wrap {
+.box-wrap {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    .wrap {
+    width: 400px;
+    // background-color: red;
     // justify-content: space-around;
         .form-group {
             padding: 10px;
         }
         .form-control-sm {
-            width: 100px;
+            width: 400px;
         }
+    }
+
 }
+
+
