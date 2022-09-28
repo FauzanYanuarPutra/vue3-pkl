@@ -227,7 +227,7 @@ const view_row = (item) => {
             '<p><b>Nama</b> : ' + item.nama + '</p>' +
             '<p><b>Jabatan</b> : ' + item.jabatan + '</p>' +
             '<p><b>No. HP</b> : ' + item.no_hp + '</p>' +
-            '<p><b>Password</b> : ' + item.tgl_bergabung + '</p>' +
+            '<p><b>Password</b> : ' + item.password + '</p>' +
             '<p><b>Email</b> : ' + item.email + '</p>' +
             '<p><b>Photo</b> : ' + item.photo + '</p>' +
             '<p><b>tanggal Lahir</b> : ' + item.tgl_lahir + '</p>' +
