@@ -49,7 +49,7 @@
                                         </div>
                                     </div>
 
-                                        <div class="form-group">
+                                    <div class="form-group">
                                         <div class="row">
                                             <h6>Alkalinitas (ppm)</h6>
                                         </div>
@@ -75,93 +75,87 @@
                                             <input type="number" name="keterangan" class="form-control" />
                                         </div>
                                     </div>
-                   
-                                     <div class="form-group">
-                                <label class="control-label">Ammonium-NH4 (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Nitrit-NO2 (ppm):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                    <div class="form-group">
+                                        <label class="control-label">Ammonium-NH4 (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Nitrit-NO2 (ppm):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                                         </div>
-                                
+
                                 <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Nitrit-NO3 (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Nitrit-NO3 (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                    <div class="form-group">
+                                        <label class="control-label">Phosphate-PO4 (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Iron-Fe (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <h6>Hardness</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Magnesium-Mg (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Calium-Ca (mg/L):</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Total:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Residual Chlorin-CI:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Redox (mV):</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Phosphate-PO4 (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Iron-Fe (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
-   
-                                <div class="form-group">
-                                <div class="row">
-                                    <h6>Hardness</h6>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Magnesium-Mg (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Calium-Ca (mg/L):</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Total:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                                
-                            <div class="form-group">
-                                <label class="control-label">Residual Chlorin-CI:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Redox (mV):</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            </div>
-
-                            </div>
-                        
-
-
-
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

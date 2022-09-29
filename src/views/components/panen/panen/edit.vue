@@ -26,46 +26,42 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                <div class="form-group">
-                                <label class="control-label">Id kolam:</label>
-                                <input type="id" name="id_kolam" class="form-control" />
-                            </div>
-                            <div class="row">
-                                <label for="fullName">Tanggal panen:</label>
-                            </div>
-                            <div class="form-group mb-4">
-                                <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
-                            </div>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Id kolam:</label>
+                                        <input type="id" name="id_kolam" class="form-control" />
+                                    </div>
+                                    <div class="row">
+                                        <label for="fullName">Tanggal panen:</label>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                    </div>
+                                </div>
+
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Tipe panen:</label>
+                                        <multiselect
+                                            v-model="inputs['input1']"
+                                            :options="options1"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">DOC (Day of cultivation):</label>
+                                        <input type="number" name="doc" class="form-control" />
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="wrap">
-                                
-                            <div class="form-group">
-                                <label class="control-label">Tipe panen:</label>
-                                <multiselect
-                                    v-model="inputs['input1']"
-                                    :options="options1"
-                                    :searchable="true"
-                                    placeholder="Choose..."
-                                    selected-label=""
-                                    select-label=""
-                                    deselect-label=""
-                                ></multiselect>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">DOC (Day of cultivation):</label>
-                                <input type="number" name="doc" class="form-control" />
-                            </div>
-                            </div>
-                        </div>
-                            
-                            
-
-
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

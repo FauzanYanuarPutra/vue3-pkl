@@ -26,56 +26,53 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                        <div class="wrap">
-                         <div class="form-group">
-                                <label class="control-label">Nama Kolam:</label>
-                                <input type="text" name="id_kolam" class="form-control" />
-                            </div>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Kolam:</label>
+                                        <input type="text" name="id_kolam" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Tanggal:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class="form-group mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">ABW = Avg. Body Weigth (gr):</label>
+                                        <input type="number" name="abw" class="form-control" min="0" step="0.01" value="0.00" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">ADG = Avg. Daily Growth (gr):</label>
+                                        <input type="number" name="adg" class="form-control" min="0" step="0.01" value="0.00" />
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">SR = Survival Rate (%):</label>
+                                        <input type="number" name="sr" class="form-control" min="0" step="0.01" value="0.00" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Total biomassa (Kg):</label>
+                                        <input type="number" name="sr" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Ukuran Udang:</label>
+                                        <input type="number" name="sr" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Scoring Udang:</label>
+                                        <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.0" />
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">ABW = Avg. Body Weigth (gr):</label>
-                                <input type="number" name="abw" class="form-control" min="0" step="0.01" value="0.00" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">ADG = Avg. Daily Growth (gr):</label>
-                                <input type="number" name="adg" class="form-control" min="0" step="0.01" value="0.00" />
-                            </div>
-                        </div>
-                        <div class="wrap">
-                             <div class="form-group">
-                                <label class="control-label">SR = Survival Rate (%):</label>
-                                <input type="number" name="sr" class="form-control" min="0" step="0.01" value="0.00" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Total biomassa (Kg):</label>
-                                <input type="number" name="sr" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Ukuran Udang:</label>
-                                <input type="number" name="sr" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Scoring Udang:</label>
-                                <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.0" />
-                            </div>
-                        </div>
-                        </div>
-                        
-
-                           
-
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

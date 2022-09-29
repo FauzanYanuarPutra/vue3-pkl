@@ -27,102 +27,225 @@
                         </div>
                         <div class="panel-body">
                             <form class="form-vertical" action="#">
-
                                 <div class="box-wrap">
                                     <div class="wrap">
                                         <div class="form-group">
-                            <label class="control-label">Tanggal dan jam iput:</label>
-                            <div class="form-group mb-0">
-                                <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Panjang benur (mm)</label>
-                            <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Size varian</label>
-                            <multiselect v-model="inputs['input3']" :options="options3" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Hepatopankreas</label>
-                            <multiselect v-model="inputs['input4']" :options="options4" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Necrosis</label>
-                            <multiselect v-model="inputs['input5']" :options="options5" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">MGR (muscle gut ratio)</label>
-                            <multiselect v-model="inputs['input6']" :options="options6" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Ektoparasite</label>
-                            <multiselect v-model="inputs['input7']" :options="options7" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Stress test (Formaline dan Salinitas)</label>
-                            <multiselect v-model="inputs['input8']" :options="options8" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Vibrio luminnescen (water & fry)</label>
-                            <multiselect v-model="inputs['input9']" :options="options9" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-</div>
-                        <div class="wrap">
-                             <div class="form-group">
-                            <label class="control-label">TVC (water)</label>
-                            <multiselect v-model="inputs['input10']" :options="options10" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">pH</label>
-                            <multiselect v-model="inputs['input11']" :options="options11" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Selisih salinitas</label>
-                            <multiselect v-model="inputs['input12']" :options="options12" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">DO</label>
-                            <multiselect v-model="inputs['input13']" :options="options13" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Suhu</label>
-                            <multiselect v-model="inputs['input14']" :options="options14" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">TAN</label>
-                            <multiselect v-model="inputs['input15']" :options="options15" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Bolitas</label>
-                            <multiselect v-model="inputs['input16']" :options="options16" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Status</label>
-                            <multiselect v-model="inputs['input17']" :options="options17" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label=""></multiselect>
-                        </div>
+                                            <label class="control-label">Tanggal dan jam iput:</label>
+                                            <div class="form-group mb-0">
+                                                <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Panjang benur (mm)</label>
+                                            <multiselect
+                                                v-model="inputs['input2']"
+                                                :options="options2"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Size varian</label>
+                                            <multiselect
+                                                v-model="inputs['input3']"
+                                                :options="options3"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Hepatopankreas</label>
+                                            <multiselect
+                                                v-model="inputs['input4']"
+                                                :options="options4"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Necrosis</label>
+                                            <multiselect
+                                                v-model="inputs['input5']"
+                                                :options="options5"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">MGR (muscle gut ratio)</label>
+                                            <multiselect
+                                                v-model="inputs['input6']"
+                                                :options="options6"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Ektoparasite</label>
+                                            <multiselect
+                                                v-model="inputs['input7']"
+                                                :options="options7"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Stress test (Formaline dan Salinitas)</label>
+                                            <multiselect
+                                                v-model="inputs['input8']"
+                                                :options="options8"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Vibrio luminnescen (water & fry)</label>
+                                            <multiselect
+                                                v-model="inputs['input9']"
+                                                :options="options9"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                    </div>
+                                    <div class="wrap">
+                                        <div class="form-group">
+                                            <label class="control-label">TVC (water)</label>
+                                            <multiselect
+                                                v-model="inputs['input10']"
+                                                :options="options10"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">pH</label>
+                                            <multiselect
+                                                v-model="inputs['input11']"
+                                                :options="options11"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Selisih salinitas</label>
+                                            <multiselect
+                                                v-model="inputs['input12']"
+                                                :options="options12"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">DO</label>
+                                            <multiselect
+                                                v-model="inputs['input13']"
+                                                :options="options13"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Suhu</label>
+                                            <multiselect
+                                                v-model="inputs['input14']"
+                                                :options="options14"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">TAN</label>
+                                            <multiselect
+                                                v-model="inputs['input15']"
+                                                :options="options15"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Bolitas</label>
+                                            <multiselect
+                                                v-model="inputs['input16']"
+                                                :options="options16"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Status</label>
+                                            <multiselect
+                                                v-model="inputs['input17']"
+                                                :options="options17"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
 
-                        <div id="manageTambak" class="col-lg-12">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                        <h4>Grade</h4>
-                                        <h7>160 - 140 = A</h7><br />
-                                        <h7>139 - 110 = B</h7><br />
-                                        <h7>kurang 110 = C</h7>
+                                        <div id="manageTambak" class="col-lg-12">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                                        <h4>Grade</h4>
+                                                        <h7>160 - 140 = A</h7><br />
+                                                        <h7>139 - 110 = B</h7><br />
+                                                        <h7>kurang 110 = C</h7>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        </div>
-                                    </div>
-                            
-                                
-                       
 
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
-
+                                <input type="submit" value="Submit" class="btn mt-3" />
                             </form>
                         </div>
                     </div>
