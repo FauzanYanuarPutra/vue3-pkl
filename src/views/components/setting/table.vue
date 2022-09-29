@@ -137,8 +137,8 @@
         items.value = [
             {
                 id: 1,
-                nama: 'AAAAAAAAAAA',
-                kategori: 'BBBBB',
+                nama: 'Indonesia',
+                kategori: 'Leanguage',
                 deskripsi: '-',
                 status: '1',
             },
