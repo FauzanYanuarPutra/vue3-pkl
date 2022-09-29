@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pembuangan Sedimen Organik</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Pembuangan Sedimen
+                                        Organik</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -34,60 +35,40 @@
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <div @click="view_row(props.row)" style="cursor: pointer">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-eye"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye">
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <router-link to="/pembuangan-sedimen-organik/edit" data-bs-toggle="tooltip" title="Edit">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-edit-2"
-                                            >
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                        <router-link to="/pembuangan-sedimen-organik/edit" data-bs-toggle="tooltip"
+                                            title="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
-                                        </svg>
+                                            </svg>
                                         </a>
                                     </div>
                                 </div>
@@ -102,147 +83,137 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', 'tanggal', 'lama_hari', 'keterangan', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 10,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref(['nama_kolam', 'tanggal', 'keterangan', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    perPage: 10,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['nama_kolam', 'tanggal', 'keterangan', 'status'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            ID: 1,
+            nama_kolam: 'Kolam b1',
+            tanggal: '2011/04/25',
+            keterangan: 'null',
         },
-        sortable: ['nama_kolam', 'tanggal', 'keterangan', 'status'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
+        {
+            ID: 2,
+            nama_kolam: 'Kolam b2',
+            tanggal: '2011/03/25',
+            keterangan: 'null',
         },
-        resizableColumns: false,
+        {
+            ID: 3,
+            nama_kolam: 'Kolam b3',
+            tanggal: '2011/07/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 4,
+            nama_kolam: 'Kolam b4',
+            tanggal: '2011/08/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 5,
+            nama_kolam: 'Kolam b5',
+            tanggal: '2011/01/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 6,
+            nama_kolam: 'Kolam b6',
+            tanggal: '2011/12/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 7,
+            nama_kolam: 'Kolam b7',
+            tanggal: '2011/05/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 8,
+            nama_kolam: 'Kolam b8',
+            tanggal: '2011/12/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 9,
+            nama_kolam: 'Kolam b9',
+            tanggal: '2011/09/25',
+            keterangan: 'null',
+        },
+        {
+            ID: 10,
+            nama_kolam: 'Kolam b10',
+            tanggal: '2011/06/25',
+            keterangan: 'null',
+        },
+    ];
+};
+
+const view_row = (item) => {
+    new window.Swal({
+        title: '<i>Pembuangan sedimen organik</i>',
+        text: 'HALLO',
+        html: '<p><b>Nama Kolam</b> : ' + item.nama_kolam + '</p>' + '<p><b>Tanggal</b> : ' + item.tanggal + '</p>' + '<p><b>Keterangan</b> : ' + item.keterangan + '</p>',
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
     });
-
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                ID: 1,
-                nama_kolam: 'Kolam b1',
-                tanggal: '2011/04/25',
-                lama_hari: '20 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 2,
-                nama_kolam: 'Kolam b2',
-                tanggal: '2011/03/25',
-                lama_hari: '23 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 3,
-                nama_kolam: 'Kolam b3',
-                tanggal: '2011/07/25',
-                lama_hari: '12 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 4,
-                nama_kolam: 'Kolam b4',
-                tanggal: '2011/08/25',
-                lama_hari: '23 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 5,
-                nama_kolam: 'Kolam b5',
-                tanggal: '2011/01/25',
-                lama_hari: '25 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 6,
-                nama_kolam: 'Kolam b6',
-                tanggal: '2011/12/25',
-                lama_hari: '15 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 7,
-                nama_kolam: 'Kolam b7',
-                tanggal: '2011/05/25',
-                lama_hari: '63 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 8,
-                nama_kolam: 'Kolam b8',
-                tanggal: '2011/12/25',
-                lama_hari: '35 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 9,
-                nama_kolam: 'Kolam b9',
-                tanggal: '2011/09/25',
-                lama_hari: '52 Hari',
-                keterangan: 'null',
-            },
-            {
-                ID: 10,
-                nama_kolam: 'Kolam b10',
-                tanggal: '2011/06/25',
-                lama_hari: '63 Hari',
-                keterangan: 'null',
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        new window.Swal({
-            title: '<i>Pembuangan sedimen organik</i>',
-            text: 'HALLO',
-            html: '<p><b>Nama Kolam</b> : ' + item.nama_kolam + '</p>' + '<p><b>Tanggal</b> : ' + item.tanggal + '</p>' + '<p><b>Keterangan</b> : ' + item.keterangan + '</p>',
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'
-            // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-            // DIAKHIR TIDAK MENGGUNAKAN tanda +
-            showCloseButton: true,
-            focusConfirm: false,
-            confirmButtonColor: '#4361ee',
-            confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
-            confirmButtonAriaLabel: 'Oke',
-
-            padding: '2em',
-        });
-        // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
-    };
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
+};
 </script>

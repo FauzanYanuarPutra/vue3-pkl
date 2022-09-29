@@ -42,13 +42,9 @@
                                     <label class="control-label">Harga:</label>
                                     <input type="text" name="alamat" class="form-control" />
                                 </div>
-
-                                
                             </div>
-                            
-                            
 
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

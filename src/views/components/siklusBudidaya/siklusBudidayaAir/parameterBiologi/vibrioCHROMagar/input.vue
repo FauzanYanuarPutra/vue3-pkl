@@ -26,72 +26,68 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Algino:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
 
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                 <div class="form-group">
-                                <label class="control-label">Algino:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
+                                    <div class="form-group">
+                                        <label class="control-label">Chlorela:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Parahaema:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Lumph:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Vibrio Count:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Total Bacillus Count:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Total Organic Matters (ppm):</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Chlorela:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Parahaema:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Lumph:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            </div>
-
-                            <div class="wrap">
-                                 <div class="form-group">
-                                <label class="control-label">Total Vibrio Count:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Total Bacillus Count:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Total Organic Matters (ppm):</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                           
-
-                           
-
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

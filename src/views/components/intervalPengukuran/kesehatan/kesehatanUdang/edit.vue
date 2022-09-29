@@ -29,12 +29,12 @@
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
                                 <div class="wrap form-group">
-                                <label>Kesehatan Udang: </label>
-                                <input type="number" name="kesehatan_udang" class="form-control" />
+                                    <label>Kesehatan Udang: </label>
+                                    <input type="number" name="kesehatan_udang" class="form-control" />
                                 </div>
                             </div>
-                            
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

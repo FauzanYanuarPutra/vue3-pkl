@@ -26,50 +26,47 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                <div class="form-group">
-                                <label class="control-label">Kuning:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Kuning:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Hijau:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Hitam:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Nyala:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Total Vibrio Count:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="keterangan" class="form-control" />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Hijau:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Hitam:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-                            </div>
-                            <div class="wrap">
-                                <div class="form-group">
-                                <label class="control-label">Nyala:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Total Vibrio Count:</label>
-                                <div class="d-flex">
-                                    <input type="text" name="keterangan" class="form-control" />
-                                </div>
-                            </div>
-
-                            </div>
-                        </div>
-                            
-
-                            
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

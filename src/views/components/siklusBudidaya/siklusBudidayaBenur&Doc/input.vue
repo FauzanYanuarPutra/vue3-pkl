@@ -29,71 +29,69 @@
                             <div class="box-wrap">
                                 <div class="wrap">
                                     <div class="form-group">
-                                <label class="control-label">Nama Kolam:</label>
-                                <input type="text" name="nama_kolam" class="form-control" />
-                            </div>
+                                        <label class="control-label">Nama Kolam:</label>
+                                        <input type="text" name="nama_kolam" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Tanggal Tebar Benur:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
-                                </div>
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Tebar Benur:</label>
+                                        <div class="form-group mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                        </div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Asal Benur:</label>
-                                <input type="text" name="asal_benur" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Umur benur (Hari):</label>
-                                <input type="number" name="umur_benur" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Ukuran Rataan (mm):</label>
-                                <input type="number" name="ukuran_rataan" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Berat Rataan (gram):</label>
-                                <input type="number" name="berat_rataan" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Asal Benur:</label>
+                                        <input type="text" name="asal_benur" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Umur benur (Hari):</label>
+                                        <input type="number" name="umur_benur" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Ukuran Rataan (mm):</label>
+                                        <input type="number" name="ukuran_rataan" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Berat Rataan (gram):</label>
+                                        <input type="number" name="berat_rataan" class="form-control" />
+                                    </div>
                                 </div>
 
                                 <div class="wrap">
-                                     <div class="form-group">
-                                <label class="control-label">Jumlah Benih (ekor):</label>
-                                <input type="number" name="jumlah_benih" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Jumlah Benih (ekor):</label>
+                                        <input type="number" name="jumlah_benih" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Scoring Benur:</label>
-                                <input type="number" name="scoring_benur" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Scoring Benur:</label>
+                                        <input type="number" name="scoring_benur" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Periode Siklus Ke:</label>
-                                <input type="number" name="periode_siklus_ke" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Periode Siklus Ke:</label>
+                                        <input type="number" name="periode_siklus_ke" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Perkiraan DOC (hari):</label>
-                                <input type="number" name="perkiraan_doc" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Perkiraan DOC (hari):</label>
+                                        <input type="number" name="perkiraan_doc" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Density Per Square Meter:</label>
-                                <input type="number" name="density_per_square_meter" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Density Per Square Meter:</label>
+                                        <input type="number" name="density_per_square_meter" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Total Bio Mass:</label>
-                                <input type="number" name="total_bio_mass" class="form-control" />
-                            </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Total Bio Mass:</label>
+                                        <input type="number" name="total_bio_mass" class="form-control" />
+                                    </div>
                                 </div>
                             </div>
-                            
-                           
 
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

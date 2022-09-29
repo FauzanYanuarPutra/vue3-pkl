@@ -26,53 +26,50 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                <div class="form-group">
-                                <label class="control-label">Id:</label>
-                                <input type="text" name="id" class="form-control" />
-                            </div>
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Id:</label>
+                                        <input type="text" name="id" class="form-control" />
+                                    </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Tanggal:</label>
-                                <div class="form-group mb-0">
-                                    <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class="form-group mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Kolam:</label>
+                                        <input type="text" name="id_tambak" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">ID User:</label>
+                                        <input type="text" name="id_user" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Judul:</label>
+                                        <input type="text" name="judul" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Status:</label>
+                                        <input type="text" name="id_status_reminder" class="form-control" />
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Nama Kolam:</label>
-                                <input type="text" name="id_tambak" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">ID User:</label>
-                                <input type="text" name="id_user" class="form-control" />
-                            </div>
-                            </div>   
-
-                            <div class="wrap">
-                                 <div class="form-group">
-                                <label class="control-label">Judul:</label>
-                                <input type="text" name="judul" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Keterangan:</label>
-                                <input type="text" name="keterangan" class="form-control" />
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label">Status:</label>
-                                <input type="text" name="id_status_reminder" class="form-control" />
-                            </div>
-
-                            </div>   
-                        </div>
-                            
-
-                           
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>
