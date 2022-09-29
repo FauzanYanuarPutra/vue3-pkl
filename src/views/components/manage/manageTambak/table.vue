@@ -241,7 +241,7 @@
 
     const view_row = (item) => {
         new window.Swal({
-            title: '<i>Kolam Treament</i>',
+            title: '<i>Manage Tambak</i>',
             text: 'HALLO',
             html:
                 '<p><b>Nama Tambak</b> : ' +

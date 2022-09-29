@@ -107,7 +107,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['WARNA_AIR_YANG_DITIMBULKAN', 'JENIS_PLANKTON', 'KECERAHAN', 'KETERANGAN', 'actions']);
+    const columns = ref(['warna_air', 'jenis_plankton', 'kecerahan', 'keterangan', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -121,7 +121,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['WARNA_AIR_YANG_DITIMBULKAN', 'JENIS_PLANKTON', 'KECERAHAN', 'KETERANGAN'],
+        sortable: ['warna_air', 'jenis_plankton', 'kecerahan', 'keterangan'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -138,93 +138,93 @@
         items.value = [
             {
                 id: 1,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat muda',
-                JENIS_PLANKTON: 'navicula sp',
-                KECERAHAN: '35',
-                KETERANGAN: 'Baik,pertahankan',
+                warna_air: 'Cokelat muda',
+                jenis_plankton: 'navicula sp',
+                kecerahan: '35',
+                keterangan: 'Baik,pertahankan',
             },
             {
                 id: 2,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat tua',
-                JENIS_PLANKTON: 'Nitzschia sp',
-                KECERAHAN: '25',
-                KETERANGAN: 'Baik,air perlu dicairkan',
+                warna_air: 'Cokelat tua',
+                jenis_plankton: 'Nitzschia sp',
+                kecerahan: '25',
+                keterangan: 'Baik,air perlu dicairkan',
             },
             {
                 id: 3,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat biru',
-                JENIS_PLANKTON: 'Chaetoceros sp',
-                KECERAHAN: '<25',
-                KETERANGAN: 'Tidak baik,air perlu diganti',
+                warna_air: 'Cokelat biru',
+                jenis_plankton: 'Chaetoceros sp',
+                kecerahan: '<25',
+                keterangan: 'Tidak baik,air perlu diganti',
             },
             {
                 id: 4,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat kemerahan',
-                JENIS_PLANKTON: 'Brachionus sp',
-                KECERAHAN: '25',
-                KETERANGAN: 'Bahaya,air dibuang & diganti',
+                warna_air: 'Cokelat kemerahan',
+                jenis_plankton: 'Brachionus sp',
+                kecerahan: '25',
+                keterangan: 'Bahaya,air dibuang & diganti',
             },
             {
                 id: 5,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat kehijauan',
-                JENIS_PLANKTON: 'Diantomae',
-                KECERAHAN: '25',
-                KETERANGAN: 'Kurang baik,air perlu diencerkan',
+                warna_air: 'Cokelat kehijauan',
+                jenis_plankton: 'Diantomae',
+                kecerahan: '25',
+                keterangan: 'Kurang baik,air perlu diencerkan',
             },
             {
                 id: 6,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Cokelat kehitaman jernih',
-                JENIS_PLANKTON: 'Asam organik(tambah baru)',
-                KECERAHAN: '50-60',
-                KETERANGAN: 'Tidak baik,perlu reklamasi tanah dasar',
+                warna_air: 'Cokelat kehitaman jernih',
+                jenis_plankton: 'Asam organik(tambah baru)',
+                kecerahan: '50-60',
+                keterangan: 'Tidak baik,perlu reklamasi tanah dasar',
             },
             {
                 id: 7,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Hijau daun muda',
-                JENIS_PLANKTON: 'Chorella sp',
-                KECERAHAN: '35',
-                KETERANGAN: 'Baik,pertahankan',
+                warna_air: 'Hijau daun muda',
+                jenis_plankton: 'Chorella sp',
+                kecerahan: '35',
+                keterangan: 'Baik,pertahankan',
             },
             {
                 id: 8,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Hijau tua',
-                JENIS_PLANKTON: 'Oasystis sp',
-                KECERAHAN: '<25',
-                KETERANGAN: 'Tidak baik,air perlu banyak diencerkan',
+                warna_air: 'Hijau tua',
+                jenis_plankton: 'Oasystis sp',
+                kecerahan: '<25',
+                keterangan: 'Tidak baik,air perlu banyak diencerkan',
             },
             {
                 id: 9,
-                WARNA_AIR_YANG_DITIMBULKAN: 'Hijau kebituan',
-                JENIS_PLANKTON: 'Anabaena sp',
-                KECERAHAN: '<20',
-                KETERANGAN: 'Tidak baik,air dibuang & diganti',
+                warna_air: 'Hijau kebituan',
+                jenis_plankton: 'Anabaena sp',
+                kecerahan: '<20',
+                keterangan: 'Tidak baik,air dibuang & diganti',
             },
             {
                 id: 10,
-                WARNA_AIR_YANG_DITIMBULKAN: '',
-                JENIS_PLANKTON: '',
-                KECERAHAN: '',
-                KETERANGAN: '',
+                warna_air: '',
+                jenis_plankton: '',
+                kecerahan: '',
+                keterangan: '',
             },
         ];
     };
 
     const view_row = (item) => {
         new window.Swal({
-            title: '<i>Kolam Treament</i>',
+            title: '<i>Warna Air Tambak</i>',
             text: 'HALLO',
             html:
-                '<p><b>Warna Air yang ditimbulkan</b> : ' +
-                item.WARNA_AIR_YANG_DITIMBULKAN +
+                '<p><b>Warna Air </b> : ' +
+                item.warna_air +
                 '</p>' +
                 '<p><b>Jenis Plankton</b> : ' +
-                item.JENIS_PLANKTON +
+                item.jenis_plankton +
                 '</p>' +
                 '<p><b>Kecerahan</b> : ' +
-                item.KECERAHAN +
+                item.kecerahan +
                 '</p>' +
                 '<p><b>Keterangan</b> : ' +
-                item.KETERANGAN +
+                item.keterangan +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
