@@ -31,15 +31,15 @@
                                     <label class="control-label">Scoring:</label>
                                     <input type="number" name="scoring" class="form-control" />
                                 </div>
-
                             </div>
 
-                            <input type="submit" value="Submit" class="btn mt-3" />
-                        </form>
                     </div>
+                    <input type="submit" value="Submit" class="btn  mt-3" />
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 

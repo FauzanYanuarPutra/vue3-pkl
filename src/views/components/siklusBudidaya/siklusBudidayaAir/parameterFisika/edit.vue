@@ -26,48 +26,61 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="wrap">
-                                <div class="form-group">
-                                    <label class="control-label">Tinggi Air (cm):</label>
-                                    <div class="d-flex">
-                                        <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
-                                        <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Tinggi Air (cm):</label>
+                                        <div class="d-flex">
+                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
+                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Kecerahan:</label>
+                                        <div class="d-flex">
+                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
+                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="control-label">Kecerahan:</label>
-                                    <div class="d-flex">
-                                        <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
-                                        <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Warna:</label>
+                                        <div class="d-flex">
+                                            <multiselect
+                                                v-model="inputs['input1']"
+                                                :options="options1"
+                                                :searchable="true"
+                                                placeholder="Pagi"
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                            <multiselect
+                                                v-model="inputs['input2']"
+                                                :options="options2"
+                                                :searchable="true"
+                                                placeholder="Sore"
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Suhu Air(cekcius):</label>
+                                        <div class="d-flex">
+                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
+                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="wrap">
-                                <div class="form-group">
-                                    <label class="control-label">Warna:</label>
-                                    <div class="d-flex">
-                                        <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Pagi" selected-label="" select-label="" deselect-label=""></multiselect>
-                                        <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Sore" selected-label="" select-label="" deselect-label=""></multiselect>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">Suhu Air(cekcius):</label>
-                                    <div class="d-flex">
-                                        <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                        <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            
-
-                        
-
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>

@@ -59,7 +59,7 @@
                                     </div>
                                 </div>
                                 <div class="wrap">
-                                      <div class="form-group">
+                                    <div class="form-group">
                                         <label class="control-label">Jenis:</label>
                                         <input type="text" name="jenis" class="form-control" />
                                     </div>
@@ -74,10 +74,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                        
 
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>
