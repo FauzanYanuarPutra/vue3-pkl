@@ -151,7 +151,7 @@
             },
             {
                 id: 3,
-                nama: 'Ir',
+                nama: 'Manager',
                 kategori: 'Jabatan',
                 deskripsi: '-',
                 status: '1',
