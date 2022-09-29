@@ -196,7 +196,6 @@ const view_row = (item) => {
 
         padding: '2em',
     });
-<<<<<<< HEAD
 
     onMounted(() => {
         bind_data();
