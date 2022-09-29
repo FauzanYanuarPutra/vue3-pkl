@@ -473,8 +473,4 @@ const view_row = (item) => {
         });
         // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
     };
-=======
-    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
-};
->>>>>>> d94c0b5a74c2e53eb37dde8d5947d75c9219bfb1
 </script>
