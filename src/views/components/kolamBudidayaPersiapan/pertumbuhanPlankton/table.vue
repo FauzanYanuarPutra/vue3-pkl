@@ -24,10 +24,8 @@
                                     <h4>Pertumbuhan Plankton</h4>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/pertumbuhan-plankton/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
-                        </div>
+                        </div>                       <div class="d-flex flex-row-reverse position-relative">
+                            <router-link to="/pertumbuhan-plankton/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>                        </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">

@@ -25,8 +25,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/pembuangan-sendimen-organik/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                        <div class=" d-flex flex-row-reverse position-relative">
+                            <router-link to="/pembuangan-sendimen-organik/create" @click="toggleMobileMenu"
+                                class="btn  mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
@@ -86,7 +87,7 @@
                                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg>
+                                        </svg>
                                         </a>
                                     </div>
                                 </div>
