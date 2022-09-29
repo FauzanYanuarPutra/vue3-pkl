@@ -106,13 +106,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['Tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
+    const columns = ref(['tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
+        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -120,7 +120,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['Tanggal_input', 'Ukuran_udang', 'Harga'],
+        sortable: ['tanggal_input', 'Ukuran_udang', 'Harga'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -137,61 +137,61 @@
         items.value = [
             {
                 id: 1,
-                Tanggal_input: '2011/04/25',
+                tanggal_input: '2011/04/25',
                 Ukuran_udang: '32 cm',
                 Harga: 'Rp.70000',
             },
             {
                 id: 2,
-                Tanggal_input: '2011/07/25',
+                tanggal_input: '2011/07/25',
                 Ukuran_udang: '17 cm',
                 Harga: 'Rp.10000',
             },
             {
                 id: 3,
-                Tanggal_input: '2009/01/12',
+                tanggal_input: '2009/01/12',
                 Ukuran_udang: '86 cm',
                 Harga: 'Rp.130000',
             },
             {
                 id: 4,
-                Tanggal_input: '2012/03/29',
+                tanggal_input: '2012/03/29',
                 Ukuran_udang: '43 cm',
                 Harga: 'Rp.70000',
             },
             {
                 id: 5,
-                Tanggal_input: '2008/11/28',
+                tanggal_input: '2008/11/28',
                 Ukuran_udang: '16 cm',
                 Harga: 'Rp.50000',
             },
             {
                 id: 6,
-                Tanggal_input: '2012/12/02',
+                tanggal_input: '2012/12/02',
                 Ukuran_udang: '37 cm',
                 Harga: 'Rp.60000',
             },
             {
                 id: 7,
-                Tanggal_input: '2012/08/06',
+                tanggal_input: '2012/08/06',
                 Ukuran_udang: '13 cm',
                 Harga: 'Rp.20000',
             },
             {
                 id: 8,
-                Tanggal_input: '2010/10/14',
+                tanggal_input: '2010/10/14',
                 Ukuran_udang: '32 cm',
                 Harga: 'Rp.50000',
             },
             {
                 id: 9,
-                Tanggal_input: '2009/09/15',
+                tanggal_input: '2009/09/15',
                 Ukuran_udang: '20 cm',
                 Harga: 'Rp.10000',
             },
             {
                 id: 10,
-                Tanggal_input: '2008/12/13',
+                tanggal_input: '2008/12/13',
                 Ukuran_udang: '10 cm',
                 Harga: 'Rp.30000',
             },
@@ -202,7 +202,7 @@
         new window.Swal({
             title: '<i>Harga Udang</i>',
             text: 'HALLO',
-            html: '<p><b>Tanggal Input</b> : ' + item.Tanggal_input + '</p>' + '<p><b>Ukuran Udang</b> : ' + item.Ukuran_udang + '</p>' + '<p><b>Harga</b> : ' + item.Harga + '</p>',
+            html: '<p><b>Tanggal Input</b> : ' + item.tanggal_input + '</p>' + '<p><b>Ukuran Udang</b> : ' + item.Ukuran_udang + '</p>' + '<p><b>Harga</b> : ' + item.Harga + '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

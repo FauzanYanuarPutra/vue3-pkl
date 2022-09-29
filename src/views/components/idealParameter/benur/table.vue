@@ -127,6 +127,7 @@
             up: 'sort-icon-asc',
             down: 'sort-icon-desc',
         },
+<<<<<<< HEAD
         resizableColumns: false,
     });
 
@@ -218,4 +219,80 @@
         });
         // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
     };
+=======
+        {
+            id: 3,
+            scoring: 66,
+        },
+        {
+            id: 4,
+            scoring: 22,
+        },
+        {
+            id: 5,
+            scoring: 33,
+        },
+        {
+            id: 6,
+            scoring: 61,
+        },
+        {
+            id: 7,
+            scoring: 59,
+        },
+        {
+            id: 8,
+            scoring: 55,
+        },
+        {
+            id: 9,
+
+            scoring: 39,
+        },
+        {
+            id: 10,
+            scoring: 23,
+        },
+    ];
+};
+
+const view_row = (item) => {
+    new window.Swal({
+        title: '<i>Benur</i>',
+        text: 'HALLO',
+        html: '<p><b>Scoring</b> : ' + item.scoring + '</p>',
+        // '<p><b>Min</b> : ' + item.min + '</p>'+
+        // '<p><b>Max</b> : ' + item.max + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
+    });
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
+};
+>>>>>>> b6f7a3efa231ff4d79cb786b88aaeae89eb762f8
 </script>

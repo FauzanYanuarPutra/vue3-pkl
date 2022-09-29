@@ -106,6 +106,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
+<<<<<<< HEAD
     const columns = ref(['nama_tambak', 'tanggal_input', 'tipe_model', 'jumlah_unit', 'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
@@ -117,6 +118,66 @@
             filter: '',
             filterPlaceholder: 'Search...',
             limit: 'Results:',
+=======
+const columns = ref(['nama_tambak', 'tanggal_input', 'tipe_model', 'jumlah_unit', 'status', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center', view: 'actions text-center', tanggal_input: 'text-center'},
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: [
+        'nama_tambak',
+        'tanggal_input',
+        'id_alat',
+        'kategori_alat',
+        'brand',
+        'tipe_model',
+        'kegunaan',
+        'keterangan',
+        'jumlah_unit',
+        'photo',
+        'internal_id',
+        'perkiraan_beli',
+        'tenaga_hp',
+        'status',
+    ],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            id: 1,
+            nama_tambak: 'Tambak a',
+            tanggal_input: '2011/04/25',
+            id_alat: '122',
+            kategori_alat: 'Pompa',
+            brand: 'null',
+            tipe_model: 'null',
+            kegunaan: 'null',
+            keterangan: 'null',
+            jumlah_unit: '201',
+            photo: 'null',
+            internal_id: 'null',
+            perkiraan_beli: 'null',
+            tenaga_hp: 'null',
+            status: 'Aktive',
+>>>>>>> b6f7a3efa231ff4d79cb786b88aaeae89eb762f8
         },
         sortable: [
             'nama_tambak',
@@ -141,6 +202,7 @@
         },
         resizableColumns: false,
     });
+<<<<<<< HEAD
 
     onMounted(() => {
         bind_data();
@@ -387,4 +449,7 @@
         });
         // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
     };
+=======
+};
+>>>>>>> b6f7a3efa231ff4d79cb786b88aaeae89eb762f8
 </script>
