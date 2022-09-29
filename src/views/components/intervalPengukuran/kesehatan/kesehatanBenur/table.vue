@@ -29,7 +29,7 @@
                         </div>
                         <div class=" d-flex flex-row-reverse position-relative">
                             <router-link to="/kesehatan-benur/create" @click="toggleMobileMenu"
-                                class="btn btn-primary mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">

@@ -127,12 +127,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '2',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '320,800',
         },
         {
@@ -144,12 +138,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '32',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '170,750',
         },
         {
@@ -161,12 +149,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '4',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '86,000',
         },
         {
@@ -178,12 +160,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '14',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '433,060',
         },
         {
@@ -195,12 +171,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '43',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '162,700',
         },
         {
@@ -212,12 +182,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '53',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '372,000',
         },
         {
@@ -229,12 +193,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '35',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '137,500',
         },
         {
@@ -246,12 +204,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '35',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '327,900',
         },
         {
@@ -263,12 +215,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '64',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '205,500',
         },
         {
@@ -280,12 +226,6 @@ const bind_data = () => {
             SR: 'null',
             ukuran_udang: '6',
             scoring_udang: 'null',
-            keterangan: 'null',
-            jumlah_unit: 'null',
-            photo: 'null',
-            internal_id: 'null',
-            perkiraan_beli: 'null',
-            tenaga_hp: 'null',
             total_biomassa: '103,600',
         },
     ];
@@ -296,20 +236,14 @@ const view_row = (item) => {
         title: '<i>Siklus Budidaya (Udang)</i>',
         text: 'HALLO',
         html:
-            '<p><b>Kuning</b> : ' + item.nama + '</p>' +
-            '<p><b>Hijau</b> : ' + item.Pagi + '</p>' +
-            '<p><b>Hitam</b> : ' + item.Sore + '</p>'
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'    
+            '<p><b>Nama kolam</b> : ' + item.nama_kolam + '</p>' +
+            '<p><b>Tanggal dan jam input</b> : ' + item.tanggal_input + '</p>' +
+            '<p><b>ABW = Avg. Body Weight (gr)</b> : ' + item.ABW + '</p>' +
+            '<p><b>ADG = Avg. Daily Growth (gr)</b> : ' + item.ADG + '</p>' +
+            '<p><b>SR = Survival rate (%)</b> : ' + item.SR + '</p>' +
+            '<p><b>Total biomassa (Kg)</b> : ' + item.total_biomassa + '</p>' +
+            '<p><b>Ukuran udang</b> : ' + item.ukuran_udang + '</p>' +
+            '<p><b>Scoring udang</b> : ' + item.scoring_udang + '</p>'
         // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
         // DIAKHIR TIDAK MENGGUNAKAN tanda +
         ,
