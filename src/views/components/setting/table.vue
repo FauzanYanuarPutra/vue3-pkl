@@ -26,18 +26,25 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/setting/create" @click="toggleMobileMenu"
-                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/setting/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <div @click="view_row(props.row)" style="cursor: pointer">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-eye">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-eye"
+                                            >
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
@@ -45,25 +52,38 @@
                                     </div>
                                     <div class="mx-2">
                                         <router-link to="/setting/edit" data-bs-toggle="tooltip" title="Edit">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-edit-2">
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
-                                                </path>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-edit-2"
+                                            >
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="mx-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-trash-2"
+                                            >
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
+                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -81,221 +101,109 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+    import { onMounted, ref } from 'vue';
 
-import { useMeta } from '@/composables/use-meta';
-useMeta({ title: 'Default Order Sorting Table' });
+    import { useMeta } from '@/composables/use-meta';
+    useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['id', 'nama', 'kategori', 'deskripsi', 'status', 'actions']);
-const items = ref([]);
-const table_option = ref({
-    perPage: 10,
-    perPageValues: [5, 10, 20, 50],
-    skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center' },
-    pagination: { nav: 'scroll', chunk: 5 },
-    texts: {
-        count: 'Showing {from} to {to} of {count}',
-        filter: '',
-        filterPlaceholder: 'Search...',
-        limit: 'Results:',
-    },
-    sortable: ['id', 'nama', 'kategori', 'deskripsi', 'status'],
-    sortIcon: {
-        base: 'sort-icon-none',
-        up: 'sort-icon-asc',
-        down: 'sort-icon-desc',
-    },
-    resizableColumns: false,
-});
+    const columns = ref(['id', 'nama', 'kategori', 'deskripsi', 'status', 'actions']);
+    const items = ref([]);
+    const table_option = ref({
+        perPage: 10,
+        perPageValues: [5, 10, 20, 50],
+        skin: 'table table-hover',
+        columnsClasses: { actions: 'actions text-center' },
+        pagination: { nav: 'scroll', chunk: 5 },
+        texts: {
+            count: 'Showing {from} to {to} of {count}',
+            filter: '',
+            filterPlaceholder: 'Search...',
+            limit: 'Results:',
+        },
+        sortable: ['id', 'nama', 'kategori', 'deskripsi', 'status'],
+        sortIcon: {
+            base: 'sort-icon-none',
+            up: 'sort-icon-asc',
+            down: 'sort-icon-desc',
+        },
+        resizableColumns: false,
+    });
 
-onMounted(() => {
-    bind_data();
-});
+    onMounted(() => {
+        bind_data();
+    });
 
-const bind_data = () => {
+    const bind_data = () => {
         items.value = [
             {
                 id: 1,
-                nama: 'Indonesia',
-                kategori: 'Leanguage',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Tiger Nixon',
+                kategori: '2011/04/25',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 2,
-                nama: 'Jawa Barat',
-                kategori: 'Provinsi',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Garrett Winters',
+                kategori: '2011/07/25',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 3,
-                nama: 'Ir',
-                kategori: 'Jabatan',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Ashton Cox',
+                kategori: '2009/01/12',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 4,
-                nama: 'Merah',
-                kategori: 'Warna air tambak',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Cedric Kelly',
+                kategori: '2012/03/29',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 5,
-                nama: 'Kategori Alat 1',
-                kategori: 'Kategori alat',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Airi Satou',
+                kategori: '2008/11/28',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 6,
-                nama: 'Merek Benur 1',
-                kategori: 'Merek benur',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Brielle Williamson',
+                kategori: '2012/12/02',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 7,
-                nama: 'Merek Pakan 1',
-                kategori: 'Merek Pakan',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Herrod Chandler',
+                kategori: '2012/08/06',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 8,
-                nama: 'Tipe Pakan 1',
-                kategori: 'Tipe Pakan',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Rhona Davnamason',
+                kategori: '2010/10/14',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 9,
-                nama: 'Tipe Panen 1',
-                kategori: 'Tipe Panen',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Colleen Hurst',
+                kategori: '2009/09/15',
+                deskripsi: 'null',
+                status: 'null',
             },
             {
                 id: 10,
-                nama: 'Tipe SPV 1',
-                kategori: 'Tipe SPV',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 9,
-                nama: 'Kategori Kontent 1',
-                kategori: 'Kategori Kontent',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 10,
-                nama: 'Kategori Konsumsi 1',
-                kategori: 'Kategori Konsumsi',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 11,
-                nama: 'Warna Air Tambak 1',
-                kategori: 'Warna Air Tambak',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 12,
-                nama: 'Jepang',
-                kategori: 'Leanguage',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 13,
-                nama: 'Jawa Tengah',
-                kategori: 'Provinsi',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 14,
-                nama: 'M.Kom',
-                kategori: 'Jabatan',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 15,
-                nama: 'Kuning',
-                kategori: 'Warna air tambak',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 15,
-                nama: 'Kategori Alat 2',
-                kategori: 'Kategori alat',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 17,
-                nama: 'Merek Benur 2',
-                kategori: 'Merek benur',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 18,
-                nama: 'Merek Pakan 2',
-                kategori: 'Merek Pakan',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 19,
-                nama: 'Tipe Pakan 2',
-                kategori: 'Tipe Pakan',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 20,
-                nama: 'Tipe Panen 2',
-                kategori: 'Tipe Panen',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 21,
-                nama: 'Tipe SPV 2',
-                kategori: 'Tipe SPV',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 22,
-                nama: 'Kategori Kontent 2',
-                kategori: 'Kategori Kontent',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 23,
-                nama: 'Kategori Konsumsi 2',
-                kategori: 'Kategori Konsumsi',
-                deskripsi: '-',
-                status: '1',
-            },
-            {
-                id: 24,
-                nama: 'Warna Air Tambak 2',
-                kategori: 'Warna Air Tambak',
-                deskripsi: '-',
-                status: '1',
+                nama: 'Sonya Frost',
+                kategori: '2008/12/13',
+                deskripsi: 'null',
+                status: 'null',
             },
         ];
     };
@@ -306,18 +214,15 @@ const bind_data = () => {
             text: 'HALLO',
             html:
                 '<p><b>Nama</b> : ' +
-                item.id +
-                '</p>' +
-                '<p><b>Min</b> : ' +
                 item.nama +
                 '</p>' +
-                '<p><b>Max</b> : ' +
+                '<p><b>Kategori</b> : ' +
                 item.kategori +
                 '</p>' +
-                '<p><b>Nama</b> : ' +
+                '<p><b>Deskripsi</b> : ' +
                 item.deskripsi +
                 '</p>' +
-                '<p><b>Nama</b> : ' +
+                '<p><b>Status</b> : ' +
                 item.status +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
@@ -341,7 +246,7 @@ const bind_data = () => {
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
             focusConfirm: false,
-            confirmButtonColor: '#4361ee',
+            confirmButtonColor: '#1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
 
