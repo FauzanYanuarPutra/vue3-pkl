@@ -197,9 +197,9 @@ const view_row = (item) => {
         title: '<i>Parameter Fisika</i>',
         text: 'HALLO',
         html:
-            '<p><b>Pro Air</b> : ' + item.pro_air + '</p>' +
-            '<p><b>Max</b> : ' + item.pro_oral + '</p>' +
-            '<p><b>Nama</b> : ' + item.mineral_kg + '</p>'
+            '<p><b>Pro+ Air (Liter)</b> : ' + item.pro_air + '</p>' +
+            '<p><b>Pro+ Oral (ml)</b> : ' + item.pro_oral + '</p>' +
+            '<p><b>Mineral (Kg)</b> : ' + item.mineral_kg + '</p>'
         ,
         showCloseButton: true,
         focusConfirm: false,

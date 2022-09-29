@@ -88,7 +88,7 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['nama_kolam', 'tanggal', 'lama_hari', 'keterangan', 'actions']);
+const columns = ref(['nama_kolam', 'tanggal', 'keterangan', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
@@ -121,70 +121,60 @@ const bind_data = () => {
             ID: 1,
             nama_kolam: 'Kolam b1',
             tanggal: '2011/04/25',
-            lama_hari: '20 Hari',
             keterangan: 'null',
         },
         {
             ID: 2,
             nama_kolam: 'Kolam b2',
             tanggal: '2011/03/25',
-            lama_hari: '23 Hari',
             keterangan: 'null',
         },
         {
             ID: 3,
             nama_kolam: 'Kolam b3',
             tanggal: '2011/07/25',
-            lama_hari: '12 Hari',
             keterangan: 'null',
         },
         {
             ID: 4,
             nama_kolam: 'Kolam b4',
             tanggal: '2011/08/25',
-            lama_hari: '23 Hari',
             keterangan: 'null',
         },
         {
             ID: 5,
             nama_kolam: 'Kolam b5',
             tanggal: '2011/01/25',
-            lama_hari: '25 Hari',
             keterangan: 'null',
         },
         {
             ID: 6,
             nama_kolam: 'Kolam b6',
             tanggal: '2011/12/25',
-            lama_hari: '15 Hari',
             keterangan: 'null',
         },
         {
             ID: 7,
             nama_kolam: 'Kolam b7',
             tanggal: '2011/05/25',
-            lama_hari: '63 Hari',
             keterangan: 'null',
         },
         {
             ID: 8,
             nama_kolam: 'Kolam b8',
             tanggal: '2011/12/25',
-            lama_hari: '35 Hari',
             keterangan: 'null',
         },
         {
             ID: 9,
             nama_kolam: 'Kolam b9',
             tanggal: '2011/09/25',
-            lama_hari: '52 Hari',
             keterangan: 'null',
         },
         {
             ID: 10,
             nama_kolam: 'Kolam b10',
             tanggal: '2011/06/25',
-            lama_hari: '63 Hari',
             keterangan: 'null',
         },
     ];

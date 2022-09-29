@@ -199,10 +199,10 @@ const view_row = (item) => {
             '<p><b>Nama Kolam</b> : ' +
             item.nama_kolam +
             '</p>' +
-            '<p><b>Pro+ Oral (ml)</b> : ' +
+            '<p><b>Tanggal</b> : ' +
             item.tanggal +
             '</p>' +
-            '<p><b>Mineral (Kg)</b> : ' +
+            '<p><b>Pemakaian Sterilisasi</b> : ' +
             item.pemakaian_sterilisasi +
             '</p>' +
             '<p><b>Keterangan</b> : ' +
