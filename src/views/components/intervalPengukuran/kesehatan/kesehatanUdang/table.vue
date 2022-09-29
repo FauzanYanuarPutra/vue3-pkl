@@ -198,7 +198,7 @@ const view_row = (item) => {
         ,
         showCloseButton: true,
         focusConfirm: false,
-        confirmButtonColor: '#4361ee',
+        confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
 

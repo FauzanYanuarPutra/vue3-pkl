@@ -195,20 +195,20 @@ const bind_data = () => {
 const view_row = (item) => {
     new window.Swal({
         title: '<i>Parameter Fisika</i>',
-                text: 'HALLO',
-                html: 
-                    '<p><b>Pro Air</b> : ' + item.pro_air + '</p>'+
-                    '<p><b>Max</b> : ' + item.pro_oral + '</p>'+
-                    '<p><b>Nama</b> : ' + item.mineral_kg + '</p>'
-                    ,
-                showCloseButton: true,
-                focusConfirm: false,
-                confirmButtonColor: '#4361ee',
-                confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
-                confirmButtonAriaLabel: 'Oke',
+        text: 'HALLO',
+        html:
+            '<p><b>Pro Air</b> : ' + item.pro_air + '</p>' +
+            '<p><b>Max</b> : ' + item.pro_oral + '</p>' +
+            '<p><b>Nama</b> : ' + item.mineral_kg + '</p>'
+        ,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
 
-                padding: '2em',
-            });
+        padding: '2em',
+    });
 
     // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };

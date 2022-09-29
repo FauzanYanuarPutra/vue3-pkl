@@ -26,7 +26,8 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/budidaya-kimia/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/budidaya-kimia/create" @click="toggleMobileMenu"
+                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
@@ -34,18 +35,10 @@
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <div @click="view_row(props.row)" style="cursor: pointer">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-eye"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye">
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
@@ -53,38 +46,25 @@
                                     </div>
                                     <div class="px-2">
                                         <router-link to="/budidaya-kimia/create" data-bs-toggle="tooltip" title="Edit">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-edit-2"
-                                            >
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -102,142 +82,130 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref([
-        'pH',
-        'Salinitas',
-        'DO',
-        'CO3',
-        'HC03',
-        'Total',
-        'Ammonium_NH4',
-        'Nitrit_NO2',
-        'Nitrit_NO3',
-        'hosphate_PO4',
-        'Iron_Fe',
-        'Magnesium_Mg',
-        'Calium_Ca',
-        'Total',
-        'Residual ',
-        'Redox',
-        'actions',
-    ]);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 50,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref([
+    'pH',
+    'Salinitas',
+    'DO',
+    'CO3',
+    'actions',
+]);
+const items = ref([]);
+const table_option = ref({
+    perPage: 50,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['pH', 'Salinitas', 'DO', 'CO3', 'HC03', 'Total', 'Ammonium_NH4', 'Nitrit_NO2', 'Nitrit_NO3', 'hosphate_PO4', 'Iron_Fe', 'Magnesium_Mg', 'Calium_Ca', 'Total', 'Residual ', 'Redox'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            pH: '',
+            Salinitas: '',
+            DO: '',
+            CO3: '',
+            HC03: '',
+            Total: '',
+            Ammonium_NH4: '',
+            Nitrit_NO2: '',
+            Nitrit_NO3: '',
+            hosphate_PO4: '',
+            Iron_Fe: '',
+            Magnesium_Mg: '',
+            Calium_Ca: '',
+            Total: '',
+            Residual: '',
+            Redox: '',
         },
-        sortable: ['pH', 'Salinitas', 'DO', 'CO3', 'HC03', 'Total', 'Ammonium_NH4', 'Nitrit_NO2', 'Nitrit_NO3', 'hosphate_PO4', 'Iron_Fe', 'Magnesium_Mg', 'Calium_Ca', 'Total', 'Residual ', 'Redox'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
-        },
-        resizableColumns: false,
+    ];
+};
+
+const view_row = (item) => {
+    new window.Swal({
+        title: '<i>Parameter Kimia</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>pH</b> : ' +
+            item.pH +
+            '</p>' +
+            '<p><b>Salinitas (%)</b> : ' +
+            item.Salinitas +
+            '</p>' +
+            '<p><b>DO (ppm)</b> : ' +
+            item.DO +
+            '</p>' +
+            '<p><b>CO3</b> : ' +
+            item.CO3 +
+            '</p>' +
+            '<p><b>Total_Vibrio_Count</b> : ' +
+            item.HC03 +
+            '</p>' +
+            '<p><b>Total</b> : ' +
+            item.Total +
+            '</p>' +
+            '<p><b>Ammonium-NH4 (mg/L)</b> : ' +
+            item.Ammonium_NH4 +
+            '</p>' +
+            '<p><b>Nitrit-NO2 (ppm)</b> : ' +
+            item.Nitrit_NO2 +
+            '</p>' +
+            '<p><b>Nitrat-NO3 (mg/L)</b> : ' +
+            item.Nitrit_NO3 +
+            '</p>' +
+            '<p><b>Phosphate-PO4 (mg/L)</b> : ' +
+            item.hosphate_PO4 +
+            '</p>' +
+            '<p><b>Iron-Fe (mg/L)</b> : ' +
+            item.Iron_Fe +
+            '</p>' +
+            '<p><b>Magnesium-Mg (mg/L)</b> : ' +
+            item.Magnesium_Mg +
+            '</p>' +
+            '<p><b>Calium-Ca (mg/L)</b> : ' +
+            item.Calium_Ca +
+            '</p>' +
+            '<p><b>Total</b> : ' +
+            item.Total1 +
+            '</p>' +
+            '<p><b>Residual Chlorin-Cl</b> : ' +
+            item.Residual +
+            '</p>' +
+            '<p><b>Redox (mV)</b> : ' +
+            item.Redox +
+            '</p>',
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
     });
-
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                pH: '',
-                Salinitas: '',
-                DO: '',
-                CO3: '',
-                HC03: '',
-                Total: '',
-                Ammonium_NH4: '',
-                Nitrit_NO2: '',
-                Nitrit_NO3: '',
-                hosphate_PO4: '',
-                Iron_Fe: '',
-                Magnesium_Mg: '',
-                Calium_Ca: '',
-                Total: '',
-                Residual: '',
-                Redox: '',
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        new window.Swal({
-            title: '<i>Parameter Kimia</i>',
-            text: 'HALLO',
-            html:
-                '<p><b>Kuning</b> : ' +
-                item.pH +
-                '</p>' +
-                '<p><b>Hijau</b> : ' +
-                item.Salinitas +
-                '</p>' +
-                '<p><b>Hitam</b> : ' +
-                item.DO +
-                '</p>' +
-                '<p><b>Nyala</b> : ' +
-                item.CO3 +
-                '</p>' +
-                '<p><b>Total_Vibrio_Count</b> : ' +
-                item.HC03 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Total +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Ammonium_NH4 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Nitrit_NO2 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Nitrit_NO3 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.hosphate_PO4 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Iron_Fe +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Magnesium_Mg +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Calium_Ca +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Total1 +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Residual +
-                '</p>' +
-                '<p><b>Nama</b> : ' +
-                item.Redox +
-                '</p>',
-            // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-            // DIAKHIR TIDAK MENGGUNAKAN tanda +
-            showCloseButton: true,
-            focusConfirm: false,
-            confirmButtonColor: '#1695DC',
-            confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
-            confirmButtonAriaLabel: 'Oke',
-
-            padding: '2em',
-        });
-        // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
-    };
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
+};
 </script>

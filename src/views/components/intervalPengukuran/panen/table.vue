@@ -26,8 +26,8 @@
                             </div>
                         </div>
                         <div class=" d-flex flex-row-reverse position-relative">
-                            <router-link to="/panen/create" @click="toggleMobileMenu"
-                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/panen/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">
+                                Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
@@ -198,7 +198,7 @@ const view_row = (item) => {
         ,
         showCloseButton: true,
         focusConfirm: false,
-        confirmButtonColor: '#4361ee',
+        confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
 
