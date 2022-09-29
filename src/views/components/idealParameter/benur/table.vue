@@ -210,10 +210,9 @@
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
             focusConfirm: false,
-            confirmButtonColor: '#4361ee',
+            // confirmButtonColor: '#4361ee',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
-
             padding: '2em',
         });
         // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);

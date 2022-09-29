@@ -380,7 +380,6 @@
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
             focusConfirm: false,
-            confirmButtonColor: '##1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
 
