@@ -165,8 +165,8 @@ const view_row = (item) => {
         title: '<i>Benur</i>',
         text: 'HALLO',
         html: '<p><b>Scoring</b> : ' + item.scoring + '</p>',
-        // '<p><b>Min</b> : ' + item.min + '</p>'+
-        // '<p><b>Max</b> : ' + item.max + '</p>'
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
