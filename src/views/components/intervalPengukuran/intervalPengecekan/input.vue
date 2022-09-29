@@ -28,25 +28,25 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                        <div class="wrap">
-                            <div class="form-group">
-                                <label class="control-label">Pro+ Air (Liter)</label>
-                                <input type="number" name="pro_air" class="form-control" />
+                            <div class="box-wrap">
+                                <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Pro+ Air (Liter)</label>
+                                        <input type="number" name="pro_air" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pro+ Oral (ml)</label>
+                                        <input type="number" name="pro_oral" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="wrap form-group">
+                                    <label class="control-label">Mineral (Kg)</label>
+                                    <input type="number" name="mineral_kg" class="form-control" />
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Pro+ Oral (ml)</label>
-                                <input type="number" name="pro_oral" class="form-control" />
-                            </div>
-                        </div>
-                            
-                            <div class="wrap form-group">
-                                <label class="control-label">Mineral (Kg)</label>
-                                <input type="number" name="mineral_kg" class="form-control" />
-                            </div>
-                        </div>
-                        
-                            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+
+                            <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
                 </div>
