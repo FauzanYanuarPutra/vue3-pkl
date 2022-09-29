@@ -137,17 +137,10 @@
         items.value = [
             {
                 id: 1,
-<<<<<<< HEAD
-                nama: 'bbbbbb',
-                kategori: 'bbbbb',
-                deskripsi: 'bbbb',
-                status: 'bbbb',
-=======
                 nama: 'AAAAAAAAAAA',
                 kategori: 'BBBBB',
                 deskripsi: '-',
                 status: '1',
->>>>>>> 4ecd1b2edd025a531b9354e8cbd99afbaeced3c5
             },
             {
                 id: 2,
