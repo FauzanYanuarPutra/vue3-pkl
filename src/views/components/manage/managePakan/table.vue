@@ -149,7 +149,7 @@ const bind_data = () => {
             pakan_batch_id: 63,
             jenis_butiran: 61,
             tanggal_beli: '2011/04/25',
-            ukuran_karung: 61,
+            ukuran_karung: 60,
             jumlah_karung: 22,
             photo: 'null',
             status: '170,750',
