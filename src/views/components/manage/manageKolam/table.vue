@@ -29,11 +29,13 @@
                             <router-link to="/manage-kolam/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
 
+                
+
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer">
+                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -133,6 +135,7 @@
     onMounted(() => {
         bind_data();
     });
+    
 
     const bind_data = () => {
         items.value = [

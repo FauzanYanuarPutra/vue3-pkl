@@ -33,7 +33,7 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer">
+                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -100,6 +100,7 @@
         </div>
     </div>
 </template>
+
 
 <script setup>
     import { onMounted, ref } from 'vue';

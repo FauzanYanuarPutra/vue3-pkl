@@ -41,7 +41,7 @@
 
     .table td,
     .table th {
-        padding: 10px 21px;
+        padding: 10px 30px;
     }
 
     .table-hover:not(.table-dark) tbody tr:hover td {
@@ -323,9 +323,18 @@
 
 
 .table > :not(caption) > * > * {
-    border: 1px solid #ebedf2;
+    border: 2px solid #ebedf2;
+    border-bottom-width: 1px solid #ebedf2;
+
 }
 
+.table-responsive {
+    // padding: 5px;
+    margin: 5px;
+}
 
+.VueTables__sortable .text-end{
+    text-align: start;
+}
 
 
