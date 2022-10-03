@@ -113,7 +113,17 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', nama: ' text-dark fw-bold' },
+        columnsClasses: {
+            actions: 'actions text-center',
+            nama: ' text-dark fw-bold',
+            Density: 'text-end',
+            Cloro: 'text-end',
+            Proto: 'text-end',
+            Diantom: 'text-end',
+            Dyno: 'text-end',
+            GA: 'text-end',
+            BGA: 'text-end',
+        },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',

@@ -113,7 +113,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center' },
+        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', No_auto_feeder: 'text-end', Pemberian_pakan: 'text-end', pakan_kumulative: 'text-end', FCR: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
