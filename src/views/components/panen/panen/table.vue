@@ -112,7 +112,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
+        columnsClasses: { actions: 'actions text-center', Tanggal_panen: 'text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -138,7 +138,7 @@
             {
                 id: 1,
                 Id_kolam: 'Kolam b1',
-                Tanggal_panen: 'System Architect',
+                Tanggal_panen: '2022/03/29',
                 Tipe_panen: 'Full',
                 Doc: 'null',
             },

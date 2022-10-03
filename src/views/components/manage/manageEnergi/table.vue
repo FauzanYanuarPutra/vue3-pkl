@@ -107,13 +107,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'kategori_konsumsi_listrik', 'actions']);
+    const columns = ref(['nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'konsumsi_listrik', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center' },
+        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', penggunaan_listrik: 'text-end', konsumsi_listrik: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -121,7 +121,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'kategori_konsumsi_listrik'],
+        sortable: ['nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'konsumsi_listrik'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -143,7 +143,7 @@
                 bulan: 'Januari',
                 penggunaan_listrik: 2000,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 2,
@@ -152,7 +152,7 @@
                 bulan: 'Januari',
                 penggunaan_listrik: 2453,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 3,
@@ -161,7 +161,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2066,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 4,
@@ -170,7 +170,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2002,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 5,
@@ -179,7 +179,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2233,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 6,
@@ -188,7 +188,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2049,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 7,
@@ -197,7 +197,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2034,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 8,
@@ -206,7 +206,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2768,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 9,
@@ -215,7 +215,7 @@
                 bulan: 'Februari',
                 penggunaan_listrik: 2139,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 10,
@@ -224,7 +224,7 @@
                 bulan: 'Februaru',
                 penggunaan_listrik: 2323,
 
-                kategori_konsumsi_listrik: '131.000 VA',
+                konsumsi_listrik: '131.000 VA',
             },
         ];
     };
@@ -247,7 +247,7 @@
                 item.penggunaan_listrik +
                 '</p>' +
                 '<p><b>Kategori Konsumsi Listrik</b> : ' +
-                item.kategori_konsumsi_listrik +
+                item.konsumsi_listrik +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
