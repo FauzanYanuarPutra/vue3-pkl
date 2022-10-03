@@ -88,12 +88,13 @@ import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
 const columns = ref(['nama_tambak', 'tanggal_input', 'asal_pakan', 'jenis_butiran', 'actions']);
+
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { actions: 'actions text-center ', tanggal_input: 'text-center ', jenis_butiran: 'text-end '},
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',

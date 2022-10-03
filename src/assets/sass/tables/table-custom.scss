@@ -30,12 +30,12 @@
 
 .custom-table {
     .table th {
-        background: #eff5ff !important;
-        color: #515365;
+        // background: #eff5ff !important;
+        color: #1695DC;
         text-transform: none;
         font-size: 14px;
         user-select: none;
-        border-top: 0;
+        // border-top: 0;
         font-weight: 600;
     }
 
@@ -136,6 +136,7 @@
             .VueTables__limit-field {
                 display: flex;
                 align-items: center;
+                width: 400px;
 
                 label {
                     margin-bottom: 0;
@@ -147,7 +148,7 @@
                     padding: 7px 16px;
                     font-size: 13px;
                     height: calc(1.3em + 1.3rem + 2px);
-                    min-width: 90px;
+                    width: 100%;
                 }
                 select.form-control {
                     background: #fff
@@ -320,6 +321,10 @@
 
 }
 
+
+.table > :not(caption) > * > * {
+    border: 1px solid #ebedf2;
+}
 
 
 
