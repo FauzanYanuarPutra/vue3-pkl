@@ -95,7 +95,7 @@ const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center' },
+    columnsClasses: { panen: 'text-end', actions: 'actions text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
