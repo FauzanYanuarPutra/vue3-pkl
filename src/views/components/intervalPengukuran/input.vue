@@ -46,7 +46,7 @@
                                 <div class="wrap form-group">
                                     <label class="control-label">Mineral (Kg)</label>
                                     <input type="number" name="mineral_kg" class="form-control"
-                                        placeholder="Input setiap hari" />
+                                        placeholder="Input setiap ari" />
                                 </div>
                             </div>
 
@@ -105,10 +105,12 @@
 
                             <h4 class="mt-5">Siklus budidaya (Benur & DOC)</h4><br>
                             <div class="box-wrap">
-                                <div class="wrap form-group">
+                                <div class="wrap">
                                     <label>Siklus budidaya (Benur & DOC)</label>
                                     <input type="number" name="siklus_benur" class="form-control"
                                         placeholder="Input hanya 1 kali persiklus" />
+                                </div>
+                                <div class="wrap">
                                 </div>
                             </div>
 
@@ -142,7 +144,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">DO (ppm)</label>
-                                        <input type="number" name="do" class="form-control" />
+                                        <input type="number" name="do" class="form-control"
+                                            placeholder="Input setiap 3 hari sekali" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Salinitas (%)</label>
@@ -198,6 +201,8 @@
                                     <input type="number" name="siklus_udang" class="form-control"
                                         placeholder="Input setiap hari" />
                                 </div>
+                                <div class="wrap">
+                                </div>
                             </div>
 
                             <h4 class="mt-5">Siklus budidaya (Pakan)</h4><br>
@@ -206,6 +211,8 @@
                                     <label>Siklus budidaya (Pakan)</label>
                                     <input type="number" name="siklus_pakan" class="form-control"
                                         placeholder="Input setiap hari" />
+                                </div>
+                                <div class="wrap">
                                 </div>
                             </div>
 
@@ -216,6 +223,8 @@
                                     <input type="number" name="kesehatan_benur" class="form-control"
                                         placeholder="Input hanya 1 kali persiklus" />
                                 </div>
+                                <div class="wrap">
+                                </div>
                             </div>
 
                             <h4 class="mt-5">Kesehatan udang</h4><br>
@@ -225,6 +234,8 @@
                                     <input type="number" name="kesehatan_udang" class="form-control"
                                         placeholder="Input setiap 10 hari sekali" />
                                 </div>
+                                <div class="wrap">
+                                </div>
                             </div>
 
                             <h4 class="mt-5">Panen</h4><br>
@@ -233,6 +244,8 @@
                                     <label>Panen</label>
                                     <input type="number" name="panen" class="form-control"
                                         placeholder="Input hanya 1 kali persiklus" />
+                                </div>
+                                <div class="wrap">
                                 </div>
                             </div>
 
