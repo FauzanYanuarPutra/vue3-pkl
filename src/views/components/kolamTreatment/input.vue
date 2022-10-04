@@ -33,11 +33,13 @@
                                 <div class="wrap">
                                     <div class="form-group">
                                         <label class="control-label">Nama Kolam</label>
-                                        <input type="text" name="nama_kolam" class="form-control" />
+                                        <input type="text" name="nama_kolam" class="form-control"
+                                            placeholder="Masukkan nama kolam" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Jam</label>
-                                        <input type="text" name="jam" class="form-control" />
+                                        <input type="text" name="jam" class="form-control"
+                                            placeholder="Masukkan jam input" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Bulan:</label>
@@ -48,22 +50,26 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Pro+ Air (Liter)</label>
-                                        <input type="text" name="pro_air" class="form-control" />
+                                        <input type="text" name="pro_air" class="form-control"
+                                            placeholder="Masukkan Pro+ Air (Liter)" />
                                     </div>
                                 </div>
 
                                 <div class="wrap">
                                     <div class="form-group">
                                         <label class="control-label">Pro+ Oral (ml)</label>
-                                        <input type="text" name="pro_oral" class="form-control" />
+                                        <input type="text" name="pro_oral" class="form-control"
+                                            placeholder="Masukkan Pro+ Oral (ml)" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Mineral (Kg)</label>
-                                        <input type="text" name="mineral" class="form-control" />
+                                        <input type="text" name="mineral" class="form-control"
+                                            placeholder="Masukkan Mineral (Kg)" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Keterangan</label>
-                                        <input type="text" name="keterangan" class="form-control" />
+                                        <input type="text" name="keterangan" class="form-control"
+                                            placeholder="Beri Keterangan" />
                                     </div>
                                 </div>
                             </div>
