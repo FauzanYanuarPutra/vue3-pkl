@@ -742,6 +742,12 @@ const routes = [
         name: 'manage-setting-edit',
         component: () => import('../views/components/manage/setting/edit.vue'),
     },
+    // Laporan
+    {
+        path: '/laporan',
+        name: 'laporan',
+        component: () => import('../views/components/laporan/laporan.vue'),
+    },
 ];
 
 const router = new createRouter({
