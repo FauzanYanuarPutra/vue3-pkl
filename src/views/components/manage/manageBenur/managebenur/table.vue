@@ -126,7 +126,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'actions']);
+    const columns = ref(['nama_tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'nilai_scoring', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -140,7 +140,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)'],
+        sortable: ['nama_tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)', 'nilai_scoring'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -163,6 +163,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18 ',
+                nilai_scoring: 'A',
             },
             {
                 id: 2,
@@ -172,6 +173,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18-20 ',
+                nilai_scoring: 'B',
             },
             {
                 id: 3,
@@ -181,6 +183,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '20 ',
+                nilai_scoring: 'B',
             },
             {
                 id: 4,
@@ -190,6 +193,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18-20 ',
+                nilai_scoring: 'A',
             },
             {
                 id: 5,
@@ -199,6 +203,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18-20 ',
+                nilai_scoring: 'C',
             },
             {
                 id: 6,
@@ -208,6 +213,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18 ',
+                nilai_scoring: 'A',
             },
             {
                 id: 7,
@@ -217,6 +223,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18 ',
+                nilai_scoring: 'B',
             },
             {
                 id: 8,
@@ -226,6 +233,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '20 ',
+                nilai_scoring: 'B',
             },
             {
                 id: 9,
@@ -235,6 +243,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '18-20 ',
+                nilai_scoring: 'C',
             },
             {
                 id: 10,
@@ -244,6 +253,7 @@
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
                 'usia_benur(hari)': '19 ',
+                nilai_scoring: 'A',
             },
         ];
     };
@@ -270,6 +280,9 @@
                 '</p>' +
                 '<p><b>Usia Benur</b> : ' +
                 item.usia_benur +
+                '</p>' +
+                '<p><b>Nilai Scoring</b> : ' +
+                item.nilai_scoring +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

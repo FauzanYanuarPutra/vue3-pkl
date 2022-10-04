@@ -62,7 +62,7 @@
                                         <input type="text" name="provinsi" class="form-control" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Usia benur:</label>
+                                        <label class="control-label">Usia benur(hari):</label>
                                         <input type="text" name="provinsi" class="form-control" />
                                     </div>
                                 </div>

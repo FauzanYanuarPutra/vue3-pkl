@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Manage Tambak</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Scoring Benur</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -18,10 +18,10 @@
             <div id="manageTambak" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
-                        <div class="form-group">
+                        <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h6>Scoring benur</h6>
+                                    <h4>Scoring Benur</h4>
                                 </div>
                             </div>
                         </div>
