@@ -30,35 +30,43 @@
                                 <div class="wrap">
                                     <div class="form-group">
                                         <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
+                                        <input type="text" name="nama_tambak" class="form-control"
+                                        placeholder="Menambahkan Tambak" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal dan jam input:</label>
-                                        <input type="text" name="Tanggal_dan_jam_input" class="form-control" />
+                                        <input type="text" name="Tanggal_dan_jam_input" class="form-control" 
+                                        placeholder="Menambahkan Tanggal dan jam input"/>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">ID pakan:</label>
-                                        <input type="text" name="ID_PaKan" class="form-control" />
+                                        <input type="text" name="ID_PaKan" class="form-control" 
+                                        placeholder="Menambahkan ID Pakan"/>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Asal pakan:</label>
-                                        <input type="text" name="Asal_PaKan" class="form-control" />
+                                        <input type="text" name="Asal_PaKan" class="form-control"
+                                        placeholder="Menambahkan Asal Pakan" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Pakan batch id:</label>
-                                        <input type="text" name="Pakan_batch_id" class="form-control" />
+                                        <input type="text" name="Pakan_batch_id" class="form-control"
+                                        placeholder="Menambahkan Keterangan" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Jenis butiran:</label>
-                                        <input type="text" name="Jenis_butiran" class="form-control" />
+                                        <input type="text" name="Jenis_butiran" class="form-control"
+                                        placeholder="Menambahkan Jenis Butiran" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Tanggal beli:</label>
-                                        <input type="text" name="Tanggal_beli" class="form-control" />
+                                        <input type="text" name="Tanggal_beli" class="form-control"
+                                        placeholder="Menambahkan Tanggal beli"/>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">(kg)Ukuran/Karung:</label>
-                                        <input type="text" name="(kg)Ukuran/Karung" class="form-control" />
+                                        <input type="text" name="(kg)Ukuran/Karung" class="form-control"
+                                        placeholder="Menambahkan (kg)Ukuran/Karung" />
                                     </div>
                                 </div>
                                 <div class="wrap">
@@ -104,25 +112,30 @@
 
                                     <div class="form-group">
                                         <label class="control-label">Status:</label>
-                                        <input type="text" name="Status" class="form-control" />
+                                        <input type="text" name="Status" class="form-control" 
+                                        placeholder="Menambahkan Status"/>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Scoring Pakan:</label>
-                                        <input type="text" name="Scoring_Pakan" class="form-control" />
+                                        <input type="text" name="Scoring_Pakan" class="form-control"
+                                        placeholder="Menambahkan Scoring_Pakan"/>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Aktraktan:</label>
-                                        <input type="text" name="Aktraktan" class="form-control" />
+                                        <input type="text" name="Aktraktan" class="form-control" 
+                                        placeholder="Menambahkan Aktraktan"/>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Protein untuk pertumbuhan:</label>
-                                        <input type="text" name="Protein_untuk_pertumbuhan" class="form-control" />
+                                        <input type="text" name="Protein_untuk_pertumbuhan" class="form-control"
+                                        placeholder="Menambahkan Protein_untuk_pertumbuhan" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Keterangan:</label>
-                                        <input type="text" name="Keterangan" class="form-control" />
+                                        <input type="text" name="Keterangan" class="form-control"
+                                         placeholder="Menambahkan Keterangan" />
                                     </div>
                                 </div>
                             </div>
