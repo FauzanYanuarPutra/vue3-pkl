@@ -29,6 +29,7 @@
         "jspdf": "^2.5.0",
         "jspdf-autotable": "^3.5.23",
         "maska": "^1.5.0",
+        "serve": "^14.0.1",
         "sweetalert2": "^11.4.17",
         "v-tables-3": "^0.4.7",
         "vue": "^3.2.13",

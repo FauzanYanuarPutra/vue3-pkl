@@ -33,7 +33,7 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -90,6 +90,25 @@
                                             </svg>
                                         </a>
                                     </div>
+                                    <div class="px-2">
+                                        <a href="/scoring-benur/create" data-bs-toggle="tooltip" title="Scoring">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                class="feather feather-clipboard"
+                                            >
+                                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </template>
                             <template #salary="props"> ${{ props.row.salary }} </template>
@@ -107,13 +126,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'tanggal_input', 'Asal_benur', 'usia_benur', 'actions']);
+    const columns = ref(['nama_tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', usia_benur: 'text-end' },
+        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -121,7 +140,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur'],
+        sortable: ['nama_tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -143,7 +162,7 @@
                 Id_benur: '1',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18 hari',
+                'usia_benur(hari)': '18 ',
             },
             {
                 id: 2,
@@ -152,7 +171,7 @@
                 Id_benur: '2',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18-20 hari',
+                'usia_benur(hari)': '18-20 ',
             },
             {
                 id: 3,
@@ -161,7 +180,7 @@
                 Id_benur: '3',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '20 hari',
+                'usia_benur(hari)': '20 ',
             },
             {
                 id: 4,
@@ -170,7 +189,7 @@
                 Id_benur: '4',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18-20 hari',
+                'usia_benur(hari)': '18-20 ',
             },
             {
                 id: 5,
@@ -179,7 +198,7 @@
                 Id_benur: '5',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18-20 hari',
+                'usia_benur(hari)': '18-20 ',
             },
             {
                 id: 6,
@@ -188,7 +207,7 @@
                 Id_benur: '6',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18 hari',
+                'usia_benur(hari)': '18 ',
             },
             {
                 id: 7,
@@ -197,7 +216,7 @@
                 Id_benur: '7',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18 hari',
+                'usia_benur(hari)': '18 ',
             },
             {
                 id: 8,
@@ -206,7 +225,7 @@
                 Id_benur: '8',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '20 hari',
+                'usia_benur(hari)': '20 ',
             },
             {
                 id: 9,
@@ -215,7 +234,7 @@
                 Id_benur: '9',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '18-20 hari',
+                'usia_benur(hari)': '18-20 ',
             },
             {
                 id: 10,
@@ -224,7 +243,7 @@
                 Id_benur: '10',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                usia_benur: '19 hari',
+                'usia_benur(hari)': '19 ',
             },
         ];
     };
