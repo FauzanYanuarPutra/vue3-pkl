@@ -68,12 +68,12 @@
                                     <div class="form-group">
                                         <label class="control-label">Pemberian pakan kumulative (Kg)</label>
                                         <input type="number" name="kumulative" class="form-control"
-                                            placeholder="Masukkan pakan kumulative (Kg)" />
+                                            placeholder="Masukkan Total pakan hari ini + total pakan kemarin" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">FCR (Food conversion rate)</label>
                                         <input type="number" name="fcr" class="form-control"
-                                            placeholder="Masukkan FCR (Food conversion rate)" />
+                                            placeholder="Masukkan Total kumulative pakan / Total biomassa " />
                                     </div>
                                 </div>
                             </div>
