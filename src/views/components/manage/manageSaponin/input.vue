@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <label class="control-label">Jenis:</label>
                                         <input type="text" name="jenis" class="form-control"
-                                            placeholder="Masukkan jenisnya" />
+                                            placeholder="Contoh data, Vit C, Vit A, pupuk amonia" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Keterangan:</label>

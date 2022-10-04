@@ -52,51 +52,19 @@ const routes = [
     },
 
     {
-        path: '/parameter-biologi-fitoplankton',
-        name: 'parameter-biologi-fitoplankton',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/table.vue'),
+        path: '/parameter-biologi',
+        name: 'parameter-biologi',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/table.vue'),
     },
     {
-        path: '/parameter-biologi-fitoplankton/create',
-        name: 'parameter-biologi-fitoplankton-create',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/input.vue'),
+        path: '/parameter-biologi/create',
+        name: 'parameter-biologi-create',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/input.vue'),
     },
     {
-        path: '/parameter-biologi-fitoplankton/edit',
-        name: 'parameter-biologi-fitoplankton-edit',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/fitoplankton/edit.vue'),
-    },
-
-    {
-        path: '/parameter-biologi-vibrioTCBS',
-        name: 'parameter-biologi-vibrioTCBS',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/table.vue'),
-    },
-    {
-        path: '/parameter-biologi-vibrioTCBS/create',
-        name: 'parameter-biologi-vibrioTCBS-create',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/input.vue'),
-    },
-    {
-        path: '/parameter-biologi-vibrioTCBS/edit',
-        name: 'parameter-biologi-vibrioTCBS-edit',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioTCBS/edit.vue'),
-    },
-
-    {
-        path: '/parameter-biologi-vibrioCHROMagar',
-        name: 'parameter-biologi-vibrioCHROMagar',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/table.vue'),
-    },
-    {
-        path: '/parameter-biologi-vibrioCHROMagar/create',
-        name: 'parameter-biologi-vibrioCHROMagar-create',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/input.vue'),
-    },
-    {
-        path: '/parameter-biologi-vibrioCHROMagar/edit',
-        name: 'parameter-biologi-vibrioCHROMagar-edit',
-        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/vibrioCHROMagar/edit.vue'),
+        path: '/parameter-biologi/edit',
+        name: 'parameter-biologi-edit',
+        component: () => import('../views/components/idealParameter/kondisiAir/parameterBiologi/edit.vue'),
     },
 
     {
