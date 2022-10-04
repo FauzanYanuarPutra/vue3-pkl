@@ -126,8 +126,7 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#intervalPengukuran"
-                        aria-controls="intervalPengukuran" aria-expanded="false">
+                    <router-link to="/interval-pengukuran/create" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -138,78 +137,7 @@
                             </svg>
                             <span>{{ $t('Interval Pengukuran') }}</span>
                         </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-chevron-right">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                            <span>{{ $t('Interval Pengukuran') }}</span>
-                        </div>
-                    </a>
-                    <ul id="intervalPengukuran" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
-                        <li>
-                            <router-link to="/interval-pengecekan/table" @click="toggleMobileMenu">Interval pengecekan
-                                kolam treatment </router-link>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle" href="#budidaya" data-bs-parent="#budidaya"
-                                data-bs-toggle="collapse" role="button" aria-expanded="false">
-                                Siklus Budidaya
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-chevron-right">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </a>
-
-                            <ul id="budidaya" class="mx-3 collapse list-unstyled sub-submenu">
-                                <li>
-                                    <router-link to="/budidaya-persiapan/table" @click="toggleMobileMenu">Persiapan
-                                    </router-link>
-                                </li>
-                                <li>
-                                    <router-link to="/budidaya-benur/table" @click="toggleMobileMenu">Benur & DOC
-                                    </router-link>
-                                </li>
-                                <li>
-                                    <router-link to="/budidaya-air/table" @click="toggleMobileMenu">Air</router-link>
-                                </li>
-                                <li>
-                                    <router-link to="/budidaya-udang/table" @click="toggleMobileMenu">Udang
-                                    </router-link>
-                                </li>
-                                <li>
-                                    <router-link to="/budidaya-pakan/table" @click="toggleMobileMenu">Pakan
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle" href="#kesehatan" data-bs-parent="#kesehatan"
-                                data-bs-toggle="collapse" role="button" aria-expanded="false">
-                                Kesehatan
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-chevron-right">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </a>
-                            <ul id="kesehatan" class="mx-3 collapse list-unstyled sub-submenu">
-                                <li>
-                                    <router-link to="/kesehatan-benur/table" @click="toggleMobileMenu">Benur
-                                    </router-link>
-                                </li>
-                                <li>
-                                    <router-link to="/kesehatan-udang/table" @click="toggleMobileMenu">Udang
-                                    </router-link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <router-link to="/panen/table" @click="toggleMobileMenu">Panen</router-link>
-                        </li>
-                    </ul>
+                    </router-link>
                 </li>
 
                 <li class="menu">
