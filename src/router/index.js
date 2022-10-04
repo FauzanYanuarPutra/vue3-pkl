@@ -408,160 +408,23 @@ const routes = [
 
     // Kolam Budidaya Persiapan
 
-    // pengeringan dasar tambak
     {
-        path: '/pengeringan-dasar-tambak',
-        name: 'pengeringan-dasar-tambak',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/table.vue'),
+        path: '/kolam-budidaya-persiapan',
+        name: 'kolam-budidaya-persiapan',
+        component: () => import('../views/components/kolamBudidayaPersiapan/table.vue'),
     },
     {
-        path: '/pengeringan-dasar-tambak/create',
-        name: 'pengeringan-dasar-tambak-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/input.vue'),
+        path: '/kolam-budidaya-persiapan/create',
+        name: 'kolam-budidaya-persiapan-create',
+        component: () => import('../views/components/kolamBudidayaPersiapan/input.vue'),
     },
     {
-        path: '/pengeringan-dasar-tambak/edit',
-        name: 'pengeringan-dasar-tambak-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengeringanDasarTambak/edit.vue'),
-    },
-
-    // pembuangan sendimen organik
-    {
-        path: '/pembuangan-sendimen-organik',
-        name: 'pembuangan-sendimen-organik',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/table.vue'),
-    },
-    {
-        path: '/pembuangan-sendimen-organik/create',
-        name: 'pembuangan-sendimen-organik-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/input.vue'),
-    },
-    {
-        path: '/pembuangan-sendimen-organik/edit',
-        name: 'pembuangan-sendimen-organik-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pembuanganSedimenOrganik/edit.vue'),
+        path: '/kolam-budidaya-persiapan/edit',
+        name: 'kolam-budidaya-persiapan-edit',
+        component: () => import('../views/components/kolamBudidayaPersiapan/edit.vue'),
     },
 
-    // sterilisasi tambak
-    {
-        path: '/sterilisasi-tambak',
-        name: 'sterilisasi-tambak',
-        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/table.vue'),
-    },
-    {
-        path: '/sterilisasi-tambak/create',
-        name: 'sterilisasi-tambak-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/input.vue'),
-    },
-    {
-        path: '/sterilisasi-tambak/edit',
-        name: 'sterilisasi-tambak-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/sterilisasiTambak/edit.vue'),
-    },
-
-    // pengisian air dan sterilisasi air tambak
-    {
-        path: '/pengisian-air-dan-sterilisasi-air-tambak',
-        name: 'pengisian-air-dan-sterilisasi-air-tambak',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/table.vue'),
-    },
-    {
-        path: '/pengisian-air-dan-sterilisasi-air-tambak/create',
-        name: 'pengisian-air-dan-sterilisasi-air-tambak-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/input.vue'),
-    },
-    {
-        path: '/pengisian-air-dan-sterilisasi-air-tambak/edit',
-        name: 'pengisian-air-dan-sterilisasi-air-tambak-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengisianAirDanSterilisasiAirTambak/edit.vue'),
-    },
-
-    // pengapuran
-    {
-        path: '/pengapuran',
-        name: 'pengapuran',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/table.vue'),
-    },
-    {
-        path: '/pengapuran/create',
-        name: 'pengapuran-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/input.vue'),
-    },
-    {
-        path: '/pengapuran/edit',
-        name: 'pengapuran-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pengapuran/edit.vue'),
-    },
-
-    // pemupukan-dan-pemberian-mineral
-    {
-        path: '/pemupukan-dan-pemberian-mineral',
-        name: 'pemupukan-dan-pemberian-mineral',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/table.vue'),
-    },
-    {
-        path: '/pemupukan-dan-pemberian-mineral/create',
-        name: 'pemupukan-dan-pemberian-mineral-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/input.vue'),
-    },
-    {
-        path: '/pemupukan-dan-pemberian-mineral/edit',
-        name: 'pemupukan-dan-pemberian-mineral-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pemupukanDanPemberianMineral/edit.vue'),
-    },
-
-    // pertumbuhan-plankton
-    {
-        path: '/pertumbuhan-plankton',
-        name: 'pertumbuhan-plankton',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/table.vue'),
-    },
-    {
-        path: '/pertumbuhan-plankton/create',
-        name: 'pertumbuhan-plankton-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/input.vue'),
-    },
-    {
-        path: '/pertumbuhan-plankton/edit',
-        name: 'pertumbuhan-plankton-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPlankton/edit.vue'),
-    },
-
-    // pertumbuhan-patogen-atau-yang-merugikan
-    {
-        path: '/pertumbuhan-patogen-atau-yang-merugikan',
-        name: 'pertumbuhan-patogen-atau-yang-merugikan',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/table.vue'),
-    },
-    {
-        path: '/pertumbuhan-patogen-atau-yang-merugikan/create',
-        name: 'pertumbuhan-patogen-atau-yang-merugikan-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/input.vue'),
-    },
-    {
-        path: '/pertumbuhan-patogen-atau-yang-merugikan/edit',
-        name: 'pertumbuhan-patogen-atau-yang-merugikan-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/pertumbuhanPatogenAtauYangMerugikan/edit.vue'),
-    },
-
-    // probiotik
-
-    {
-        path: '/probiotik',
-        name: 'probiotik',
-        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/table.vue'),
-    },
-    {
-        path: '/probiotik/create',
-        name: 'probiotik-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/input.vue'),
-    },
-    {
-        path: '/probiotik/edit',
-        name: 'probiotik-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/probiotik/edit.vue'),
-    },
-
+    
     // akhir Kolam Budidaya Persiapan
 
     // kolamTreatment

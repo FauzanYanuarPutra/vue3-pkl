@@ -82,7 +82,7 @@
                 </li>
 
                 <li class="menu">
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#kolamBudidayaPersiapan" aria-controls="kolamBudidayaPersiapan" aria-expanded="false">
+                    <router-link to="/kolam-budidaya-persiapan" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -94,61 +94,18 @@
                                 stroke-width="2"
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                class="feather feather-command"
+                                class="feather feather-save"
                             >
-                                <path
-                                    d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"
-                                ></path>
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                <polyline points="7 3 7 8 15 8"></polyline>
                             </svg>
                             <span>{{ $t('Kolam Budidaya (Persiapan)') }}</span>
                         </div>
-                        <div>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                            >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                    <ul id="kolamBudidayaPersiapan" class="collapse submenu list-unstyled" data-bs-parent="#sidebar">
-                        <li>
-                            <router-link to="/pengeringan-dasar-tambak" @click="toggleMobileMenu">Pengeringan Dasar Tambak</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pembuangan-sendimen-organik" @click="toggleMobileMenu">Pebuangan Sendimen Organik</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/sterilisasi-tambak" @click="toggleMobileMenu">Sterilisasi Tambak </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pengisian-air-dan-sterilisasi-air-tambak" @click="toggleMobileMenu"> Pengisian Air Dan Sterilisasi Air Tambak</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pengapuran" @click="toggleMobileMenu">Pengapuran</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pemupukan-dan-pemberian-mineral" @click="toggleMobileMenu">Pemupukan Dan Pemberian Mineral</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pertumbuhan-plankton" @click="toggleMobileMenu">Pertumbuhan Plankton </router-link>
-                        </li>
-                        <li>
-                            <router-link to="/pertumbuhan-patogen-atau-yang-merugikan" @click="toggleMobileMenu"> Pertumbuhan Patogen atau Yang Merugikan</router-link>
-                        </li>
-                        <li>
-                            <router-link to="/probiotik" @click="toggleMobileMenu">Probiotik</router-link>
-                        </li>
-                    </ul>
+                    </router-link>
                 </li>
+
+                
 
                 <li class="menu">
                     <a class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#siklusBudidaya" aria-controls="siklusBudidaya" aria-expanded="false">
