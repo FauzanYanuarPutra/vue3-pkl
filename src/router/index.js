@@ -729,18 +729,18 @@ const routes = [
     // Setting
     {
         path: '/setting/table',
-        name: 'setting',
-        component: () => import('../views/components/setting/table.vue'),
+        name: 'manage-setting',
+        component: () => import('../views/components/manage/setting/table.vue'),
     },
     {
         path: '/setting/create',
-        name: 'setting-create',
-        component: () => import('../views/components/setting/input.vue'),
+        name: 'manage-setting-create',
+        component: () => import('../views/components/manage/setting/input.vue'),
     },
     {
         path: '/setting/edit',
-        name: 'setting-edit',
-        component: () => import('../views/components/setting/edit.vue'),
+        name: 'manage-setting-edit',
+        component: () => import('../views/components/manage/setting/edit.vue'),
     },
 ];
 
