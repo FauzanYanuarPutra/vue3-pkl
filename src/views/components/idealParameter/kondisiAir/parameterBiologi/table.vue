@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Vibrio TCBS</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Fitoplankton</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,12 +21,12 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Vibrio TCBS</h4>
+                                    <h4>Fitoplankton</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/parameter-biologi-vibrioCHROMagar/create" @click="toggleMobileMenu"
+                            <router-link to="/parameter-biologi/create" @click="toggleMobileMenu"
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
@@ -44,8 +44,8 @@
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <router-link to="/parameter-biologi-vibrioCHROMagar/edit"
-                                            data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/parameter-biologi/edit" data-bs-toggle="tooltip"
+                                            title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -88,10 +88,9 @@ import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
 const columns = ref(['nama', 'min', 'max', 'actions']);
-
 const items = ref([]);
 const table_option = ref({
-    perPage: 10,
+    perPage: 20,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
     columnsClasses: { max: 'text-end', min: 'text-end', actions: 'actions text-center', nama: ' text-dark fw-bold' },
@@ -117,6 +116,46 @@ onMounted(() => {
 
 const bind_data = () => {
     items.value = [
+        {
+            nama: 'Density',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Cloro (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Proto (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Diantom (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Dyno (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'GA (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'BGA (%)',
+            min: 10,
+            max: 40,
+        },
+        {
+            nama: 'Other (%)',
+            min: 10,
+            max: 40,
+        },
         {
             nama: 'Algino',
             min: 23,
@@ -152,12 +191,37 @@ const bind_data = () => {
             min: 56,
             max: 120,
         },
+        {
+            nama: 'Kuning',
+            min: 23,
+            max: 35,
+        },
+        {
+            nama: 'Hijau',
+            min: 34,
+            max: 45,
+        },
+        {
+            nama: 'Hitam',
+            min: 45,
+            max: 67,
+        },
+        {
+            nama: 'Nyala',
+            min: 56,
+            max: 120,
+        },
+        {
+            nama: 'Total Vibrio Count',
+            min: 56,
+            max: 120,
+        },
     ];
 };
 
 const view_row = (item) => {
     new window.Swal({
-        title: '<i>Parameter Biologi(Vibrio CHROMagar)</i>',
+        title: '<i>Parameter Biologi (Fitoplankton)</i>',
         text: 'HALLO',
         html: '<p><b>Nama</b> : ' + item.nama + '</p>' + '<p><b>Min</b> : ' + item.min + '</p>' + '<p><b>Max</b> : ' + item.max + '</p>',
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
