@@ -30,6 +30,9 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <template #no="props" v-for="index in items" >
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -107,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'alamat', 'nama_area', 'provinsi', 'photo', 'status', 'actions']);
+    const columns = ref(['no', 'nama_tambak', 'nama_area', 'provinsi',  'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
+        columnsClasses: { no: 'text-end', actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -121,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'alamat', 'nama_area', 'provinsi', 'photo', 'map_location', 'status'],
+        sortable: ['nama_tambak', 'nama_area', 'provinsi',  'map_location', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -139,100 +142,80 @@
             {
                 id: 1,
                 nama_tambak: 'Tambak a',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 2,
                 nama_tambak: 'Tambak b',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 3,
                 nama_tambak: 'Tambak c',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 4,
                 nama_tambak: 'Tambak d',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 5,
                 nama_tambak: 'Tambak e',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 6,
                 nama_tambak: 'Tambak f',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 7,
                 nama_tambak: 'Tambak g',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 8,
                 nama_tambak: 'Tambak h',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 9,
                 nama_tambak: 'Tambak i',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },
             {
                 id: 10,
                 nama_tambak: 'Tambak j',
-                alamat: 'Bandung',
                 nama_area: 'null',
                 provinsi: 'Jawa Barat',
-                photo: 'null',
                 map_location: 'null',
                 status: 'Aktive',
             },

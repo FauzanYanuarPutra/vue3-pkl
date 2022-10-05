@@ -29,17 +29,16 @@
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
                                 <div class="form-group">
-                                    <label class="control-label">Tambak Id</label>
-                                    <input type="number" name="id_tambak" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Kolam Id</label>
-                                    <input type="number" name="id_kolam" class="form-control" />
+                                    <label class="control-label">Nama Tambak</label>
+                                    <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Nama Kolam</label>
-                                    <input type="text" name="nama_kolam" class="form-control"
-                                        placeholder="Masukkan nama kolam" />
+                                    <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tipe Kolam</label>
@@ -65,25 +64,36 @@
                                 </div>
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Kincir</label></strong>
+                                    <div class="multiple-input">
                                     <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
+                                    <input type="text" name="jumlah" class="form-control"
+                                        placeholder="Jumlah Kincir" />
+                                    </div>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Pompa</label></strong>
+                                    <div class="multiple-input">
+
                                     <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
+                                    <input type="text" name="jumlah" class="form-control"
+                                        placeholder="Jumlah Pompa" />
+                                        </div>
                                 </div>
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Auto Feeder</label></strong>
+                                    <div class="multiple-input">
+
                                     <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Jumlah</label>
-                                    <input type="number" name="tinggi_kolam" class="form-control" />
+                                    <input type="text" name="jumlah" class="form-control"
+                                        placeholder="Jumlah Auto Feeder" />
+                                        </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Status</label>
@@ -172,6 +182,9 @@ const inputs6 = ref({
     input2: [],
     input3: [],
 });
+
+const kolam = ref(['Kolam b1', 'Kolam b2']);
+const tambak = ref(['Tambak b1', 'Tambak b2']);
 
 const change_file = (event) => {
     selected_file.value = URL.createObjectURL(event.target.files[0]);

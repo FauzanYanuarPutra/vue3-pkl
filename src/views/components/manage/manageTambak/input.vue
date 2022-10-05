@@ -87,15 +87,12 @@
 
                                     
 
-                                    <div class="form-group">
+                                    <div class="form-group w-100">
                                         <label class="control-label">Map:</label>
                                         <input type="text" name="map" class="form-control" />
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Status:</label>
-                                        <input type="text" name="status" class="form-control" />
-                                    </div>
+                                   
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />
