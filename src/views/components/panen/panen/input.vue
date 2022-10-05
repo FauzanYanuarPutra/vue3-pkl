@@ -15,52 +15,114 @@
         </teleport>
 
         <div class="container">
-            <div id="manageTambak" class="col-lg-12">
+            <div id="PemupukanDanPemberianMineral" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Panen</h4>
+                                <h4>Input Panen</h4>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Id kolam:</label>
-                                        <input type="id" name="id_kolam" class="form-control" />
-                                    </div>
-                                    <div class="row">
-                                        <label for="fullName">Tanggal panen:</label>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                <div class="form-group">
+                                    <label class="control-label">Nama Kolam:</label>
+                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal input:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
                                     </div>
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Tipe panen:</label>
-                                        <multiselect
-                                            v-model="inputs['input1']"
-                                            :options="options1"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">DOC (Day of cultivation):</label>
-                                        <input type="number" name="doc" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tipe panen:</label>
+                                    <multiselect
+                                        v-model="inputs['input3']"
+                                        :options="options3"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">DOC (Day of cultivation):</label>
+                                    <input type="number" name="doc" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">ABW (gram):</label>
+                                    <input type="number" name="abw" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Size:</label>
+                                    <input type="number" name="size" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Total biomana (kg):</label>
+                                    <input type="number" name="total_biomana" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Total populasi (ekor):</label>
+                                    <input type="number" name="total_populasi" class="form-control" />
                                 </div>
                             </div>
 
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-4 mb-1"></h6>
+
+                                <div class="form-group">
+                                    <label class="control-label">FRC:</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">SR (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Produktivity (Ton/Ha):</label>
+                                    <input type="number" name="doc" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-4 mb-1"></h6>
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah udang fresh (pcs):</label>
+                                    <input type="number" name="fresh" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah udang molting (pcs):</label>
+                                    <input type="number" name="molting" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah udang broken (pcs):</label>
+                                    <input type="number" name="broken" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Undersize</h6>
+                                <div class="form-group">
+                                    <label class="control-label">Size:</label>
+                                    <input type="number" name="size" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah:</label>
+                                    <input type="number" name="jumlah" class="form-control" />
+                                </div>
+                            </div>
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
@@ -87,7 +149,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'File Upload' });
 
-    const options1 = ref(['Parsial', 'Full']);
+    const options1 = ref(['Tambak a', 'Tambak b']);
     const inputs = ref({
         input1: [],
         input2: [],
@@ -95,8 +157,8 @@
         input4: [],
         input5: [],
     });
-    const options2 = ref(['Laki Laki', 'Perempuan']);
-    const options3 = ref(['Menikah', 'Belum menikah']);
+    const options2 = ref(['Kolam B1', 'Kolam B2']);
+    const options3 = ref(['Parsial', 'Full']);
     const options4 = ref(['Aktiv', 'Tidak aktiv']);
 
     const code_arr = ref([]);
