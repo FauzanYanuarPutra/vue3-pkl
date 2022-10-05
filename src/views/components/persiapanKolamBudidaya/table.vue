@@ -32,7 +32,7 @@
     
                                 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                            <template #no="props" v-for="item,index in items">
+                            <template #no="props" v-for="index in items" >
                                 {{ props.index }}
                             </template>
 
@@ -116,7 +116,7 @@ const table_option = ref({
         up: 'sort-icon-asc',
         down: 'sort-icon-desc',
     },
-    resizableColumns: false,
+    resizableColumns: true,
 });
 
 onMounted(() => {
@@ -265,6 +265,21 @@ const bind_data = () => {
             pertumbuhan_patogen_atau_yang_merugikan: '✓',
             probiotik: '✓',
         },
+        {
+            ID: 11,
+            nama_tambak: 'Tambak b9',
+            nama_kolam: 'Kolam b9',
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
+        },
+        
     ];
 };
 
