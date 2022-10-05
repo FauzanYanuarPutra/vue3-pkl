@@ -68,6 +68,19 @@
                                     </div>
                         </div>
                             <div class="box-wrap">
+                            <div class="form-group">
+                                        <label class="control-label">Nama Tambak:</label>
+                                        <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+
+                                </div>
+                                <div class="form-group">
+                                        <label class="control-label">Tanggal dan jam input:</label>
+                                        <div class="mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Kategori Alat:</label>
                                         <input type="text" name="kategori_alat" class="form-control" />
@@ -93,10 +106,7 @@
                                         <label class="control-label">Kegunaan:</label>
                                         <input type="text" name="kegunaan" class="form-control" />
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
+                                    
 
                                     <div class="form-group">
                                         <label class="control-label">Jumlah unit:</label>
@@ -119,10 +129,29 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Tenaga(HP):</label>
-                                        <input type="number" name="tenaga_hp" class="form-control" />
+                                    <div class="form-group w-100">
+                                        <label class="control-label">Keterangan:</label>
+                                        <textarea name="Keterangan" id="" cols="10" rows="10" class="form-control"></textarea>
+
                                     </div>
+
+                                    <div class="form-group w-100">
+                                        <label class="control-label">Spesifikasi:</label>
+                                        <textarea name="Spesifikasi" id="" cols="10" rows="10" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <label class="control-label">Status:</label>
+                                        <multiselect
+                                            v-model="inputs['input3']"
+                                            :options="status"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+
                                 
                             </div>
 
@@ -163,6 +192,11 @@
             code_arr.value.push(name);
         }
     };
+
+const tambak = ref(['Tambak b1', 'Tambak b2']);
+const status = ref(['aktive', 'tidak aktive']);
+
+
 
     const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
     const inputs = ref({

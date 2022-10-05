@@ -29,6 +29,9 @@
                             <router-link to="/manage-alat/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <template #no="props" v-for="index in items" >
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -106,7 +109,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_tambak', 'tanggal_input', 'tipe_model', 'jumlah_unit', 'status', 'actions']);
+    const columns = ref(['no', 'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli','actions']);
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
@@ -119,20 +122,7 @@
             limit: 'Results:',
         },
         sortable: [
-            'nama_tambak',
-            'tanggal_input',
-            'id_alat',
-            'kategori_alat',
-            'brand',
-            'tipe_model',
-            'kegunaan',
-            'keterangan',
-            'jumlah_unit',
-            'photo',
-            'internal_id',
-            'perkiraan_beli',
-            'tenaga_hp',
-            'status',
+            'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'status',
         ],
         sortIcon: {
             base: 'sort-icon-none',
