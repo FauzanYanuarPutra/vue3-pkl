@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pengapuran</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Pemupukan Dan Pemberian
+                                        Mineral</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -15,18 +16,17 @@
         </teleport>
 
         <div class="container">
-            <div id="Pengapuran" class="col-lg-12">
+            <div id="PemupukanDanPemberianMineral" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Pengapuran</h4>
+                                <h4>Pemupukan Dan Pemberian Mineral</h4>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-
                             <div class="box-wrap">
                                 <div class="wrap">
                                     <div class="form-group">
@@ -46,7 +46,7 @@
 
                                 <div class="wrap">
                                     <div class="form-group">
-                                        <label class="control-label">Pemakaian Kapur:</label>
+                                        <label class="control-label">Pemakaian Pupuk dan Mineral:</label>
                                         <multiselect v-model="inputs['input2']" :options="options2" :searchable="true"
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
@@ -99,7 +99,7 @@ const toggleCode = (name) => {
 };
 
 const options1 = ref(['Data di ambil dari data management kolam di gabung informasi tambak', 'Data di ambil dari data management kolam di gabung informasi tambak']);
-const options2 = ref(['Kapur Kalsit', 'Kapur Oksida', 'Kapur Dolomit']);
+const options2 = ref(['Pupuk dan mineral 1', 'Pupuk dan mineral 2']);
 
 const inputs = ref({
     input1: [],

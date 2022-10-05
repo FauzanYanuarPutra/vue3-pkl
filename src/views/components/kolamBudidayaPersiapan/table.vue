@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pengapuran</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Persiapan Kolam Budidaya</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,7 +21,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Pengapuran</h4>
+                                    <h4>Persiapan Kolam Budidaya</h4>
                                 </div>
                             </div>
                         </div>
@@ -29,8 +29,13 @@
                             <router-link to="/pengapuran/create" @click="toggleMobileMenu"
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-
+    
+                                
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="item,index in items">
+                                {{ props.index }}
+                            </template>
+
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -72,8 +77,12 @@
                                     </div>
                                 </div>
                             </template>
+                            
+
                             <template #salary="props"> ${{ props.row.salary }} </template>
                         </v-client-table>
+                        
+                
                     </div>
                 </div>
             </div>
@@ -87,7 +96,7 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['nama_kolam', 'pengeringan_dasar_tambak', 'pembuangan_sendimen_organik', 'sterilisasi_tambak', 'pengisian_air_dan_sterilisasi_air_tambak', 'pengapuran', 'pemupukan_dan_pemberian_mineral', 'pertumbuhan_plankton', 'pertumbuhan_patogen_atau_yang_merugikan', 'probiotik', 'actions']);
+const columns = ref(['no', 'nama_tambak', 'nama_kolam', 'pengeringan_dasar_tambak', 'pembuangan_sendimen_organik', 'sterilisasi_tambak', 'pengisian_air_dan_sterilisasi_air_tambak', 'pengapuran', 'pemupukan_dan_pemberian_mineral', 'pertumbuhan_plankton', 'pertumbuhan_patogen_atau_yang_merugikan', 'probiotik', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
@@ -101,7 +110,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['nama_kolam', 'pengeringan_dasar_tambak', 'pembuangan_sendimen_organik', 'sterilisasi_tambak', 'pengisian_air_dan_sterilisasi_air_tambak', 'pengapuran', 'pemupukan_dan_pemberian_mineral', 'pertumbuhan_plankton', 'pertumbuhan_patogen_atau_yang_merugikan', 'probiotik', 'status'],
+    sortable: ['nama_tambak', 'nama_kolam', 'pengeringan_dasar_tambak', 'pembuangan_sendimen_organik', 'sterilisasi_tambak', 'pengisian_air_dan_sterilisasi_air_tambak', 'pengapuran', 'pemupukan_dan_pemberian_mineral', 'pertumbuhan_plankton', 'pertumbuhan_patogen_atau_yang_merugikan', 'probiotik', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -118,133 +127,143 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
+            nama_tambak: 'Tambak b1',
             nama_kolam: 'Kolam b1',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 2,
+            nama_tambak: 'Tambak b2',
             nama_kolam: 'Kolam b2',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 3,
+            nama_tambak: 'Tambak b3',
             nama_kolam: 'Kolam b3',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 4,
+            nama_tambak: 'Tambak b4',
             nama_kolam: 'Kolam b4',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 5,
+            nama_tambak: 'Tambak b5',
             nama_kolam: 'Kolam b5',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 6,
+            nama_tambak: 'Tambak b6',
             nama_kolam: 'Kolam b6',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 7,
+            nama_tambak: 'Tambak b7',
             nama_kolam: 'Kolam b7',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 8,
+            nama_tambak: 'Tambak b8',
             nama_kolam: 'Kolam b8',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 9,
+            nama_tambak: 'Tambak b9',
             nama_kolam: 'Kolam b9',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
         {
             ID: 10,
+            nama_tambak: 'Tambak b10',
             nama_kolam: 'Kolam b10',
-            pengeringan_dasar_tambak: '1',
-            pembuangan_sendimen_organik: '1',
-            sterilisasi_tambak: '1',
-            pengisian_air_dan_sterilisasi_air_tambak: '1',
-            pengapuran: '1',
-            pemupukan_dan_pemberian_mineral: '1',
-            pertumbuhan_plankton: '1',
-            pertumbuhan_patogen_atau_yang_merugikan: '1',
-            probiotik: 1,
+            pengeringan_dasar_tambak: '✓',
+            pembuangan_sendimen_organik: '✓',
+            sterilisasi_tambak: '✓',
+            pengisian_air_dan_sterilisasi_air_tambak: '✓',
+            pengapuran: '✓',
+            pemupukan_dan_pemberian_mineral: '✓',
+            pertumbuhan_plankton: '✓',
+            pertumbuhan_patogen_atau_yang_merugikan: '✓',
+            probiotik: '✓',
         },
     ];
 };
