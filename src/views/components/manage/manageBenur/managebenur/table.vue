@@ -132,7 +132,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end' },
+        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
