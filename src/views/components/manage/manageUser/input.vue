@@ -27,47 +27,9 @@
                         </div>
                         <div class="panel-body">
                             <form class="form-vertical" action="#">
-                                <div class="box-wrap">
-                                    <div class="wrap">
-                                        <div class="form-group">
-                                            <label class="control-label">Name</label>
-                                            <input type="text" name="name" class="form-control" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Jabatan</label>
-                                            <multiselect
-                                                v-model="inputs['input1']"
-                                                :options="options1"
-                                                :searchable="true"
-                                                placeholder="Choose..."
-                                                selected-label=""
-                                                select-label=""
-                                                deselect-label=""
-                                            ></multiselect>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="ph-number">No hp</label>
-                                            <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="(__) ___-___-____" />
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label">Password</label>
-                                            <input type="password" class="form-control" id="sPassword" placeholder="Password" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label">Email</label>
-                                            <div class="input-group">
-                                                <div class="input-group-text">@</div>
-                                                <input type="text" name="email" class="form-control" />
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <label for="fullName">Photo</label>
-                                        </div>
-
-                                        <div class="row">
+                            <div class="box-wrap">
+                                <div class="form-group">
+                                        <label for="fullName">Photo</label>
                                             <div class="invoice-detail-title">
                                                 <div class="invoice-logo">
                                                     <div class="upload pe-md-4">
@@ -107,10 +69,47 @@
                                                 </div>
                                             </div>
                                         </div>
+                            </div>
+                                <div class="box-wrap">
+                                        <div class="form-group">
+                                            <label class="control-label">Name</label>
+                                            <input type="text" name="name" class="form-control" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Jabatan</label>
+                                            <multiselect
+                                                v-model="inputs['input1']"
+                                                :options="options1"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ph-number">No hp</label>
+                                            <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="(__) ___-___-____" />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label">Password</label>
+                                            <input type="password" class="form-control" id="sPassword" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Email</label>
+                                            <div class="input-group">
+                                                <div class="input-group-text">@</div>
+                                                <input type="text" name="email" class="form-control" />
+                                            </div>
+                                        </div>
+
+                                        
                                         <div class="form-group">
                                             <label class="control-label">Tgl lahir</label>
-                                            <div class="form-group mb-0">
-                                                <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                            <div class="">
+                                                <flat-pickr v-model="params.invoice_date" class="form-control  flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                             </div>
                                         </div>
 
@@ -139,17 +138,17 @@
                                                 deselect-label=""
                                             ></multiselect>
                                         </div>
-                                    </div>
 
-                                    <div class="wrap">
+
+ 
                                         <div class="form-group">
                                             <label class="control-label">Alamat rumah</label>
                                             <input type="text" name="alamat_rumah" class="form-control" />
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label">Tanggal bergabung</label>
-                                            <div class="form-group mb-0">
-                                                <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                            <div class="">
+                                                <flat-pickr v-model="params.invoice_date" class="form-control  flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -177,14 +176,15 @@
                                             ></multiselect>
                                         </div>
 
+                                        
+
                                         <div class="form-group">
                                             <label class="control-label">Access right</label>
-                                            <div class="form-group mb-0">
-                                                <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                            <div class="">
+                                                <flat-pickr v-model="params.invoice_date" class="form-control  flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                            </div>
 
                                 <button type="submit" class="btn mt-2">Submit</button>
                             </form>

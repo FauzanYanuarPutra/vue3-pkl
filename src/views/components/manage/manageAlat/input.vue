@@ -26,46 +26,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Kategori Alat:</label>
-                                        <input type="text" name="kategori_alat" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Brand:</label>
-                                        <input type="text" name="brand" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Tipe / Model:</label>
-                                        <multiselect
-                                            v-model="inputs['input3']"
-                                            :options="options1"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Kegunaan:</label>
-                                        <input type="text" name="kegunaan" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Jumlah unit:</label>
-                                        <input type="text" name="jumlah_unit" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="wrap">
-                                    <div class="form-group">
+                        <div class="box-wrap">
+                             <div class="form-group">
                                         <label class="control-label">Photo:</label>
                                         <div class="custom-file-container">
                                             <div class="invoice-logo">
@@ -104,6 +66,46 @@
                                             </div>
                                         </div>
                                     </div>
+                        </div>
+                            <div class="box-wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Kategori Alat:</label>
+                                        <input type="text" name="kategori_alat" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Brand:</label>
+                                        <input type="text" name="brand" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tipe / Model:</label>
+                                        <multiselect
+                                            v-model="inputs['input3']"
+                                            :options="options1"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Kegunaan:</label>
+                                        <input type="text" name="kegunaan" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Jumlah unit:</label>
+                                        <input type="text" name="jumlah_unit" class="form-control" />
+                                    </div>
+                            
+
+                    
+                    
 
                                     <div class="form-group">
                                         <label class="control-label">Internal ID:</label>
@@ -112,7 +114,7 @@
 
                                     <div class="form-group">
                                         <label class="control-label">Perkiraan bulan dan tahun beli:</label>
-                                        <div class="form-group mb-0">
+                                        <div class="mb-0">
                                             <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
                                         </div>
                                     </div>
@@ -121,7 +123,7 @@
                                         <label class="control-label">Tenaga(HP):</label>
                                         <input type="number" name="tenaga_hp" class="form-control" />
                                     </div>
-                                </div>
+                                
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />

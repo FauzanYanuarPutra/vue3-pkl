@@ -2099,6 +2099,8 @@
     }
 }
 
+
+
 .swal2-popup.swal2-modal.swal2-show{
     width: 60rem;
 }
@@ -2132,6 +2134,18 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     color: black;
 }
 
+.VueTables__heading{
+    display: flex;
+    white-space: nowrap;
+    // width: 80px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    // background-color: red;
+}
+
+
+
 
 @media only screen and (max-width: 768px) {
   .box-wrap {
@@ -2152,4 +2166,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
         width: 100%;
     }
 }
+
+
+
 }

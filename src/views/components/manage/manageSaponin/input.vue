@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tanggal dan jam input:</label>
-                                    <div class="form-group mb-0">
+                                    <div class=" mb-0">
                                         <flat-pickr v-model="date1" class="form-control flatpickr active">
                                         </flat-pickr>
                                     </div>

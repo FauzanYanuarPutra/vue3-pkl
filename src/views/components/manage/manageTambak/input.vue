@@ -26,28 +26,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Alamat:</label>
-                                        <input type="text" name="alamat" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Area:</label>
-                                        <input type="text" name="nama_area" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Provinsi:</label>
-                                        <input type="text" name="provinsi" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="wrap">
-                                    <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="form-group">
                                         <label class="control-label">Photo:</label>
                                         <div class="custom-file-container">
                                             <div class="invoice-logo">
@@ -86,6 +66,26 @@
                                             </div>
                                         </div>
                                     </div>
+                        </div>
+                            <div class="box-wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Tambak:</label>
+                                        <input type="text" name="nama_tambak" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Alamat:</label>
+                                        <input type="text" name="alamat" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Area:</label>
+                                        <input type="text" name="nama_area" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Provinsi:</label>
+                                        <input type="text" name="provinsi" class="form-control" />
+                                    </div>
+
+                                    
 
                                     <div class="form-group">
                                         <label class="control-label">Map:</label>
@@ -96,7 +96,6 @@
                                         <label class="control-label">Status:</label>
                                         <input type="text" name="status" class="form-control" />
                                     </div>
-                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />

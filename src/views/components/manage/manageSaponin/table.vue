@@ -30,7 +30,7 @@
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                            <template #no="props" v-for="item,index in items">
+                            <template #no="props" v-for="item,index in items" class="w-10">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
@@ -95,7 +95,7 @@ const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'text-center', actions: 'actions text-center', tanggal_input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',

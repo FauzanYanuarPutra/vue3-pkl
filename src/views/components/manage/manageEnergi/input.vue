@@ -27,7 +27,7 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
+                                
                                     <div class="form-group">
                                         <label class="control-label">Nama Tambak:</label>
                                         <input type="text" name="nama_tambak" class="form-control" />
@@ -40,13 +40,11 @@
 
                                     <div class="form-group">
                                         <label class="control-label">Bulan:</label>
-                                        <div class="form-group mb-0">
+                                        <div class="mb-0">
                                             <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="wrap">
+                                
                                     <div class="form-group">
                                         <label class="control-label">Penggunaan Listrik:</label>
                                         <input type="number" name="id" class="form-control" />
@@ -57,7 +55,6 @@
                                         <multiselect v-model="inputs['input3']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
-                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />

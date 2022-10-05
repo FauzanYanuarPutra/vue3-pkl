@@ -28,7 +28,6 @@
                         <div class="panel-body">
                             <form class="form-vertical" action="#">
                                 <div class="box-wrap">
-                                    <div class="wrap">
                                         <div class="form-group">
                                             <label class="control-label">Tanggal dan jam iput:</label>
                                             <div class="form-group mb-0">
@@ -131,8 +130,7 @@
                                                 deselect-label=""
                                             ></multiselect>
                                         </div>
-                                    </div>
-                                    <div class="wrap">
+                             
                                         <div class="form-group">
                                             <label class="control-label">TVC (water)</label>
                                             <multiselect
@@ -241,7 +239,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                      
                                     </div>
                                 </div>
 

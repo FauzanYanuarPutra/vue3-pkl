@@ -15,7 +15,7 @@
         </teleport>
 
         <div class="container">
-            <div id="manageTambak" class="col-lg-12">
+            <div id="hargaUdang" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
@@ -26,22 +26,27 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="box-wrap">
-                                <div class="wrap">
+                        <div class="box-wrap">
+                            
                                     <div class="form-group">
-                                        <label for="fullName">Tanggal iput:</label>
-                                        <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
+                                        <label class="control-label">Tanggal Input:</label>
+                                        <div class="mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Ukuran udang:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
-                                    </div>
-                                </div>
 
-                                <div class="form-group wrap">
-                                    <label class="control-label">Harga:</label>
-                                    <input type="text" name="alamat" class="form-control" />
-                                </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Ukuran Udang:</label>
+                                        <input type="text" name="ukuran_udang" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Harga Udang:</label>
+                                        <input type="text" name="harga_udang" class="form-control" />
+                                    </div>
+
+                            
+                                
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />
@@ -55,66 +60,43 @@
 
 <script setup>
     import { onMounted, ref } from 'vue';
-    import '@/assets/sass/apps/invoice-add.scss';
+    import '@/assets/sass/scrollspyNav.scss';
+    import '@/assets/sass/forms/file-upload-with-preview.min.css';
+    import '@suadelabs/vue3-multiselect/dist/vue3-multiselect.css';
+    import '@/assets/sass/forms/file-upload-with-preview.min.css';
+    import highlight from '@/components/plugins/highlight.vue';
 
-    //flatpickr
     import flatPickr from 'vue-flatpickr-component';
     import 'flatpickr/dist/flatpickr.css';
-    import '@/assets/sass/forms/custom-flatpickr.css';
+
+    import Multiselect from '@suadelabs/vue3-multiselect';
+
+    import FileUploadWithPreview from 'file-upload-with-preview';
 
     import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Invoice Add' });
+    useMeta({ title: 'File Upload' });
 
-    const items = ref([]);
+    const code_arr = ref([]);
     const selected_file = ref(null);
-    const params = ref({
-        title: '',
-        invoice_no: '',
-        from: { name: '', email: '', address: '', phone: '' },
-        to: { name: '', email: '', address: '', phone: '' },
 
-        invoice_date: '',
-        due_date: '',
-        bank_info: { no: '', name: '', swift_code: '', country: '' },
-        notes: '',
-    });
-    const currency_list = ref([]);
-    const selected_currency = ref({ key: 'USD - US Dollar', thumb: 'flags/en.png' });
-    const tax_type_list = ref([]);
-    const selected_tax_type = ref({ key: 'None', value: null });
-    const discount_list = ref([]);
-    const selected_discount = ref({ key: 'None', value: null, type: '' });
+    const toggleCode = (name) => {
+        if (code_arr.value.includes(name)) {
+            code_arr.value = code_arr.value.filter((d) => d != name);
+        } else {
+            code_arr.value.push(name);
+        }
+    };
 
-    onMounted(() => {
-        //set default data
-        items.value.push({ id: 1, title: '', description: '', rate: 0, quantity: 0, amount: 100, is_tax: false });
-
-        let dt = new Date();
-        params.value.invoice_date = JSON.parse(JSON.stringify(dt));
-        dt.setDate(dt.getDate() + 5);
-        params.value.due_date = dt;
-
-        //discount list
-        discount_list.value = [
-            { key: 'Percent', value: 10, type: 'percent' },
-            { key: 'Flat Amount', value: 25, type: 'amount' },
-            { key: 'None', value: null, type: '' },
-        ];
+    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+    const inputs = ref({
+        input1: [],
+        input2: [],
+        input3: [],
+        input4: [],
+        input5: [],
     });
 
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);
-    };
-
-    const add_item = () => {
-        let max_id = 0;
-        if (items.value && items.value.length) {
-            max_id = items.value.reduce((max, character) => (character.id > max ? character.id : max), items.value[0].id);
-        }
-        items.value.push({ id: max_id + 1, title: '', description: '', rate: 0, quantity: 0, amount: 0, is_tax: false });
-    };
-
-    const remove_item = (item) => {
-        items.value = items.value.filter((d) => d.id != item.id);
     };
 </script>

@@ -27,49 +27,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                            <div class="box-wrap">
-                                <div class="form-group">
-                                    <label class="control-label">Id Kontent</label>
-                                    <input type="number" name="id_kontent" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Tanggal Input</label>
-                                    <div class="form-group mb-0">
-                                        <flat-pickr v-model="date1" name="tanggal_input"
-                                            class="form-control flatpickr active"></flat-pickr>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Jam Input</label>
-                                    <input type="text" name="jam" class="form-control"
-                                        placeholder="Masukkan jam input" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Kategori</label>
-                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Judul</label>
-                                    <input type="text" name="judul" class="form-control" placeholder="Masukkan judul" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Deskripsi</label>
-                                    <input type="text" name="deskripsi" class="form-control"
-                                        placeholder="Beri deskripsi" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">No. of like</label>
-                                    <input type="number" name="tinggi_kolam" class="form-control"
-                                        placeholder="Masukkan No. of like" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">No. of view</label>
-                                    <input type="number" name="luas_kolam" class="form-control"
-                                        placeholder="Masukkan No. of view" />
-                                </div>
-                                <div class="form-group">
+                        <div class="box-wrap">
+                            <div class="form-group">
                                     <label class="control-label">Upload Gambar</label>
                                     <div class="custom-file-container">
                                         <div class="invoice-logo">
@@ -169,6 +128,50 @@
                                         </div>
                                     </div>
                                 </div>
+                        </div>
+                            <div class="box-wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Id Kontent</label>
+                                    <input type="number" name="id_kontent" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal Input</label>
+                                    <div class="form-group mb-0">
+                                        <flat-pickr v-model="date1" name="tanggal_input"
+                                            class="form-control flatpickr active"></flat-pickr>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jam Input</label>
+                                    <input type="text" name="jam" class="form-control"
+                                        placeholder="Masukkan jam input" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kategori</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Judul</label>
+                                    <input type="text" name="judul" class="form-control" placeholder="Masukkan judul" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Deskripsi</label>
+                                    <input type="text" name="deskripsi" class="form-control"
+                                        placeholder="Beri deskripsi" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">No. of like</label>
+                                    <input type="number" name="tinggi_kolam" class="form-control"
+                                        placeholder="Masukkan No. of like" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">No. of view</label>
+                                    <input type="number" name="luas_kolam" class="form-control"
+                                        placeholder="Masukkan No. of view" />
+                                </div>
+                                
 
 
                                 <div class="form-group">
