@@ -30,9 +30,6 @@
                             <router-link to="/manage-kolam/create" @click="toggleMobileMenu"
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-
-
-
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #no="props" v-for="item,index in items">
                                 {{ props.index }}
