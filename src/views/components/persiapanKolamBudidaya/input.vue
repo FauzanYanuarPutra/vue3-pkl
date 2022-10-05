@@ -29,17 +29,18 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="form-group">
-                                    <label class="control-label">Nama Kolam:</label>
-                                    <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Nama Tambak:</label>
-                                    <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Kolam:</label>
+                                        <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama Tambak:</label>
+                                        <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+
                                 </div>
                             </div>
 
@@ -78,7 +79,209 @@
                                     <label class="control-label">keterangan:</label>
                                     <input type="text" name="keterangan" class="form-control" />
                                 </div>
-                            </div>
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Sterilisasi Tambak</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Mulai:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Berakhir:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pemakaian Sterilisasi:</label>
+                                        <multiselect v-model="inputs['input3']" :options="sterilisasi" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pengisisan air dan sterilisasi air tambak</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Mulai:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Berakhir:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tinggi Air (cm):</label>
+                                        <input type="number" name="keterangan" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pemakaian Sterilisasi:</label>
+                                        <multiselect v-model="inputs['input4']" :options="pemakaianSterilisasi" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pengapuran</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Mulai:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Berakhir:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pemakaian Kapur:</label>
+                                        <multiselect v-model="inputs['input5']" :options="pengapuran" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pemupukan dan pemberian mineral</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Mulai:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal Berakhir:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pemakaian Pupuk dan Mineral:</label>
+                                        <multiselect v-model="inputs['input6']" :options="pupukDanMineral" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pertumbuhan Plankton</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Teridentifikasi:</label>
+                                        <multiselect v-model="inputs['input7']" :options="teridentifikasi" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pertumbuhan Patogen atau yang merugikan</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Teridentifikasi:</label>
+                                        <multiselect v-model="inputs['input8']" :options="teridentifikasi" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                    
+                                </div>
+
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Probiotik</h6>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                            </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Pemakaian Probiotik:</label>
+                                        <multiselect v-model="inputs['input9']" :options="probiotik" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group w-100">
+                                        <label class="control-label">keterangan:</label>
+                                        <input type="text" name="keterangan" class="form-control" />
+                                    </div>
+                                    
+                                    
+                                </div>
+
+
+
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
