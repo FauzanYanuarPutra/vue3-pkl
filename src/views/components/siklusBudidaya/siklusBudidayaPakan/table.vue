@@ -131,7 +131,7 @@ const bind_data = () => {
             No_auto_feeder: 'null',
             'Pemberian_pakan(Kg)': '12',
             'pakan_kumulative(Kg)': '31',
-            DOC: 'null',
+            DOC: '23',
             FCR: 'null',
         },
         {
@@ -144,7 +144,7 @@ const bind_data = () => {
             No_auto_feeder: 'null',
             'Pemberian_pakan(Kg)': '22',
             'pakan_kumulative(Kg)': '23',
-            DOC: 'null',
+            DOC: '12',
             FCR: 'null',
         },
         {
@@ -157,7 +157,7 @@ const bind_data = () => {
             No_auto_feeder: 'null',
             'Pemberian_pakan(Kg)': '12',
             'pakan_kumulative(Kg)': '32',
-            DOC: 'null',
+            DOC: '13',
             FCR: 'null',
         },
         {
@@ -170,7 +170,7 @@ const bind_data = () => {
             No_auto_feeder: 'null',
             'Pemberian_pakan(Kg)': '14',
             'pakan_kumulative(Kg)': '42',
-            DOC: 'null',
+            DOC: '21',
             FCR: 'null',
         },
         {
@@ -183,7 +183,7 @@ const bind_data = () => {
             No_auto_feeder: 'null',
             'Pemberian_pakan(Kg)': '22',
             'pakan_kumulative(Kg)': '11',
-            DOC: 'null',
+            DOC: '23',
             FCR: 'null',
         },
     ];

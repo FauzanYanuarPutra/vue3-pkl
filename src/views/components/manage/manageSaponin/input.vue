@@ -27,50 +27,45 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control"
-                                            placeholder="Masukkan nama tambak" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Tanggal dan jam input:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">ID:</label>
-                                        <input type="number" name="id" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Kategori:</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <input type="text" name="nama_tambak" class="form-control"
+                                        placeholder="Masukkan nama tambak" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <div class="form-group mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
                                     </div>
                                 </div>
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Jenis:</label>
-                                        <input type="text" name="jenis" class="form-control"
-                                            placeholder="Contoh data, Vit C, Vit A, pupuk amonia" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control"
-                                            placeholder="Beri keterangan" />
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Status:</label>
-                                        <input type="number" name="internal_id" class="form-control"
-                                            placeholder="Tambahkan status" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">ID:</label>
+                                    <input type="number" name="id" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Kategori:</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jenis:</label>
+                                    <input type="text" name="jenis" class="form-control"
+                                        placeholder="Contoh data, Vit C, Vit A, pupuk amonia" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Keterangan:</label>
+                                    <input type="text" name="keterangan" class="form-control"
+                                        placeholder="Beri keterangan" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Status:</label>
+                                    <input type="number" name="internal_id" class="form-control"
+                                        placeholder="Tambahkan status" />
                                 </div>
                             </div>
 

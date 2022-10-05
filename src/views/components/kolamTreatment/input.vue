@@ -30,61 +30,55 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama tambak</label>
-                                        <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Nama kolam</label>
-                                        <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Jam</label>
-                                        <input type="text" name="jam" class="form-control"
-                                            placeholder="Masukkan jam input" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Bulan:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama tambak</label>
+                                    <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama kolam</label>
+                                    <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jam</label>
+                                    <input type="text" name="jam" class="form-control"
+                                        placeholder="Masukkan jam input" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Bulan:</label>
+                                    <div class="form-group mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
                                     </div>
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Pro+ Air (Liter)</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Pro+ Oral (ml)</label>
-                                        <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Mineral (Kg)</label>
-                                        <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan</label>
-                                        <input type="text" name="keterangan" class="form-control"
-                                            placeholder="Beri Keterangan" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pro+ Air (Liter)</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pro+ Oral (ml)</label>
+                                    <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Mineral (Kg)</label>
+                                    <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Keterangan</label>
+                                    <input type="text" name="keterangan" class="form-control"
+                                        placeholder="Beri Keterangan" />
                                 </div>
                             </div>
-
-
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
