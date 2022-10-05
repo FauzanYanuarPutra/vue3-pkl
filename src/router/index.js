@@ -409,19 +409,19 @@ const routes = [
     // Kolam Budidaya Persiapan
 
     {
-        path: '/kolam-budidaya-persiapan',
-        name: 'kolam-budidaya-persiapan',
-        component: () => import('../views/components/kolamBudidayaPersiapan/table.vue'),
+        path: '/persiapan-kolam-budidaya',
+        name: 'persiapan-kolam-budidaya',
+        component: () => import('../views/components/persiapanKolamBudidaya/table.vue'),
     },
     {
-        path: '/kolam-budidaya-persiapan/create',
-        name: 'kolam-budidaya-persiapan-create',
-        component: () => import('../views/components/kolamBudidayaPersiapan/input.vue'),
+        path: '/persiapan-kolam-budidaya/create',
+        name: 'persiapan-kolam-budidaya-create',
+        component: () => import('../views/components/persiapanKolamBudidaya/input.vue'),
     },
     {
-        path: '/kolam-budidaya-persiapan/edit',
-        name: 'kolam-budidaya-persiapan-edit',
-        component: () => import('../views/components/kolamBudidayaPersiapan/edit.vue'),
+        path: '/persiapan-kolam-budidaya/edit',
+        name: 'persiapan-kolam-budidaya-edit',
+        component: () => import('../views/components/persiapanKolamBudidaya/edit.vue'),
     },
 
     

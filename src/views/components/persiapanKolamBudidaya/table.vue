@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/pengapuran/create" @click="toggleMobileMenu"
+                            <router-link to="/persiapan-kolam-budidaya/create" @click="toggleMobileMenu"
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
     
@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                     <div class="mx-2">
-                                        <router-link to="/pengapuran/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/persiapan-kolam-budidaya/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"

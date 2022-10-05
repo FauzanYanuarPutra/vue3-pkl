@@ -82,7 +82,7 @@
                 </li>
 
                 <li class="menu">
-                    <router-link to="/kolam-budidaya-persiapan" class="dropdown-toggle" @click="toggleMobileMenu">
+                    <router-link to="/persiapan-kolam-budidaya" class="dropdown-toggle" @click="toggleMobileMenu">
                         <div class="">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

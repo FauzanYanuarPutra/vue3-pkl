@@ -28,35 +28,43 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
+
+
                                     <div class="form-group">
                                         <label class="control-label">Nama Kolam:</label>
-                                        <multiselect v-model="inputs['input1']" :options="options1" :searchable="true"
+                                        <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
+
                                     <div class="form-group">
-                                        <label class="control-label">Tanggal:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
+                                        <label class="control-label">Nama Tambak:</label>
+                                        <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                     </div>
+
+
+
+                                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Pemupukan Dan Pemberian Mineral</h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                    
+
+
+
+                                    
+
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Pemakaian Pupuk dan Mineral:</label>
-                                        <multiselect v-model="inputs['input2']" :options="options2" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
+                                
+
 
 
 
@@ -98,8 +106,8 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['Data di ambil dari data management kolam di gabung informasi tambak', 'Data di ambil dari data management kolam di gabung informasi tambak']);
-const options2 = ref(['Pupuk dan mineral 1', 'Pupuk dan mineral 2']);
+const kolam = ref(['Kolam b1', 'Kolam b2']);
+const tambak = ref(['Tambak b1', 'Tambak b2']);
 
 const inputs = ref({
     input1: [],
