@@ -32,9 +32,16 @@
                             <div class="box-wrap">
                                 <div class="wrap">
                                     <div class="form-group">
-                                        <label class="control-label">Nama Kolam</label>
-                                        <input type="text" name="nama_kolam" class="form-control"
-                                            placeholder="Masukkan nama kolam" />
+                                        <label class="control-label">Nama tambak</label>
+                                        <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama kolam</label>
+                                        <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Jam</label>
@@ -48,23 +55,26 @@
                                             </flat-pickr>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Pro+ Air (Liter)</label>
-                                        <input type="text" name="pro_air" class="form-control"
-                                            placeholder="Masukkan Pro+ Air (Liter)" />
-                                    </div>
                                 </div>
 
                                 <div class="wrap">
                                     <div class="form-group">
+                                        <label class="control-label">Pro+ Air (Liter)</label>
+                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                    <div class="form-group">
                                         <label class="control-label">Pro+ Oral (ml)</label>
-                                        <input type="text" name="pro_oral" class="form-control"
-                                            placeholder="Masukkan Pro+ Oral (ml)" />
+                                        <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Mineral (Kg)</label>
-                                        <input type="text" name="mineral" class="form-control"
-                                            placeholder="Masukkan Mineral (Kg)" />
+                                        <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Keterangan</label>
@@ -113,8 +123,44 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const options1 = ref(['TIP', 'BIO', 'MOL', 'Vit B']);
 const inputs = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options2 = ref(['Vit C', 'Bioez', 'bp', 'Bio']);
+const inputs2 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options3 = ref(['K_P', 'Gpg', 'Azo', 'Tio', 'Agz', 'Quick']);
+const inputs3 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options4 = ref(['Tambak a', 'Tambak b', 'Tambak c', 'Tambak d', 'Tambak e', 'Tambak f']);
+const inputs4 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options5 = ref(['Kolam B1', 'Kolam B2', 'Kolam B3', 'Kolam B4', 'Kolam B5', 'Kolam B6']);
+const inputs5 = ref({
     input1: [],
     input2: [],
     input3: [],
