@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Pemupukan Dan Pemberian
+                                <li class="breadcrumb-item active" aria-current="page"><span>Input Pemupukan Dan
+                                        Pemberian
                                         Mineral</span></li>
                             </ol>
                         </nav>
@@ -28,6 +29,7 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
+<<<<<<< HEAD
                                     <div class="form-group">
                                         <label class="control-label">Nama Kolam:</label>
                                         <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
@@ -39,45 +41,58 @@
                                         <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
-                                    </div>
+=======
+                                <div class="form-group">
+                                    <label class="control-label">Nama Kolam:</label>
+                                    <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                            </div>
 
-                                <div class="box-wrap">
-                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">pengeringan Dasar Tambak</h6>
-                                    
-                                    <div class="form-group">
-                                        <label class="control-label">Tanggal:</label>
-                                        <div class=" mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Lama Hari:</label>
-                                        <input type="number" name="lama_hari" class="form-control" />
-                                    </div>
-                                    <div class="form-group-panjang">
-                                        <label class="control-label">keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
-                                </div>
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">pengeringan Dasar Tambak</h6>
 
-                                <div class="box-wrap">
-                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pembuangan Sedimen Organik</h6>
-                                    
-                                    <div class="form-group">
-                                        <label class="control-label">Tanggal:</label>
-                                        <div class=" mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal:</label>
+                                    <div class=" mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
+>>>>>>> 46b79c1717912ba47a2463888cd2ff2476e7df32
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
-                                    
                                 </div>
+                                <div class="form-group">
+                                    <label class="control-label">Lama Hari:</label>
+                                    <input type="number" name="lama_hari" class="form-control" />
+                                </div>
+                                <div class="form-group-panjang">
+                                    <label class="control-label">keterangan:</label>
+                                    <input type="text" name="keterangan" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Pembuangan Sedimen Organik
+                                </h6>
+
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal:</label>
+                                    <div class=" mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">keterangan:</label>
+                                    <input type="text" name="keterangan" class="form-control" />
+                                </div>
+<<<<<<< HEAD
 
                                 <div class="box-wrap">
                                     <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Sterilisasi Tambak</h6>
@@ -284,6 +299,9 @@
 
 
                             
+=======
+                            </div>
+>>>>>>> 46b79c1717912ba47a2463888cd2ff2476e7df32
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>

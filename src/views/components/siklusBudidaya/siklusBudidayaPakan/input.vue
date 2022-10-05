@@ -28,56 +28,51 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Kolam</label>
-                                        <input type="text" name="nama_kolam" class="form-control"
-                                            placeholder="Masukkan nama kolam" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Tanggal dan jam input</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="select" class="col-form-label">Merek Pakan</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">No. Pakan</label>
-                                        <input type="text" name="pakan" class="form-control"
-                                            placeholder="Masukkan nomer pakan" />
+                                <div class="form-group">
+                                    <label class="control-label">Nama Kolam</label>
+                                    <input type="text" name="nama_kolam" class="form-control"
+                                        placeholder="Masukkan nama kolam" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan jam input</label>
+                                    <div class="form-group mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
                                     </div>
                                 </div>
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label for="select" class="col-form-label">No. Auto Feeder</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Pemberian pakan (kg)</label>
-                                        <input type="number" name="pemberian_pakan" class="form-control"
-                                            placeholder="Masukkan pakan (kg)" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Pemberian pakan kumulative (Kg)</label>
-                                        <input type="number" name="kumulative" class="form-control"
-                                            placeholder="Masukkan Total pakan hari ini + total pakan kemarin" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">FCR (Food conversion rate)</label>
-                                        <input type="number" name="fcr" class="form-control"
-                                            placeholder="Masukkan Total kumulative pakan / Total biomassa " />
-                                    </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-form-label">Merek Pakan</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">No. Pakan</label>
+                                    <input type="text" name="pakan" class="form-control"
+                                        placeholder="Masukkan nomer pakan" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="select" class="col-form-label">No. Auto Feeder</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pemberian pakan (kg)</label>
+                                    <input type="number" name="pemberian_pakan" class="form-control"
+                                        placeholder="Masukkan pakan (kg)" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pemberian pakan kumulative (Kg)</label>
+                                    <input type="number" name="kumulative" class="form-control"
+                                        placeholder="Masukkan Total pakan hari ini + total pakan kemarin" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">FCR (Food conversion rate)</label>
+                                    <input type="number" name="fcr" class="form-control"
+                                        placeholder="Masukkan Total kumulative pakan / Total biomassa " />
                                 </div>
                             </div>
-
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>

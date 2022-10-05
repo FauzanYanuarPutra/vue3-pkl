@@ -29,23 +29,55 @@
                             <div class="box-wrap">
                                 <div class="wrap">
                                     <div class="form-group">
-                                        <label class="control-label">Tinggi Air (cm):</label>
+                                        <label class="control-label">Nama tambak:</label>
                                         <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
-                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                            <multiselect
+                                                v-model="inputs['input2']"
+                                                :options="options2"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Nama kolam:</label>
+                                        <div class="d-flex">
+                                            <multiselect
+                                                v-model="inputs['input3']"
+                                                :options="options3"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Kecerahan:</label>
+                                        <label class="control-label">Tanggal:</label>
+
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Tinggi Air (cm):</label>
                                         <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Pagi" />
-                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Sore" />
+                                            <input type="text" name="alamat_rumah" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Kecerahan:</label>
+                                        <div class="d-flex">
+                                            <input type="text" name="alamat_rumah" class="form-control" />
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label class="control-label">Warna:</label>
                                         <div class="d-flex">
@@ -53,16 +85,7 @@
                                                 v-model="inputs['input1']"
                                                 :options="options1"
                                                 :searchable="true"
-                                                placeholder="Pagi"
-                                                selected-label=""
-                                                select-label=""
-                                                deselect-label=""
-                                            ></multiselect>
-                                            <multiselect
-                                                v-model="inputs['input2']"
-                                                :options="options2"
-                                                :searchable="true"
-                                                placeholder="Sore"
+                                                placeholder="Choose..."
                                                 selected-label=""
                                                 select-label=""
                                                 deselect-label=""
@@ -73,8 +96,7 @@
                                     <div class="form-group">
                                         <label class="control-label">Suhu Air(cekcius):</label>
                                         <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex" placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60" placeholder="Max" />
+                                            <input type="text" name="alamat_rumah" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
@@ -137,18 +159,8 @@
         input4: [],
         input5: [],
     });
-    const options2 = ref([
-        'Cokelat muda',
-        'Cokelat tua',
-        'Cokelat biru',
-        'Cokelat kemerahan',
-        'Cokelat kehijauan',
-        'Cokelat kehitaman',
-        'Hijau daun muda',
-        'Hijau tua',
-        'Hijau kekuningan',
-        'Hijau ke kebiruan',
-    ]);
+    const options2 = ref(['Tambak a', 'Tambak b']);
+    const options3 = ref(['Kolam B1', 'Kolam B2']);
 
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);

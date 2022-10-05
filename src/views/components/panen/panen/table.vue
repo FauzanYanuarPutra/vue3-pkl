@@ -29,10 +29,14 @@
                             <router-link to="/panen-create-" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="(item, index) in items">
+                                {{ props.index }}
+                            </template>
+
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -106,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['Id_kolam', 'Tanggal_panen', 'Tipe_panen', 'Doc', 'actions']);
+    const columns = ref(['no', 'Nama_tambak', 'Nama_kolam', 'Tanggal', 'Tipe', 'ABW(gram)', 'Size', 'FCR', 'SR(%)', 'DOC', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', Tanggal_panen: 'text-center' },
+        columnsClasses: { actions: 'actions text-center', Tanggal_panen: 'text-center ', 'ABW(gram)': 'text-end ', Size: 'text-end ', FCR: 'text-end ', 'SR(%)': 'text-end ', DOC: 'text-end ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -120,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['Id_kolam', 'Tanggal_panen', 'Tipe_panen', 'Doc'],
+        sortable: ['Nama_tambak', 'Nama_kolam', 'Tanggal', 'Tipe', 'ABW(gram)', 'Size', 'FCR', 'SR(%)', 'DOC'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -137,66 +141,123 @@
         items.value = [
             {
                 id: 1,
-                Id_kolam: 'Kolam b1',
-                Tanggal_panen: '2022/03/29',
-                Tipe_panen: 'Full',
-                Doc: 'null',
+                Nama_tambak: 'Tambak a',
+                Nama_kolam: 'Kolam B1',
+                Tanggal: '2022/03/29',
+                Tipe: 'Full',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,4',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 2,
-                Id_kolam: 'Kolam b2',
-                Tanggal_panen: '2011/07/25',
-                Tipe_panen: 'Parsial',
-                Doc: 'null',
+                Nama_tambak: 'Tambak b',
+                Nama_kolam: 'Kolam B2',
+                Tanggal: '2011/07/25',
+                Tipe: 'Parsial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,4',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 3,
-                Id_kolam: 'Kolam b3',
-                Tanggal_panen: '2009/01/12',
-                Tipe_panen: 'Parsial',
-                Doc: 'null',
+                Nama_tambak: 'Tambak c',
+                Nama_kolam: 'Kolam B3',
+                Tanggal: '2009/01/12',
+                Tipe: 'Parsial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,4',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 4,
-                Id_kolam: 'Kolam b4',
-                Tanggal_panen: '2012/03/29',
-                Tipe_panen: 'Full',
-                Doc: 'null',
+                Nama_tambak: 'Tambak d',
+                Nama_kolam: 'Kolam B4',
+                Tanggal: '2012/03/29',
+                Tipe: 'Full',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,2',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 5,
-                Id_kolam: 'Kolam b5',
-                Tanggal_panen: '2008/11/28',
-                Tipe_panen: 'Parsial',
-                Doc: 'null',
+                Nama_tambak: 'Tambak e',
+                Nama_kolam: 'Kolam B5',
+                Tanggal: '2008/11/28',
+                Tipe: 'Parsial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,4',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 6,
-                Id_kolam: 'Kolam b6',
-                Tanggal_panen: '2012/12/02',
-                Tipe_panen: 'Full',
-                Doc: 'null',
+                Nama_tambak: 'Tambak f',
+                Nama_kolam: 'Kolam B6',
+                Tanggal: '2012/12/02',
+                Tipe: 'Persial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,2',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 7,
-                Id_kolam: 'Kolam b7',
-                Tanggal_panen: '2012/08/06',
-                Tipe_panen: 'Full',
-                Doc: 'null',
+                Nama_tambak: 'Tambak g',
+                Nama_kolam: 'Kolam B7',
+                Tanggal: '2012/08/06',
+                Tipe: 'Persial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,2',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 8,
-                Id_kolam: 'Kolam b8',
-                Tanggal_panen: '2010/10/14',
-                Tipe_panen: 'Parsial',
-                Doc: 'null',
+                Nama_tambak: 'Tambak h',
+                Nama_kolam: 'Kolam B8',
+                Tanggal: '2010/10/14',
+                Tipe: 'Parsial',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,2',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
             {
                 id: 9,
-                Id_kolam: 'Kolam b9',
-                Tanggal_panen: '2009/09/15',
-                Tipe_panen: 'Full',
-                Doc: 'null',
+                Nama_tambak: 'Tambak i',
+                Nama_kolam: 'Kolam B9',
+                Tanggal: '2009/09/15',
+                Tipe: 'Full',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,2',
+                'SR(%)': ' 95',
+                DOC: '60',
+            },
+            {
+                id: 10,
+                Nama_tambak: 'Tambak i',
+                Nama_kolam: 'Kolam B9',
+                Tanggal: '2009/09/15',
+                Tipe: 'Full',
+                'ABW(gram)': '25',
+                Size: '40',
+                FCR: '1,4',
+                'SR(%)': ' 95',
+                DOC: '60',
             },
         ];
     };
