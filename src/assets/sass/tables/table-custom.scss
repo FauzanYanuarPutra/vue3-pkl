@@ -28,13 +28,20 @@
     color: #d3d3d3;
 }
 
+
 .custom-table {
     .table th {
-        // background: #eff5ff !important;
-        color: #1695DC;
+        background: grey !important;
+        color: black;
         text-transform: none;
         font-size: 14px;
         user-select: none;
+        width: 100%;
+        text-align: center;
+    margin: 0px auto;
+    align-items: center;
+    vertical-align: center; 
+        
         // border-top: 0;
         font-weight: 600;
     }
@@ -42,6 +49,7 @@
     .table td,
     .table th {
         padding: 10px 30px;
+        
     }
 
     .table-hover:not(.table-dark) tbody tr:hover td {
@@ -104,7 +112,7 @@
                 thead th .resize-handle {
                     width: 2px !important;
                     height: 100% !important;
-                    background: #dee2e6;
+                    // background: #dee2e6;
                 }
 
                 .VueTables__filters-row > th {
@@ -246,6 +254,7 @@
                 padding-right: 30px;
                 background-repeat: no-repeat;
                 background-size: 8px 14px;
+                display: block;
             }
 
             .sort-icon-asc {
