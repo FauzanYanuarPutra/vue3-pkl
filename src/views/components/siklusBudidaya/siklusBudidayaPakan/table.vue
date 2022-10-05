@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Table Siklus Budidaya Pakan</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Siklus Budidaya
+                                        Pakan</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,70 +22,54 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Table Siklus Budidaya Pakan</h4>
+                                    <h4>Siklus Budidaya Pakan</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/siklus-budidaya-pakan/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/siklus-budidaya-pakan/create" @click="toggleMobileMenu"
+                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="item,index in items">
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-eye"
-                                            >
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye">
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <router-link to="/siklus-budidaya-pakan/edit" data-bs-toggle="tooltip" title="Edit">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-edit-2"
-                                            >
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                        <router-link to="/siklus-budidaya-pakan/edit" data-bs-toggle="tooltip"
+                                            title="Edit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -102,137 +87,147 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', 'tanggal_input', 'merek_pakan', 'No_pakan', 'Pemberian_pakan', 'pakan_kumulative', 'FCR', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 10,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', No_auto_feeder: 'text-end', Pemberian_pakan: 'text-end', pakan_kumulative: 'text-end', FCR: 'text-end' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref(['no', 'nama_tambak', 'nama_kolam', 'tanggal_input', 'merek_pakan', 'Pemberian_pakan(Kg)', 'pakan_kumulative(Kg)', 'DOC', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    perPage: 10,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', No_auto_feeder: 'text-end', 'Pemberian_pakan(Kg)': 'text-end', 'pakan_kumulative(Kg)': 'text-end' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['nama_tambak', 'nama_kolam', 'tanggal_input', 'merek_pakan', 'No_auto_feeder', 'Pemberian_pakan(Kg)', 'pakan_kumulative(Kg)'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            id: 1,
+            nama_tambak: 'Tambak a',
+            nama_kolam: 'Kolam B1',
+            tanggal_input: '2021/04/25',
+            merek_pakan: 'null',
+            No_pakan: 'null',
+            No_auto_feeder: 'null',
+            'Pemberian_pakan(Kg)': '12',
+            'pakan_kumulative(Kg)': '31',
+            DOC: 'null',
+            FCR: 'null',
         },
-        sortable: ['nama_kolam', 'tanggal_input', 'merek_pakan', 'No_pakan', 'No_auto_feeder', 'Pemberian_pakan', 'pakan_kumulative', 'FCR'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
+        {
+            id: 2,
+            nama_tambak: 'Tambak b',
+            nama_kolam: 'Kolam B2',
+            tanggal_input: '2021/04/25',
+            merek_pakan: 'null',
+            No_pakan: 'null',
+            No_auto_feeder: 'null',
+            'Pemberian_pakan(Kg)': '22',
+            'pakan_kumulative(Kg)': '23',
+            DOC: 'null',
+            FCR: 'null',
         },
-        resizableColumns: false,
+        {
+            id: 3,
+            nama_tambak: 'Tambak c',
+            nama_kolam: 'Kolam B3',
+            tanggal_input: '2021/04/25',
+            merek_pakan: 'null',
+            No_pakan: 'null',
+            No_auto_feeder: 'null',
+            'Pemberian_pakan(Kg)': '12',
+            'pakan_kumulative(Kg)': '32',
+            DOC: 'null',
+            FCR: 'null',
+        },
+        {
+            id: 4,
+            nama_tambak: 'Tambak d',
+            nama_kolam: 'Kolam B4',
+            tanggal_input: '2021/04/25',
+            merek_pakan: 'null',
+            No_pakan: 'null',
+            No_auto_feeder: 'null',
+            'Pemberian_pakan(Kg)': '14',
+            'pakan_kumulative(Kg)': '42',
+            DOC: 'null',
+            FCR: 'null',
+        },
+        {
+            id: 5,
+            nama_tambak: 'Tambak e',
+            nama_kolam: 'Kolam B5',
+            tanggal_input: '2021/04/25',
+            merek_pakan: 'null',
+            No_pakan: 'null',
+            No_auto_feeder: 'null',
+            'Pemberian_pakan(Kg)': '22',
+            'pakan_kumulative(Kg)': '11',
+            DOC: 'null',
+            FCR: 'null',
+        },
+    ];
+};
+
+const view_row = (item) => {
+    new window.Swal({
+        title: '<i>Siklus budidaya (Udang)</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>Nama kolam</b> : ' +
+            item.nama_kolam +
+            '</p>' +
+            '<p><b>Tanggal dan jam input</b> : ' +
+            item.tanggal_input +
+            '</p>' +
+            '<p><b>Merek pakan</b> : ' +
+            item.merek_pakan +
+            '</p>' +
+            '<p><b>No. Pakan (gr)</b> : ' +
+            item.No_pakan +
+            '</p>' +
+            '<p><b>No. Auto feeder</b> : ' +
+            item.No_auto_feeder +
+            '</p>' +
+            '<p><b>Pemberian pakan(Kg)</b> : ' +
+            item.Pemberian_pakan +
+            '</p>' +
+            '<p><b>Pakan kumulativ</b> : ' +
+            item.pakan_kumulativ +
+            '</p>' +
+            '<p><b>FCR</b> : ' +
+            item.FCR +
+            '</p>',
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
     });
-
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                id: 1,
-                nama_kolam: 'Kolam B1',
-                tanggal_input: '2021/04/25',
-                merek_pakan: 'null',
-                No_pakan: 'null',
-                No_auto_feeder: 'null',
-                Pemberian_pakan: 'null',
-                pakan_kumulative: 'null',
-                FCR: 'null',
-            },
-            {
-                id: 2,
-                nama_kolam: 'Kolam B2',
-                tanggal_input: '2021/04/25',
-                merek_pakan: 'null',
-                No_pakan: 'null',
-                No_auto_feeder: 'null',
-                Pemberian_pakan: 'null',
-                pakan_kumulative: 'null',
-                FCR: 'null',
-            },
-            {
-                id: 3,
-                nama_kolam: 'Kolam B3',
-                tanggal_input: '2021/04/25',
-                merek_pakan: 'null',
-                No_pakan: 'null',
-                No_auto_feeder: 'null',
-                Pemberian_pakan: 'null',
-                pakan_kumulative: 'null',
-                FCR: 'null',
-            },
-            {
-                id: 4,
-                nama_kolam: 'Kolam B4',
-                tanggal_input: '2021/04/25',
-                merek_pakan: 'null',
-                No_pakan: 'null',
-                No_auto_feeder: 'null',
-                Pemberian_pakan: 'null',
-                pakan_kumulative: 'null',
-                FCR: 'null',
-            },
-            {
-                id: 5,
-                nama_kolam: 'Kolam B5',
-                tanggal_input: '2021/04/25',
-                merek_pakan: 'null',
-                No_pakan: 'null',
-                No_auto_feeder: 'null',
-                Pemberian_pakan: 'null',
-                pakan_kumulative: 'null',
-                FCR: 'null',
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        new window.Swal({
-            title: '<i>Siklus budidaya (Udang)</i>',
-            text: 'HALLO',
-            html:
-                '<p><b>Nama kolam</b> : ' +
-                item.nama_kolam +
-                '</p>' +
-                '<p><b>Tanggal dan jam input</b> : ' +
-                item.tanggal_input +
-                '</p>' +
-                '<p><b>Merek pakan</b> : ' +
-                item.merek_pakan +
-                '</p>' +
-                '<p><b>No. Pakan (gr)</b> : ' +
-                item.No_pakan +
-                '</p>' +
-                '<p><b>No. Auto feeder</b> : ' +
-                item.No_auto_feeder +
-                '</p>' +
-                '<p><b>Pemberian pakan(Kg)</b> : ' +
-                item.Pemberian_pakan +
-                '</p>' +
-                '<p><b>Pakan kumulativ</b> : ' +
-                item.pakan_kumulativ +
-                '</p>' +
-                '<p><b>FCR</b> : ' +
-                item.FCR +
-                '</p>',
-            // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-            // DIAKHIR TIDAK MENGGUNAKAN tanda +
-            showCloseButton: true,
-            focusConfirm: false,
-            confirmButtonColor: '#1695DC',
-            confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
-            confirmButtonAriaLabel: 'Oke',
-
-            padding: '2em',
-        });
-        // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
-    };
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
+};
 </script>
