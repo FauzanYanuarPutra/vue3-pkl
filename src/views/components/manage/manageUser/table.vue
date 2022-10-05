@@ -30,10 +30,14 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="(item, index) in items">
+                                {{ props.index }}
+                            </template>
+
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -101,20 +105,19 @@
     </div>
 </template>
 
-
 <script setup>
     import { onMounted, ref } from 'vue';
 
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama', 'jabatan', 'no_hp', 'tgl_bergabung', 'status', 'tambak', 'akses_terakhir', 'actions']);
+    const columns = ref(['no', 'nama', 'jabatan', 'no_hp', 'tgl_bergabung', 'team_tambak', 'access_right', 'akses_terakhir', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tgl_bergabung: 'text-center', no_hp: 'text-end' },
+        columnsClasses: { actions: 'actions text-center ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-end ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -122,7 +125,23 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama', 'jabatan', 'no_hp', 'tgl_bergabung', 'status', 'tambak', 'akses_terakhir', 'password'],
+        sortable: [
+            'nama',
+            'jabatan',
+            'no_hp',
+            'password',
+            'email',
+            'photo',
+            'tgl_lahir',
+            'jenis_kelamin',
+            'status',
+            'alamat_rumah',
+            'tgl_bergabung',
+            'status',
+            'team_tambak',
+            'access_right',
+            'akses_terakhir',
+        ],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',

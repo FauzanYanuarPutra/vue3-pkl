@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Table Kolam
+                                <li class="breadcrumb-item active" aria-current="page"><span>Kolam
                                         Treatment</span></li>
                             </ol>
                         </nav>
@@ -22,7 +22,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h2>Table Kolam Treatment</h2>
+                                    <h2>Kolam Treatment</h2>
                                 </div>
                             </div>
                         </div>
@@ -32,10 +32,13 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="item,index in items">
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -88,13 +91,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['nama_kolam', 'tanggal_input', 'pro_air', 'pro_oral', 'mineral_kg', 'keterangan', 'actions']);
+const columns = ref(['no', 'nama_tambak', 'nama_kolam', 'tanggal_input', 'pro_air', 'pro_oral', 'mineral_kg', 'keterangan', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { tanggal_input: 'text-center', pro_air: 'text-end', pro_oral: 'text-end', mineral_kg: 'text-end', actions: 'actions text-center' },
+    columnsClasses: { no: 'text-end', pro_air: 'text-end', pro_oral: 'text-end', actions: 'actions text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -102,8 +105,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: [['nama_kolam', 'tanggal_input', 'pro_air', 'pro_oral', 'mineral', 'keterangan']],
-
+    sortable: ['nama_tambak', 'nama_kolam', 'tanggal_input', 'pro_air', 'pro_oral', 'mineral_kg', 'keterangan'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -120,92 +122,102 @@ const bind_data = () => {
     items.value = [
         {
             ID: 1,
+            nama_tambak: 'Tambak a',
             nama_kolam: 'Kolam b1',
             tanggal_input: '2011/04/25',
-            pro_air: '23',
-            pro_oral: '53',
-            mineral_kg: '54',
+            pro_air: 'TIP',
+            pro_oral: 'Vit C',
+            mineral_kg: 'Azo',
             keterangan: 'null',
         },
         {
             ID: 2,
+            nama_tambak: 'Tambak b',
             nama_kolam: 'Kolam b2',
             tanggal_input: '2011/04/25',
-            pro_air: '54',
-            pro_oral: '43',
-            mineral_kg: '22',
+            pro_air: 'BIO',
+            pro_oral: 'Bioez',
+            mineral_kg: 'Tio',
             keterangan: 'null',
         },
         {
             ID: 3,
+            nama_tambak: 'Tambak c',
             nama_kolam: 'Kolam b3',
             tanggal_input: '2011/04/25',
-            pro_air: '64',
-            pro_oral: '33',
-            mineral_kg: '24',
+            pro_air: 'MOL',
+            pro_oral: 'bp',
+            mineral_kg: 'Agz',
             keterangan: 'null',
         },
         {
             ID: 4,
+            nama_tambak: 'Tambak d',
             nama_kolam: 'Kolam b4',
             tanggal_input: '2011/04/25',
-            pro_air: '42',
-            pro_oral: '54',
-            mineral_kg: '64',
+            pro_air: 'Vit B',
+            pro_oral: 'Bio',
+            mineral_kg: 'Quick',
             keterangan: 'null',
         },
         {
             ID: 5,
+            nama_tambak: 'Tambak e',
             nama_kolam: 'Kolam b5',
             tanggal_input: '2011/04/25',
-            pro_air: '23',
-            pro_oral: '53',
-            mineral_kg: '54',
+            pro_air: 'TIP',
+            pro_oral: 'Vit C',
+            mineral_kg: 'Azo',
             keterangan: 'null',
         },
         {
             ID: 6,
+            nama_tambak: 'Tambak f',
             nama_kolam: 'Kolam b6',
             tanggal_input: '2011/04/25',
-            pro_air: '3',
-            pro_oral: '64',
-            mineral_kg: '64',
+            pro_air: 'BIO',
+            pro_oral: 'Bioez',
+            mineral_kg: 'Tio',
             keterangan: 'null',
         },
         {
             ID: 7,
+            nama_tambak: 'Tambak g',
             nama_kolam: 'Kolam b7',
             tanggal_input: '2011/04/25',
-            pro_air: '53',
-            pro_oral: '5',
-            mineral_kg: '55',
+            pro_air: 'MOL',
+            pro_oral: 'Vit C',
+            mineral_kg: 'Agz',
             keterangan: 'null',
         },
         {
             ID: 8,
+            nama_tambak: 'Tambak h',
             nama_kolam: 'Kolam b8',
             tanggal_input: '2011/04/25',
-            pro_air: '53',
-            pro_oral: '42',
-            mineral_kg: '53',
+            pro_air: 'Vit B',
+            pro_oral: 'bp',
+            mineral_kg: 'Gpg',
             keterangan: 'null',
         },
         {
             ID: 9,
+            nama_tambak: 'Tambak i',
             nama_kolam: 'Kolam b9',
             tanggal_input: '2011/04/25',
-            pro_air: '23',
-            pro_oral: '3',
-            mineral_kg: '56',
+            pro_air: 'TIP',
+            pro_oral: 'bp',
+            mineral_kg: 'Azo',
             keterangan: 'null',
         },
         {
             ID: 10,
+            nama_tambak: 'Tambak j',
             nama_kolam: 'Kolam b10',
             tanggal_input: '2011/04/25',
-            pro_air: '86',
-            pro_oral: '86',
-            mineral_kg: '46',
+            pro_air: 'BIO',
+            pro_oral: 'Bioez',
+            mineral_kg: 'K_P',
             keterangan: 'null',
         },
     ];

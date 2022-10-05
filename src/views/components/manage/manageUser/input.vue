@@ -30,11 +30,6 @@
                                 <div class="box-wrap">
                                     <div class="wrap">
                                         <div class="form-group">
-                                            <label class="control-label">Member ID</label>
-                                            <input type="id" name="member_id" class="form-control" />
-                                        </div>
-
-                                        <div class="form-group">
                                             <label class="control-label">Name</label>
                                             <input type="text" name="name" class="form-control" />
                                         </div>
@@ -169,28 +164,21 @@
                                                 deselect-label=""
                                             ></multiselect>
                                         </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label">Supervisor</label>
-                                            <input type="id" name="name" class="form-control" />
-                                        </div>
                                         <div class="form-group">
                                             <label class="control-label">Team tambak</label>
-                                            <input type="id" name="name" class="form-control" />
+                                            <multiselect
+                                                v-model="inputs['input5']"
+                                                :options="options5"
+                                                :searchable="true"
+                                                placeholder="Choose..."
+                                                selected-label=""
+                                                select-label=""
+                                                deselect-label=""
+                                            ></multiselect>
                                         </div>
 
-                                        <div class="row">
-                                            <div class="col-md-12 form-group">
-                                                <form>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Access right</label>
-                                                        <input type="id" name="name" class="form-control" required />
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
                                         <div class="form-group">
-                                            <label class="control-label">Akses terakhir</label>
+                                            <label class="control-label">Access right</label>
                                             <div class="form-group mb-0">
                                                 <flat-pickr v-model="params.invoice_date" class="form-control form-control-sm flatpickr active" placeholder="Invoice Date"></flat-pickr>
                                             </div>
@@ -237,6 +225,7 @@
     const options2 = ref(['Laki Laki', 'Perempuan']);
     const options3 = ref(['Menikah', 'Belum menikah']);
     const options4 = ref(['Aktiv', 'Tidak aktiv']);
+    const options5 = ref(['Team tambak']);
 
     const code_arr = ref([]);
     const form1 = ref({ name: '' });
