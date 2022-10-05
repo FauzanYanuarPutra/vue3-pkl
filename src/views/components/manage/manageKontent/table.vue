@@ -30,12 +30,14 @@
                             <router-link to="/manage-kontent/create" @click="toggleMobileMenu"
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
-
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="item,index in items">
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -88,13 +90,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['tanggal_input', 'Kategori', 'judul', 'status', 'actions']);
+const columns = ref(['no', 'tanggal_input', 'Kategori', 'judul', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
