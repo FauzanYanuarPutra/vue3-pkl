@@ -143,6 +143,9 @@
         resizableColumns: false,
     });
 
+    
+
+
     onMounted(() => {
         bind_data();
     });

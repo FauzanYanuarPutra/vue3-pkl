@@ -6,9 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Pemupukan Dan
-                                        Pemberian
-                                        Mineral</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Persiapan Budidaya</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -22,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Pemupukan Dan Pemberian Mineral</h3>
+                                <h3>Input Persiapan Budidaya</h3>
                             </div>
                         </div>
                     </div>

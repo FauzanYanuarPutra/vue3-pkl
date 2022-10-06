@@ -30,6 +30,9 @@
                         </div>
 
                         <v-client-table :data="items1" :columns="columns1" :options="table_option1">
+                         <template #no="props" v-for="index in items" >
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -107,7 +110,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns1 = ref(['tanggal_input', 'Panjang_benur', 'Size_varian', 'Status', 'actions']);
+    const columns1 = ref(['no', 'tanggal_input', 'Panjang_benur', 'Size_varian', 'Status', 'actions']);
     const items1 = ref([]);
     const table_option1 = ref({
         perPage: 10,
