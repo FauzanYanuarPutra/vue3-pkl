@@ -60,7 +60,7 @@
                                     
                             </div>
 
-                            <div class="box-wrap">
+                            <div class="box-wrap" v-if="inputs['input3'] === 'Listrik'">
 
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-4 mt-5">
                                 <h6>Jika Sumber Energi Listrik</h6>
@@ -81,7 +81,7 @@
                                     
                             </div>
 
-                            <div class="box-wrap">
+                            <div class="box-wrap" v-if="inputs['input3'] === 'Genset'">
 
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-4 mt-5">
                                 <h6>Jika SumberGenset</h6>
