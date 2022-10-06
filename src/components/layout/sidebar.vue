@@ -153,7 +153,32 @@
                             <router-link to="/siklus-budidaya-benur-doc" @click="toggleMobileMenu">Benur & DOC </router-link>
                         </li>
                         <li>
-                            <router-link to="/siklus-budidaya-udang" @click="toggleMobileMenu">Udang</router-link>
+                            <a class="dropdown-toggle" href="#udang" data-bs-parent="#siklusBudidaya" data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                Udang
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-chevron-right"
+                                >
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </a>
+
+                            <ul id="udang" class="mx-3 collapse list-unstyled sub-submenu">
+                                <li>
+                                    <router-link to="/pertumbuhan-udangs" @click="toggleMobileMenu">Pertumbuhan Udang </router-link>
+                                </li>
+                                <li>
+                                    <router-link to="/scoring-kesehatan-udang" @click="toggleMobileMenu"> Scoring Kesehatan Udang </router-link>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a class="dropdown-toggle" href="#appInvoice" data-bs-parent="#siklusBudidaya" data-bs-toggle="collapse" role="button" aria-expanded="false">

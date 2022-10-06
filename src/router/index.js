@@ -462,19 +462,36 @@ const routes = [
 
     // siklus budidaya udang
     {
-        path: '/siklus-budidaya-udang',
-        name: 'siklus-budidaya-udang',
-        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/table.vue'),
+        path: '/pertumbuhan-udangs',
+        name: 'pertumbuhan-udangs',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/pertumbuhanUdang/table.vue'),
     },
     {
-        path: '/siklus-budidaya-udang/create',
-        name: 'siklus-budidaya-udang-create',
-        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/input.vue'),
+        path: '/pertumbuhan-udangs/create',
+        name: 'pertumbuhan-udangs-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/pertumbuhanUdang/input.vue'),
     },
     {
-        path: '/siklus-budidaya-udang/edit',
-        name: 'siklus-budidaya-udang-edit',
-        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/edit.vue'),
+        path: '/pertumbuhan-udangs/edit',
+        name: 'pertumbuhan-udangs-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/pertumbuhanUdang/edit.vue'),
+    },
+
+    // siklus budidaya udang
+    {
+        path: '/scoring-kesehatan-udang',
+        name: 'scoring-kesehatan-udang',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/scoringKesehatanUdang/table.vue'),
+    },
+    {
+        path: '/scoring-kesehatan-udang/create',
+        name: 'scoring-kesehatan-udang-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/scoringKesehatanUdang/input.vue'),
+    },
+    {
+        path: '/scoring-kesehatan-udang/edit',
+        name: 'scoring-kesehatan-udang-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaUdang/scoringKesehatanUdang/edit.vue'),
     },
 
     // siklusBudidayaAir

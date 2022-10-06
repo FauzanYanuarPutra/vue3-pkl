@@ -27,7 +27,6 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
                                     <div class="form-group">
                                         <label class="control-label">Nama tambak:</label>
                                         <div class="d-flex">
@@ -69,9 +68,7 @@
                                             <input type="text" name="alamat_rumah" class="form-control" />
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="wrap">
+                                   
                                     <div class="form-group">
                                         <label class="control-label">Kecerahan:</label>
                                         <div class="d-flex">
@@ -99,7 +96,6 @@
                                             <input type="text" name="alamat_rumah" class="form-control" />
                                         </div>
                                     </div>
-                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />

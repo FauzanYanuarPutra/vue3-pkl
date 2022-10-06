@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Siklus Budidaya (Benur & DOC)</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Siklus Budidaya Udang</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -15,19 +15,18 @@
         </teleport>
 
         <div class="container">
-            <div id="siklusBudidayaBenur&DOC" class="col-lg-12">
+            <div id="manageAlat" class="col-lg-12">
                 <div class="statbox panel box box-shadow">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Siklus Budidaya (Benur & DOC)</h4>
+                                <h4>Siklus Budidaya Udang</h4>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                
                                     <div class="form-group">
                                         <label class="control-label">Nama Kolam:</label>
                                         <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
@@ -42,57 +41,39 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Tanggal Tebar Benur:</label>
+                                        <label class="control-label">Tanggal Input:</label>
                                         <div class=" mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Asal Benur:</label>
-                                        <input type="text" name="asal_benur" class="form-control" />
+                                        <label class="control-label">ABW = Avg. Body Weigth (gr):</label>
+                                        <input type="number" name="abw" class="form-control" min="0" step="0.01" value="0.00" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Umur benur (Hari):</label>
-                                        <input type="number" name="umur_benur" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Ukuran Rataan (mm):</label>
-                                        <input type="number" name="ukuran_rataan" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Berat Rataan (gram):</label>
-                                        <input type="number" name="berat_rataan" class="form-control" />
+                                        <label class="control-label">ADG = Avg. Daily Growth (gr):</label>
+                                        <input type="number" name="adg" class="form-control" min="0" step="0.01" value="0.00" />
                                     </div>
                                 
                                     <div class="form-group">
-                                        <label class="control-label">Jumlah Benih (ekor):</label>
-                                        <input type="number" name="jumlah_benih" class="form-control" />
+                                        <label class="control-label">SR = Survival Rate (%):</label>
+                                        <input type="number" name="sr" class="form-control" min="0" step="0.01" value="0.00" />
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Scoring Benur:</label>
-                                        <input type="number" name="scoring_benur" class="form-control" />
+                                        <label class="control-label">Total biomassa (Kg):</label>
+                                        <input type="number" name="sr" class="form-control" />
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Periode Siklus Ke:</label>
-                                        <input type="number" name="periode_siklus_ke" class="form-control" />
+                                        <label class="control-label">Ukuran Udang:</label>
+                                        <input type="number" name="sr" class="form-control" />
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Perkiraan Panen (hari):</label>
-                                        <input type="number" name="perkiraan_doc" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Density Per Square Meter:</label>
-                                        <input type="number" name="density_per_square_meter" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Total Bio Mass:</label>
-                                        <input type="number" name="total_bio_mass" class="form-control" />
+                                        <label class="control-label">Scoring Udang:</label>
+                                        <input type="number" name="sr" class="form-control" min="0" step="0.1" value="0.0" />
                                     </div>
                             </div>
 
@@ -134,10 +115,10 @@
         }
     };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
-const kolam = ref(['Kolam b1', 'Kolam b2']);
+    const kolam = ref(['Kolam b1', 'Kolam b2']);
 const tambak = ref(['Tambak b1', 'Tambak b2']);
 
+    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
     const inputs = ref({
         input1: [],
         input2: [],

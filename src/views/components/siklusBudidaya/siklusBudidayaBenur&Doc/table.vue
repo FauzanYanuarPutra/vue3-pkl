@@ -30,6 +30,9 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <template #no="props" v-for="index in items" >
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -107,7 +110,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', 'tanggal_tebar_benur', 'umur_benur', 'ukuran_rataan', 'actions']);
+    const columns = ref(['no', 'nama_tambak', 'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'rataan', 'umur_benur' ,'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -122,17 +125,7 @@
             limit: 'Results:',
         },
         sortable: [
-            'nama_kolam',
-            'tanggal_tebar_benur',
-            'umur_benur',
-            'ukuran_rataan',
-            'berat_rataan',
-            'jumlah_benih',
-            'scoring_benur',
-            'periode_siklus_ke',
-            'dperkiraan_doc',
-            'ddensity_per_square_meter',
-            'total_bio_mass',
+            'nama_tambak',  'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'rataan', 'umur_benur'
         ],
         sortIcon: {
             base: 'sort-icon-none',
@@ -150,7 +143,7 @@
         items.value = [
             {
                 id: 1,
-                nama_kolam: 'Kolam B1',
+                nama_tambak: 'Kolam B1',
                 tanggal_tebar_benur: '2011/04/25',
                 asal_benur: 'Edinburgh',
                 umur_benur: '22',
@@ -163,12 +156,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '320,800',
             },
             {
                 id: 2,
-                nama_kolam: 'Kolam B2',
+                nama_tambak: 'Kolam B2',
                 tanggal_tebar_benur: '2011/07/25',
                 asal_benur: 'Tokyo',
                 umur_benur: '13',
@@ -181,12 +174,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '170,750',
             },
             {
                 id: 3,
-                nama_kolam: 'Kolam B3',
+                nama_tambak: 'Kolam B3',
                 tanggal_tebar_benur: '2009/01/12',
                 asal_benur: 'San Francisco',
                 umur_benur: '5',
@@ -199,12 +192,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '86,000',
             },
             {
                 id: 4,
-                nama_kolam: 'Kolam B4',
+                nama_tambak: 'Kolam B4',
                 tanggal_tebar_benur: '2012/03/29',
                 asal_benur: 'Edinburgh',
                 umur_benur: '6',
@@ -217,12 +210,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '433,060',
             },
             {
                 id: 5,
-                nama_kolam: 'Kolam B5',
+                nama_tambak: 'Kolam B5',
                 tanggal_tebar_benur: '2008/11/28',
                 asal_benur: 'Tokyo',
                 umur_benur: '22',
@@ -235,12 +228,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '162,700',
             },
             {
                 id: 6,
-                nama_kolam: 'Kolam B6',
+                nama_tambak: 'Kolam B6',
                 tanggal_tebar_benur: '2012/12/02',
                 asal_benur: 'New York',
                 umur_benur: '45',
@@ -253,12 +246,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '372,000',
             },
             {
                 id: 7,
-                nama_kolam: 'Kolam B7',
+                nama_tambak: 'Kolam B7',
                 tanggal_tebar_benur: '2012/08/06',
                 asal_benur: 'San Francisco',
                 umur_benur: '3',
@@ -271,12 +264,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '137,500',
             },
             {
                 id: 8,
-                nama_kolam: 'Kolam B8',
+                nama_tambak: 'Kolam B8',
                 tanggal_tebar_benur: '2010/10/14',
                 asal_benur: 'Tokyo',
                 umur_benur: '2',
@@ -289,12 +282,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '327,900',
             },
             {
                 id: 9,
-                nama_kolam: 'Kolam B9',
+                nama_tambak: 'Kolam B9',
                 tanggal_tebar_benur: '2009/09/15',
                 asal_benur: 'San Francisco',
                 umur_benur: '22',
@@ -307,12 +300,12 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '205,500',
             },
             {
                 id: 10,
-                nama_kolam: 'Kolam B10',
+                nama_tambak: 'Kolam B10',
                 tanggal_tebar_benur: '2008/12/13',
                 asal_benur: 'Edinburgh',
                 umur_benur: '4',
@@ -325,7 +318,7 @@
                 ddensity_per_square_meter: 'null',
                 total_bio_mass: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                rataan: 'null',
                 status: '103,600',
             },
         ];
@@ -337,7 +330,7 @@
             text: 'HALLO',
             html:
                 '<p><b>Nama kolam</b> : ' +
-                item.nama_kolam +
+                item.nama_tambak +
                 '</p>' +
                 '<p><b>Tanggal tebar benur</b> : ' +
                 item.tanggal_tebar_benur +

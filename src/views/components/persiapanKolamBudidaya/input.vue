@@ -40,8 +40,7 @@
                                         <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
-
-                                </div>
+                                    </div>
                             </div>
 
                             <div class="box-wrap">
@@ -322,6 +321,7 @@ const toggleCode = (name) => {
 
 const kolam = ref(['Kolam b1', 'Kolam b2']);
 const tambak = ref(['Tambak b1', 'Tambak b2']);
+
 const sterilisasi = ref(['Sterilisasi tambak 1', 'Sterilisasi tambak 2']);
 const pemakaianSterilisasi = ref(['Kalium', 'Hydrogen Peroksida', 'Kaporit', 'Saponin']);
 const pengapuran = ref(['Kapur Kalsit', 'Kapur Oksida', 'Kapur Hidrat', 'Kapur Dolomit']);

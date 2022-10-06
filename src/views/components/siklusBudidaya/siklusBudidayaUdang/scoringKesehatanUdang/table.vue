@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative">
-                            <router-link to="/siklus-budidaya-udang/create" @click="toggleMobileMenu" class="btn y mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/scoring-kesehatan-udang/create" @click="toggleMobileMenu" class="btn y mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
@@ -44,7 +44,7 @@
                                         </div>
                                     </div>
                                     <div class="mx-2">
-                                        <router-link to="/siklus-budidaya-udang/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/scoring-kesehatan-udang/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -99,7 +99,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['nama_kolam', 'tanggal_input', 'ABW', 'ADG', 'SR', 'total_biomassa', 'ukuran_udang', 'scoring_udang', 'actions']);
+    const columns = ref([ 'nama_tambak', 'nama_kolam', 'tanggal', 'scoring', 'DOC', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -122,7 +122,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_kolam', 'tanggal_input', 'ABW', 'ADG', 'SR', 'total_biomassa', 'ukuran_udang', 'scoring_udang'],
+        sortable: [ 'nama_tambak', 'nama_kolam', 'tanggal', 'scoring', 'DOC'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
