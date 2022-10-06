@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
+                                        <a href="/budidaya-fisika/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
