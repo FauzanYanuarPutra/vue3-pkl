@@ -84,7 +84,7 @@
                             <div class="box-wrap" v-if="inputs['input3'] === 'Genset'">
 
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-4 mt-5">
-                                <h6>Jika SumberGenset</h6>
+                                <h6>Jika Sumber Genset</h6>
                             </div>
                             
                                 
