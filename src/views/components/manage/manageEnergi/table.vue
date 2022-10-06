@@ -110,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no','nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'konsumsi_listrik', 'actions']);
+    const columns = ref(['no','nama_tambak', 'tanggal', 'bulan', 'sumber_energi', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', penggunaan_listrik: 'text-end', konsumsi_listrik: 'text-end' },
+        columnsClasses: { actions: 'actions text-center', tanggal: 'text-center', sumber_energi: 'text-end', konsumsi_listrik: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -124,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'bulan', 'penggunaan_listrik', 'konsumsi_listrik'],
+        sortable: ['nama_tambak', 'tanggal', 'bulan', 'sumber_energi'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -142,90 +142,90 @@
             {
                 id: 1,
                 nama_tambak: 'Tambak a',
-                tanggal_input: '2022/01/25',
+                tanggal: '2022/01/25',
                 bulan: 'Januari',
-                penggunaan_listrik: 2000,
+                sumber_energi: 2000,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 2,
                 nama_tambak: 'Tambak b',
-                tanggal_input: '2022/01/28',
+                tanggal: '2022/01/28',
                 bulan: 'Januari',
-                penggunaan_listrik: 2453,
+                sumber_energi: 2453,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 3,
                 nama_tambak: 'Tambak c',
-                tanggal_input: '2022/02/01',
+                tanggal: '2022/02/01',
                 bulan: 'Februari',
-                penggunaan_listrik: 2066,
+                sumber_energi: 2066,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 4,
                 nama_tambak: 'Tambak d',
-                tanggal_input: '2022/02/05',
+                tanggal: '2022/02/05',
                 bulan: 'Februari',
-                penggunaan_listrik: 2002,
+                sumber_energi: 2002,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 5,
                 nama_tambak: 'Tambak e',
-                tanggal_input: '2022/02/08',
+                tanggal: '2022/02/08',
                 bulan: 'Februari',
-                penggunaan_listrik: 2233,
+                sumber_energi: 2233,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 6,
                 nama_tambak: 'Tambak f',
-                tanggal_input: '2022/02/12',
+                tanggal: '2022/02/12',
                 bulan: 'Februari',
-                penggunaan_listrik: 2049,
+                sumber_energi: 2049,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 7,
                 nama_tambak: 'Tambak g',
-                tanggal_input: '2022/02/19',
+                tanggal: '2022/02/19',
                 bulan: 'Februari',
-                penggunaan_listrik: 2034,
+                sumber_energi: 2034,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 8,
                 nama_tambak: 'Tambak  h',
-                tanggal_input: '2022/02/23',
+                tanggal: '2022/02/23',
                 bulan: 'Februari',
-                penggunaan_listrik: 2768,
+                sumber_energi: 2768,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 9,
                 nama_tambak: 'Tambak i',
-                tanggal_input: '2022/02/26',
+                tanggal: '2022/02/26',
                 bulan: 'Februari',
-                penggunaan_listrik: 2139,
+                sumber_energi: 2139,
 
                 konsumsi_listrik: '131.000 VA',
             },
             {
                 id: 10,
                 nama_tambak: 'Tambak j',
-                tanggal_input: '2022/02/29',
+                tanggal: '2022/02/29',
                 bulan: 'Februaru',
-                penggunaan_listrik: 2323,
+                sumber_energi: 2323,
 
                 konsumsi_listrik: '131.000 VA',
             },
@@ -241,13 +241,13 @@
                 item.nama_tambak +
                 '</p>' +
                 '<p><b>Tanggal</b> : ' +
-                item.tanggal_input +
+                item.tanggal +
                 '</p>' +
                 '<p><b>Bulan</b> : ' +
                 item.bulan +
                 '</p>' +
                 '<p><b>Penggunaan listrik (KwH)</b> : ' +
-                item.penggunaan_listrik +
+                item.sumber_energi +
                 '</p>' +
                 '<p><b>Kategori Konsumsi Listrik</b> : ' +
                 item.konsumsi_listrik +

@@ -30,8 +30,11 @@
                                 
                                     <div class="form-group">
                                         <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
-                                    </div>
+                                        <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+
+                                </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Tanggal dan Jam Input:</label>
@@ -46,6 +49,23 @@
                                         <multiselect v-model="inputs['input3']" :options="bulan" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Sumber Energi:</label>
+                                        <multiselect v-model="inputs['input3']" :options="sumberEnergi" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+                                
+
+                                    
+                            </div>
+
+                            <div class="box-wrap">
+
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Jika Sumber Energi Listrik</h4>
+                            </div>
+                            
                                 
                                     <div class="form-group">
                                         <label class="control-label">Penggunaan Listrik (KwH):</label>
@@ -53,9 +73,32 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label">Kategori Konsumsi Listrik:</label>
+                                        <label class="control-label">Kategori Konsumsi listrik:</label>
+                                        <multiselect v-model="inputs['input3']" :options="konsumsiListrik" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                    </div>
+
+                                    
+                            </div>
+
+                            <div class="box-wrap">
+
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                <h4>Jika SumberGenset</h4>
+                            </div>
+                            
+                                
+                                    <div class="form-group">
+                                        <label class="control-label">Durasi menyala (menit):</label>
                                         <input type="text" name="id" class="form-control" />
                                     </div>
+
+                                     <div class="form-group">
+                                        <label class="control-label">Konsumsi BBM (liter):</label>
+                                        <input type="text" name="id" class="form-control" />
+                                    </div>
+
+                                   
 
                                     
                             </div>
@@ -99,7 +142,13 @@
     };
 
     const options1 = ref(['Kincir', 'Pompa', 'Autofeeder', 'Auxiliaries']);
-    const bulan = ref(['Bulan']);
+const tambak = ref(['Tambak b1', 'Tambak b2']);
+const sumberEnergi = ref(['Listrik', 'Genset']);
+
+
+const bulan = ref(['Bulan']);
+    const konsumsiListrik = ref(['konsumsi listrik']);
+    
 
     const inputs = ref({
         input1: [],
