@@ -68,7 +68,7 @@
                                                 placeholder="Max" />
                                         </div>
                                     </div>
-            
+
                                     <div class="form-group">
                                         <label class="control-label">Dyno (%)</label>
                                         <div class="d-flex">
@@ -109,7 +109,7 @@
                                         </div>
                                     </div>
 
-                            
+
                                     <div class="form-group">
                                         <label class="control-label">Algino:</label>
                                         <div class="d-flex">
@@ -129,10 +129,10 @@
                                                 placeholder="Max" />
                                         </div>
                                     </div>
-                                        </div>
+                                </div>
 
 
-                                 <div class="wrap">
+                                <div class="wrap">
 
                                     <div class="form-group">
                                         <label class="control-label">Parahaema:</label>
@@ -153,7 +153,7 @@
                                                 placeholder="Max" />
                                         </div>
                                     </div>
-                           
+
                                     <div class="form-group">
                                         <label class="control-label">Total Vibrio Count:</label>
                                         <div class="d-flex">
@@ -183,7 +183,7 @@
                                                 placeholder="Max" />
                                         </div>
                                     </div>
- 
+
                                     <div class="form-group">
                                         <label class="control-label">Kuning:</label>
                                         <div class="d-flex">
@@ -214,7 +214,7 @@
                                         </div>
                                     </div>
 
-    
+
                                     <div class="form-group">
                                         <label class="control-label">Nyala:</label>
                                         <div class="d-flex">
@@ -235,7 +235,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                                            </div>
+                            </div>
 
 
 

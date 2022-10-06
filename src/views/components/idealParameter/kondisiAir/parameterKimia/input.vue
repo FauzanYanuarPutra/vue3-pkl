@@ -27,176 +27,166 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">PH:</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">DO (ppm):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Salinitas (%):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Alkalinitas (ppm):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">CO3:</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">HC03:</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label class="control-label">Total:</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Ammonium-NH4 (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">PH:</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
                                 </div>
 
-                                <div class="wrap">
-
-                                    <div class="form-group">
-                                        <label class="control-label">Nitrit-NO2 (ppm):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">DO (ppm):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Nitrit-NO2 (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Salinitas (%):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Phosphate-PO4 (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Alkalinitas (ppm):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Iron-Fe (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">CO3:</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Magnesium-Mg (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">HC03:</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Calium-Ca (mg/L):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Total:</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Residual Chlorin-CI:</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Ammonium-NH4 (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nitrit-NO2 (ppm):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Redox (mV):</label>
-                                        <div class="d-flex">
-                                            <input type="number" class="form-control form-control-sm w-60 d-flex"
-                                                placeholder="Min" />
-                                            <input type="number" class="form-control form-control-sm w-60"
-                                                placeholder="Max" />
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nitrit-NO2 (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Phosphate-PO4 (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Iron-Fe (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Magnesium-Mg (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Calium-Ca (mg/L):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Residual Chlorin-CI:</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Redox (mV):</label>
+                                    <div class="d-flex">
+                                        <input type="number" class="form-control form-control-sm w-60 d-flex"
+                                            placeholder="Min" />
+                                        <input type="number" class="form-control form-control-sm w-60"
+                                            placeholder="Max" />
                                     </div>
                                 </div>
                             </div>
-
-
-
-
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>

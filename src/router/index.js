@@ -424,7 +424,6 @@ const routes = [
         component: () => import('../views/components/persiapanKolamBudidaya/edit.vue'),
     },
 
-    
     // akhir Kolam Budidaya Persiapan
 
     // kolamTreatment
@@ -525,6 +524,21 @@ const routes = [
         path: '/budidaya-kimia/edit',
         name: 'budidaya-kimia-edit',
         component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterKimia/edit.vue'),
+    },
+    {
+        path: '/budidaya-biologi',
+        name: 'budidaya-biologi',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/table.vue'),
+    },
+    {
+        path: '/budidaya-biologi/create',
+        name: 'budidaya-biologi-create',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/input.vue'),
+    },
+    {
+        path: '/budidaya-biologi/edit',
+        name: 'budidaya-biologi-edit',
+        component: () => import('../views/components/siklusBudidaya/siklusBudidayaAir/parameterBiologi/edit.vue'),
     },
     {
         path: '/budidaya-biologi-fitoplankton',

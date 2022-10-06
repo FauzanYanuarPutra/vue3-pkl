@@ -27,29 +27,25 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Kategori:</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Nama:</label>
-                                        <input type="text" name="nama" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kategori:</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Deskripsi:</label>
-                                        <input type="text" name="deskripsi" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama:</label>
+                                    <input type="text" name="nama" class="form-control" />
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Status:</label>
-                                        <input type="text" name="status" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Deskripsi:</label>
+                                    <input type="text" name="deskripsi" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Status:</label>
+                                    <input type="text" name="status" class="form-control" />
                                 </div>
                             </div>
 

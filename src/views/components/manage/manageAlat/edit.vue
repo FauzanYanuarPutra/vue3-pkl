@@ -27,100 +27,121 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Kategori Alat:</label>
-                                        <input type="text" name="kategori_alat" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Brand:</label>
-                                        <input type="text" name="brand" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Tipe / Model:</label>
-                                        <multiselect
-                                            v-model="inputs['input3']"
-                                            :options="options1"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Kegunaan:</label>
-                                        <input type="text" name="kegunaan" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan:</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Jumlah unit:</label>
-                                        <input type="text" name="jumlah_unit" class="form-control" />
-                                    </div>
-                                </div>
-
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Photo:</label>
-                                        <div class="custom-file-container">
-                                            <div class="invoice-logo">
-                                                <div class="upload pe-md-5">
-                                                    <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
-                                                    <img
-                                                        v-if="selected_file"
-                                                        :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
-                                                        alt="profile"
-                                                        class="profile-preview"
-                                                        @click="$refs.fl_profile.click()"
-                                                    />
-                                                    <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
-                                                        <div class="my-2">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="50"
-                                                                height="50"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                                stroke="currentColor"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                class="feather feather-upload-cloud"
-                                                            >
-                                                                <polyline points="16 16 12 12 8 16"></polyline>
-                                                                <line x1="12" y1="12" x2="12" y2="21"></line>
-                                                                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
-                                                                <polyline points="16 16 12 12 8 16"></polyline>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="mt-2">Click to Upload Picture/Logo</div>
+                                <div class="form-group">
+                                    <label class="control-label">Photo:</label>
+                                    <div class="custom-file-container">
+                                        <div class="invoice-logo">
+                                            <div class="upload pe-md-5">
+                                                <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
+                                                <img
+                                                    v-if="selected_file"
+                                                    :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
+                                                    alt="profile"
+                                                    class="profile-preview"
+                                                    @click="$refs.fl_profile.click()"
+                                                />
+                                                <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
+                                                    <div class="my-2">
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width="50"
+                                                            height="50"
+                                                            viewBox="0 0 24 24"
+                                                            fill="none"
+                                                            stroke="currentColor"
+                                                            stroke-width="2"
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            class="feather feather-upload-cloud"
+                                                        >
+                                                            <polyline points="16 16 12 12 8 16"></polyline>
+                                                            <line x1="12" y1="12" x2="12" y2="21"></line>
+                                                            <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                                                            <polyline points="16 16 12 12 8 16"></polyline>
+                                                        </svg>
                                                     </div>
+                                                    <div class="mt-2">Click to Upload Picture/Logo</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Internal ID:</label>
-                                        <input type="number" name="internal_id" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="box-wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kategori Alat:</label>
+                                    <input type="text" name="kategori_alat" class="form-control" />
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Perkiraan bulan dan tahun beli:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
-                                        </div>
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Brand:</label>
+                                    <input type="text" name="brand" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tipe / Model:</label>
+                                    <multiselect
+                                        v-model="inputs['input3']"
+                                        :options="options1"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kegunaan:</label>
+                                    <input type="text" name="kegunaan" class="form-control" />
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Tenaga(HP):</label>
-                                        <input type="number" name="tenaga_hp" class="form-control" />
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah unit:</label>
+                                    <input type="text" name="jumlah_unit" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Internal ID:</label>
+                                    <input type="number" name="internal_id" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Perkiraan bulan dan tahun beli:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
                                     </div>
+                                </div>
+
+                                <div class="form-group w-100">
+                                    <label class="control-label">Keterangan:</label>
+                                    <textarea name="Keterangan" id="" cols="10" rows="10" class="form-control"></textarea>
+                                </div>
+
+                                <div class="form-group w-100">
+                                    <label class="control-label">Spesifikasi:</label>
+                                    <textarea name="Spesifikasi" id="" cols="10" rows="10" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group w-100">
+                                    <label class="control-label">Status:</label>
+                                    <multiselect
+                                        v-model="inputs['input3']"
+                                        :options="status"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
                                 </div>
                             </div>
 
@@ -161,6 +182,9 @@
             code_arr.value.push(name);
         }
     };
+
+    const tambak = ref(['Tambak b1', 'Tambak b2']);
+    const status = ref(['aktive', 'tidak aktive']);
 
     const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
     const inputs = ref({

@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                     <div class="px-2">
-                                        <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Edit">
+                                        <a href="/budidaya-fisika/edit" data-bs-toggle="tooltip" title="Edit">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -247,7 +247,19 @@
         new window.Swal({
             title: '<i>Parameter Fisika</i>',
             text: 'HALLO',
-            html: '<p><b>Nama</b> : ' + item.nama + '</p>' + '<p><b>Pagi</b> : ' + item.Pagi + '</p>' + '<p><b>Sore</b> : ' + item.Sore + '</p>',
+            html:
+                '<p><b>Nama Tambak</b> : ' +
+                item.Nama_Tambak +
+                '</p>' +
+                '<p><b>Nama Kolam</b> : ' +
+                item.Nama_Kolam +
+                '</p>' +
+                '<p><b>Tanggal</b> : ' +
+                item.Tanggal +
+                '</p>' +
+                '<p><b>DOC</b> : ' +
+                item.DOC +
+                '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

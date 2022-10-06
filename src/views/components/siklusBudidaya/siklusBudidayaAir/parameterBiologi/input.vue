@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Parameter Kimia</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Input Parameter Biologi</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Input Parameter Kimia</h4>
+                                <h4>Input Parameter Biologi</h4>
                             </div>
                         </div>
                     </div>
@@ -44,87 +44,104 @@
                                     <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
+                            </div>
+
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Fitoplankton</h6>
                                 <div class="form-group">
-                                    <label class="control-label">pH:</label>
+                                    <label class="control-label">Density:</label>
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Salinitas(%):</label>
-                                    <input type="number" name="salinitas" class="form-control" />
+                                    <label class="control-label">Cloro (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">DO (ppm):</label>
+                                    <label class="control-label">Proto (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Diatom (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Dyno (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">GA (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">BGA (%):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Other (%):</label>
                                     <input type="number" placeholder="0.00" required name="price" class="form-control" />
                                 </div>
                             </div>
 
                             <div class="box-wrap">
-                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Alkalinitas (ppm)</h6>
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Vibrio TCBS</h6>
                                 <div class="form-group">
-                                    <label class="control-label">CO3:</label>
-                                    <input type="number" name="HCO3" class="form-control" />
+                                    <label class="control-label">Kuning:</label>
+                                    <input type="number" name="Kuning" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">HCO3:</label>
-                                    <input type="number" name="HC03" class="form-control" />
+                                    <label class="control-label">Hijau:</label>
+                                    <input type="number" name="hijau" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Total:</label>
-                                    <input type="number" name="total" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="box-wrap">
-                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-4 mb-1"></h6>
-                                <div class="form-group">
-                                    <label class="control-label">Ammonium-NH4 (mg/L):</label>
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                    <label class="control-label">Hitam:</label>
+                                    <input type="number" name="hitam" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Nitrit-NO2 (ppm):</label>
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                    <label class="control-label">Nyala:</label>
+                                    <input type="number" name="nyala" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Nitrat-NO3 (mg/L):</label>
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Phosphate-PO4 (mg/L):</label>
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Iron-Fe (mg/L):</label>
-                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
-                                </div>
-                            </div>
-
-                            <div class="box-wrap">
-                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Hardness</h6>
-                                <div class="form-group">
-                                    <label class="control-label">Magnesium-Mg (mg/L):</label>
+                                    <label class="control-label">Total Vibrio Count:</label>
                                     <input type="number" name="" class="form-control" />
                                 </div>
+                            </div>
+
+                            <div class="box-wrap">
+                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-4">Vibrio CHROMagar</h6>
                                 <div class="form-group">
-                                    <label class="control-label">Calium-Ca (mg/L):</label>
-                                    <input type="number" name="" class="form-control" />
+                                    <label class="control-label">Algio:</label>
+                                    <input type="number" name="Algio" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Total:</label>
+                                    <label class="control-label">Chlorela:</label>
+                                    <input type="number" name="Chlorela" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Parahaema:</label>
+                                    <input type="number" name="Parahaema" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Lumph:</label>
+                                    <input type="number" name="Lumph" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Total Vibrio Count:</label>
                                     <input type="number" name="" class="form-control" />
                                 </div>
                             </div>
                             <div class="box-wrap">
                                 <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-5 mb-2"></h6>
                                 <div class="form-group">
-                                    <label class="control-label">Residual Chlorin-Cl:</label>
+                                    <label class="control-label">Total Bacillus Count:</label>
                                     <input type="number" name="" class="form-control" />
                                 </div>
-                            </div>
-                            <div class="box-wrap">
-                                <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-1 mb-1"></h6>
                                 <div class="form-group">
-                                    <label class="control-label">Redox (mV):</label>
-                                    <input type="number" name="" class="form-control" />
+                                    <label class="control-label">Total Organic Matters - TOM (ppm):</label>
+                                    <input type="number" placeholder="0.00" required name="price" class="form-control" />
+                                </div>
+                                <div class="form-group w-100">
+                                    <label class="control-label">keterangan:</label>
+                                    <input type="text" name="keterangan" class="form-control" />
                                 </div>
                             </div>
                             <input type="submit" value="Submit" class="btn mt-3" />
