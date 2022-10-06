@@ -298,17 +298,38 @@
             title: '<i>Panen</i>',
             text: 'HALLO',
             html:
+                '<p><b>Nama Tambak</b> : ' +
+                item.Nama_tambak +
+                '</p>' +
                 '<p><b>Nama Kolam</b> : ' +
-                item.Id_kolam +
+                item.Nama_kolam +
                 '</p>' +
-                '<p><b>Tanggal Panen</b> : ' +
-                item.Tanggal_panen +
+                '<p><b>GA </b> : ' +
+                item.GA +
                 '</p>' +
-                '<p><b>Tipe Panen</b> : ' +
-                item.Tipe_panen +
+                '<p><b> DIATOM </b> : ' +
+                item.DIATOM +
+                '</p>' +
+                '<p><b>DYNO </b> : ' +
+                item.DYNO +
+                '</p>' +
+                '<p><b>BGA</b> : ' +
+                item.BGA +
+                '</p>' +
+                '<p><b>OTHER </b> : ' +
+                item.OTHER +
+                '</p>' +
+                '<p><b>DENSITY </b> : ' +
+                item.DENSITY +
+                '</p>' +
+                '<p><b>Total Vibrio TCBS </b> : ' +
+                item.Total_Vibrio_TCBS +
+                '</p>' +
+                '<p><b>Total Vibrio CHROMagar</b> : ' +
+                item.Total_Vibrio_CHROMagar +
                 '</p>' +
                 '<p><b>DOC (Day of cultivation)</b> : ' +
-                item.Doc +
+                item.DOC +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

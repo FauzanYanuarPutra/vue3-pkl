@@ -110,7 +110,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'Nama_tambak', 'Tanggal', 'PH', 'SAL(%)', '	DO(PPM)', 'C03', 'HC03', 'TOTAL', '	TOM', 'NH4', 'N02', 'N03', 'P04', 'FE', 'DOC', 'actions']);
+    const columns = ref(['no', 'Nama_tambak', 'Tanggal', 'PH', 'SAL(%)', '	DO(PPM)', 'CO3', 'HCO3', 'TOTAL', '	TOM', 'NH4', 'NO2', 'NO3', 'PO4', 'FE', 'DOC', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -134,7 +134,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['Nama_tambak', 'Tanggal', 'PH', 'SAL(%)', '	DO(PPM)', 'C03', 'HC03', 'TOTAL', '	TOM', 'NH4', 'N02', 'N03', 'P04', 'FE', 'DOC'],
+        sortable: ['Nama_tambak', 'Tanggal', 'PH', 'SAL(%)', '	DO(PPM)', 'CO3', 'HCO3', 'TOTAL', '	TOM', 'NH4', 'NO2', 'NO3', 'PO4', 'FE', 'DOC'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -157,14 +157,14 @@
                 PH: '',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -175,14 +175,14 @@
                 Tanggal: '2011/07/25',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -193,14 +193,14 @@
                 Tanggal: '2009/01/12',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -211,14 +211,14 @@
                 Tanggal: '2012/03/29',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -230,14 +230,14 @@
                 Tipe: 'Parsial',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -249,14 +249,14 @@
                 Tipe: 'Persial',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -268,14 +268,14 @@
                 Tipe: 'Persial',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -286,14 +286,14 @@
                 Tanggal: '2010/10/14',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -304,14 +304,14 @@
                 Tanggal: '2009/09/15',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -322,14 +322,14 @@
                 Tanggal: '2009/09/15',
                 'SAL(%)': '',
                 'DO(PPM)': '',
-                C03: '',
-                HC03: '',
+                CO3: '',
+                HCO3: '',
                 TOTAL: '',
                 TOM: '',
                 NH4: '',
-                N02: '',
-                N03: '',
-                P04: '',
+                NO2: '',
+                NO3: '',
+                PO4: '',
                 FE: '',
                 DOC: '60',
             },
@@ -341,53 +341,41 @@
             title: '<i>Parameter Kimia</i>',
             text: 'HALLO',
             html:
-                '<p><b>pH</b> : ' +
-                item.pH +
+                '<p><b>Nama tambak</b> : ' +
+                item.Nama_tambak +
                 '</p>' +
-                '<p><b>Salinitas (%)</b> : ' +
-                item.Salinitas +
+                '<p><b>Nama kolam </b> : ' +
+                item.Nama_kolam +
                 '</p>' +
-                '<p><b>DO (ppm)</b> : ' +
-                item.DO +
+                '<p><b>Tanggal (ppm)</b> : ' +
+                item.Tanggal +
                 '</p>' +
                 '<p><b>CO3</b> : ' +
                 item.CO3 +
                 '</p>' +
                 '<p><b>Total_Vibrio_Count</b> : ' +
-                item.HC03 +
+                item.HCO3 +
                 '</p>' +
                 '<p><b>Total</b> : ' +
-                item.Total +
+                item.TOTAL +
                 '</p>' +
                 '<p><b>Ammonium-NH4 (mg/L)</b> : ' +
-                item.Ammonium_NH4 +
+                item.NH4 +
                 '</p>' +
                 '<p><b>Nitrit-NO2 (ppm)</b> : ' +
-                item.Nitrit_NO2 +
+                item.NO2 +
                 '</p>' +
                 '<p><b>Nitrat-NO3 (mg/L)</b> : ' +
-                item.Nitrit_NO3 +
+                item.NO3 +
                 '</p>' +
                 '<p><b>Phosphate-PO4 (mg/L)</b> : ' +
-                item.hosphate_PO4 +
+                item.PO4 +
                 '</p>' +
                 '<p><b>Iron-Fe (mg/L)</b> : ' +
-                item.Iron_Fe +
+                item.FE +
                 '</p>' +
-                '<p><b>Magnesium-Mg (mg/L)</b> : ' +
-                item.Magnesium_Mg +
-                '</p>' +
-                '<p><b>Calium-Ca (mg/L)</b> : ' +
-                item.Calium_Ca +
-                '</p>' +
-                '<p><b>Total</b> : ' +
-                item.Total1 +
-                '</p>' +
-                '<p><b>Residual Chlorin-Cl</b> : ' +
-                item.Residual +
-                '</p>' +
-                '<p><b>Redox (mV)</b> : ' +
-                item.Redox +
+                '<p><b>DOC</b> : ' +
+                item.DOC +
                 '</p>',
             // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
             // DIAKHIR TIDAK MENGGUNAKAN tanda +

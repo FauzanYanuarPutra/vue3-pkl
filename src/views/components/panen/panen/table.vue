@@ -267,14 +267,23 @@
             title: '<i>Panen</i>',
             text: 'HALLO',
             html:
-                '<p><b>Nama Kolam</b> : ' +
-                item.Id_kolam +
+                '<p><b>Nama Tambak</b> : ' +
+                item.Nama_tambak +
                 '</p>' +
-                '<p><b>Tanggal Panen</b> : ' +
-                item.Tanggal_panen +
+                '<p><b>Nama Kolam</b> : ' +
+                item.Nama_kolam +
+                '</p>' +
+                '<p><b>Tanggal</b> : ' +
+                item.Tanggal +
                 '</p>' +
                 '<p><b>Tipe Panen</b> : ' +
-                item.Tipe_panen +
+                item.Tipe +
+                '</p>' +
+                '<p><b>Size</b> : ' +
+                item.Size +
+                '</p>' +
+                '<p><b>FCR</b> : ' +
+                item.FCR +
                 '</p>' +
                 '<p><b>DOC (Day of cultivation)</b> : ' +
                 item.Doc +
