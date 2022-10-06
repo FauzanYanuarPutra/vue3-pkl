@@ -247,7 +247,19 @@
         new window.Swal({
             title: '<i>Parameter Fisika</i>',
             text: 'HALLO',
-            html: '<p><b>Nama</b> : ' + item.nama + '</p>' + '<p><b>Pagi</b> : ' + item.Pagi + '</p>' + '<p><b>Sore</b> : ' + item.Sore + '</p>',
+            html:
+                '<p><b>Nama Tambak</b> : ' +
+                item.Nama_Tambak +
+                '</p>' +
+                '<p><b>Nama Kolam</b> : ' +
+                item.Nama_Kolam +
+                '</p>' +
+                '<p><b>Tanggal</b> : ' +
+                item.Tanggal +
+                '</p>' +
+                '<p><b>DOC</b> : ' +
+                item.DOC +
+                '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
