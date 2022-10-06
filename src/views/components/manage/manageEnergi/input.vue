@@ -30,7 +30,7 @@
                                 
                                     <div class="form-group">
                                         <label class="control-label">Nama Tambak:</label>
-                                        <multiselect v-model="inputs['input2']" :options="tambak" :searchable="true"
+                                        <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
 
@@ -46,7 +46,7 @@
 
                                     <div class="form-group">
                                         <label class="control-label">Bulan:</label>
-                                        <multiselect v-model="inputs['input3']" :options="bulan" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        <multiselect v-model="inputs['input2']" :options="bulan" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
 
@@ -62,8 +62,8 @@
 
                             <div class="box-wrap">
 
-                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Jika Sumber Energi Listrik</h4>
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-4 mt-5">
+                                <h6>Jika Sumber Energi Listrik</h6>
                             </div>
                             
                                 
@@ -74,7 +74,7 @@
 
                                     <div class="form-group">
                                         <label class="control-label">Kategori Konsumsi listrik:</label>
-                                        <multiselect v-model="inputs['input3']" :options="konsumsiListrik" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        <multiselect v-model="inputs['input4']" :options="konsumsiListrik" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
 
@@ -83,8 +83,8 @@
 
                             <div class="box-wrap">
 
-                            <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Jika SumberGenset</h4>
+                            <div class="col-xl-12 col-md-12 col-sm-12 col-12 mb-4 mt-5">
+                                <h6>Jika SumberGenset</h6>
                             </div>
                             
                                 
