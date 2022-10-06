@@ -184,37 +184,6 @@
                                 <li>
                                     <router-link to="/budidaya-biologi" @click="toggleMobileMenu">Parameter Biologi </router-link>
                                 </li>
-                                <li>
-                                    <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
-                                        Parameter Biologi
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="13"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            class="feather feather-chevron-right"
-                                        >
-                                            <polyline points="9 18 15 12 9 6"></polyline>
-                                        </svg>
-                                    </a>
-
-                                    <ul id="parameterBiologi" class="mx-3 collapse list-unstyled sub-submenu">
-                                        <li>
-                                            <router-link to="/budidaya-biologi-fitoplankton" @click="toggleMobileMenu"> Filoplankton </router-link>
-                                        </li>
-                                        <li>
-                                            <router-link to="/budidaya-biologi-vibrioTCBS" @click="toggleMobileMenu"> Vibrio TCBS </router-link>
-                                        </li>
-                                        <li>
-                                            <router-link to="/budidaya-biologi-vibrioCHROMagar" @click="toggleMobileMenu">Vibrio CHROMagar </router-link>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                     </ul>
