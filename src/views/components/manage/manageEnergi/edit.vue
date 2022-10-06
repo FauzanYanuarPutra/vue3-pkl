@@ -27,36 +27,32 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <input type="text" name="nama_tambak" class="form-control" />
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Jam:</label>
-                                        <input type="text" name="jam" class="form-control" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Bulan:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active"></flat-pickr>
-                                        </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan Jam Input:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
                                     </div>
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Penggunaan Listrik:</label>
-                                        <input type="number" name="id" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Bulan:</label>
+                                    <multiselect v-model="inputs['input3']" :options="bulan" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label">Kategori Konsumsi Listrik:</label>
-                                        <multiselect v-model="inputs['input3']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Penggunaan Listrik (KwH):</label>
+                                    <input type="text" name="id" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Kategori Konsumsi Listrik:</label>
+                                    <input type="text" name="id" class="form-control" />
                                 </div>
                             </div>
 
@@ -99,6 +95,8 @@
     };
 
     const options1 = ref(['Kincir', 'Pompa', 'Autofeeder', 'Auxiliaries']);
+    const bulan = ref(['Bulan']);
+
     const inputs = ref({
         input1: [],
         input2: [],
