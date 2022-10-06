@@ -182,6 +182,9 @@
                                     <router-link to="/budidaya-kimia" @click="toggleMobileMenu">Parameter Kimia </router-link>
                                 </li>
                                 <li>
+                                    <router-link to="/budidaya-biologi" @click="toggleMobileMenu">Parameter Biologi </router-link>
+                                </li>
+                                <li>
                                     <a class="dropdown-toggle" href="#parameterBiologi" data-bs-parent="#parameterBiologi" data-bs-toggle="collapse" role="button" aria-expanded="false">
                                         Parameter Biologi
                                         <svg
