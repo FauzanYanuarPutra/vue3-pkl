@@ -109,7 +109,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['mo', 'tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
+    const columns = ref(['no', 'tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
