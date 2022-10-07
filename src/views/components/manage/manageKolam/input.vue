@@ -30,13 +30,13 @@
                             <div class="box-wrap">
                                 <div class="form-group">
                                     <label class="control-label">Nama Tambak</label>
-                                    <multiselect v-model="inputs['input1']" :options="tambak" :searchable="true"
+                                    <multiselect v-model="inputs7['input1']" :options="options7" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Nama Kolam</label>
-                                    <multiselect v-model="inputs['input1']" :options="kolam" :searchable="true"
+                                    <multiselect v-model="inputs8['input1']" :options="options8" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
@@ -183,8 +183,19 @@ const inputs6 = ref({
     input3: [],
 });
 
-const kolam = ref(['Kolam b1', 'Kolam b2']);
-const tambak = ref(['Tambak b1', 'Tambak b2']);
+const options7 = ref(['Kolam b1', 'Kolam b2']);
+const inputs7 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options8 = ref(['Tambak b1', 'Tambak b2']);
+const inputs8 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
 
 const change_file = (event) => {
     selected_file.value = URL.createObjectURL(event.target.files[0]);
