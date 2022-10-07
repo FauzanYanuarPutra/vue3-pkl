@@ -65,35 +65,35 @@
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Kincir</label></strong>
                                     <div class="multiple-input">
-                                    <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                    <input type="text" name="jumlah" class="form-control"
-                                        placeholder="Jumlah Kincir" />
+                                        <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                        <input type="text" name="jumlah" class="form-control"
+                                            placeholder="Jumlah Kincir" />
                                     </div>
-                                    
+
                                 </div>
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Pompa</label></strong>
                                     <div class="multiple-input">
 
-                                    <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                    <input type="text" name="jumlah" class="form-control"
-                                        placeholder="Jumlah Pompa" />
-                                        </div>
+                                        <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                        <input type="text" name="jumlah" class="form-control"
+                                            placeholder="Jumlah Pompa" />
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <strong><label class="control-label">Pilih Auto Feeder</label></strong>
                                     <div class="multiple-input">
 
-                                    <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                    <input type="text" name="jumlah" class="form-control"
-                                        placeholder="Jumlah Auto Feeder" />
-                                        </div>
+                                        <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
+                                        <input type="text" name="jumlah" class="form-control"
+                                            placeholder="Jumlah Auto Feeder" />
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Status</label>
@@ -155,21 +155,21 @@ const inputs2 = ref({
     input3: [],
 });
 
-const options3 = ref(['Pilih Kincir']);
+const options3 = ref(['Kincir 1', 'Kincir 2']);
 const inputs3 = ref({
     input1: [],
     input2: [],
     input3: [],
 });
 
-const options4 = ref(['Pilih Pompa']);
+const options4 = ref(['Pompa 1', 'Pompa 2']);
 const inputs4 = ref({
     input1: [],
     input2: [],
     input3: [],
 });
 
-const options5 = ref(['Pilih Auto Feeder']);
+const options5 = ref(['Auto Feeder 1', 'Auto Feeder 2']);
 const inputs5 = ref({
     input1: [],
     input2: [],

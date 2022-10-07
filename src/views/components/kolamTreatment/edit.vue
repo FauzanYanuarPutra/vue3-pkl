@@ -30,45 +30,50 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Kolam</label>
-                                        <input type="text" name="nama_kolam" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Jam</label>
-                                        <input type="text" name="jam" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Bulan:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Pro+ Air (Liter)</label>
-                                        <input type="text" name="pro_air" class="form-control" />
+                                <div class="form-group">
+                                    <label class="control-label">Nama tambak</label>
+                                    <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Nama kolam</label>
+                                    <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan Jam input:</label>
+                                    <div class=" mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active">
+                                        </flat-pickr>
                                     </div>
                                 </div>
 
-                                <div class="wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Pro+ Oral (ml)</label>
-                                        <input type="text" name="pro_oral" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Mineral (Kg)</label>
-                                        <input type="text" name="mineral" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Keterangan</label>
-                                        <input type="text" name="keterangan" class="form-control" />
-                                    </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pro+ Air (Liter)</label>
+                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pro+ Oral (ml)</label>
+                                    <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Mineral (Kg)</label>
+                                    <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Keterangan</label>
+                                    <input type="text" name="keterangan" class="form-control"
+                                        placeholder="Beri Keterangan" />
                                 </div>
                             </div>
-
-
                             <input type="submit" value="Submit" class="btn mt-3" />
                         </form>
                     </div>
@@ -107,8 +112,44 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const options1 = ref(['Probio', 'Lodan', 'Lodak', 'Tionat']);
 const inputs = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options2 = ref(['Pro1', 'AquXit', 'Quickpro', 'Shrimp Gold']);
+const inputs2 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options3 = ref(['Improvium', 'Premix Aquavita', 'Bio Max', 'Vrisda']);
+const inputs3 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options4 = ref(['Tambak a', 'Tambak b', 'Tambak c', 'Tambak d', 'Tambak e', 'Tambak f']);
+const inputs4 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options5 = ref(['Kolam B1', 'Kolam B2', 'Kolam B3', 'Kolam B4', 'Kolam B5', 'Kolam B6']);
+const inputs5 = ref({
     input1: [],
     input2: [],
     input3: [],

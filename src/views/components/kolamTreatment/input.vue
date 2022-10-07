@@ -43,12 +43,7 @@
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Jam</label>
-                                    <input type="text" name="jam" class="form-control"
-                                        placeholder="Masukkan jam input" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Bulan:</label>
+                                    <label class="control-label">Tanggal dan Jam input:</label>
                                     <div class=" mb-0">
                                         <flat-pickr v-model="date1" class="form-control flatpickr active">
                                         </flat-pickr>
@@ -117,7 +112,7 @@ const toggleCode = (name) => {
     }
 };
 
-const options1 = ref(['TIP', 'BIO', 'MOL', 'Vit B']);
+const options1 = ref(['Probio', 'Lodan', 'Lodak', 'Tionat']);
 const inputs = ref({
     input1: [],
     input2: [],
@@ -126,7 +121,7 @@ const inputs = ref({
     input5: [],
 });
 
-const options2 = ref(['Vit C', 'Bioez', 'bp', 'Bio']);
+const options2 = ref(['Pro1', 'AquXit', 'Quickpro', 'Shrimp Gold']);
 const inputs2 = ref({
     input1: [],
     input2: [],
@@ -135,7 +130,7 @@ const inputs2 = ref({
     input5: [],
 });
 
-const options3 = ref(['K_P', 'Gpg', 'Azo', 'Tio', 'Agz', 'Quick']);
+const options3 = ref(['Improvium', 'Premix Aquavita', 'Bio Max', 'Vrisda']);
 const inputs3 = ref({
     input1: [],
     input2: [],
