@@ -197,9 +197,6 @@ const inputs8 = ref({
     input3: [],
 });
 
-const kolam = ref(['Kolam b1', 'Kolam b2']);
-const tambak = ref(['Tambak b1', 'Tambak b2']);
-
 const change_file = (event) => {
     selected_file.value = URL.createObjectURL(event.target.files[0]);
 };
