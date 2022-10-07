@@ -27,8 +27,8 @@
                     </div>
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
-                        <div class="box-wrap">
-                            <div class="form-group">
+                            <div class="box-wrap">
+                                <div class="form-group">
                                     <label class="control-label">Upload Gambar</label>
                                     <div class="custom-file-container">
                                         <div class="invoice-logo">
@@ -128,23 +128,19 @@
                                         </div>
                                     </div>
                                 </div>
-                        </div>
+                            </div>
                             <div class="box-wrap">
                                 <div class="form-group">
                                     <label class="control-label">Id Kontent</label>
                                     <input type="number" name="id_kontent" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Tanggal Input</label>
+                                    <label class="control-label">Tanggal dan Jam Input</label>
                                     <div class="form-group mb-0">
-                                        <flat-pickr v-model="date1" name="tanggal_input"
+                                        <flat-pickr v-model="date2"
+                                            :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"
                                             class="form-control flatpickr active"></flat-pickr>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Jam Input</label>
-                                    <input type="text" name="jam" class="form-control"
-                                        placeholder="Masukkan jam input" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Kategori</label>
@@ -171,7 +167,7 @@
                                     <input type="number" name="luas_kolam" class="form-control"
                                         placeholder="Masukkan No. of view" />
                                 </div>
-                                
+
 
 
                                 <div class="form-group">

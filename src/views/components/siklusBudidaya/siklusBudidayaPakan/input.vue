@@ -36,8 +36,10 @@
                                 <div class="form-group">
                                     <label class="control-label">Tanggal dan jam input</label>
                                     <div class=" mb-0">
-                                    <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
-                                </div>
+                                        <flat-pickr v-model="date2"
+                                            :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"
+                                            class="form-control flatpickr active"></flat-pickr>
+                                    </div>
 
                                 </div>
                                 <div class="form-group">

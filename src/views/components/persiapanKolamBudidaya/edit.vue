@@ -36,10 +36,11 @@
                                         </multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Tanggal:</label>
-                                        <div class="form-group mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active">
-                                            </flat-pickr>
+                                        <label class="control-label">Tanggal dan Jam Input:</label>
+                                        <div class=" mb-0">
+                                            <flat-pickr v-model="date2"
+                                                :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"
+                                                class="form-control flatpickr active"></flat-pickr>
                                         </div>
                                     </div>
                                 </div>
