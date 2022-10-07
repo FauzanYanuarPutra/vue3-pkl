@@ -110,7 +110,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'rataan', 'umur_benur' ,'actions']);
+    const columns = ref(['no', 'nama_tambak', 'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'umur_benur' ,'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -125,7 +125,7 @@
             limit: 'Results:',
         },
         sortable: [
-            'nama_tambak',  'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'rataan', 'umur_benur'
+            'nama_tambak',  'asal_benur', 'scoring_benur', 'periode_siklus_ke', 'umur_benur'
         ],
         sortIcon: {
             base: 'sort-icon-none',
