@@ -157,6 +157,11 @@ const routes = [
         name: 'manage-pakan-edit',
         component: () => import('../views/components/manage/managePakan/edit.vue'),
     },
+    {
+        path: '/manage-pakan/scoring',
+        name: 'manage-pakan-scoring',
+        component: () => import('../views/components/manage/managePakan/scoring.vue'),
+    },
 
     // manage alat
     {

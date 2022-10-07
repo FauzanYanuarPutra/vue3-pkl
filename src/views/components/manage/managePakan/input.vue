@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pakan</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Input Pakan</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -29,13 +29,13 @@
                             <div class="box-wrap">
                                 <div class="form-group">
                                     <label class="control-label">Nama Tambak:</label>
-                                    <multiselect v-model="inputs['input2']" :options="options2" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tanggal dan Jam Input:</label>
                                     <div class="mb-0">
-                                        <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
+                                        <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -54,8 +54,8 @@
                                 <div class="form-group">
                                     <label class="control-label">Asal Pakan:</label>
                                     <multiselect
-                                        v-model="inputs['input3']"
-                                        :options="options3"
+                                        v-model="inputs['input2']"
+                                        :options="options2"
                                         :searchable="true"
                                         placeholder="Choose..."
                                         selected-label=""
@@ -94,10 +94,10 @@
                                     <input type="number" name="total_biomana" class="form-control" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Jenis Butiran:</label>
+                                    <label class="control-label">Status:</label>
                                     <multiselect
-                                        v-model="inputs['input3']"
-                                        :options="options3"
+                                        v-model="inputs['input4']"
+                                        :options="options4"
                                         :searchable="true"
                                         placeholder="Choose..."
                                         selected-label=""
@@ -180,8 +180,8 @@
         input4: [],
         input5: [],
     });
-    const options2 = ref(['Kolam B1', 'Kolam B2']);
-    const options3 = ref(['Parsial', 'Full']);
+    const options2 = ref(['Indonesi']);
+    const options3 = ref(['Mesh (tepung)', 'Crumble (granula)', 'Pelet']);
     const options4 = ref(['Aktiv', 'Tidak aktiv']);
 
     const code_arr = ref([]);
