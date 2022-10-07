@@ -74,7 +74,7 @@
                                         placeholder="Beri Keterangan" />
                                 </div>
                             </div>
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <input type="submit" value="Simpan" class="btn mt-3" />
                         </form>
                     </div>
                 </div>
