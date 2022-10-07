@@ -41,7 +41,7 @@
                                             placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                         </multiselect>
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group w-100">
                                     <label class="control-label">Tanggal Input:</label>
                                     <div class=" mb-0">
                                         <flat-pickr v-model="date1" class="form-control flatpickr active">
@@ -130,7 +130,7 @@
                                     <label class="control-label">Hijau:</label>
                                     <input type="number" name="lama_hari" class="form-control" />
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group w-100">
                                     <label class="control-label">Nyala:</label>
                                     <input type="number" name="lama_hari" class="form-control" />
                                 </div>
@@ -356,8 +356,8 @@
                                 </div>
                             </div>
 
-                            <div class="box-wrap w-100">
-                                <div class="form-group">
+                            <div class="box-wrap ">
+                                <div class="form-group w-100">
                                     <label class="control-label">Scoring:</label>
                                     <input type="number" name="lama_hari" class="form-control" />
                                 </div>
