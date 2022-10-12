@@ -285,7 +285,7 @@ const bind_data = () => {
 
 const view_row = (item) => {
     new window.Swal({
-        title: '<i>Pengapuran</i>',
+        title: '<i>Persiapan Kolam Budidaya</i>',
         text: 'HALLO',
         html:`
             <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.nama_tambak}</h6>

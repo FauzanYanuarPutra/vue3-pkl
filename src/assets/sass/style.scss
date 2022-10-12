@@ -2107,11 +2107,21 @@
 
 .btn {
     background-color: #1695DC;
+
     color: white;
     .mt-3 {
         padding:20px
     }
+    
 }
+
+.btn-submit{
+    background-color: #1695DC;
+    }
+    .btn-kembali {
+    background-color: rgb(210, 63, 63);
+
+    }
 
 .btn:hover {
     background-color: white;
@@ -2158,6 +2168,13 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     font-size: calc(1vh + 0.3em);
 }
 
+.submit {
+    display: flex;
+    justify-content: end;
+    input {
+        margin: 0px 6px;
+    }
+}
 
 
 

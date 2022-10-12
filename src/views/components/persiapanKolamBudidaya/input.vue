@@ -287,8 +287,11 @@
                             </div>
 
 
-
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <input type="submit" value="Kembali" class="btn btn-kembali mt-3" />
+                            </div>
+                        
                         </form>
                     </div>
                 </div>
