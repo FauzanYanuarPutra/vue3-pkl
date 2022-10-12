@@ -34,7 +34,7 @@
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -164,7 +164,16 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Benur</i>',
         text: 'HALLO',
-        html: '<p><b>Scoring</b> : ' + item.scoring + '</p>',
+        html: `
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Scoring</b></td>
+                                            <td aria-colindex="2" role="cell">${item.scoring}</td>
+                                        </tr>
+                                    </tbody>
+            </table>    
+        `,
         // '<p><b>Min</b> : ' + item.min + '</p>'+
         // '<p><b>Max</b> : ' + item.max + '</p>'
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+

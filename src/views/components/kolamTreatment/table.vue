@@ -227,25 +227,35 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Kolam Treament</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Nama Kolam</b> : ' +
-            item.nama_kolam +
-            '</p>' +
-            '<p><b>Tanggal</b> : ' +
-            item.tanggal_input +
-            '</p>' +
-            '<p><b>Pro+ Air (Liter)</b> : ' +
-            item.pro_air +
-            '</p>' +
-            '<p><b>Pro+ Oral (ml)</b> : ' +
-            item.pro_oral +
-            '</p>' +
-            '<p><b>Mineral (Kg)</b> : ' +
-            item.mineral_kg +
-            '</p>' +
-            '<p><b>Keterangan</b> : ' +
-            item.keterangan +
-            '</p>',
+        html: `
+            <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.nama_tambak}</h6>
+            <h6 class="judul-detail"><b>Nama Kolam</b> : ${item.nama_kolam}</h6> 
+
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal dan Jam Input</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tanggal_input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pro+ Air (Liter)</b></td>
+                                            <td aria-colindex="2" role="cell">${item.pro_air}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pro+ Oral (ml)</b></td>
+                                            <td aria-colindex="2" role="cell">${item.pro_oral}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Mineral (Kg)</b></td>
+                                            <td aria-colindex="2" role="cell">${item.mineral_kg}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Keterangan </b></td>
+                                            <td aria-colindex="2" role="cell">${item.keterangan}</td>
+                                        </tr>
+                                    </tbody>
+            </table>    
+        `,
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
