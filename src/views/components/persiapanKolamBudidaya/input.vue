@@ -289,7 +289,7 @@
 
                             <div class="submit">
                                 <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
-                                <input type="submit" value="Kembali" class="btn btn-kembali mt-3" />
+                                <router-link to="/persiapan-kolam-budidaya" @click="toggleMobileMenu" class="btn btn-kembali mt-3" >Kembali</router-link>
                             </div>
                         
                         </form>
