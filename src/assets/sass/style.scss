@@ -2150,6 +2150,14 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
        
 }
 
+.judul-detail {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-bottom: 10px;
+    font-size: calc(1vh + 0.3em);
+}
+
 
 
 

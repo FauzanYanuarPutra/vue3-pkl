@@ -287,19 +287,51 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Pengapuran</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Nama Kolam</b> : ' +
-            item.nama_kolam +
-            '</p>' +
-            '<p><b>pengeringan_dasar_tambak</b> : ' +
-            item.pengeringan_dasar_tambak +
-            '</p>' +
-            '<p><b>Pemakaian kapur</b> : ' +
-            item.pembuangan_sendimen_organik +
-            '</p>' +
-            '<p><b>sterilisasi_tambak</b> : ' +
-            item.sterilisasi_tambak +
-            '</p>',
+        html:`
+            <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.nama_tambak}</h6>
+            <h6 class="judul-detail"><b>Nama Kolam</b> : ${item.nama_kolam}</h6> 
+
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pengeringan Dasar Tambak</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pengeringan_dasar_tambak }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pembuangan Sendimen Organik</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pembuangan_sendimen_organik }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Sterilisasi Tambak </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.sterilisasi_tambak }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pengisian Air Dan Sterilisasi Air Tambak </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pengisian_air_dan_sterilisasi_air_tambak }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pengapuran </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pengapuran }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pemupukan Dan Pemberian Mineral </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pemupukan_dan_pemberian_mineral }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pertumbuhan Plankton </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pertumbuhan_plankton }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pertumbuhan Patogen Atau Yang Merugikan </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.pertumbuhan_patogen_atau_yang_merugikan }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Probiotik </b></td>
+                                            <td aria-colindex="2" role="cell">${ item.probiotik }</td>
+                                        </tr>
+                                    </tbody>
+            </table>    
+        `,
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
