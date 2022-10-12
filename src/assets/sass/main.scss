@@ -2438,8 +2438,8 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
     cursor: not-allowed;
-    background-color: #f1f2f3 !important;
-    color: #bfc9d4;
+    background-color: white !important;
+    color: black;
 }
 
 .help-block,
