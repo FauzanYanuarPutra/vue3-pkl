@@ -353,10 +353,11 @@ const view_row = (item) => {
         // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
         // DIAKHIR TIDAK MENGGUNAKAN tanda +
         showCloseButton: true,
-        focusConfirm: false,
+        focusConfirm: true,
         confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
+        confirmButtonClass: 'd-none',
 
         padding: '2em',
     });
