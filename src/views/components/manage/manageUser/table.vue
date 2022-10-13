@@ -117,7 +117,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-end ' },
+        columnsClasses: { actions: 'actions text-center ', no: 'text-end ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-center ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -173,8 +173,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 2,
@@ -194,8 +194,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 3,
@@ -215,8 +215,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 4,
@@ -236,8 +236,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 5,
@@ -257,8 +257,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 6,
@@ -278,8 +278,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 7,
@@ -299,8 +299,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 8,
@@ -320,8 +320,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 9,
@@ -341,8 +341,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
             {
                 id: 10,
@@ -362,8 +362,8 @@
                 team_tambak: 'null',
                 supervisor: 'null',
                 tambak: 'Tambak udang',
-                access_right: 'null',
-                akses_terakhir: 'null',
+                access_right: 'Yes',
+                akses_terakhir: '2022/01/25',
             },
         ];
     };

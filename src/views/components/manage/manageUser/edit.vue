@@ -29,6 +29,94 @@
                             <form class="form-vertical" action="#">
                                 <div class="box-wrap">
                                     <div class="form-group">
+                                        <label class="control-label">Name</label>
+                                        <input type="text" name="name" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Jabatan</label>
+                                        <multiselect
+                                            v-model="inputs['input1']"
+                                            :options="options1"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+                                </div>
+                                <div class="box-wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Email</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">@</div>
+                                            <input type="text" name="email" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Jenis kelamin</label>
+                                        <multiselect
+                                            v-model="inputs['input2']"
+                                            :options="options2"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Password</label>
+
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <svg
+                                                    @click="set_pwd_type"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="20"
+                                                    height="20"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    id="toggle-password"
+                                                    class="feather feather-eye"
+                                                >
+                                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                    <circle cx="12" cy="12" r="3"></circle>
+                                                </svg>
+                                            </div>
+                                            <input :type="pwd_type" class="form-control" placeholder="Password" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Status</label>
+                                        <multiselect
+                                            v-model="inputs['input3']"
+                                            :options="options3"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ph-number">No hp</label>
+                                        <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Alamat rumah</label>
+                                        <input type="text" name="alamat_rumah" class="form-control" />
+                                    </div>
+
+                                    <div class="form-group">
                                         <label for="fullName">Photo</label>
                                         <div class="invoice-detail-title">
                                             <div class="invoice-logo">
@@ -69,79 +157,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="box-wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Name</label>
-                                        <input type="text" name="name" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Jabatan</label>
-                                        <multiselect
-                                            v-model="inputs['input1']"
-                                            :options="options1"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="ph-number">No hp</label>
-                                        <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="" />
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Password</label>
-                                        <input type="password" class="form-control" id="sPassword" placeholder="Password" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Email</label>
-                                        <div class="input-group">
-                                            <div class="input-group-text">@</div>
-                                            <input type="text" name="email" class="form-control" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Tgl lahir:</label>
-                                        <div class="mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Jenis kelamin</label>
-                                        <multiselect
-                                            v-model="inputs['input2']"
-                                            :options="options2"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Status</label>
-                                        <multiselect
-                                            v-model="inputs['input3']"
-                                            :options="options3"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Alamat rumah</label>
-                                        <input type="text" name="alamat_rumah" class="form-control" />
-                                    </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Tanggal bergabung:</label>
@@ -149,18 +164,14 @@
                                             <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
                                         </div>
                                     </div>
-
+                                </div>
+                                <div class="box-wrap">
+                                    <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-3 mb-2"></h6>
                                     <div class="form-group">
-                                        <label class="control-label">Status</label>
-                                        <multiselect
-                                            v-model="inputs['input4']"
-                                            :options="options4"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
+                                        <label class="control-label">Access right:</label>
+                                        <div class="mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Team tambak</label>
@@ -175,10 +186,16 @@
                                         ></multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Access right:</label>
-                                        <div class="mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
-                                        </div>
+                                        <label class="control-label">Status</label>
+                                        <multiselect
+                                            v-model="inputs['input4']"
+                                            :options="options4"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
                                     </div>
                                 </div>
 
@@ -210,6 +227,15 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'File Upload' });
 
+    const pwd_type = ref('password');
+
+    const set_pwd_type = () => {
+        if (pwd_type.value === 'password') {
+            pwd_type.value = 'text';
+        } else {
+            pwd_type.value = 'password';
+        }
+    };
     const code_arr = ref([]);
     const selected_file = ref(null);
 
