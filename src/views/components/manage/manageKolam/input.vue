@@ -62,37 +62,35 @@
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
-                                <div class="form-group">
+                                <div id="pembungkus_nama" class="form-group">
                                     <strong><label class="control-label">Pilih Kincir</label></strong>
                                     <div class="multiple-input">
-                                        <multiselect v-model="inputs3['input3']" :options="options3" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                        <input type="text" name="jumlah" class="form-control"
-                                            placeholder="Jumlah Kincir" />
+                                        <input type="text" name="nama_kincir" class="form-control" id="nama_0"
+                                            placeholder="Nama Kincir">
+                                        <input type="number" name="jumlah_kincir" class="form-control" id="nama_0"
+                                            placeholder="Jumlah Kincir">
+                                        <buttom class="btn btn-primary" onclick="increment()">Tambah</buttom>
                                     </div>
 
                                 </div>
-                                <div class="form-group">
+                                <div id="pembungkus_nama1" class="form-group">
                                     <strong><label class="control-label">Pilih Pompa</label></strong>
                                     <div class="multiple-input">
-
-                                        <multiselect v-model="inputs4['input3']" :options="options4" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                        <input type="text" name="jumlah" class="form-control"
+                                        <input type="text" name="nama_pompa" class="form-control"
+                                            placeholder="Nama Pompa" />
+                                        <input type="text" name="jumlah_pompa" class="form-control"
                                             placeholder="Jumlah Pompa" />
+                                        <buttom class="btn btn-primary" onclick="increment1()">Tambah</buttom>
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div id="pembungkus_nama2" class="form-group">
                                     <strong><label class="control-label">Pilih Auto Feeder</label></strong>
                                     <div class="multiple-input">
-
-                                        <multiselect v-model="inputs5['input3']" :options="options5" :searchable="true"
-                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                        </multiselect>
-                                        <input type="text" name="jumlah" class="form-control"
+                                        <input type="text" name="nama_autofeeder" class="form-control"
+                                            placeholder="Nama Auto Feeder" />
+                                        <input type="text" name="jumlah_autofeeder" class="form-control"
                                             placeholder="Jumlah Auto Feeder" />
+                                        <buttom class="btn btn-primary" onclick="increment2()">Tambah</buttom>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -102,8 +100,11 @@
                                     </multiselect>
                                 </div>
                             </div>
-
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-kolam" @click="toggleMobileMenu" class="btn btn-kembali mt-3">
+                                    Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -155,28 +156,7 @@ const inputs2 = ref({
     input3: [],
 });
 
-const options3 = ref(['Kincir 1', 'Kincir 2']);
-const inputs3 = ref({
-    input1: [],
-    input2: [],
-    input3: [],
-});
-
-const options4 = ref(['Pompa 1', 'Pompa 2']);
-const inputs4 = ref({
-    input1: [],
-    input2: [],
-    input3: [],
-});
-
-const options5 = ref(['Auto Feeder 1', 'Auto Feeder 2']);
-const inputs5 = ref({
-    input1: [],
-    input2: [],
-    input3: [],
-});
-
-const options6 = ref(['Aktive', 'Tidak Aktive']);
+const options6 = ref(['Aktif', 'Tidak Aktif']);
 const inputs6 = ref({
     input1: [],
     input2: [],

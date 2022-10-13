@@ -16,4 +16,94 @@
         <div id="app"></div>
         <!-- built files will be auto injected -->
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var index = 0;
+
+		function increment(){
+			
+			var pembungkus = $("#pembungkus_nama");
+			var total_baris = 20;
+
+			if(this.index < total_baris){
+
+				index++;
+
+				var tambah_form = '<div id="hapus_baris_'+ index +'">'
+                                    +'<br><div class="multiple-input"><input type="text" name="nama_kincir" class="form-control" id="nama_'+index+'" placeholder="Nama Kincir"><input type="text" name="jumlah_kincir" class="form-control" id="nama_'+index+'" placeholder="Jumlah Kincir"><buttom class="btn btn-primary" onclick="decrement('+index+')">Hapus</buttom></div>';
+
+				$(pembungkus).append(tambah_form);
+			}
+		}
+
+		function decrement(index){
+
+			var konfirmasi = true;
+			if (konfirmasi) {
+				$("#hapus_baris_"+index).remove();
+			}else{
+				return;
+			}
+
+			
+		}
+
+        function increment1(){
+			
+			var pembungkus = $("#pembungkus_nama1");
+			var total_baris = 20;
+
+			if(this.index < total_baris){
+
+				index++;
+
+				var tambah_form = '<div id="hapus_baris_'+ index +'">'
+                                    +'<br><div class="multiple-input"><input type="text" name="nama_pompa" class="form-control" id="nama_'+index+'" placeholder="Nama Pompa"/><input type="text" name="nama_pompa" class="form-control" id="nama_'+index+'" placeholder="Jumlah Pompa"/><buttom class="btn btn-primary" onclick="decrement1('+index+')">Hapus</buttom></div>';
+
+				$(pembungkus).append(tambah_form);
+			}
+		}
+
+		function decrement1(index){
+
+			var konfirmasi = true;
+			if (konfirmasi) {
+				$("#hapus_baris_"+index).remove();
+			}else{
+				return;
+			}
+
+			
+		}
+
+        function increment2(){
+			
+			var pembungkus = $("#pembungkus_nama2");
+			var total_baris = 20;
+
+			if(this.index < total_baris){
+
+				index++;
+
+				var tambah_form = '<div id="hapus_baris_'+ index +'">'
+                                    +'<br><div class="multiple-input"><input type="text" name="nama_autofeeder" class="form-control" id="nama_'+index+'" placeholder="Nama Auto Feeder"/><input type="text" name="jumlah_autofeeder" class="form-control" id="nama_'+index+'" placeholder="Jumlah Auto Feeder"/><buttom class="btn btn-primary" onclick="decrement2('+index+')">Hapus</buttom></div>';
+
+				$(pembungkus).append(tambah_form);
+			}
+		}
+
+		function decrement2(index){
+
+			var konfirmasi = true;
+			if (konfirmasi) {
+				$("#hapus_baris_"+index).remove();
+			}else{
+				return;
+			}
+
+			
+		}
+
+	</script>
 </html>

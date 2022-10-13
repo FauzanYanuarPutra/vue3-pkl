@@ -90,7 +90,7 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'nama_tambak', 'nama_kolam', 'tipe_kolam', 'luas_kolam(M2)', 'tinggi_kolam(M)', 'jenis_kolam', 'status', 'actions']);
+const columns = ref(['no', 'tambak', 'kolam', 'tipe_kolam', 'luas_kolam(M2)', 'tinggi_kolam(M)', 'jenis_kolam', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
@@ -104,7 +104,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['id_tambak', 'nama_tambak', 'id_kolam', 'nama_kolam', 'tipe_kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_kolam', 'pilih_kincir', 'pilih_pompa', 'pilih_auto_feeder', 'status'],
+    sortable: ['id_tambak', 'tambak', 'id_kolam', 'kolam', 'tipe_kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_kolam', 'nama_kincir', 'nama_pompa', 'nama_autofeeder', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -124,151 +124,181 @@ const bind_data = () => {
             id: 1,
             id_tambak: '12',
             id_kolam: 'null',
-            nama_tambak: 'Tambak a',
-            nama_kolam: 'Kolam B1',
+            tambak: 'Tambak a',
+            kolam: 'Kolam B1',
             tipe_kolam: 'Treatment',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Beton',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 2,
             id_tambak: '14',
             id_kolam: 'null',
-            nama_tambak: 'Tambak b',
-            nama_kolam: 'Kolam B2',
+            tambak: 'Tambak b',
+            kolam: 'Kolam B2',
             tipe_kolam: 'Treatment',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Beton',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 3,
             id_tambak: '18',
             id_kolam: 'null',
-            nama_tambak: 'Tambak c',
-            nama_kolam: 'Kolam B3',
+            tambak: 'Tambak c',
+            kolam: 'Kolam B3',
             tipe_kolam: 'Treatment',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Beton',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 4,
             id_tambak: '15',
             id_kolam: 'null',
-            nama_tambak: 'Tambak d',
-            nama_kolam: 'Kolam B4',
+            tambak: 'Tambak d',
+            kolam: 'Kolam B4',
             tipe_kolam: 'Treatment',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Beton',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Tidak Aktif',
         },
         {
             id: 5,
             id_tambak: '16',
             id_kolam: 'null',
-            nama_tambak: 'Tambak e',
-            nama_kolam: 'Kolam B5',
+            tambak: 'Tambak e',
+            kolam: 'Kolam B5',
             tipe_kolam: 'Treatment',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Beton',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Tidak Aktif',
         },
         {
             id: 6,
             id_tambak: '4',
             id_kolam: 'null',
-            nama_tambak: 'Tambak f',
-            nama_kolam: 'Kolam B6',
+            tambak: 'Tambak f',
+            kolam: 'Kolam B6',
             tipe_kolam: 'Tandon',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'HDPE',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 7,
             id_tambak: '9',
             id_kolam: 'null',
-            nama_tambak: 'Tambak g',
-            nama_kolam: 'Kolam B7',
+            tambak: 'Tambak g',
+            kolam: 'Kolam B7',
             tipe_kolam: 'Budidaya',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Tanah',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 8,
             id_tambak: '2',
             id_kolam: 'null',
-            nama_tambak: 'Tambak h',
-            nama_kolam: 'Kolam B8',
+            tambak: 'Tambak h',
+            kolam: 'Kolam B8',
             tipe_kolam: 'Budidaya',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Tanah',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Tidak Aktif',
         },
         {
             id: 9,
             id_tambak: '21',
             id_kolam: 'null',
-            nama_tambak: 'Tambak i',
-            nama_kolam: 'Kolam B9',
+            tambak: 'Tambak i',
+            kolam: 'Kolam B9',
             tipe_kolam: 'Budidaya',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Tanah',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
         {
             id: 10,
             id_tambak: '10',
             id_kolam: 'null',
-            nama_tambak: 'Tambak j',
-            nama_kolam: 'Kolam B10',
+            tambak: 'Tambak j',
+            kolam: 'Kolam B10',
             tipe_kolam: 'Budidaya',
             'luas_kolam(M2)': '52',
             'tinggi_kolam(M)': '25',
             jenis_kolam: 'Tanah',
-            pilih_kincir: 'null',
-            pilih_pompa: 'null',
-            pilih_auto_feeder: 'null',
-            status: 'active',
+            nama_kincir: 'null',
+            jumlah_kincir: 'null',
+            nama_pompa: 'null',
+            jumlah_pompa: 'null',
+            nama_autofeeder: 'null',
+            jumlah_autofeeder: 'null',
+            status: 'Aktif',
         },
     ];
 };
@@ -277,37 +307,74 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Manage Kolam</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Nama Tambak</b> : ' +
-            item.id_tambak +
-            '</p>' +
-            '<p><b>Nama Kolam</b> : ' +
-            item.nama_kolam +
-            '</p>' +
-            '<p><b>Tipe Kolam</b> : ' +
-            item.tipe_kolam +
-            '</p>' +
-            '<p><b>Luas kolam (meter persegi)</b> : ' +
-            item.luas_kolam +
-            '</p>' +
-            '<p><b>Tinggi kolam (meter)</b> : ' +
-            item.tinggi_kolam +
-            '</p>' +
-            '<p><b>Jenis kolam</b> : ' +
-            item.jenis_kolam +
-            '</p>' +
-            '<p><b>Pilih kincir</b> : ' +
-            item.pilih_kincir +
-            '</p>' +
-            '<p><b>Pilih pompa</b> : ' +
-            item.pilih_pompa +
-            '</p>' +
-            '<p><b>Pilih auto feeder</b> : ' +
-            item.pilih_auto_feeder +
-            '</p>' +
-            '<p><b>Status</b> : ' +
-            item.status +
-            '</p>',
+        html: `
+            <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.tambak}</h6>
+            <h6 class="judul-detail"><b>Nama Kolam</b> : ${item.kolam}</h6> 
+
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tipe Kolam</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tipe_kolam}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Luas kolam (meter persegi)</b></td>
+                                            <td aria-colindex="2" role="cell">${item.luas_kolam}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tinggi kolam (meter)</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tinggi_kolam}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jenis Kolam</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jenis_kolam}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td aria-colindex="2" role="cell">${item.status}</td>
+                                        </tr>
+                                    </tbody>
+            </table>    
+            <h6 class="judul-detail"><b>Kincir</b></h6> 
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                <tbody role="rowgroup">
+                    <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Nama Kincir</b></td>
+                                            <td aria-colindex="2" role="cell">${item.nama_kincir}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jumlah Kincir</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jumlah_kincir}</td>
+                                        </tr>
+                    </tbody>
+                </table>
+                <h6 class="judul-detail"><b>Pompa</b></h6> 
+                <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                <tbody role="rowgroup">
+                    <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Nama Pompa</b></td>
+                                            <td aria-colindex="2" role="cell">${item.nama_pompa}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jumlah Pompa</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jumlah_pompa}</td>
+                                        </tr>
+                    </tbody>
+                </table>
+                <h6 class="judul-detail"><b>Auto Feeder</b></h6> 
+                <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                <tbody role="rowgroup">
+                    <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Nama Auto Feeder</b></td>
+                                            <td aria-colindex="2" role="cell">${item.nama_autofeeder}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jumlah Auto Feeder</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jumlah_autofeeder}</td>
+                                        </tr>
+                    </tbody>
+                </table>
+        `,
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
