@@ -31,7 +31,7 @@
                         </div>
     
                                 
-                        <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <v-client-table :data="items" :columns="columns" :options="table_option"   >
                             <template #no="props" v-for="index in items" >
                                 {{ props.index }}
                             </template>
@@ -50,7 +50,7 @@
                                         </div>
                                     </div>
                                     <div class="mx-2">
-                                        <router-link to="/persiapan-kolam-budidaya/edit" data-bs-toggle="tooltip" title="Edit">
+                                        <router-link to="/persiapan-kolam-budidaya/create" data-bs-toggle="tooltip" title="Edit">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
@@ -126,7 +126,7 @@ onMounted(() => {
 const bind_data = () => {
     items.value = [
         {
-            ID: 1,
+            id: 1,
             nama_tambak: 'Tambak b1',
             nama_kolam: 'Kolam b1',
             pengeringan_dasar_tambak: '✓',
@@ -140,7 +140,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 2,
+            id: 2,
             nama_tambak: 'Tambak b2',
             nama_kolam: 'Kolam b2',
             pengeringan_dasar_tambak: '✓',
@@ -154,7 +154,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 3,
+            id: 3,
             nama_tambak: 'Tambak b3',
             nama_kolam: 'Kolam b3',
             pengeringan_dasar_tambak: '✓',
@@ -168,7 +168,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 4,
+            id: 4,
             nama_tambak: 'Tambak b4',
             nama_kolam: 'Kolam b4',
             pengeringan_dasar_tambak: '✓',
@@ -182,7 +182,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 5,
+            id: 5,
             nama_tambak: 'Tambak b5',
             nama_kolam: 'Kolam b5',
             pengeringan_dasar_tambak: '✓',
@@ -196,7 +196,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 6,
+            id: 6,
             nama_tambak: 'Tambak b6',
             nama_kolam: 'Kolam b6',
             pengeringan_dasar_tambak: '✓',
@@ -210,7 +210,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 7,
+            id: 7,
             nama_tambak: 'Tambak b7',
             nama_kolam: 'Kolam b7',
             pengeringan_dasar_tambak: '✓',
@@ -224,7 +224,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 8,
+            id: 8,
             nama_tambak: 'Tambak b8',
             nama_kolam: 'Kolam b8',
             pengeringan_dasar_tambak: '✓',
@@ -238,7 +238,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 9,
+            id: 9,
             nama_tambak: 'Tambak b9',
             nama_kolam: 'Kolam b9',
             pengeringan_dasar_tambak: '✓',
@@ -252,7 +252,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 10,
+            id: 10,
             nama_tambak: 'Tambak b10',
             nama_kolam: 'Kolam b10',
             pengeringan_dasar_tambak: '✓',
@@ -266,7 +266,7 @@ const bind_data = () => {
             probiotik: '✓',
         },
         {
-            ID: 11,
+            id: 11,
             nama_tambak: 'Tambak b9',
             nama_kolam: 'Kolam b9',
             pengeringan_dasar_tambak: '✓',

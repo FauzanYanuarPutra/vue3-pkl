@@ -424,8 +424,8 @@ const routes = [
         component: () => import('../views/components/persiapanKolamBudidaya/input.vue'),
     },
     {
-        path: '/persiapan-kolam-budidaya/edit',
-        name: 'persiapan-kolam-budidaya-edit',
+        path: '/persiapan-kolam-budidaya/:id/edit',
+        name: 'PersiapanKolamBudidaya-edit',
         component: () => import('../views/components/persiapanKolamBudidaya/edit.vue'),
     },
 
