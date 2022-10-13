@@ -29,13 +29,13 @@
                             <router-link to="/manage-alat/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                        <template #no="props" v-for="index in items" >
+                            <template #no="props" v-for="index in items">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -109,7 +109,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli','actions']);
+    const columns = ref(['no', 'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'actions']);
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
@@ -121,9 +121,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: [
-            'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'status',
-        ],
+        sortable: ['nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
