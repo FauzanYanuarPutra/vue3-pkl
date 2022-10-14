@@ -180,7 +180,7 @@ const toggleCode = (name) => {
 };
 
 const tambak = ref(['Tambak b1', 'Tambak b2']);
-const status = ref(['aktive', 'tidak aktive']);
+const status = ref(['Aktike', 'Tidak']);
 
 
 

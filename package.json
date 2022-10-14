@@ -8,6 +8,7 @@
         "build": "vue-cli-service build"
     },
     "dependencies": {
+        "@fawmi/vue-google-maps": "^0.9.79",
         "@fortawesome/fontawesome-svg-core": "^6.2.0",
         "@fortawesome/free-brands-svg-icons": "^6.2.0",
         "@fortawesome/free-regular-svg-icons": "^6.2.0",
@@ -44,6 +45,7 @@
         "vue-router": "^4.0.3",
         "vue-sweetalert": "^0.1.18",
         "vue-sweetalert2": "^5.0.5",
+        "vue2-google-maps": "^0.10.7",
         "vue3-apexcharts": "^1.4.1",
         "vue3-form-wizard": "^0.0.4",
         "vue3-google-map": "^0.11.0",

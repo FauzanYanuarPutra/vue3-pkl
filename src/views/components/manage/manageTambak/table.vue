@@ -122,137 +122,126 @@ const bind_data = () => {
         {
             id: 1,
             nama_tambak: 'Tambak a',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Banda Aceh',
+            provinsi: 'Naggroe Aceh Darussalam',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 2,
             nama_tambak: 'Tambak b',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Medan',
+            provinsi: 'Sumatera Utara',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 3,
             nama_tambak: 'Tambak c',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Palembang',
+            provinsi: 'Sumatera Selatan',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 4,
             nama_tambak: 'Tambak d',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Padang',
+            provinsi: 'Sumatera Barat',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 5,
             nama_tambak: 'Tambak e',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Bengkulu',
+            provinsi: 'Bengkulu',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 6,
             nama_tambak: 'Tambak f',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Pekan Baru',
+            provinsi: 'Riau',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Tidak',
         },
         {
             id: 7,
             nama_tambak: 'Tambak g',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Tanjung Pinang',
+            provinsi: 'Kepulauan Riau',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 8,
             nama_tambak: 'Tambak h',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Jambi',
+            provinsi: 'Jambi',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 9,
             nama_tambak: 'Tambak i',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Bandar Lampung',
+            provinsi: 'Lampung',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 10,
             nama_tambak: 'Tambak j',
-            nama_area: 'null',
-            provinsi: 'Jawa Barat',
+            nama_area: 'Pangkal Pinang',
+            provinsi: 'Bangka Belitung',
             map_location: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
     ];
 };
 
 const view_row = (item) => {
     new window.Swal({
-        title: '<i>Manage Tambak</i>',
+        title: '<i>Persiapan Kolam Budidaya</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Nama Tambak</b> : ' +
-            item.nama_tambak +
-            '</p>' +
-            '<p><b>Alamat</b> : ' +
-            item.alamat +
-            '</p>' +
-            '<p><b>Nama Area</b> : ' +
-            item.nama_area +
-            '</p>' +
-            '<p><b>Provinsi</b> : ' +
-            item.provinsi +
-            '</p>' +
-            '<p><b>Photo</b> : ' +
-            item.photo +
-            '</p>' +
-            '<p><b>Google map location</b> : ' +
-            item.map_location +
-            '</p>' +
-            '<p><b>Status</b> : ' +
-            item.status +
-            '</p>',
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'
-        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        html:`
+            <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.nama_tambak}</h6>
+            <h6 class="judul-detail"><b>Status</b> : ${item.status}</h6>
+
+
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
+                                    <thead role="rowgroup" class="detail-table">
+                                        <tr role="row">
+                                            <th role="columnheaderr" scope="col" aria-colindex="1" class="color-dange"><div>Nama Area</div></th>
+                                            <th role="columnheader" scope="col" aria-colindex="2"><div>Provinsi</div></th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="2" role="cell">${ item.nama_area}</td>
+                                            <td aria-colindex="2" role="cell">${item.provinsi }</td>
+                                        </tr>
+                                    </tbody>
+            </table>    
+        `,
         showCloseButton: true,
-        focusConfirm: false,
+        focusConfirm: true,
         confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
+        confirmButtonClass: 'd-none',
 
         padding: '2em',
     });
     // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
 };
 </script>
+
+<style>
+.detail-table {
+    color: black;
+}
+</style>

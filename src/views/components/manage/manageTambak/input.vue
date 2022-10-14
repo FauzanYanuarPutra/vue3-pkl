@@ -85,12 +85,20 @@
                                         <input type="text" name="provinsi" class="form-control" />
                                     </div>
 
-                                    
+                                    <div class="form-group">
+                                    <label class="control-label">Status:</label>
+                                    <multiselect v-model="inputs['input3']" :options="status" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
 
-                                    <div class="form-group w-100">
-                                        <label class="control-label">Map:</label>
-                                        <input type="text" name="map" class="form-control" />
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Google Map:</label>
+                                    <img src="/map.jpeg" alt="map" class="map">
+
                                     </div>
+
 
                                    
                             </div>
@@ -134,6 +142,8 @@
     };
 
     const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
+const status = ref(['Aktike', 'Tidak']);
+
     const inputs = ref({
         input1: [],
         input2: [],
@@ -145,4 +155,7 @@
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);
     };
-</script>
+
+
+   </script>
+

@@ -332,26 +332,6 @@ const view_row = (item) => {
                                     </tbody>
             </table>    
         `,
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-        // '<p><b>Nama</b> : ' + item.nama + '</p>'
-        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-        // DIAKHIR TIDAK MENGGUNAKAN tanda +
         showCloseButton: true,
         focusConfirm: true,
         confirmButtonColor: '#1695DC',

@@ -2202,6 +2202,19 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     }
 }
 
+.map {
+    width: 100%;
+    margin-top: -70px;
+}
+
+.table > thead > tr > th {
+    color: black;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 
 
 
