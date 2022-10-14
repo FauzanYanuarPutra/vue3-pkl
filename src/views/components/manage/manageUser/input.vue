@@ -108,7 +108,7 @@
 
                                     <div class="form-group">
                                         <label for="ph-number">No hp</label>
-                                        <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="" />
+                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="" />
                                     </div>
 
                                     <div class="form-group">
