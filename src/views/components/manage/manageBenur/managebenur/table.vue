@@ -30,7 +30,7 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                         <template #no="props" v-for="index in items" >
+                            <template #no="props" v-for="index in items">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
@@ -129,7 +129,7 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'nilai_scoring', 'actions']);
+    const columns = ref(['no', 'tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'nilai_scoring', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
@@ -143,7 +143,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)', 'nilai_scoring'],
+        sortable: ['tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)', 'nilai_scoring'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -160,7 +160,7 @@
         items.value = [
             {
                 id: 1,
-                nama_tambak: 'Tambak a',
+                tambak: 'Tambak a',
                 tanggal_input: '2022/01/25',
                 Id_benur: '1',
                 Asal_benur: 'Udang vaname',
@@ -170,17 +170,17 @@
             },
             {
                 id: 2,
-                nama_tambak: 'Tambak b',
+                tambak: 'Tambak b',
                 tanggal_input: '2022/02/26',
                 Id_benur: '2',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                'usia_benur(hari)': '18-20 ',
+                'usia_benur(hari)': '20 ',
                 nilai_scoring: 'B',
             },
             {
                 id: 3,
-                nama_tambak: 'Tambak c',
+                tambak: 'Tambak c',
                 tanggal_input: '2022/03/07',
                 Id_benur: '3',
                 Asal_benur: 'Udang vaname',
@@ -190,27 +190,27 @@
             },
             {
                 id: 4,
-                nama_tambak: 'Tambak d',
+                tambak: 'Tambak d',
                 tanggal_input: '2022/03/28',
                 Id_benur: '4',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                'usia_benur(hari)': '18-20 ',
+                'usia_benur(hari)': '18 ',
                 nilai_scoring: 'A',
             },
             {
                 id: 5,
-                nama_tambak: 'Tambak e',
+                tambak: 'Tambak e',
                 tanggal_input: '2022/04/10',
                 Id_benur: '5',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                'usia_benur(hari)': '18-20 ',
+                'usia_benur(hari)': '20 ',
                 nilai_scoring: 'C',
             },
             {
                 id: 6,
-                nama_tambak: 'Tambak f',
+                tambak: 'Tambak f',
                 tanggal_input: '2022/05/29',
                 Id_benur: '6',
                 Asal_benur: 'Udang vaname',
@@ -220,7 +220,7 @@
             },
             {
                 id: 7,
-                nama_tambak: 'Tambak g',
+                tambak: 'Tambak g',
                 tanggal_input: '2022/06/23',
                 Id_benur: '7',
                 Asal_benur: 'Udang vaname',
@@ -230,7 +230,7 @@
             },
             {
                 id: 8,
-                nama_tambak: 'Tambak h',
+                tambak: 'Tambak h',
                 tanggal_input: '2022/07/21',
                 Id_benur: '8',
                 Asal_benur: 'Udang vaname',
@@ -240,17 +240,17 @@
             },
             {
                 id: 9,
-                nama_tambak: 'Tambak i',
+                tambak: 'Tambak i',
                 tanggal_input: '2022/08/15',
                 Id_benur: '9',
                 Asal_benur: 'Udang vaname',
                 benur_batch_id: 'null',
-                'usia_benur(hari)': '18-20 ',
+                'usia_benur(hari)': '20 ',
                 nilai_scoring: 'C',
             },
             {
                 id: 10,
-                nama_tambak: 'Tambak j',
+                tambak: 'Tambak j',
                 tanggal_input: '2022/08/15',
                 Id_benur: '10',
                 Asal_benur: 'Udang vaname',
@@ -267,7 +267,7 @@
             text: 'HALLO',
             html:
                 '<p><b>Nama Tambak</b> : ' +
-                item.nama_tambak +
+                item.tambak +
                 '</p>' +
                 '<p><b>Tanggal Input</b> : ' +
                 item.tanggal_input +
