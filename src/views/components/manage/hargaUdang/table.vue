@@ -29,13 +29,13 @@
                             <router-link to="/hargaudang/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                         <template #no="props" v-for="index in items" >
+                            <template #no="props" v-for="index in items">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -115,7 +115,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no', actions: 'actions text-center', tanggal_input: 'text-center', Ukuran_udang: 'text-end', Harga: 'text-end' },
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center', tanggal_input: 'text-center', Ukuran_udang: 'text-end', Harga: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',

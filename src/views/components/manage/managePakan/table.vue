@@ -135,7 +135,15 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', Tanggal: 'text-center ', Harga_Pakan: 'text-end ', Kode_Pakan: 'text-end ', 'SR(%)': 'text-end ', Scoring: 'text-end ' },
+        columnsClasses: {
+            no: 'no text-center',
+            actions: 'actions text-center',
+            Tanggal: 'text-center ',
+            Harga_Pakan: 'text-end ',
+            Kode_Pakan: 'text-end ',
+            'SR(%)': 'text-end ',
+            Scoring: 'text-end ',
+        },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
