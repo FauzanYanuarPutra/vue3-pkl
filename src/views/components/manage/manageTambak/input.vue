@@ -98,9 +98,6 @@
                                     <img src="/map.jpeg" alt="map" class="map">
 
                                     </div>
-
-
-                                   
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />

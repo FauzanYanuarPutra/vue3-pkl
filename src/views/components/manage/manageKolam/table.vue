@@ -96,7 +96,7 @@ const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'text-end', actions: 'actions text-center', 'luas_kolam(M2)': 'text-end', 'tinggi_kolam(M)': 'text-end' },
+    columnsClasses: { no: 'no text-center', actions: 'actions text-center', 'luas_kolam(M2)': 'text-end', 'tinggi_kolam(M)': 'text-end' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
