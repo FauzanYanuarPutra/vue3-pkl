@@ -108,7 +108,7 @@
 
                                     <div class="form-group">
                                         <label for="ph-number">No hp</label>
-                                        <input type="text" id="ph-number" class="form-control" v-maska="'(##) ###-###-####'" placeholder="" />
+                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="" />
                                     </div>
 
                                     <div class="form-group">
@@ -169,9 +169,15 @@
                                     <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-3 mb-2"></h6>
                                     <div class="form-group">
                                         <label class="control-label">Access right:</label>
-                                        <div class="mb-0">
-                                            <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
-                                        </div>
+                                        <multiselect
+                                            v-model="inputs['input6']"
+                                            :options="options6"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Team tambak</label>
@@ -254,11 +260,13 @@
         input3: [],
         input4: [],
         input5: [],
+        input6: [],
     });
     const options2 = ref(['Laki Laki', 'Perempuan']);
     const options3 = ref(['Menikah', 'Belum menikah']);
-    const options4 = ref(['Aktiv', 'Tidak aktiv']);
+    const options4 = ref(['Aktif', 'Tidak aktif']);
     const options5 = ref(['Team tambak']);
+    const options6 = ref(['Yes', 'No']);
 
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);

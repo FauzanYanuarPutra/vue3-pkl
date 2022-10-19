@@ -27,41 +27,36 @@
                     <div class="panel-body">
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
-                                    <div class="form-group">
-                                        <label class="control-label">Nama Tambak:</label>
-                                        <input type="text" name="nama_tambak" class="form-control" />
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <input type="text" name="nama_tambak" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan jam iput:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Tanggal dan jam iput:</label>
-                                        <div class=" mb-0">
-                                            <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Id benur:</label>
-                                        <input type="text" name="alamat" class="form-control" />
-                                    </div>
-                                
-                                    <div class="form-group">
-                                        <label class="control-label">Asal benur:</label>
-                                        <multiselect
-                                            v-model="inputs['input1']"
-                                            :options="options1"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Benur batch id:</label>
-                                        <input type="text" name="provinsi" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">Usia benur(hari):</label>
-                                        <input type="text" name="provinsi" class="form-control" />
-                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Asal benur:</label>
+                                    <multiselect
+                                        v-model="inputs['input1']"
+                                        :options="options1"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Benur batch id:</label>
+                                    <input type="text" name="provinsi" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Usia benur(hari):</label>
+                                    <input type="number" name="provinsi" class="form-control" />
+                                </div>
                             </div>
 
                             <input type="submit" value="Submit" class="btn mt-3" />
