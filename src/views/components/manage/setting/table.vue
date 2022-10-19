@@ -29,6 +29,10 @@
                             <router-link to="/setting/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                        <template #no="props" v-for="(item, index) in items">
+                                {{ props.index }}
+                            </template>
+
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
@@ -106,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['id', 'nama', 'kategori', 'deskripsi', 'status', 'actions']);
+    const columns = ref(['no', 'id', 'nama', 'kategori', 'deskripsi', 'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center' },
+        columnsClasses: { no: 'no text-center', id: 'no text-center', actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -120,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['id', 'nama', 'kategori', 'deskripsi', 'status'],
+        sortable: ['no', 'id', 'nama', 'kategori', 'deskripsi', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -139,7 +143,7 @@
                 id: 1,
                 nama: 'Indonesia',
                 kategori: 'Leanguage',
-                deskripsi: '-',
+                deskripsi: 'asd',
                 status: '1',
             },
             {
