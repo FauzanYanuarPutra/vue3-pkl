@@ -30,10 +30,13 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
+                            <template #no="props" v-for="(item, index) in items">
+                                {{ props.index }}
+                            </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -107,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['id', 'tanggal', 'nama_kolam', 'kategori', 'judul', 'keterangan', 'status', 'actions']);
+    const columns = ref(['no', 'tanggal', 'nama_kolam', 'kategori', 'judul', 'keterangan', 'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal: 'text-center' },
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center', tanggal: 'text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -121,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['id', 'tanggal', 'nama_kolam', 'id_user', 'kategori', 'judul', 'keterangan', 'status'],
+        sortable: ['no', 'tanggal', 'nama_kolam', 'id_user', 'kategori', 'judul', 'keterangan', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
