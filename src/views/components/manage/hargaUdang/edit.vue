@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Harga Udang</h4>
+                                <h4>Edit Data Harga Udang</h4>
                             </div>
                         </div>
                     </div>
@@ -36,16 +36,19 @@
 
                                 <div class="form-group">
                                     <label class="control-label">Ukuran Udang:</label>
-                                    <input type="text" name="ukuran_udang" class="form-control" />
+                                    <input type="number" name="ukuran_udang" class="form-control" />
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Harga Udang:</label>
-                                    <input type="text" name="harga_udang" class="form-control" />
+                                    <input type="number" name="harga_udang" class="form-control" />
                                 </div>
                             </div>
 
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/harga-udang" @click="toggleMobileMenu" class="btn btn-kembali mt-3"> Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -82,15 +85,6 @@
             code_arr.value.push(name);
         }
     };
-
-    const options1 = ref(['pompa', 'Kincir', 'Auto feeder', 'Alat laboratorium dan Pengukuran']);
-    const inputs = ref({
-        input1: [],
-        input2: [],
-        input3: [],
-        input4: [],
-        input5: [],
-    });
 
     const change_file = (event) => {
         selected_file.value = URL.createObjectURL(event.target.files[0]);
