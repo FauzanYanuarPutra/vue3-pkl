@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Manage benur</h4>
+                                <h4>Tambah Data Benur</h4>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,8 @@
                             <div class="box-wrap">
                                 <div class="form-group">
                                     <label class="control-label">Nama Tambak:</label>
-                                    <input type="text" name="nama_tambak" class="form-control" />
+                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tanggal dan jam iput:</label>
@@ -40,8 +41,8 @@
                                 <div class="form-group">
                                     <label class="control-label">Asal benur:</label>
                                     <multiselect
-                                        v-model="inputs['input1']"
-                                        :options="options1"
+                                        v-model="inputs['input2']"
+                                        :options="options2"
                                         :searchable="true"
                                         placeholder="Choose..."
                                         selected-label=""
@@ -51,16 +52,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Benur batch id:</label>
-                                    <input type="text" name="provinsi" class="form-control" />
+                                    <input type="text" name="" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Usia benur(hari):</label>
-                                    <input type="number" name="provinsi" class="form-control" />
+                                    <input type="number" name="usia" class="form-control" />
                                 </div>
                             </div>
-
-                            <input type="submit" value="Submit" class="btn mt-3" />
-
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-benur" @click="toggleMobileMenu" class="btn btn-kembali mt-3"> Kembali</router-link>
+                            </div>
                             <br />
                         </form>
                     </div>
@@ -99,10 +101,12 @@
         }
     };
 
-    const options1 = ref(['#', '#']);
+    const options1 = ref(['Tambak a', 'Tambak b']);
+    const options2 = ref(['Japfa', 'Vanama']);
 
     const inputs = ref({
         input1: [],
+        input2: [],
     });
 
     const change_file = (event) => {
