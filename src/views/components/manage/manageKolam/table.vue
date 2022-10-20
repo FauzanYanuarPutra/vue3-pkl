@@ -90,13 +90,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'tambak', 'kolam', 'tipe_kolam', 'luas_kolam(M2)', 'tinggi_kolam(M)', 'jenis_kolam', 'status', 'actions']);
+const columns = ref(['no', 'tambak', 'kolam', 'tipe_Kolam', 'luas(M2)', 'tinggi(M)', 'jenis_Kolam', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'no text-center', actions: 'actions text-center', 'luas_kolam(M2)': 'text-end', 'tinggi_kolam(M)': 'text-end' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', 'luas(M2)': 'text-end', 'tinggi(M)': 'text-end' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -104,7 +104,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['id_tambak', 'tambak', 'id_kolam', 'kolam', 'tipe_kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_kolam', 'nama_kincir', 'nama_pompa', 'nama_autofeeder', 'status'],
+    sortable: ['id_tambak', 'tambak', 'id_kolam', 'kolam', 'tipe_Kolam', 'luas_kolam', 'tinggi_kolam', 'jenis_Kolam', 'nama_kincir', 'nama_pompa', 'nama_autofeeder', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -126,10 +126,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak a',
             kolam: 'Kolam B1',
-            tipe_kolam: 'Treatment',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Beton',
+            tipe_Kolam: 'Treatment',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Beton',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -144,10 +144,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak b',
             kolam: 'Kolam B2',
-            tipe_kolam: 'Treatment',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Beton',
+            tipe_Kolam: 'Treatment',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Beton',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -162,10 +162,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak c',
             kolam: 'Kolam B3',
-            tipe_kolam: 'Treatment',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Beton',
+            tipe_Kolam: 'Treatment',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Beton',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -180,10 +180,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak d',
             kolam: 'Kolam B4',
-            tipe_kolam: 'Treatment',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Beton',
+            tipe_Kolam: 'Treatment',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Beton',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -198,10 +198,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak e',
             kolam: 'Kolam B5',
-            tipe_kolam: 'Treatment',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Beton',
+            tipe_Kolam: 'Treatment',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Beton',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -216,10 +216,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak f',
             kolam: 'Kolam B6',
-            tipe_kolam: 'Tandon',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'HDPE',
+            tipe_Kolam: 'Tandon',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'HDPE',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -234,10 +234,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak g',
             kolam: 'Kolam B7',
-            tipe_kolam: 'Budidaya',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Tanah',
+            tipe_Kolam: 'Budidaya',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Tanah',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -252,10 +252,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak h',
             kolam: 'Kolam B8',
-            tipe_kolam: 'Budidaya',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Tanah',
+            tipe_Kolam: 'Budidaya',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Tanah',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -270,10 +270,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak i',
             kolam: 'Kolam B9',
-            tipe_kolam: 'Budidaya',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Tanah',
+            tipe_Kolam: 'Budidaya',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Tanah',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -288,10 +288,10 @@ const bind_data = () => {
             id_kolam: 'null',
             tambak: 'Tambak j',
             kolam: 'Kolam B10',
-            tipe_kolam: 'Budidaya',
-            'luas_kolam(M2)': '52',
-            'tinggi_kolam(M)': '25',
-            jenis_kolam: 'Tanah',
+            tipe_Kolam: 'Budidaya',
+            'luas(M2)': '52',
+            'tinggi(M)': '25',
+            jenis_Kolam: 'Tanah',
             nama_kincir: 'null',
             jumlah_kincir: 'null',
             nama_pompa: 'null',
@@ -315,7 +315,7 @@ const view_row = (item) => {
                                     <tbody role="rowgroup">
                                         <tr v-for="item in table_1" :key="item.name" role="row">
                                             <td aria-colindex="1" role="cell"><b>Tipe Kolam</b></td>
-                                            <td aria-colindex="2" role="cell">${item.tipe_kolam}</td>
+                                            <td aria-colindex="2" role="cell">${item.tipe_Kolam}</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
                                             <td aria-colindex="1" role="cell"><b>Luas kolam (meter persegi)</b></td>
@@ -327,7 +327,7 @@ const view_row = (item) => {
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
                                             <td aria-colindex="1" role="cell"><b>Jenis Kolam</b></td>
-                                            <td aria-colindex="2" role="cell">${item.jenis_kolam}</td>
+                                            <td aria-colindex="2" role="cell">${item.jenis_Kolam}</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
                                             <td aria-colindex="1" role="cell"><b>Status </b></td>
