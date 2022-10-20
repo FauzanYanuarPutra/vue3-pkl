@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Manage Kontent
+                                <li class="breadcrumb-item active" aria-current="page"><span>Tambah Data Kontent
                                         Edukasi</span></li>
                             </ol>
                         </nav>
@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Manage Kontent Edukasi</h3>
+                                <h4>Tambah Data Kontent Edukasi</h4>
                             </div>
                         </div>
                     </div>
@@ -63,80 +63,21 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Video</label>
-                                    <div class="custom-file-container">
-                                        <div class="invoice-logo">
-                                            <div class="upload pe-md-5">
-                                                <input ref="fl_profile" type="file" name="video" class="d-none"
-                                                    accept="image/*" @change="change_file" />
-                                                <img v-if="selected_file"
-                                                    :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
-                                                    alt="profile" class="profile-preview"
-                                                    @click="$refs.fl_profile.click()" />
-                                                <div v-else class="profile-preview upload-preview text-center border"
-                                                    @click="$refs.fl_profile.click()">
-                                                    <div class="my-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="feather feather-upload-cloud">
-                                                            <polyline points="16 16 12 12 8 16"></polyline>
-                                                            <line x1="12" y1="12" x2="12" y2="21"></line>
-                                                            <path
-                                                                d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3">
-                                                            </path>
-                                                            <polyline points="16 16 12 12 8 16"></polyline>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="mt-2">Click to Upload Video</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Upload file (PDF)</label>
-                                    <div class="custom-file-container">
-                                        <div class="invoice-logo">
-                                            <div class="upload pe-md-5">
-                                                <input ref="fl_profile" type="file" name="pdf" class="d-none"
-                                                    accept="image/*" @change="change_file" />
-                                                <img v-if="selected_file"
-                                                    :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
-                                                    alt="profile" class="profile-preview"
-                                                    @click="$refs.fl_profile.click()" />
-                                                <div v-else class="profile-preview upload-preview text-center border"
-                                                    @click="$refs.fl_profile.click()">
-                                                    <div class="my-2">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                            stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round"
-                                                            class="feather feather-upload-cloud">
-                                                            <polyline points="16 16 12 12 8 16"></polyline>
-                                                            <line x1="12" y1="12" x2="12" y2="21"></line>
-                                                            <path
-                                                                d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3">
-                                                            </path>
-                                                            <polyline points="16 16 12 12 8 16"></polyline>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="mt-2">Click to Upload PDF</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <label class="control-label">Upload Video</label>
+                                    <input type="file" name="video" class="form-control"
+                                        placeholder="Masukkan nama tambak" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Upload File (PDF)</label>
+                                    <input type="file" name="pdf" class="form-control" />
                                 </div>
                             </div>
                             <div class="box-wrap">
                                 <div class="form-group">
-                                    <label class="control-label">Id Kontent</label>
-                                    <input type="number" name="id_kontent" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Tanggal dan Jam Input</label>
-                                    <div class="form-group mb-0">
+                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <div class="mb-0">
                                         <flat-pickr v-model="date2"
                                             :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"
                                             class="form-control flatpickr active"></flat-pickr>
@@ -158,19 +99,6 @@
                                         placeholder="Beri deskripsi" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">No. of like</label>
-                                    <input type="number" name="tinggi_kolam" class="form-control"
-                                        placeholder="Masukkan No. of like" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">No. of view</label>
-                                    <input type="number" name="luas_kolam" class="form-control"
-                                        placeholder="Masukkan No. of view" />
-                                </div>
-
-
-
-                                <div class="form-group">
                                     <label class="control-label">Status</label>
                                     <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
@@ -178,7 +106,12 @@
                                 </div>
                             </div>
 
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-kontent" @click="toggleMobileMenu"
+                                    class="btn btn-kembali mt-3">
+                                    Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -223,7 +156,7 @@ const inputs = ref({
     input3: [],
 });
 
-const options2 = ref(['Aktive', 'Tidak Aktive']);
+const options2 = ref(['Aktif', 'Tidak Aktif']);
 const inputs2 = ref({
     input1: [],
     input2: [],

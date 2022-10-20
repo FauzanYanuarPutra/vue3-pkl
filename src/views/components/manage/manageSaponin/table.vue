@@ -26,7 +26,8 @@
                             </div>
                         </div>
                         <div class="d-flex flex-row-reverse position-relative div-tambah">
-                            <router-link to="/saponin/create" @click="toggleMobileMenu" class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
+                            <router-link to="/saponin/create" @click="toggleMobileMenu"
+                                class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
                             <template #no="props" v-for="(item, index) in items" class="w-10">
@@ -36,18 +37,10 @@
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
                                         <div @click="view_row(props.row)" style="cursor: pointer" title="View">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-eye"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye">
                                                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                                                 <circle cx="12" cy="12" r="3"></circle>
                                             </svg>
@@ -55,38 +48,25 @@
                                     </div>
                                     <div class="px-2">
                                         <router-link to="/saponin/edit" data-bs-toggle="tooltip" title="Edit">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-edit-2"
-                                            >
-                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
                                             </svg>
                                         </router-link>
                                     </div>
                                     <div class="px-2">
                                         <a href="javascript:void(0);" data-bs-toggle="tooltip" title="Delete">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                class="feather feather-trash-2"
-                                            >
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
                                                 <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
                                                 <line x1="10" y1="11" x2="10" y2="17"></line>
                                                 <line x1="14" y1="11" x2="14" y2="17"></line>
                                             </svg>
@@ -104,215 +84,215 @@
 </template>
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
-    import { useMeta } from '@/composables/use-meta';
-    useMeta({ title: 'Default Order Sorting Table' });
+import { useMeta } from '@/composables/use-meta';
+useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'tanggal_input', 'jenis', 'status', 'actions']);
-    const items = ref([]);
-    const table_option = ref({
-        perPage: 10,
-        perPageValues: [5, 10, 20, 50],
-        skin: 'table table-hover',
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center', tanggal_input: 'text-center' },
-        pagination: { nav: 'scroll', chunk: 5 },
-        texts: {
-            count: 'Showing {from} to {to} of {count}',
-            filter: '',
-            filterPlaceholder: 'Search...',
-            limit: 'Results:',
+const columns = ref(['no', 'tambak', 'tanggal_input', 'jenis', 'status', 'actions']);
+const items = ref([]);
+const table_option = ref({
+    perPage: 10,
+    perPageValues: [5, 10, 20, 50],
+    skin: 'table table-hover',
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
+    pagination: { nav: 'scroll', chunk: 5 },
+    texts: {
+        count: 'Showing {from} to {to} of {count}',
+        filter: '',
+        filterPlaceholder: 'Search...',
+        limit: 'Results:',
+    },
+    sortable: ['tambak', 'tanggal_input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
+    sortIcon: {
+        base: 'sort-icon-none',
+        up: 'sort-icon-asc',
+        down: 'sort-icon-desc',
+    },
+    resizableColumns: false,
+});
+
+onMounted(() => {
+    bind_data();
+});
+
+const bind_data = () => {
+    items.value = [
+        {
+            id: 1,
+            tambak: 'Tambak a',
+            tanggal_input: '2021/04/25',
+            id: '23',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
         },
-        sortable: ['nama_tambak', 'tanggal_input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
-        sortIcon: {
-            base: 'sort-icon-none',
-            up: 'sort-icon-asc',
-            down: 'sort-icon-desc',
+        {
+            id: 2,
+            tambak: 'Tambak b',
+            tanggal_input: '2021/05/05',
+            id: '12',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
         },
-        resizableColumns: false,
+        {
+            id: 3,
+            tambak: 'Tambak c',
+            tanggal_input: '2022/09/18',
+            id: '14',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 4,
+            tambak: 'Tambak d',
+            tanggal_input: '2022/07/23',
+            id: '2',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 5,
+            tambak: 'Tambak e',
+            tanggal_input: '2022/01/15',
+            id: '7',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 6,
+            tambak: 'Tambak f',
+            tanggal_input: '2022/01/17',
+            id: '8',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 7,
+            tambak: 'Tambak g',
+            tanggal_input: '2022/03/25',
+            id: '17',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 8,
+            tambak: 'Tambak h',
+            tanggal_input: '2022/02/18',
+            id: '12',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 9,
+            tambak: 'Tambak i',
+            tanggal_input: '2022/04/05',
+            id: '10',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 10,
+            tambak: 'Tambak j',
+            tanggal_input: '2022/06/24',
+            id: '21',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 11,
+            tambak: 'Tambak k',
+            tanggal_input: '2022/05/13',
+            id: '21',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+        {
+            id: 12,
+            tambak: 'Tambak l',
+            tanggal_input: '2022/07/15',
+            id: '21',
+            kategori: 'Saponin',
+            jenis: 'saponin steroid',
+            keterangan: 'null',
+            status: 'Aktif',
+        },
+    ];
+};
+
+const view_row = (item) => {
+    new window.Swal({
+        title: '<i>Manage, saponin, probiotik, vitamin</i>',
+        text: 'HALLO',
+        html:
+            '<p><b>ID</b> : ' +
+            item.id +
+            '</p>' +
+            '<p><b>Nama tambak</b> : ' +
+            item.nama_tambak +
+            '</p>' +
+            '<p><b>Tanggal dan jam input</b> : ' +
+            item.tanggal_input +
+            '</p>' +
+            '<p><b>Kategori</b> : ' +
+            item.kategori +
+            '</p>' +
+            '<p><b>Jenis</b> : ' +
+            item.jenis +
+            '</p>' +
+            '<p><b>Keterangan</b> : ' +
+            item.keterangan +
+            '</p>' +
+            '<p><b>Status</b> : ' +
+            item.status +
+            '</p>',
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+        // '<p><b>Nama</b> : ' + item.nama + '</p>'
+        // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
+        // DIAKHIR TIDAK MENGGUNAKAN tanda +
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonColor: '#1695DC',
+        confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
+        confirmButtonAriaLabel: 'Oke',
+
+        padding: '2em',
     });
-
-    onMounted(() => {
-        bind_data();
-    });
-
-    const bind_data = () => {
-        items.value = [
-            {
-                id: 1,
-                nama_tambak: 'Tambak a',
-                tanggal_input: '2021/04/25',
-                id: '23',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 2,
-                nama_tambak: 'Tambak b',
-                tanggal_input: '2021/05/05',
-                id: '12',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 3,
-                nama_tambak: 'Tambak c',
-                tanggal_input: '2022/09/18',
-                id: '14',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 4,
-                nama_tambak: 'Tambak d',
-                tanggal_input: '2022/07/23',
-                id: '2',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 5,
-                nama_tambak: 'Tambak e',
-                tanggal_input: '2022/01/15',
-                id: '7',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 6,
-                nama_tambak: 'Tambak f',
-                tanggal_input: '2022/01/17',
-                id: '8',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 7,
-                nama_tambak: 'Tambak g',
-                tanggal_input: '2022/03/25',
-                id: '17',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 8,
-                nama_tambak: 'Tambak h',
-                tanggal_input: '2022/02/18',
-                id: '12',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 9,
-                nama_tambak: 'Tambak i',
-                tanggal_input: '2022/04/05',
-                id: '10',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 10,
-                nama_tambak: 'Tambak j',
-                tanggal_input: '2022/06/24',
-                id: '21',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 11,
-                nama_tambak: 'Tambak k',
-                tanggal_input: '2022/05/13',
-                id: '21',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-            {
-                id: 12,
-                nama_tambak: 'Tambak l',
-                tanggal_input: '2022/07/15',
-                id: '21',
-                kategori: 'Saponin',
-                jenis: 'saponin steroid',
-                keterangan: 'null',
-                status: 'Aktive',
-            },
-        ];
-    };
-
-    const view_row = (item) => {
-        new window.Swal({
-            title: '<i>Manage, saponin, probiotik, vitamin</i>',
-            text: 'HALLO',
-            html:
-                '<p><b>ID</b> : ' +
-                item.id +
-                '</p>' +
-                '<p><b>Nama tambak</b> : ' +
-                item.nama_tambak +
-                '</p>' +
-                '<p><b>Tanggal dan jam input</b> : ' +
-                item.tanggal_input +
-                '</p>' +
-                '<p><b>Kategori</b> : ' +
-                item.kategori +
-                '</p>' +
-                '<p><b>Jenis</b> : ' +
-                item.jenis +
-                '</p>' +
-                '<p><b>Keterangan</b> : ' +
-                item.keterangan +
-                '</p>' +
-                '<p><b>Status</b> : ' +
-                item.status +
-                '</p>',
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'
-            // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
-            // DIAKHIR TIDAK MENGGUNAKAN tanda +
-            showCloseButton: true,
-            focusConfirm: false,
-            confirmButtonColor: '#1695DC',
-            confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
-            confirmButtonAriaLabel: 'Oke',
-
-            padding: '2em',
-        });
-        // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
-    };
+    // alert(' Name: ' + item.nama + ', MIN: ' + item.min + ', MAX: ' + item.max);
+};
 </script>

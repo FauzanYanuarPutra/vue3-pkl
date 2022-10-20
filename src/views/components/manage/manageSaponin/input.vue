@@ -6,7 +6,8 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Saponin</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Tambah Data Saponin</span>
+                                </li>
                             </ol>
                         </nav>
                     </div>
@@ -20,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Saponin</h4>
+                                <h4>Tambah Data Saponin</h4>
                             </div>
                         </div>
                     </div>
@@ -40,12 +41,6 @@
                                             class="form-control flatpickr active"></flat-pickr>
                                     </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">ID:</label>
-                                    <input type="number" name="id" class="form-control" />
-                                </div>
-
                                 <div class="form-group">
                                     <label class="control-label">Kategori:</label>
                                     <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
@@ -57,20 +52,24 @@
                                     <input type="text" name="jenis" class="form-control"
                                         placeholder="Contoh data, Vit C, Vit A, pupuk amonia" />
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group w-100">
                                     <label class="control-label">Keterangan:</label>
                                     <input type="text" name="keterangan" class="form-control"
                                         placeholder="Beri keterangan" />
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Status:</label>
-                                    <input type="number" name="internal_id" class="form-control"
-                                        placeholder="Tambahkan status" />
+                                    <label class="control-label">Status</label>
+                                    <multiselect v-model="inputs2['input3']" :options="options2" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
                                 </div>
                             </div>
-
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/saponin" @click="toggleMobileMenu" class="btn btn-kembali mt-3">
+                                    Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -110,6 +109,15 @@ const toggleCode = (name) => {
 
 const options1 = ref(['Saponin', 'Pupuk', 'Probiotik', 'Vitamin']);
 const inputs = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+    input4: [],
+    input5: [],
+});
+
+const options2 = ref(['Aktif', 'Tidak Aktif']);
+const inputs2 = ref({
     input1: [],
     input2: [],
     input3: [],
