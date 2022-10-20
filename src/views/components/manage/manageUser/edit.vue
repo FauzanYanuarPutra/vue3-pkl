@@ -118,7 +118,7 @@
                                         <label class="control-label">Email</label>
                                         <div class="input-group">
                                             <div class="input-group-text">@</div>
-                                            <input type="email q" name="email" class="form-control" />
+                                            <input type="email" name="email" class="form-control" />
                                         </div>
                                     </div>
                                     <div class="form-group">
