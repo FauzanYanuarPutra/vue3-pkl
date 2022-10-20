@@ -116,7 +116,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center', kecerahan: 'text-end' },
+        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', kecerahan: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -248,10 +248,11 @@
             // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
-            focusConfirm: false,
+            focusConfirm: true,
             confirmButtonColor: '#1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
+            confirmButtonClass: 'd-none',
 
             padding: '2em',
         });
