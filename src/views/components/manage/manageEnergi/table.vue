@@ -116,11 +116,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-<<<<<<< HEAD
         columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal: 'text-center', sumber_energi: 'text-end', konsumsi_listrik: 'text-end' },
-=======
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center', tanggal: 'text-center', sumber_energi: 'text-end', konsumsi_listrik: 'text-end' },
->>>>>>> 2db1260a1a1c56a96c34d229c851f48c030c8645
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',

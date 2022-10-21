@@ -113,11 +113,8 @@
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
-<<<<<<< HEAD
-        columnsClasses: { no: 'no text-center',actions: 'actions text-center', view: 'actions text-center', jumlah: 'text-end' },
-=======
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center', view: 'actions text-center', jumlah_unit: 'text-end' },
->>>>>>> 2db1260a1a1c56a96c34d229c851f48c030c8645
+
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center', view: 'actions text-center', jumlah: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -154,7 +151,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -171,7 +168,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -188,7 +185,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -205,7 +202,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -222,7 +219,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -239,7 +236,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -256,7 +253,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -273,7 +270,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -290,7 +287,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
@@ -307,7 +304,7 @@
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
         ];
@@ -341,29 +338,44 @@
                                             <td aria-colindex="2" role="cell">${ item.brand }</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="1" role="cell"><b>Pengapuran </b></td>
+                                            <td aria-colindex="1" role="cell"><b>Tipe / Model </b></td>
                                             <td class="titik-dua"><b>:</b></td>
-                                            <td aria-colindex="2" role="cell">${ item.pengapuran }</td>
+                                            <td aria-colindex="2" role="cell">${ item.tipe_model }</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="1" role="cell"><b>Pemupukan Dan Pemberian Mineral </b></td>
+                                            <td aria-colindex="1" role="cell"><b>kegunaan </b></td>
                                             <td class="titik-dua"><b>:</b></td>
-                                            <td aria-colindex="2" role="cell">${ item.pemupukan_dan_pemberian_mineral }</td>
+                                            <td aria-colindex="2" role="cell">${ item.Kegunaan }</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="1" role="cell"><b>Pertumbuhan Plankton </b></td>
+                                            <td aria-colindex="1" role="cell"><b>Keterangan </b></td>
                                             <td class="titik-dua"><b>:</b></td>
-                                            <td aria-colindex="2" role="cell">${ item.pertumbuhan_plankton }</td>
+                                            <td aria-colindex="2" role="cell">${ item.keterangan }</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="1" role="cell"><b>Pertumbuhan Patogen Atau Yang Merugikan </b></td>
+                                            <td aria-colindex="1" role="cell"><b>Jumlah </b></td>
                                             <td class="titik-dua"><b>:</b></td>
-                                            <td aria-colindex="2" role="cell">${ item.pertumbuhan_patogen_atau_yang_merugikan }</td>
+                                            <td aria-colindex="2" role="cell">${ item.jumlah }</td>
                                         </tr>
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="1" role="cell"><b>Probiotik </b></td>
+                                            <td aria-colindex="1" role="cell"><b>Internal </b></td>
                                             <td class="titik-dua"><b>:</b></td>
-                                            <td aria-colindex="2" role="cell">${ item.probiotik }</td>
+                                            <td aria-colindex="2" role="cell">${ item.internal }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Perkiraan bulan dan taun beli </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.perkiraan_beli }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Spesifikasi </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.spesifikasi }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.status }</td>
                                         </tr>
                                     </tbody>
             </table>   
