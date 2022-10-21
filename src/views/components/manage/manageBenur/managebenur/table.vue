@@ -135,7 +135,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end ' },
+        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -164,7 +164,7 @@
                 tanggal_input: '2022/01/25',
                 Id_benur: '1',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '1',
                 'usia_benur(hari)': '18 ',
                 nilai_scoring: 'A',
             },
@@ -174,7 +174,7 @@
                 tanggal_input: '2022/02/26',
                 Id_benur: '2',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '2',
                 'usia_benur(hari)': '20 ',
                 nilai_scoring: 'B',
             },
@@ -184,7 +184,7 @@
                 tanggal_input: '2022/03/07',
                 Id_benur: '3',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '3',
                 'usia_benur(hari)': '20 ',
                 nilai_scoring: 'B',
             },
@@ -194,7 +194,7 @@
                 tanggal_input: '2022/03/28',
                 Id_benur: '4',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '4',
                 'usia_benur(hari)': '18 ',
                 nilai_scoring: 'A',
             },
@@ -204,7 +204,7 @@
                 tanggal_input: '2022/04/10',
                 Id_benur: '5',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '5',
                 'usia_benur(hari)': '20 ',
                 nilai_scoring: 'C',
             },
@@ -214,7 +214,7 @@
                 tanggal_input: '2022/05/29',
                 Id_benur: '6',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '6',
                 'usia_benur(hari)': '18 ',
                 nilai_scoring: 'A',
             },
@@ -224,7 +224,7 @@
                 tanggal_input: '2022/06/23',
                 Id_benur: '7',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '7',
                 'usia_benur(hari)': '18 ',
                 nilai_scoring: 'B',
             },
@@ -234,7 +234,7 @@
                 tanggal_input: '2022/07/21',
                 Id_benur: '8',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '8',
                 'usia_benur(hari)': '20 ',
                 nilai_scoring: 'B',
             },
@@ -244,7 +244,7 @@
                 tanggal_input: '2022/08/15',
                 Id_benur: '9',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '9',
                 'usia_benur(hari)': '20 ',
                 nilai_scoring: 'C',
             },
@@ -254,7 +254,7 @@
                 tanggal_input: '2022/08/15',
                 Id_benur: '10',
                 Asal_benur: 'Udang vaname',
-                benur_batch_id: 'null',
+                benur_batch_id: '10',
                 'usia_benur(hari)': '19 ',
                 nilai_scoring: 'A',
             },
@@ -271,9 +271,6 @@
                 '</p>' +
                 '<p><b>Tanggal Input</b> : ' +
                 item.tanggal_input +
-                '</p>' +
-                '<p><b>ID Benur</b> : ' +
-                item.Id_benur +
                 '</p>' +
                 '<p><b>Asal Benur</b> : ' +
                 item.Asal_benur +
@@ -295,10 +292,11 @@
             // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
-            focusConfirm: false,
+            focusConfirm: true,
             confirmButtonColor: '#1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
+            confirmButtonClass: 'd-none',
 
             padding: '2em',
         });

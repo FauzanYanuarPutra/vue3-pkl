@@ -30,7 +30,7 @@
                                 class="btn mb-2 mx-3 tambah-data">Tambah Data</router-link>
                         </div>
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                            <template #no="props" v-for="item,index in items" class="w-10">
+                            <template #no="props" v-for="(item, index) in items" class="w-10">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
@@ -89,13 +89,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'nama_tambak', 'tanggal_input', 'jenis', 'status', 'actions']);
+const columns = ref(['no', 'tambak', 'tanggal_input', 'jenis', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'text-center', actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -103,7 +103,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['nama_tambak', 'tanggal_input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
+    sortable: ['tambak', 'tanggal_input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -120,123 +120,123 @@ const bind_data = () => {
     items.value = [
         {
             id: 1,
-            nama_tambak: 'Tambak a',
+            tambak: 'Tambak a',
             tanggal_input: '2021/04/25',
             id: '23',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 2,
-            nama_tambak: 'Tambak b',
+            tambak: 'Tambak b',
             tanggal_input: '2021/05/05',
             id: '12',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 3,
-            nama_tambak: 'Tambak c',
+            tambak: 'Tambak c',
             tanggal_input: '2022/09/18',
             id: '14',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 4,
-            nama_tambak: 'Tambak d',
+            tambak: 'Tambak d',
             tanggal_input: '2022/07/23',
             id: '2',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 5,
-            nama_tambak: 'Tambak e',
+            tambak: 'Tambak e',
             tanggal_input: '2022/01/15',
             id: '7',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 6,
-            nama_tambak: 'Tambak f',
+            tambak: 'Tambak f',
             tanggal_input: '2022/01/17',
             id: '8',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 7,
-            nama_tambak: 'Tambak g',
+            tambak: 'Tambak g',
             tanggal_input: '2022/03/25',
             id: '17',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 8,
-            nama_tambak: 'Tambak h',
+            tambak: 'Tambak h',
             tanggal_input: '2022/02/18',
             id: '12',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 9,
-            nama_tambak: 'Tambak i',
+            tambak: 'Tambak i',
             tanggal_input: '2022/04/05',
             id: '10',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 10,
-            nama_tambak: 'Tambak j',
+            tambak: 'Tambak j',
             tanggal_input: '2022/06/24',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 11,
-            nama_tambak: 'Tambak k',
+            tambak: 'Tambak k',
             tanggal_input: '2022/05/13',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
         {
             id: 12,
-            nama_tambak: 'Tambak l',
+            tambak: 'Tambak l',
             tanggal_input: '2022/07/15',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
             keterangan: 'null',
-            status: 'Aktive',
+            status: 'Aktif',
         },
     ];
 };

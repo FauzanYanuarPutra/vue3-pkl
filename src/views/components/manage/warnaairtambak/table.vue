@@ -30,13 +30,13 @@
                         </div>
 
                         <v-client-table :data="items" :columns="columns" :options="table_option">
-                         <template #no="props" v-for="index in items" >
+                            <template #no="props" v-for="index in items">
                                 {{ props.index }}
                             </template>
                             <template #actions="props">
                                 <div class="table-controls d-flex no-wrap justify-content-center">
                                     <div class="px-2">
-                                        <div @click="view_row(props.row)" style="cursor: pointer"  title="View">
+                                        <div @click="view_row(props.row)" style="cursor: pointer" title="View">
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
@@ -116,7 +116,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center', kecerahan: 'text-end' },
+        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', kecerahan: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -248,10 +248,11 @@
             // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
-            focusConfirm: false,
+            focusConfirm: true,
             confirmButtonColor: '#1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
+            confirmButtonClass: 'd-none',
 
             padding: '2em',
         });

@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Manage Kolam</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Tambah Data Kolam</span>
                                 </li>
                             </ol>
                         </nav>
@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Input Manage Kolam</h4>
+                                <h4>Tambah Data Kolam</h4>
                             </div>
                         </div>
                     </div>
@@ -30,15 +30,14 @@
                             <div class="box-wrap">
                                 <div class="form-group">
                                     <label class="control-label">Nama Tambak</label>
-                                    <multiselect v-model="inputs7['input1']" :options="options7" :searchable="true"
+                                    <multiselect v-model="inputs8['input1']" :options="options8" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Nama Kolam</label>
-                                    <multiselect v-model="inputs8['input1']" :options="options8" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
+                                    <input type="text" name="nama_kolam" class="form-control"
+                                        placeholder="Masukkan nama kolam" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tipe Kolam</label>
@@ -47,14 +46,14 @@
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Luas kolam (meter persegi)</label>
+                                    <label class="control-label">Luas Kolam (Meter Persegi)</label>
                                     <input type="number" name="luas_kolam" class="form-control"
                                         placeholder="Masukkan luas kolam" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Tinggi kolam (meter)</label>
+                                    <label class="control-label">Tinggi Kolam (Meter)</label>
                                     <input type="text" name="tinggi_kolam" class="form-control"
-                                        placeholder="Masukkan tingi kolam" />
+                                        placeholder="Masukkan tinggi kolam" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Jenis Kolam</label>
@@ -76,8 +75,9 @@
                                 <div id="pembungkus_nama1" class="form-group">
                                     <strong><label class="control-label">Pilih Pompa</label></strong>
                                     <div class="multiple-input">
-                                        <input type="text" name="nama_pompa" class="form-control"
-                                            placeholder="Nama Pompa" />
+                                        <multiselect v-model="inputs7['input3']" :options="options7" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                         <input type="text" name="jumlah_pompa" class="form-control"
                                             placeholder="Jumlah Pompa" />
                                         <buttom class="btn btn-primary" onclick="increment1()">Tambah</buttom>
@@ -86,8 +86,9 @@
                                 <div id="pembungkus_nama2" class="form-group">
                                     <strong><label class="control-label">Pilih Auto Feeder</label></strong>
                                     <div class="multiple-input">
-                                        <input type="text" name="nama_autofeeder" class="form-control"
-                                            placeholder="Nama Auto Feeder" />
+                                        <multiselect v-model="inputs9['input3']" :options="options9" :searchable="true"
+                                            placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        </multiselect>
                                         <input type="text" name="jumlah_autofeeder" class="form-control"
                                             placeholder="Jumlah Auto Feeder" />
                                         <buttom class="btn btn-primary" onclick="increment2()">Tambah</buttom>
@@ -100,7 +101,11 @@
                                     </multiselect>
                                 </div>
                             </div>
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-kolam" @click="toggleMobileMenu" class="btn btn-kembali mt-3">
+                                    Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -159,7 +164,7 @@ const inputs6 = ref({
     input3: [],
 });
 
-const options7 = ref(['Kolam b1', 'Kolam b2']);
+const options7 = ref(['Pilih Pompa']);
 const inputs7 = ref({
     input1: [],
     input2: [],
@@ -168,6 +173,13 @@ const inputs7 = ref({
 
 const options8 = ref(['Tambak b1', 'Tambak b2']);
 const inputs8 = ref({
+    input1: [],
+    input2: [],
+    input3: [],
+});
+
+const options9 = ref(['Pilih Auto Feeder']);
+const inputs9 = ref({
     input1: [],
     input2: [],
     input3: [],

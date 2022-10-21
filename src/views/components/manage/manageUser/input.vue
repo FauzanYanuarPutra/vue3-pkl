@@ -21,12 +21,53 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Manage User</h4>
+                                    <h4>Tambah Data User</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="panel-body">
                             <form class="form-vertical" action="#">
+                                <div class="box-wrap">
+                                    <div class="form-group">
+                                        <label class="control-label">Photo:</label>
+                                        <div class="custom-file-container">
+                                            <div class="invoice-logo">
+                                                <div class="upload pe-md-5">
+                                                    <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
+                                                    <img
+                                                        v-if="selected_file"
+                                                        :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
+                                                        alt="profile"
+                                                        class="profile-preview"
+                                                        @click="$refs.fl_profile.click()"
+                                                    />
+                                                    <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
+                                                        <div class="my-2">
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="50"
+                                                                height="50"
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                stroke-width="2"
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                class="feather feather-upload-cloud"
+                                                            >
+                                                                <polyline points="16 16 12 12 8 16"></polyline>
+                                                                <line x1="12" y1="12" x2="12" y2="21"></line>
+                                                                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                                                                <polyline points="16 16 12 12 8 16"></polyline>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="mt-2">Click to Upload Picture/Logo</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="box-wrap">
                                     <div class="form-group">
                                         <label class="control-label">Name</label>
@@ -44,32 +85,12 @@
                                             deselect-label=""
                                         ></multiselect>
                                     </div>
-                                </div>
-                                <div class="box-wrap">
                                     <div class="form-group">
-                                        <label class="control-label">Email</label>
-                                        <div class="input-group">
-                                            <div class="input-group-text">@</div>
-                                            <input type="text" name="email" class="form-control" />
-                                        </div>
+                                        <label for="ph-number">No hp</label>
+                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="" />
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Jenis kelamin</label>
-                                        <multiselect
-                                            v-model="inputs['input2']"
-                                            :options="options2"
-                                            :searchable="true"
-                                            placeholder="Choose..."
-                                            selected-label=""
-                                            select-label=""
-                                            deselect-label=""
-                                        ></multiselect>
-                                    </div>
-
                                     <div class="form-group">
                                         <label class="control-label">Password</label>
-
                                         <div class="input-group">
                                             <div class="input-group-text">
                                                 <svg
@@ -94,7 +115,32 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Status</label>
+                                        <label class="control-label">Email</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">@</div>
+                                            <input type="email" name="email" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Tanggal lahir:</label>
+                                        <div class="mb-0">
+                                            <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Jenis kelamin</label>
+                                        <multiselect
+                                            v-model="inputs['input2']"
+                                            :options="options2"
+                                            :searchable="true"
+                                            placeholder="Choose..."
+                                            selected-label=""
+                                            select-label=""
+                                            deselect-label=""
+                                        ></multiselect>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label">Status pernikahan</label>
                                         <multiselect
                                             v-model="inputs['input3']"
                                             :options="options3"
@@ -105,59 +151,10 @@
                                             deselect-label=""
                                         ></multiselect>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="ph-number">No hp</label>
-                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="" />
-                                    </div>
-
                                     <div class="form-group">
                                         <label class="control-label">Alamat rumah</label>
                                         <input type="text" name="alamat_rumah" class="form-control" />
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="fullName">Photo</label>
-                                        <div class="invoice-detail-title">
-                                            <div class="invoice-logo">
-                                                <div class="upload pe-md-4">
-                                                    <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
-                                                    <img
-                                                        v-if="selected_file"
-                                                        :src="selected_file ? selected_file : require('@/assets/images/user-profile.jpeg')"
-                                                        alt="profile"
-                                                        class="profile-preview"
-                                                        @click="$refs.fl_profile.click()"
-                                                    />
-
-                                                    <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
-                                                        <div class="my-2">
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="50"
-                                                                height="50"
-                                                                viewBox="0 0 24 24"
-                                                                fill="none"
-                                                                stroke="currentColor"
-                                                                stroke-width="2"
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                class="feather feather-upload-cloud"
-                                                            >
-                                                                <polyline points="16 16 12 12 8 16"></polyline>
-                                                                <line x1="12" y1="12" x2="12" y2="21"></line>
-                                                                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
-                                                                <polyline points="16 16 12 12 8 16"></polyline>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="mt-2">Click to Upload Picture/Logo</div>
-                                                    </div>
-                                                    <br />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="form-group">
                                         <label class="control-label">Tanggal bergabung:</label>
                                         <div class="mb-0">
@@ -165,6 +162,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="box-wrap">
                                     <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-3 mb-2"></h6>
                                     <div class="form-group">
@@ -205,7 +203,10 @@
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn mt-2">Submit</button>
+                                <div class="submit">
+                                    <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                    <router-link to="/manage-user" @click="toggleMobileMenu" class="btn btn-kembali mt-3"> Kembali</router-link>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -265,7 +266,7 @@
     const options2 = ref(['Laki Laki', 'Perempuan']);
     const options3 = ref(['Menikah', 'Belum menikah']);
     const options4 = ref(['Aktif', 'Tidak aktif']);
-    const options5 = ref(['Team tambak']);
+    const options5 = ref(['Bandung', 'Bali', 'Lombok', 'Lampung']);
     const options6 = ref(['Yes', 'No']);
 
     const change_file = (event) => {
