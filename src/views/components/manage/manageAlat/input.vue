@@ -119,24 +119,26 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group w-100">
+                                <div class="form-group">
+                                    <label class="control-label">Status:</label>
+                                    <multiselect v-model="inputs['input3']" :options="status" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="control-label">Keterangan:</label>
                                     <textarea name="Keterangan" id="" cols="10" rows="10"
                                         class="form-control"></textarea>
 
                                 </div>
 
-                                <div class="form-group w-100">
+                                <div class="form-group">
                                     <label class="control-label">Spesifikasi:</label>
                                     <textarea name="Spesifikasi" id="" cols="10" rows="10"
                                         class="form-control"></textarea>
                                 </div>
-                                <div class="form-group w-100">
-                                    <label class="control-label">Status:</label>
-                                    <multiselect v-model="inputs['input3']" :options="status" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                </div>
+                                
 
 
                             </div>

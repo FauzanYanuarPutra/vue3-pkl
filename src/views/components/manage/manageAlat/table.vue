@@ -109,11 +109,12 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'actions']);
+    const columns = ref(['no', 'tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah', 'perkiraan_beli', 'actions']);
     const items = ref([]);
     const table_option = ref({
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center', view: 'actions text-center', jumlah_unit: 'text-end' },
+
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center', view: 'actions text-center', jumlah: 'text-end' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -121,7 +122,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah_unit', 'perkiraan_beli', 'perkiraan_beli', 'status'],
+        sortable: ['tambak', 'kategori_alat', 'brand', 'tipe_model', 'jumlah', 'perkiraan_beli', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -138,7 +139,7 @@
         items.value = [
             {
                 id: 1,
-                nama_tambak: 'Tambak a',
+                tambak: 'Tambak a',
                 tanggal_input: '2011/04/25',
                 id_alat: '122',
                 kategori_alat: 'Pompa',
@@ -146,16 +147,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '201',
+                jumlah: '201',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 2,
-                nama_tambak: 'Tambak b',
+                tambak: 'Tambak b',
                 tanggal_input: '2011/07/25',
                 id_alat: '213',
                 kategori_alat: 'Pompa',
@@ -163,16 +164,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '121',
+                jumlah: '121',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 3,
-                nama_tambak: 'Tambak c',
+                tambak: 'Tambak c',
                 tanggal_input: '2009/01/12',
                 id_alat: '211',
                 kategori_alat: 'Pompa',
@@ -180,16 +181,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '21',
+                jumlah: '21',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 4,
-                nama_tambak: 'Tambak d',
+                tambak: 'Tambak d',
                 tanggal_input: '2012/03/29',
                 id_alat: '121',
                 kategori_alat: 'Auto feeder ',
@@ -197,16 +198,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '41',
+                jumlah: '41',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 5,
-                nama_tambak: 'Tambak e',
+                tambak: 'Tambak e',
                 tanggal_input: '2008/11/28',
                 id_alat: '61',
                 kategori_alat: 'Auto feeder ',
@@ -214,16 +215,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '14',
+                jumlah: '14',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 6,
-                nama_tambak: 'Tambak f',
+                tambak: 'Tambak f',
                 tanggal_input: '2012/12/02',
                 id_alat: '213',
                 kategori_alat: 'Auto feeder ',
@@ -231,16 +232,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '19',
+                jumlah: '19',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 7,
-                nama_tambak: 'Tambak g',
+                tambak: 'Tambak g',
                 tanggal_input: '2012/08/06',
                 id_alat: '12',
                 kategori_alat: 'Kincir',
@@ -248,16 +249,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '81',
+                jumlah: '81',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 8,
-                nama_tambak: 'Tambak h',
+                tambak: 'Tambak h',
                 tanggal_input: '2010/10/14',
                 id_alat: '39',
                 kategori_alat: 'Kincir',
@@ -265,16 +266,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '10',
+                jumlah: '10',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 9,
-                nama_tambak: 'Tambak i',
+                tambak: 'Tambak i',
                 tanggal_input: '2009/09/15',
                 id_alat: '43',
                 kategori_alat: 'Kincir',
@@ -282,16 +283,16 @@
                 tipe_model: 'null',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '61',
+                jumlah: '61',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
             {
                 id: 10,
-                nama_tambak: 'Tambak j',
+                tambak: 'Tambak j',
                 tanggal_input: '2008/12/13',
                 id_alat: '34',
                 kategori_alat: 'null',
@@ -299,11 +300,11 @@
                 tipe_model: 'Alat laboratorium',
                 kegunaan: 'null',
                 keterangan: 'null',
-                jumlah_unit: '11',
+                jumlah: '11',
                 photo: 'null',
                 internal_id: 'null',
                 perkiraan_beli: 'null',
-                tenaga_hp: 'null',
+                spesifikasi: 'null',
                 status: 'Aktive',
             },
         ];
@@ -313,49 +314,72 @@
         new window.Swal({
             title: '<i>Manage Alat</i>',
             text: 'HALLO',
-            html:
-                '<p><b>Nama Tambak</b> : ' +
-                item.nama_tambak +
-                '</p>' +
-                '<p><b>Tanggal</b> : ' +
-                item.tanggal_input +
-                '</p>' +
-                '<p><b>Id Alat</b> : ' +
-                item.id_alat +
-                '</p>' +
-                '<p><b>Kategori ALat</b> : ' +
-                item.kategori_alat +
-                '</p>' +
-                '<p><b>Brand</b> : ' +
-                item.brand +
-                '</p>' +
-                '<p><b>Tipe Model</b> : ' +
-                item.tipe_model +
-                '</p>' +
-                '<p><b>Kegunaan</b> : ' +
-                item.kegunaan +
-                '</p>' +
-                '<p><b>Keterangan</b> : ' +
-                item.keterangan +
-                '</p>' +
-                '<p><b>Jumlah Unit</b> : ' +
-                item.jumlah_unit +
-                '</p>' +
-                '<p><b>Photo</b> : ' +
-                item.photo +
-                '</p>' +
-                '<p><b>Interval Id</b> : ' +
-                item.internal_id +
-                '</p>' +
-                '<p><b>Perkiraan Beli</b> : ' +
-                item.perkiraan_beli +
-                '</p>' +
-                '<p><b>Tenaga HP</b> : ' +
-                item.tenaga_hp +
-                '</p>' +
-                '<p><b>Status</b> : ' +
-                item.status +
-                '</p>',
+            html: `
+            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tambak</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.tambak }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal dan Jam Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.tanggal_input }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Kategori Alat </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.kategori_alat }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Brand </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.brand }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tipe / Model </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.tipe_model }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>kegunaan </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.Kegunaan }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Keterangan </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.keterangan }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jumlah </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.jumlah }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Internal </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.internal }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Perkiraan bulan dan taun beli </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.perkiraan_beli }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Spesifikasi </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.spesifikasi }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.status }</td>
+                                        </tr>
+                                    </tbody>
+            </table>   
+            `,
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
