@@ -136,7 +136,7 @@
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
         columnsClasses: {
-            no: 'no text-center',
+            no: 'no text-end ',
             actions: 'actions text-center',
             Tanggal: 'text-center ',
             Harga_Pakan: 'text-end ',

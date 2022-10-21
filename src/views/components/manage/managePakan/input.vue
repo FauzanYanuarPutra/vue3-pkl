@@ -185,7 +185,7 @@
     });
     const options2 = ref(['Indonesia']);
     const options3 = ref(['Mesh (tepung)', 'Crumble (granula)', 'Pelet']);
-    const options4 = ref(['Aktiv', 'Tidak aktiv']);
+    const options4 = ref(['Aktif', 'Tidak aktif']);
 
     const code_arr = ref([]);
     const form1 = ref({ name: '' });
