@@ -2061,23 +2061,20 @@
     }
 }
 
-
 // tambahan
-
 
 .swal2-popup {
     max-width: 600em;
     .swal2-html-container#swal2-html-container {
-    text-align: start;
-    padding: 50px 0px 30px 0px;
-    // margin: -10px;
-    // background-color: red;
-    // width: 600em;
-    p {
-        margin-bottom: 0.2rem;
+        text-align: start;
+        padding: 50px 0px 30px 0px;
+        // margin: -10px;
+        // background-color: red;
+        // width: 600em;
+        p {
+            margin-bottom: 0.2rem;
+        }
     }
-}
-
 }
 
 .box-wrap {
@@ -2085,54 +2082,49 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .form-group {
-    width: 49%;
-    // background-color: red;
-    // justify-content: space-around;
+        width: 49%;
+        // background-color: red;
+        // justify-content: space-around;
 
         .form-control-sm {
             width: 400px;
         }
     }
 
-    .form-group-panjang{
+    .form-group-panjang {
         width: 100%;
     }
 }
 
-.form-control:disabled, .form-control[readonly]{
+.form-control:disabled,
+.form-control[readonly] {
     color: rgb(34, 34, 34);
 }
 
-
-
-.swal2-popup.swal2-modal.swal2-show{
+.swal2-popup.swal2-modal.swal2-show {
     width: 60rem;
 }
 
 .btn {
-    background-color: #1695DC;
+    background-color: #1695dc;
 
     color: white;
     .mt-3 {
-        padding:20px
+        padding: 20px;
     }
-    
 }
 
-.btn-submit{
-    background-color: #1695DC;
-    }
-    .btn-kembali {
+.btn-submit {
+    background-color: #1695dc;
+}
+.btn-kembali {
     background-color: rgb(210, 63, 63);
-
-    }
+}
 
 .btn:hover {
     background-color: white;
-    color: #1695DC;
-    
+    color: #1695dc;
 }
-
 
 .colorPrimaryDark {
     background-color: #0f7c9a;
@@ -2144,11 +2136,16 @@
     color: black;
 }
 
-input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
     color: black;
 }
 
-.VueTables__heading{
+.VueTables__heading {
     // display: flex;
     white-space: nowrap;
     // width: 80px;
@@ -2161,7 +2158,6 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 .multiple-input {
     width: 100%;
     display: flex;
-       
 }
 
 .judul-detail {
@@ -2190,13 +2186,12 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 
 // }
 
-.row{
-
+.row {
     h3 {
-    font-weight: bold;
-    margin-top: 5px;
+        font-weight: bold;
+        margin-top: 5px;
     }
-    h6{
+    h6 {
         font-weight: bold;
         font-size: 2000px;
     }
@@ -2215,45 +2210,31 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     text-transform: uppercase;
 }
 
-
 .table .no {
     width: 3%;
 }
 
-
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 768px) {
-  .box-wrap {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .form-group {
-    width: 100%;
-    // background-color: red;
-    // justify-content: space-around;
+    .box-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .form-group {
+            width: 100%;
+            // background-color: red;
+            // justify-content: space-around;
 
-        .form-control-sm {
-            width: 400px;
+            .form-control-sm {
+                width: 400px;
+            }
+        }
+
+        .form-group-panjang {
+            width: 100%;
         }
     }
 
-    .form-group-panjang{
-        width: 100%;
+    .judul-detail {
+        font-size: 0.7em;
     }
-}
-
-.judul-detail {
-    font-size: .7em;
-}
-
-
-
 }
