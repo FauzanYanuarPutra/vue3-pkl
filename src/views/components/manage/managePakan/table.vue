@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Pakan</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Manage Pakan</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -21,7 +21,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                    <h4>Pakan</h4>
+                                    <h4>Manage Pakan</h4>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['Tambak', 'Tanggal', 'Merk_Pakan', 'Harga_Pakan', 'Kode_Pakan', 'Jenis_Butiran', 'Scoring'],
+        sortable: ['Tambak', 'Tanggal', ' Asal_Pakan', 'Merk_Pakan', 'Harga_Pakan', 'Kode_Pakan', 'Pakan_Batch_id', 'Jenis_Butiran', 'Tanggal_Beli', 'Ukuran', 'Jumlah_Karung', 'Status', 'Scoring'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -170,111 +170,162 @@
                 id: 1,
                 Tambak: 'Tambak a',
                 Tanggal: '2022/03/29',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
 
-                Scoring: 'null',
+                Scoring: 'A',
             },
             {
                 id: 2,
                 Tambak: 'Tambak b',
                 Tanggal: '2011/07/05',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
             {
                 id: 3,
                 Tambak: 'Tambak c',
                 Tanggal: '2009/01/12',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
             {
                 id: 4,
                 Tambak: 'Tambak d',
                 Tanggal: '2012/03/29',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
             {
                 id: 5,
                 Tambak: 'Tambak e',
                 Tanggal: '2008/11/28',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'B',
             },
             {
                 id: 6,
                 Tambak: 'Tambak f',
                 Tanggal: '2012/12/02',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Persial',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'B',
             },
             {
                 id: 7,
                 Tambak: 'Tambak g',
                 Tanggal: '2012/08/06',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Persial',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'B',
             },
             {
                 id: 8,
                 Tambak: 'Tambak h',
                 Tanggal: '2010/10/14',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
             {
                 id: 9,
                 Tambak: 'Tambak i',
                 Tanggal: '2009/09/15',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
             {
                 id: 10,
                 Tambak: 'Tambak i',
                 Tanggal: '2009/09/15',
+                Asal_Pakan: '',
                 Merk_Pakan: 'Jafpa',
                 Harga_Pakan: '500,000',
                 Kode_Pakan: '583 - SP',
+                Pakan_Batch_id: '',
                 Jenis_Butiran: 'Pelet',
-
-                Scoring: 'null',
+                Tanggal_Beli: '',
+                Ukuran: '',
+                Jumlah_Karung: '',
+                Status: '',
+                Scoring: 'A',
             },
         ];
     };
@@ -285,10 +336,7 @@
             text: 'HALLO',
             html:
                 '<p><b>Nama Tambak</b> : ' +
-                item.Nama_tambak +
-                '</p>' +
-                '<p><b>Nama Kolam</b> : ' +
-                item.Nama_kolam +
+                item.Tambak +
                 '</p>' +
                 '<p><b>Tanggal</b> : ' +
                 item.Tanggal +
@@ -296,13 +344,10 @@
                 '<p><b>Merk_Pakan Panen</b> : ' +
                 item.Merk_Pakan +
                 '</p>' +
-                '<p><b>Size</b> : ' +
-                item.Size +
-                '</p>' +
                 '<p><b>Jenis_Butiran</b> : ' +
                 item.Jenis_Butiran +
                 '</p>' +
-                '<p><b>Scoring (Day of cultivation)</b> : ' +
+                '<p><b>Scoring</b> : ' +
                 item.Scoring +
                 '</p>',
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
@@ -324,10 +369,11 @@
             // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
             // DIAKHIR TIDAK MENGGUNAKAN tanda +
             showCloseButton: true,
-            focusConfirm: false,
+            focusConfirm: true,
             confirmButtonColor: '#1695DC',
             confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
             confirmButtonAriaLabel: 'Oke',
+            confirmButtonClass: 'd-none',
 
             padding: '2em',
         });
