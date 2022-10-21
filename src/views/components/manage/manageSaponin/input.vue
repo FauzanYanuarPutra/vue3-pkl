@@ -34,7 +34,7 @@
                                         placeholder="Masukkan nama tambak" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <label class="control-label">Tanggal dan Jam Input:</label>
                                     <div class=" mb-0">
                                         <flat-pickr v-model="date2"
                                             :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"

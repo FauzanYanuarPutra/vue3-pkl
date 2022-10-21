@@ -90,13 +90,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'tanggal_input', 'Kategori', 'judul', 'no_of_view', 'no_of_like', 'status', 'actions']);
+const columns = ref(['no', 'tanggal_Input', 'Kategori', 'judul', 'no_of_View', 'no_of_Like', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_Input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -104,7 +104,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['id_konten', 'tanggal_input', 'kategori', 'judul', 'deskripsi', 'gambar', 'video', 'pdf', 'no_of_view', 'no_of_like', 'status'],
+    sortable: ['id_konten', 'tanggal_Input', 'kategori', 'judul', 'deskripsi', 'gambar', 'video', 'pdf', 'no_of_View', 'no_of_Like', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -122,141 +122,141 @@ const bind_data = () => {
         {
             id: 1,
             id_konten: '1',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Penyakit udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '14',
-            no_of_like: '13',
+            no_of_View: '14',
+            no_of_Like: '13',
             status: 'Aktif',
         },
         {
             id: 2,
             id_konten: '2',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Penyakit udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '33',
-            no_of_like: '12',
+            no_of_View: '33',
+            no_of_Like: '12',
             status: 'Tidak Aktif',
         },
         {
             id: 3,
             id_konten: '3',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '34',
-            no_of_like: '23',
+            no_of_View: '34',
+            no_of_Like: '23',
             status: 'Aktif',
         },
         {
             id: 4,
             id_konten: '4',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '35',
-            no_of_like: '12',
+            no_of_View: '35',
+            no_of_Like: '12',
             status: 'Tidak Aktif',
         },
         {
             id: 5,
             id_konten: '5',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '34',
-            no_of_like: '15',
+            no_of_View: '34',
+            no_of_Like: '15',
             status: 'Tidak Aktif',
         },
         {
             id: 6,
             id_konten: '6',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '25',
-            no_of_like: '15',
+            no_of_View: '25',
+            no_of_Like: '15',
             status: 'Aktif',
         },
         {
             id: 7,
             id_konten: '7',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '54',
-            no_of_like: '13',
+            no_of_View: '54',
+            no_of_Like: '13',
             status: 'Aktif',
         },
         {
             id: 8,
             id_konten: '8',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '57',
-            no_of_like: '13',
+            no_of_View: '57',
+            no_of_Like: '13',
             status: 'Tidak Aktif',
         },
         {
             id: 9,
             id_konten: '9',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '46',
-            no_of_like: '31',
+            no_of_View: '46',
+            no_of_Like: '31',
             status: 'Aktif',
         },
         {
             id: 10,
             id_konten: '10',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '46',
-            no_of_like: '31',
+            no_of_View: '46',
+            no_of_Like: '31',
             status: 'Aktif',
         },
     ];
@@ -266,34 +266,62 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Manage Kontent Edukasi</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Tanggal</b> : ' +
-            item.tanggal_input +
-            '</p>' +
-            '<p><b>Kategori</b> : ' +
-            item.Kategori +
-            '</p>' +
-            '<p><b>Judul</b> : ' +
-            item.judul +
-            '</p>' +
-            '<p><b>Gambar</b> : ' +
-            item.gambar +
-            '</p>' +
-            '<p><b>Video</b> : ' +
-            item.video +
-            '</p>' +
-            '<p><b>PDF</b> : ' +
-            item.pdf +
-            '</p>' +
-            '<p><b>No. of view</b> : ' +
-            item.no_of_view +
-            '</p>' +
-            '<p><b>No. of like</b> : ' +
-            item.no_of_like +
-            '</p>' +
-            '<p><b>Status</b> : ' +
-            item.status +
-            '</p>',
+        html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tanggal_Input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Kategori</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Kategori}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Judul</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.judul}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Deskripsi</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.deskripsi}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Gambar </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.gambar}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Video </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.video}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>PDF </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.pdf}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No of View </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.no_of_View}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No of Like </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.no_of_Like}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.status}</td>
+                                        </tr>
+                                    </tbody>
+            </table>   
+            `,
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
