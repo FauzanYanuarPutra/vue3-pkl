@@ -90,13 +90,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'tanggal_input', 'Kategori', 'judul', 'no_of_view', 'no_of_like', 'status', 'actions']);
+const columns = ref(['no', 'tanggal_Input', 'Kategori', 'judul', 'no_of_View', 'no_of_Like', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_Input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -104,7 +104,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['id_konten', 'tanggal_input', 'kategori', 'judul', 'deskripsi', 'gambar', 'video', 'pdf', 'no_of_view', 'no_of_like', 'status'],
+    sortable: ['id_konten', 'tanggal_Input', 'kategori', 'judul', 'deskripsi', 'gambar', 'video', 'pdf', 'no_of_View', 'no_of_Like', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -122,141 +122,141 @@ const bind_data = () => {
         {
             id: 1,
             id_konten: '1',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Penyakit udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '14',
-            no_of_like: '13',
+            no_of_View: '14',
+            no_of_Like: '13',
             status: 'Aktif',
         },
         {
             id: 2,
             id_konten: '2',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Penyakit udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '33',
-            no_of_like: '12',
+            no_of_View: '33',
+            no_of_Like: '12',
             status: 'Tidak Aktif',
         },
         {
             id: 3,
             id_konten: '3',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '34',
-            no_of_like: '23',
+            no_of_View: '34',
+            no_of_Like: '23',
             status: 'Aktif',
         },
         {
             id: 4,
             id_konten: '4',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '35',
-            no_of_like: '12',
+            no_of_View: '35',
+            no_of_Like: '12',
             status: 'Tidak Aktif',
         },
         {
             id: 5,
             id_konten: '5',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '34',
-            no_of_like: '15',
+            no_of_View: '34',
+            no_of_Like: '15',
             status: 'Tidak Aktif',
         },
         {
             id: 6,
             id_konten: '6',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kondisi air',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '25',
-            no_of_like: '15',
+            no_of_View: '25',
+            no_of_Like: '15',
             status: 'Aktif',
         },
         {
             id: 7,
             id_konten: '7',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '54',
-            no_of_like: '13',
+            no_of_View: '54',
+            no_of_Like: '13',
             status: 'Aktif',
         },
         {
             id: 8,
             id_konten: '8',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '57',
-            no_of_like: '13',
+            no_of_View: '57',
+            no_of_Like: '13',
             status: 'Tidak Aktif',
         },
         {
             id: 9,
             id_konten: '9',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '46',
-            no_of_like: '31',
+            no_of_View: '46',
+            no_of_Like: '31',
             status: 'Aktif',
         },
         {
             id: 10,
             id_konten: '10',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             Kategori: 'Cara pengecekan kesehatan udang',
             judul: 'null',
             deskripsi: 'null',
             gambar: 'null',
             video: 'null',
             pdf: 'null',
-            no_of_view: '46',
-            no_of_like: '31',
+            no_of_View: '46',
+            no_of_Like: '31',
             status: 'Aktif',
         },
     ];
@@ -268,7 +268,7 @@ const view_row = (item) => {
         text: 'HALLO',
         html:
             '<p><b>Tanggal</b> : ' +
-            item.tanggal_input +
+            item.tanggal_Input +
             '</p>' +
             '<p><b>Kategori</b> : ' +
             item.Kategori +
@@ -286,10 +286,10 @@ const view_row = (item) => {
             item.pdf +
             '</p>' +
             '<p><b>No. of view</b> : ' +
-            item.no_of_view +
+            item.no_of_View +
             '</p>' +
             '<p><b>No. of like</b> : ' +
-            item.no_of_like +
+            item.no_of_Like +
             '</p>' +
             '<p><b>Status</b> : ' +
             item.status +

@@ -89,13 +89,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'tambak', 'tanggal_input', 'jenis', 'status', 'actions']);
+const columns = ref(['no', 'tambak', 'tanggal_Input', 'jenis', 'status', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_input: 'text-center' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_Input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -103,7 +103,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['tambak', 'tanggal_input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
+    sortable: ['tambak', 'tanggal_Input', 'id', 'kategori', 'jenis', 'keterangan', 'status'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -121,7 +121,7 @@ const bind_data = () => {
         {
             id: 1,
             tambak: 'Tambak a',
-            tanggal_input: '2021/04/25',
+            tanggal_Input: '2021/04/25',
             id: '23',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -131,7 +131,7 @@ const bind_data = () => {
         {
             id: 2,
             tambak: 'Tambak b',
-            tanggal_input: '2021/05/05',
+            tanggal_Input: '2021/05/05',
             id: '12',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -141,7 +141,7 @@ const bind_data = () => {
         {
             id: 3,
             tambak: 'Tambak c',
-            tanggal_input: '2022/09/18',
+            tanggal_Input: '2022/09/18',
             id: '14',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -151,7 +151,7 @@ const bind_data = () => {
         {
             id: 4,
             tambak: 'Tambak d',
-            tanggal_input: '2022/07/23',
+            tanggal_Input: '2022/07/23',
             id: '2',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -161,7 +161,7 @@ const bind_data = () => {
         {
             id: 5,
             tambak: 'Tambak e',
-            tanggal_input: '2022/01/15',
+            tanggal_Input: '2022/01/15',
             id: '7',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -171,7 +171,7 @@ const bind_data = () => {
         {
             id: 6,
             tambak: 'Tambak f',
-            tanggal_input: '2022/01/17',
+            tanggal_Input: '2022/01/17',
             id: '8',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -181,7 +181,7 @@ const bind_data = () => {
         {
             id: 7,
             tambak: 'Tambak g',
-            tanggal_input: '2022/03/25',
+            tanggal_Input: '2022/03/25',
             id: '17',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -191,7 +191,7 @@ const bind_data = () => {
         {
             id: 8,
             tambak: 'Tambak h',
-            tanggal_input: '2022/02/18',
+            tanggal_Input: '2022/02/18',
             id: '12',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -201,7 +201,7 @@ const bind_data = () => {
         {
             id: 9,
             tambak: 'Tambak i',
-            tanggal_input: '2022/04/05',
+            tanggal_Input: '2022/04/05',
             id: '10',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -211,7 +211,7 @@ const bind_data = () => {
         {
             id: 10,
             tambak: 'Tambak j',
-            tanggal_input: '2022/06/24',
+            tanggal_Input: '2022/06/24',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -221,7 +221,7 @@ const bind_data = () => {
         {
             id: 11,
             tambak: 'Tambak k',
-            tanggal_input: '2022/05/13',
+            tanggal_Input: '2022/05/13',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -231,7 +231,7 @@ const bind_data = () => {
         {
             id: 12,
             tambak: 'Tambak l',
-            tanggal_input: '2022/07/15',
+            tanggal_Input: '2022/07/15',
             id: '21',
             kategori: 'Saponin',
             jenis: 'saponin steroid',
@@ -253,7 +253,7 @@ const view_row = (item) => {
             item.nama_tambak +
             '</p>' +
             '<p><b>Tanggal dan jam input</b> : ' +
-            item.tanggal_input +
+            item.tanggal_Input +
             '</p>' +
             '<p><b>Kategori</b> : ' +
             item.kategori +

@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Manage Kontent
+                                <li class="breadcrumb-item active" aria-current="page"><span>Edit Data Kontent
                                         Edukasi</span></li>
                             </ol>
                         </nav>
@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h3>Input Manage Kontent Edukasi</h3>
+                                <h4>Edit Data Kontent Edukasi</h4>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                             </div>
                             <div class="box-wrap">
                                 <div class="form-group">
-                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <label class="control-label">Tanggal dan Jam Input:</label>
                                     <div class="mb-0">
                                         <flat-pickr v-model="date2"
                                             :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"

@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Tambah Data Kolam</span>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Edit Data Kolam</span>
                                 </li>
                             </ol>
                         </nav>
@@ -21,7 +21,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Tambah Data Kolam</h4>
+                                <h4>Edit Data Kolam</h4>
                             </div>
                         </div>
                     </div>
