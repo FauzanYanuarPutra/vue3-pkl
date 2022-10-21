@@ -117,7 +117,7 @@
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { actions: 'actions text-center ', no: 'text-end ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-center ' },
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center ', no: 'text-end ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-center ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
