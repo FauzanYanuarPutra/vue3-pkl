@@ -266,34 +266,62 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Manage Kontent Edukasi</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Tanggal</b> : ' +
-            item.tanggal_Input +
-            '</p>' +
-            '<p><b>Kategori</b> : ' +
-            item.Kategori +
-            '</p>' +
-            '<p><b>Judul</b> : ' +
-            item.judul +
-            '</p>' +
-            '<p><b>Gambar</b> : ' +
-            item.gambar +
-            '</p>' +
-            '<p><b>Video</b> : ' +
-            item.video +
-            '</p>' +
-            '<p><b>PDF</b> : ' +
-            item.pdf +
-            '</p>' +
-            '<p><b>No. of view</b> : ' +
-            item.no_of_View +
-            '</p>' +
-            '<p><b>No. of like</b> : ' +
-            item.no_of_Like +
-            '</p>' +
-            '<p><b>Status</b> : ' +
-            item.status +
-            '</p>',
+        html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tanggal_Input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Kategori</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Kategori}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Judul</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.judul}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Deskripsi</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.deskripsi}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Gambar </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.gambar}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Video </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.video}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>PDF </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.pdf}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No of View </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.no_of_View}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No of Like </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.no_of_Like}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.status}</td>
+                                        </tr>
+                                    </tbody>
+            </table>   
+            `,
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
         // '<p><b>Nama</b> : ' + item.nama + '</p>'+
