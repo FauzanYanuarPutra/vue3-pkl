@@ -92,13 +92,13 @@ import { onMounted, ref } from 'vue';
 import { useMeta } from '@/composables/use-meta';
 useMeta({ title: 'Default Order Sorting Table' });
 
-const columns = ref(['no', 'nama_tambak', 'nama_kolam', 'tanggal_input', 'merek_pakan', 'Pemberian_pakan(Kg)', 'pakan_kumulative(Kg)', 'DOC', 'actions']);
+const columns = ref(['no', 'tambak', 'kolam', 'tanggal_Input', 'merk_Pakan', 'Pemberian_Pakan(Kg)', 'pakan_Kumulative(Kg)', 'DOC', 'actions']);
 const items = ref([]);
 const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { actions: 'actions text-center', tanggal_input: 'text-center', No_auto_feeder: 'text-end', 'Pemberian_pakan(Kg)': 'text-end', 'pakan_kumulative(Kg)': 'text-end' },
+    columnsClasses: { no: 'text-end', actions: 'actions text-center', tanggal_Input: 'text-center', No_auto_feeder: 'text-end', 'Pemberian_Pakan(Kg)': 'text-end', 'pakan_Kumulative(Kg)': 'text-end', DOC: 'text-end' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -106,7 +106,7 @@ const table_option = ref({
         filterPlaceholder: 'Search...',
         limit: 'Results:',
     },
-    sortable: ['nama_tambak', 'nama_kolam', 'tanggal_input', 'merek_pakan', 'No_auto_feeder', 'Pemberian_pakan(Kg)', 'pakan_kumulative(Kg)'],
+    sortable: ['tambak', 'kolam', 'tanggal_Input', 'merk_Pakan', 'No_auto_feeder', 'Pemberian_Pakan(Kg)', 'pakan_Kumulative(Kg)'],
     sortIcon: {
         base: 'sort-icon-none',
         up: 'sort-icon-asc',
@@ -123,66 +123,66 @@ const bind_data = () => {
     items.value = [
         {
             id: 1,
-            nama_tambak: 'Tambak a',
-            nama_kolam: 'Kolam B1',
-            tanggal_input: '2021/04/25',
-            merek_pakan: 'null',
+            tambak: 'Tambak a',
+            kolam: 'Kolam B1',
+            tanggal_Input: '2021/04/25',
+            merk_Pakan: 'null',
             No_pakan: 'null',
             No_auto_feeder: 'null',
-            'Pemberian_pakan(Kg)': '12',
-            'pakan_kumulative(Kg)': '31',
+            'Pemberian_Pakan(Kg)': '12',
+            'pakan_Kumulative(Kg)': '31',
             DOC: '23',
             FCR: 'null',
         },
         {
             id: 2,
-            nama_tambak: 'Tambak b',
-            nama_kolam: 'Kolam B2',
-            tanggal_input: '2021/04/25',
-            merek_pakan: 'null',
+            tambak: 'Tambak b',
+            kolam: 'Kolam B2',
+            tanggal_Input: '2021/04/25',
+            merk_Pakan: 'null',
             No_pakan: 'null',
             No_auto_feeder: 'null',
-            'Pemberian_pakan(Kg)': '22',
-            'pakan_kumulative(Kg)': '23',
+            'Pemberian_Pakan(Kg)': '22',
+            'pakan_Kumulative(Kg)': '23',
             DOC: '12',
             FCR: 'null',
         },
         {
             id: 3,
-            nama_tambak: 'Tambak c',
-            nama_kolam: 'Kolam B3',
-            tanggal_input: '2021/04/25',
-            merek_pakan: 'null',
+            tambak: 'Tambak c',
+            kolam: 'Kolam B3',
+            tanggal_Input: '2021/04/25',
+            merk_Pakan: 'null',
             No_pakan: 'null',
             No_auto_feeder: 'null',
-            'Pemberian_pakan(Kg)': '12',
-            'pakan_kumulative(Kg)': '32',
+            'Pemberian_Pakan(Kg)': '12',
+            'pakan_Kumulative(Kg)': '32',
             DOC: '13',
             FCR: 'null',
         },
         {
             id: 4,
-            nama_tambak: 'Tambak d',
-            nama_kolam: 'Kolam B4',
-            tanggal_input: '2021/04/25',
-            merek_pakan: 'null',
+            tambak: 'Tambak d',
+            kolam: 'Kolam B4',
+            tanggal_Input: '2021/04/25',
+            merk_Pakan: 'null',
             No_pakan: 'null',
             No_auto_feeder: 'null',
-            'Pemberian_pakan(Kg)': '14',
-            'pakan_kumulative(Kg)': '42',
+            'Pemberian_Pakan(Kg)': '14',
+            'pakan_Kumulative(Kg)': '42',
             DOC: '21',
             FCR: 'null',
         },
         {
             id: 5,
-            nama_tambak: 'Tambak e',
-            nama_kolam: 'Kolam B5',
-            tanggal_input: '2021/04/25',
-            merek_pakan: 'null',
+            tambak: 'Tambak e',
+            kolam: 'Kolam B5',
+            tanggal_Input: '2021/04/25',
+            merk_Pakan: 'null',
             No_pakan: 'null',
             No_auto_feeder: 'null',
-            'Pemberian_pakan(Kg)': '22',
-            'pakan_kumulative(Kg)': '11',
+            'Pemberian_Pakan(Kg)': '22',
+            'pakan_Kumulative(Kg)': '11',
             DOC: '23',
             FCR: 'null',
         },
@@ -193,31 +193,62 @@ const view_row = (item) => {
     new window.Swal({
         title: '<i>Siklus budidaya (Udang)</i>',
         text: 'HALLO',
-        html:
-            '<p><b>Nama kolam</b> : ' +
-            item.nama_kolam +
-            '</p>' +
-            '<p><b>Tanggal dan jam input</b> : ' +
-            item.tanggal_input +
-            '</p>' +
-            '<p><b>Merek pakan</b> : ' +
-            item.merek_pakan +
-            '</p>' +
-            '<p><b>No. Pakan (gr)</b> : ' +
-            item.No_pakan +
-            '</p>' +
-            '<p><b>No. Auto feeder</b> : ' +
-            item.No_auto_feeder +
-            '</p>' +
-            '<p><b>Pemberian pakan(Kg)</b> : ' +
-            item.Pemberian_pakan +
-            '</p>' +
-            '<p><b>Pakan kumulativ</b> : ' +
-            item.pakan_kumulativ +
-            '</p>' +
-            '<p><b>FCR</b> : ' +
-            item.FCR +
-            '</p>',
+        html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tambak</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tambak}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Kolam</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.kolam}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal dan Jam Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tanggal_Input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Merk Pakan</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.merk_Pakan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No. Pakan </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.No_pakan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No. Auto Feeder </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.No_auto_feeder}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pemberian Pakan (Kg) </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.No_pakan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Pakan Kumulative (Kg) </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.No_pakan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>DOC </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.DOC}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>FCR </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.FCR}</td>
+                                        </tr>
+                                    </tbody>
+            </table>   
+            `,
         // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
         // DIAKHIR TIDAK MENGGUNAKAN tanda +
         showCloseButton: true,
