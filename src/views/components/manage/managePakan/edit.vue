@@ -92,7 +92,7 @@
                                     ></multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Merek Pakan:</label>
+                                    <label class="control-label">Merk Pakan:</label>
                                     <input type="text" name="merek_pakana" class="form-control" />
                                 </div>
                                 <div class="form-group">

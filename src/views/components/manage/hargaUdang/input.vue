@@ -36,12 +36,12 @@
 
                                 <div class="form-group">
                                     <label class="control-label">Ukuran Udang:</label>
-                                    <input type="number" name="ukuran_udang" class="form-control" />
+                                    <input type="text" name="ukuran_udang" class="form-control" placeholder="Masukan Ukuran Udang" />
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Harga Udang:</label>
-                                    <input type="number" name="harga_udang" class="form-control" />
+                                    <input type="number" name="harga_udang" class="form-control" v-maska="'##########################'" placeholder="Masukan Harga Udang" />
                                 </div>
                             </div>
 

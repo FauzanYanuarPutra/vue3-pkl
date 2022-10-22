@@ -45,8 +45,10 @@
                                         <textarea name="Keterangan" id="" cols="10" rows="10" class="form-control"></textarea>
                                     </div>
                                 </div>
-
-                                <input type="submit" value="Submit" class="btn mt-3" />
+                                <div class="submit">
+                                    <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                    <router-link to="/manage-pakan" @click="toggleMobileMenu" class="btn btn-kembali mt-3"> Kembali</router-link>
+                                </div>
                             </form>
                         </div>
                     </div>

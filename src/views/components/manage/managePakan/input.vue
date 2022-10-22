@@ -92,20 +92,20 @@
                                     ></multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Merek Pakan:</label>
-                                    <input type="text" name="merek_pakana" class="form-control" />
+                                    <label class="control-label">Merk Pakan:</label>
+                                    <input type="text" name="merek_pakana" class="form-control" placeholder="Masukan Merk Pakan" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Harga Pakan:</label>
-                                    <input type="number" name="harga_pakana" class="form-control" />
+                                    <label class="control-label">Harga Pakan(Rp):</label>
+                                    <input type="number" name="harga_pakana" class="form-control" v-maska="'###################'" placeholder="Masukan Harga Pakan (Rp)" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Kode Pakan:</label>
-                                    <input type="text" name="kode_pakana" class="form-control" />
+                                    <input type="text" name="kode_pakana" class="form-control" placeholder="Masukan Kode Pakan" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Pakan Batch Id:</label>
-                                    <input type="text" name="" class="form-control" />
+                                    <input type="text" name="" class="form-control" placeholder="Masukan Pakan Batch ID" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Jenis Butiran:</label>
@@ -127,11 +127,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Ukuran (Kg) / karung:</label>
-                                    <input type="number" name="size" class="form-control" />
+                                    <input type="number" class="form-control" v-maska="'##########################'" placeholder="Masukan Ukuran(Kg) / Karung" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Jumlah Karung:</label>
-                                    <input type="number" name="total_biomana" class="form-control" />
+                                    <input type="number" name="" class="form-control" v-maska="'##########################'" placeholder="Masukan Jumlah Karung" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Status:</label>
