@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Manage Alat</h4>
+                                <h4>Tambah Manage Alat</h4>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Tanggal dan jam input:</label>
+                                    <label class="control-label">Tanggal dan Jam Input:</label>
                                     <div class="mb-0">
                                         <flat-pickr v-model="date2"
                                             :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }"
@@ -79,18 +79,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Kategori Alat:</label>
-                                    <input type="text" name="kategori_alat" class="form-control" />
+                                    <multiselect v-model="inputs['input4']" :options="kategoriAlat" :searchable="true"
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label">Brand:</label>
-                                    <input type="text" name="brand" class="form-control" />
+                                    <input type="text" name="brand" class="form-control" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tipe / Model:</label>
-                                    <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
+                                    <input type="text" name="tipe_model" class="form-control" />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Kegunaan:</label>
@@ -99,8 +100,8 @@
 
 
                                 <div class="form-group">
-                                    <label class="control-label">Jumlah unit:</label>
-                                    <input type="text" name="jumlah_unit" class="form-control" />
+                                    <label class="control-label">Jumlah Unit:</label>
+                                    <input type="number" name="jumlah_unit" class="form-control" />
                                 </div>
 
 
@@ -113,7 +114,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label">Perkiraan bulan dan tahun beli:</label>
+                                    <label class="control-label">Perkiraan Bulan dan Tahun Beli:</label>
                                     <div class="mb-0">
                                         <flat-pickr v-model="date1" class="form-control flatpickr active">s</flat-pickr>
                                     </div>
@@ -143,7 +144,10 @@
 
                             </div>
 
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                             <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-alat" @click="toggleMobileMenu" class="btn btn-kembali mt-3" >Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -182,7 +186,9 @@ const toggleCode = (name) => {
 };
 
 const tambak = ref(['Tambak b1', 'Tambak b2']);
-const status = ref(['Aktike', 'Tidak']);
+const kategoriAlat = ref(['Kategori Alat', 'Kategori Alat']);
+
+const status = ref(['Aktif', 'Tidak']);
 
 
 

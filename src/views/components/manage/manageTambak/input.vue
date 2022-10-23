@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Manage Tambak</h4>
+                                <h4>Tambah Manage Tambak</h4>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                                         <input type="text" name="provinsi" class="form-control" />
                                     </div>
 
-                                    <div class="form-group">
+                                    <div class="form-group w-100">
                                     <label class="control-label">Status:</label>
                                     <multiselect v-model="inputs['input3']" :options="status" :searchable="true"
                                         placeholder="Choose..." selected-label="" select-label="" deselect-label="">
@@ -93,9 +93,9 @@
                                 </div>
 
                                     
-                                    <div class="form-group">
+                                    <div class="form-group w-100">
                                         <label class="control-label">Google Map:</label>
-                                    <img src="/map.jpeg" alt="map" class="map">
+                                        <img src="/map.jpeg" alt="map" class="map">
 
                                     </div>
                             </div>

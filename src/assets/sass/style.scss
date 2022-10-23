@@ -2204,7 +2204,9 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 
 .map {
     width: 100%;
-    margin-top: -70px;
+    height: 200px;
+    // margin-top: px;
+    object-fit: cover;
 }
 
 .table > thead > tr > th {
@@ -2216,9 +2218,32 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
 }
 
 
-.table .no {
+// .table .no {
+//     width: 30%;
+//     text-align: end;
+// }
+
+th.no .text-end{
+    text-align: center;
+    color: red;
+}
+
+.VueTables__sortable .text-end{
+    text-align: center;
+}
+
+th.tengah-kanan,
+th.no {
+    text-align: center;
     width: 3%;
 }
+
+td.tengah-kanan,
+td.no {
+    text-align: end;
+}
+
+
 
 
 

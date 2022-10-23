@@ -110,13 +110,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama_tambak', 'nama_area', 'provinsi', 'status', 'actions']);
+    const columns = ref(['no', 'tambak', 'area', 'provinsi', 'status', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center' },
+        columnsClasses: { no: 'no', actions: 'actions text-center' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -124,7 +124,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['nama_tambak', 'nama_area', 'provinsi', 'map_location', 'status'],
+        sortable: ['tambak', 'area', 'provinsi', 'map_location', 'status'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -141,80 +141,80 @@
         items.value = [
             {
                 id: 1,
-                nama_tambak: 'Tambak a',
-                nama_area: 'Banda Aceh',
+                tambak: 'Tambak a',
+                area: 'Banda Aceh',
                 provinsi: 'Naggroe Aceh Darussalam',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 2,
-                nama_tambak: 'Tambak b',
-                nama_area: 'Medan',
+                tambak: 'Tambak b',
+                area: 'Medan',
                 provinsi: 'Sumatera Utara',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 3,
-                nama_tambak: 'Tambak c',
-                nama_area: 'Palembang',
+                tambak: 'Tambak c',
+                area: 'Palembang',
                 provinsi: 'Sumatera Selatan',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 4,
-                nama_tambak: 'Tambak d',
-                nama_area: 'Padang',
+                tambak: 'Tambak d',
+                area: 'Padang',
                 provinsi: 'Sumatera Barat',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 5,
-                nama_tambak: 'Tambak e',
-                nama_area: 'Bengkulu',
+                tambak: 'Tambak e',
+                area: 'Bengkulu',
                 provinsi: 'Bengkulu',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 6,
-                nama_tambak: 'Tambak f',
-                nama_area: 'Pekan Baru',
+                tambak: 'Tambak f',
+                area: 'Pekan Baru',
                 provinsi: 'Riau',
                 map_location: 'null',
                 status: 'Tidak',
             },
             {
                 id: 7,
-                nama_tambak: 'Tambak g',
-                nama_area: 'Tanjung Pinang',
+                tambak: 'Tambak g',
+                area: 'Tanjung Pinang',
                 provinsi: 'Kepulauan Riau',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 8,
-                nama_tambak: 'Tambak h',
-                nama_area: 'Jambi',
+                tambak: 'Tambak h',
+                area: 'Jambi',
                 provinsi: 'Jambi',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 9,
-                nama_tambak: 'Tambak i',
-                nama_area: 'Bandar Lampung',
+                tambak: 'Tambak i',
+                area: 'Bandar Lampung',
                 provinsi: 'Lampung',
                 map_location: 'null',
                 status: 'Aktif',
             },
             {
                 id: 10,
-                nama_tambak: 'Tambak j',
-                nama_area: 'Pangkal Pinang',
+                tambak: 'Tambak j',
+                area: 'Pangkal Pinang',
                 provinsi: 'Bangka Belitung',
                 map_location: 'null',
                 status: 'Aktif',
@@ -227,25 +227,38 @@
             title: '<i>Persiapan Kolam Budidaya</i>',
             text: 'HALLO',
             html: `
-            <h6 class="judul-detail"><b>Nama Tambak</b> : ${item.nama_tambak}</h6>
-            <h6 class="judul-detail"><b>Status</b> : ${item.status}</h6>
-
-
-            <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-hover table-bordered" id="__BVID__415">
-                                    <thead role="rowgroup" class="detail-table">
-                                        <tr role="row">
-                                            <th role="columnheaderr" scope="col" aria-colindex="1" class="color-dange"><div>Nama Area</div></th>
-                                            <th role="columnheader" scope="col" aria-colindex="2"><div>Provinsi</div></th>
-                                            
-                                        </tr>
-                                    </thead>
+             <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
                                     <tbody role="rowgroup">
                                         <tr v-for="item in table_1" :key="item.name" role="row">
-                                            <td aria-colindex="2" role="cell">${item.nama_area}</td>
-                                            <td aria-colindex="2" role="cell">${item.provinsi}</td>
+                                            <td aria-colindex="1" role="cell"><b>Tambak</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.tambak }</td>
                                         </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Area</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.area }</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Provinsi </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.provinsi }</td>
+                                        </tr>
+                                        
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${ item.status }</td>
+                                        </tr>
+
+                                        <div>
+                                            <tr aria-colindex="1" role="cell"><b>Map Location :</b></tr>
+                                            <img src="/map.jpeg" alt="map" class="map">
+                                        </div>
+                                            
+                                        
                                     </tbody>
-            </table>    
+            </table> 
         `,
             showCloseButton: true,
             focusConfirm: true,
