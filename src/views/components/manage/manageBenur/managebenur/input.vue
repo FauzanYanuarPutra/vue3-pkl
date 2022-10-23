@@ -33,7 +33,7 @@
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Tanggal dan jam iput:</label>
+                                    <label class="control-label">Tanggal dan Jam Iput:</label>
                                     <div class="mb-0">
                                         <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
                                     </div>
@@ -51,12 +51,12 @@
                                     ></multiselect>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Benur batch id:</label>
-                                    <input type="text" name="" class="form-control" />
+                                    <label class="control-label">Benur Batch ID:</label>
+                                    <input type="text" name="" class="form-control" placeholder="Masukan Benur Batch ID" />
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Usia benur(hari):</label>
-                                    <input type="number" name="usia" class="form-control" />
+                                    <label class="control-label">Usia Benur(Hari):</label>
+                                    <input type="number" name="usia" class="form-control" v-maska="'##########################'" placeholder="Masukan Usia Benur" />
                                 </div>
                             </div>
                             <div class="submit">

@@ -61,7 +61,7 @@
                                                                 <polyline points="16 16 12 12 8 16"></polyline>
                                                             </svg>
                                                         </div>
-                                                        <div class="mt-2">Click to Upload Picture/Logo</div>
+                                                        <div class="mt-2">Click to Upload Picture</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -70,8 +70,8 @@
                                 </div>
                                 <div class="box-wrap">
                                     <div class="form-group">
-                                        <label class="control-label">Name</label>
-                                        <input type="text" name="name" class="form-control" />
+                                        <label class="control-label">Nama</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Masukkan Nama" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Jabatan</label>
@@ -86,8 +86,8 @@
                                         ></multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ph-number">No hp</label>
-                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="" />
+                                        <label for="ph-number">No Hp</label>
+                                        <input type="text" id="ph-number" class="form-control" v-maska="'#############'" placeholder="Masukan No Hp" />
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label">Password</label>
@@ -118,17 +118,17 @@
                                         <label class="control-label">Email</label>
                                         <div class="input-group">
                                             <div class="input-group-text">@</div>
-                                            <input type="email" name="email" class="form-control" />
+                                            <input type="email" name="email" class="form-control" placeholder="Email" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Tanggal lahir:</label>
+                                        <label class="control-label">Tanggal Lahir:</label>
                                         <div class="mb-0">
                                             <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Jenis kelamin</label>
+                                        <label class="control-label">Jenis Kelamin</label>
                                         <multiselect
                                             v-model="inputs['input2']"
                                             :options="options2"
@@ -140,7 +140,7 @@
                                         ></multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Status pernikahan</label>
+                                        <label class="control-label">Status Pernikahan</label>
                                         <multiselect
                                             v-model="inputs['input3']"
                                             :options="options3"
@@ -152,11 +152,11 @@
                                         ></multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Alamat rumah</label>
-                                        <input type="text" name="alamat_rumah" class="form-control" />
+                                        <label class="control-label">Alamat Rumah</label>
+                                        <input type="text" name="alamat_rumah" class="form-control" placeholder="Masukan Alamat Rumah" />
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Tanggal bergabung:</label>
+                                        <label class="control-label">Tanggal Bergabung:</label>
                                         <div class="mb-0">
                                             <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
                                         </div>
@@ -166,7 +166,7 @@
                                 <div class="box-wrap">
                                     <h6 class="col-xl-12 col-md-12 col-sm-12 col-12 mt-3 mb-2"></h6>
                                     <div class="form-group">
-                                        <label class="control-label">Access right:</label>
+                                        <label class="control-label">Access Right:</label>
                                         <multiselect
                                             v-model="inputs['input6']"
                                             :options="options6"
@@ -178,7 +178,7 @@
                                         ></multiselect>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label">Team tambak</label>
+                                        <label class="control-label">Team Tambak</label>
                                         <multiselect
                                             v-model="inputs['input5']"
                                             :options="options5"

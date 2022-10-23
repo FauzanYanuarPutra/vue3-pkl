@@ -111,13 +111,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'nama', 'jabatan', 'no_hp', 'tgl_bergabung', 'team_tambak', 'access_right', 'akses_terakhir', 'actions']);
+    const columns = ref(['no', 'nama', 'jabatan', 'No_Hp', 'Tanggal_Bergabung', 'Team_Tambak', 'Access_Right', 'Akses_Terakhir', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-center', actions: 'actions text-center ', no: 'text-end ', tgl_bergabung: 'text-center ', no_hp: 'text-end ', akses_terakhir: 'text-center ' },
+        columnsClasses: { no: 'no text-center', actions: 'actions text-center ', Tanggal_Bergabung: 'text-center ', No_Hp: 'text-end', Akses_Terakhir: 'text-center ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -128,19 +128,19 @@
         sortable: [
             'nama',
             'jabatan',
-            'no_hp',
+            'No_Hp',
             'password',
             'email',
             'photo',
-            'tgl_lahir',
+            'Tanggal_Lahir',
             'jenis_kelamin',
-            'status',
+            'status_pernikahan',
             'alamat_rumah',
-            'tgl_bergabung',
+            'Tanggal_Bergabung',
             'status',
-            'team_tambak',
-            'access_right',
-            'akses_terakhir',
+            'Team_Tambak',
+            'Access_Right',
+            'Akses_Terakhir',
         ],
         sortIcon: {
             base: 'sort-icon-none',
@@ -160,267 +160,277 @@
                 id: 1,
                 nama: 'Garrett Winters',
                 jabatan: 'Manager',
-                no_hp: '087584462',
-                tgl_bergabung: '2008/12/13',
+                No_Hp: '087584462',
+                Tanggal_Bergabung: '2008/12/13',
+                password: '****',
                 email: 'garrett@gmail.com',
                 photo: 'null',
                 tgl_lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-                password: '****',
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Bandung',
-                supervisor: 'null',
+                Tanggal_Bergabung: '2010/01/25',
+                Team_Tambak: 'Bandung',
                 tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 2,
                 nama: 'Brielle Williamson',
                 jabatan: 'Kepala teknisi',
-                no_hp: '089346254',
-                tgl_bergabung: '2011/04/25',
+                No_Hp: '089346254',
+                Tanggal_Bergabung: '2011/04/25',
                 password: '****',
                 email: 'briell@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: '',
-                team_tambak: 'Bandung',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Bandung',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 3,
                 nama: 'Herrod Chandler',
                 jabatan: 'Teknisi',
-                no_hp: '083645274',
-                tgl_bergabung: '2012/03/29',
+                No_Hp: '083645274',
+                Tanggal_Bergabung: '2012/03/29',
                 password: '****',
                 email: 'Chandler@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Perempuan',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Cirebon',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Cirebon',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 4,
                 nama: 'Cedric Kelly',
                 jabatan: 'Kepala laboratorium',
-                no_hp: '085463557',
-                tgl_bergabung: '2009/09/15',
+                No_Hp: '085463557',
+                Tanggal_Bergabung: '2009/09/15',
                 password: '****',
                 email: 'Kelyy@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Perempuan',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Lombok',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Lombok',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 5,
                 nama: 'Ashton Cox',
                 jabatan: 'Laboratorium',
-                no_hp: '084956371',
-                tgl_bergabung: '2012/08/06',
+                No_Hp: '084956371',
+                Tanggal_Bergabung: '2012/08/06',
                 password: '****',
                 email: 'ACOX@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Lombok',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Bali',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 6,
                 nama: 'Herrod Chandler',
                 jabatan: 'Laboratorium',
-                no_hp: '089756344',
-                tgl_bergabung: '	2012/12/02',
+                No_Hp: '089756344',
+                Tanggal_Bergabung: '	2012/12/02',
                 password: '****',
                 email: 'Herrod@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Perempuan',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Bali',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Bali',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 7,
                 nama: 'Sonya Frost',
                 jabatan: 'Admin',
-                no_hp: '089563745',
-                tgl_bergabung: '2012/03/29',
+                No_Hp: '089563745',
+                Tanggal_Bergabung: '2012/03/29',
                 password: '****',
                 email: 'Frost@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Perempuan',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Cirebon',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Cirebon',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 8,
                 nama: 'Rhona DavIDson',
                 jabatan: 'Mekanikal elektrika',
-                no_hp: '089735465',
-                tgl_bergabung: '2011/04/25',
+                No_Hp: '089735465',
+                Tanggal_Bergabung: '2011/04/25',
                 password: '****',
                 email: 'Rhoma@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Bali',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Bali',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 9,
                 nama: '	Tiger Nixon',
                 jabatan: 'Security',
-                no_hp: '094756375',
-                tgl_bergabung: '2011/07/25',
+                No_Hp: '094756375',
+                Tanggal_Bergabung: '2011/07/25',
                 password: '****',
                 email: 'Tiger@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Lampung',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Lampung',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
             {
                 id: 10,
                 nama: 'Colleen Hurst',
                 jabatan: 'Security',
-                no_hp: '089375645',
-                tgl_bergabung: '2009/01/12',
+                No_Hp: '089375645',
+                Tanggal_Bergabung: '2009/01/12',
                 password: '****',
                 email: 'collen@gmail.com',
                 photo: 'null',
-                tgl_lahir: '1990/12/13',
+                Tanggal_Lahir: '1990/12/13',
                 jenkel: 'Laki-Laki',
-                status: 'Aktif',
-
+                status_pernikahan: 'Menikah',
                 alamat: 'null',
-                status1: 'Menikah',
-                team_tambak: 'Lampung',
-                supervisor: 'null',
-                tambak: 'Tambak udang',
-                access_right: 'Yes',
-                akses_terakhir: '2022/01/25',
+                Team_Tambak: 'Lampung',
+                Access_Right: 'Yes',
+                Akses_Terakhir: '2022/01/25',
+                status: 'Aktif',
             },
         ];
     };
 
     const view_row = (item) => {
         new window.Swal({
-            title: '<i>Management User</i>',
+            title: '<i>Manage User</i>',
             text: 'HALLO',
-            html:
-                '<p><b>Nama</b> : ' +
-                item.nama +
-                '</p>' +
-                '<p><b>Jabatan</b> : ' +
-                item.jabatan +
-                '</p>' +
-                '<p><b>No. HP</b> : ' +
-                item.no_hp +
-                '</p>' +
-                '<p><b>Password</b> : ' +
-                item.password +
-                '</p>' +
-                '<p><b>Email</b> : ' +
-                item.email +
-                '</p>' +
-                '<p><b>Photo</b> : ' +
-                item.photo +
-                '</p>' +
-                '<p><b>tanggal Lahir</b> : ' +
-                item.tgl_lahir +
-                '</p>' +
-                '<p><b>Jenis Kelamin</b> : ' +
-                item.jenkel +
-                '</p>' +
-                '<p><b>Status</b> : ' +
-                item.status +
-                '</p>' +
-                '<p><b>Alamat rumah</b> : ' +
-                item.alamat +
-                '</p>' +
-                '<p><b>Tanggal bergabung</b> : ' +
-                item.tgl_bergabung +
-                '</p>' +
-                '<p><b>Status</b> : ' +
-                item.status1 +
-                '</p>' +
-                '<p><b>Team tambak</b> : ' +
-                item.team_tambak +
-                '</p>' +
-                '<p><b>Supervisor</b> : ' +
-                item.supervisor +
-                '</p>' +
-                '<p><b>Access right</b> : ' +
-                item.access_right +
-                '</p>' +
-                '<p><b>Akses terakhir</b> : ' +
-                item.akses_terakhir +
-                '</p>',
+            html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Nama</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.nama}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jabatan</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jabatan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>No Hp</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.No_Hp}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Password</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.password}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Email</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.email}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Photo</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.photo}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal Lahir</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Tanggal_Lahir}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Jenis Kelamin</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.jenkel}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status Pernikahan </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.status_pernikahan}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Alamat Rumah</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.alamat}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal Bergabung</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Tanggal_Bergabung}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Status </b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.status}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Team Tambak</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Team_Tambak}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Access Right</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Access_Right}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Akses Akhir</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Akses_Terakhir}</td>
+                                        </tr>
+                                    </tbody>
+            </table>   
+            `,
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

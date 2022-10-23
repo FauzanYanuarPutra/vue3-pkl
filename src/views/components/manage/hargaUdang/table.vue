@@ -109,13 +109,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'tanggal_input', 'Ukuran_udang', 'Harga', 'actions']);
+    const columns = ref(['no', 'Tanggal_Input', 'Ukuran_Udang', 'Harga_(Rp)', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', tanggal_input: 'text-center', Ukuran_udang: 'text-end ', Harga: 'text-end ' },
+        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', Tanggal_Input: 'text-center', Ukuran_Udang: 'text-end ', 'Harga_(Rp)': 'text-end ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -123,7 +123,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['tanggal_input', 'Ukuran_udang', 'Harga'],
+        sortable: ['Tanggal_Input', 'Ukuran_Udang', 'Harga_(Rp)'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -140,62 +140,72 @@
         items.value = [
             {
                 id: 1,
-                tanggal_input: '2011/04/25',
-                Ukuran_udang: '32 cm',
+                Tanggal_Input: '2011/04/25',
+                Ukuran_Udang: '32 cm',
+                'Harga_(Rp)': '70.000',
                 Harga: 'Rp.70000',
             },
             {
                 id: 2,
-                tanggal_input: '2011/07/25',
-                Ukuran_udang: '17 cm',
+                Tanggal_Input: '2011/07/25',
+                Ukuran_Udang: '17 cm',
+                'Harga_(Rp)': '10.000',
                 Harga: 'Rp.10000',
             },
             {
                 id: 3,
-                tanggal_input: '2009/01/12',
-                Ukuran_udang: '86 cm',
+                Tanggal_Input: '2009/01/12',
+                Ukuran_Udang: '86 cm',
+                'Harga_(Rp)': '130.000',
                 Harga: 'Rp.130000',
             },
             {
                 id: 4,
-                tanggal_input: '2012/03/29',
-                Ukuran_udang: '43 cm',
+                Tanggal_Input: '2012/03/29',
+                Ukuran_Udang: '43 cm',
+                'Harga_(Rp)': '70.000',
                 Harga: 'Rp.70000',
             },
             {
                 id: 5,
-                tanggal_input: '2008/11/28',
-                Ukuran_udang: '16 cm',
+                Tanggal_Input: '2008/11/28',
+                Ukuran_Udang: '16 cm',
+                'Harga_(Rp)': '50.000',
                 Harga: 'Rp.50000',
             },
             {
                 id: 6,
-                tanggal_input: '2012/12/02',
-                Ukuran_udang: '37 cm',
+                Tanggal_Input: '2012/12/02',
+                Ukuran_Udang: '37 cm',
+                'Harga_(Rp)': '60.000',
                 Harga: 'Rp.60000',
             },
             {
                 id: 7,
-                tanggal_input: '2012/08/06',
-                Ukuran_udang: '13 cm',
+                Tanggal_Input: '2012/08/06',
+                Ukuran_Udang: '13 cm',
+                'Harga_(Rp)': '20.000',
                 Harga: 'Rp.20000',
             },
             {
                 id: 8,
-                tanggal_input: '2010/10/14',
-                Ukuran_udang: '32 cm',
+                Tanggal_Input: '2010/10/14',
+                Ukuran_Udang: '32 cm',
+                'Harga_(Rp)': '50.000',
                 Harga: 'Rp.50000',
             },
             {
                 id: 9,
-                tanggal_input: '2009/09/15',
-                Ukuran_udang: '20 cm',
+                Tanggal_Input: '2009/09/15',
+                Ukuran_Udang: '20 cm',
+                'Harga_(Rp)': '10.000',
                 Harga: 'Rp.10000',
             },
             {
                 id: 10,
-                tanggal_input: '2008/12/13',
-                Ukuran_udang: '10 cm',
+                Tanggal_Input: '2008/12/13',
+                Ukuran_Udang: '10 cm',
+                'Harga_(Rp)': '30.000',
                 Harga: 'Rp.30000',
             },
         ];
@@ -203,14 +213,30 @@
 
     const view_row = (item) => {
         new window.Swal({
-            title: '<i>Harga Udang</i>',
+            title: '<i>Manage User</i>',
             text: 'HALLO',
-            html: '<p><b>Tanggal Input</b> : ' + item.tanggal_input + '</p>' + '<p><b>Ukuran Udang</b> : ' + item.Ukuran_udang + '</p>' + '<p><b>Harga</b> : ' + item.Harga + '</p>',
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
-            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Tanggal_Input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Ukuran Udang</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Ukuran_Udang}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Harga</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Harga}</td>
+                                        </tr>
+                                        
+                                    </tbody>
+            </table>   
+            `,
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

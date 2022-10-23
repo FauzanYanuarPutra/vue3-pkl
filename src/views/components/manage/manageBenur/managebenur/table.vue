@@ -129,13 +129,13 @@
     import { useMeta } from '@/composables/use-meta';
     useMeta({ title: 'Default Order Sorting Table' });
 
-    const columns = ref(['no', 'tambak', 'tanggal_input', 'Asal_benur', 'usia_benur(hari)', 'nilai_scoring', 'actions']);
+    const columns = ref(['no', 'tambak', 'Tanggal_Input', 'Asal_Benur', 'Usia_Benur(Hari)', 'Scoring', 'actions']);
     const items = ref([]);
     const table_option = ref({
         perPage: 10,
         perPageValues: [5, 10, 20, 50],
         skin: 'table table-hover',
-        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', tanggal_input: 'text-center', 'usia_benur(hari)': 'text-end ' },
+        columnsClasses: { no: 'no text-end ', actions: 'actions text-center', Tanggal_Input: 'text-center', 'Usia_Benur(Hari)': 'text-end ', Scoring: 'text-center ' },
         pagination: { nav: 'scroll', chunk: 5 },
         texts: {
             count: 'Showing {from} to {to} of {count}',
@@ -143,7 +143,7 @@
             filterPlaceholder: 'Search...',
             limit: 'Results:',
         },
-        sortable: ['tambak', 'tanggal_input', 'Id_benur', 'Asal_benur', 'benur_batch_id', 'usia_benur(hari)', 'nilai_scoring'],
+        sortable: ['tambak', 'Tanggal_Input', 'Id_benur', 'Asal_Benur', 'benur_batch_id', 'Usia_Benur(Hari)', 'Scoring'],
         sortIcon: {
             base: 'sort-icon-none',
             up: 'sort-icon-asc',
@@ -161,102 +161,112 @@
             {
                 id: 1,
                 tambak: 'Tambak a',
-                tanggal_input: '2022/01/25',
+                Tanggal_Input: '2022/01/25',
                 Id_benur: '1',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '1',
-                'usia_benur(hari)': '18 ',
-                nilai_scoring: 'A',
+                'Usia_Benur(Hari)': '18 ',
+                usia_benur: '18',
+                Scoring: 'A',
             },
             {
                 id: 2,
                 tambak: 'Tambak b',
-                tanggal_input: '2022/02/26',
+                Tanggal_Input: '2022/02/26',
                 Id_benur: '2',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '2',
-                'usia_benur(hari)': '20 ',
-                nilai_scoring: 'B',
+                'Usia_Benur(Hari)': '20 ',
+                usia_benur: '20',
+                Scoring: 'B',
             },
             {
                 id: 3,
                 tambak: 'Tambak c',
-                tanggal_input: '2022/03/07',
+                Tanggal_Input: '2022/03/07',
                 Id_benur: '3',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '3',
-                'usia_benur(hari)': '20 ',
-                nilai_scoring: 'B',
+                'Usia_Benur(Hari)': '20 ',
+                usia_benur: '20',
+                Scoring: 'B',
             },
             {
                 id: 4,
                 tambak: 'Tambak d',
-                tanggal_input: '2022/03/28',
+                Tanggal_Input: '2022/03/28',
                 Id_benur: '4',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '4',
-                'usia_benur(hari)': '18 ',
-                nilai_scoring: 'A',
+                'Usia_Benur(Hari)': '18 ',
+                usia_benur: '18',
+                Scoring: 'A',
             },
             {
                 id: 5,
                 tambak: 'Tambak e',
-                tanggal_input: '2022/04/10',
+                Tanggal_Input: '2022/04/10',
                 Id_benur: '5',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '5',
-                'usia_benur(hari)': '20 ',
-                nilai_scoring: 'C',
+                'Usia_Benur(Hari)': '20 ',
+                usia_benur: '20',
+                Scoring: 'C',
             },
             {
                 id: 6,
                 tambak: 'Tambak f',
-                tanggal_input: '2022/05/29',
+                Tanggal_Input: '2022/05/29',
                 Id_benur: '6',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '6',
-                'usia_benur(hari)': '18 ',
-                nilai_scoring: 'A',
+                'Usia_Benur(Hari)': '18 ',
+                usia_benur: '18',
+                Scoring: 'A',
             },
             {
                 id: 7,
                 tambak: 'Tambak g',
-                tanggal_input: '2022/06/23',
+                Tanggal_Input: '2022/06/23',
                 Id_benur: '7',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '7',
-                'usia_benur(hari)': '18 ',
-                nilai_scoring: 'B',
+                'Usia_Benur(Hari)': '18 ',
+                usia_benur: '18',
+                Scoring: 'B',
             },
             {
                 id: 8,
                 tambak: 'Tambak h',
-                tanggal_input: '2022/07/21',
+                Tanggal_Input: '2022/07/21',
                 Id_benur: '8',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '8',
-                'usia_benur(hari)': '20 ',
-                nilai_scoring: 'B',
+                'Usia_Benur(Hari)': '20 ',
+                usia_benur: '20',
+                Scoring: 'B',
             },
             {
                 id: 9,
                 tambak: 'Tambak i',
-                tanggal_input: '2022/08/15',
+                Tanggal_Input: '2022/08/15',
                 Id_benur: '9',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '9',
-                'usia_benur(hari)': '20 ',
-                nilai_scoring: 'C',
+                'Usia_Benur(Hari)': '20 ',
+                usia_benur: '20',
+                Scoring: 'C',
             },
             {
                 id: 10,
                 tambak: 'Tambak j',
-                tanggal_input: '2022/08/15',
+                Tanggal_Input: '2022/08/15',
                 Id_benur: '10',
-                Asal_benur: 'Udang vaname',
+                Asal_Benur: 'Udang vaname',
                 benur_batch_id: '10',
-                'usia_benur(hari)': '19 ',
-                nilai_scoring: 'A',
+                'Usia_Benur(Hari)': '19 ',
+                usia_benur: '19',
+                Scoring: 'A',
             },
         ];
     };
@@ -265,25 +275,50 @@
         new window.Swal({
             title: '<i>Manage Benur</i>',
             text: 'HALLO',
-            html:
-                '<p><b>Nama Tambak</b> : ' +
-                item.tambak +
-                '</p>' +
-                '<p><b>Tanggal Input</b> : ' +
-                item.tanggal_input +
-                '</p>' +
-                '<p><b>Asal Benur</b> : ' +
-                item.Asal_benur +
-                '</p>' +
-                '<p><b>Benur Batch Id</b> : ' +
-                item.benur_batch_id +
-                '</p>' +
-                '<p><b>Usia Benur</b> : ' +
-                item.usia_benur +
-                '</p>' +
-                '<p><b>Nilai Scoring</b> : ' +
-                item.nilai_scoring +
-                '</p>',
+            html: `
+        <table role="table" border="5" aria-busy="false" aria-colcount="5" class="table table-0  table-bordered" id="__BVID__415">
+                                    <tbody role="rowgroup">
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tambak</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.tambak}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Tanggal_Input</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Tanggal_Input}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Asal Benur(Hari)</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Asal_Benur}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Benur Batch ID</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.benur_batch_id}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Usia Benur(Hari)</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.usia_benur}</td>
+                                        </tr>
+                                        <tr v-for="item in table_1" :key="item.name" role="row">
+                                            <td aria-colindex="1" role="cell"><b>Scoring</b></td>
+                                            <td class="titik-dua"><b>:</b></td>
+                                            <td aria-colindex="2" role="cell">${item.Scoring}</td>
+                                        </tr>
+                                       
+                                        
+                                    </tbody>
+            </table>   
+            `,
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
+            // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+
             // '<p><b>Nama</b> : ' + item.nama + '</p>'+

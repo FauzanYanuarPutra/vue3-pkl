@@ -6,7 +6,7 @@
                     <div class="page-header">
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item active" aria-current="page"><span>Input Pakan</span></li>
+                                <li class="breadcrumb-item active" aria-current="page"><span>Manage Pakan</span></li>
                             </ol>
                         </nav>
                     </div>
@@ -20,7 +20,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                                <h4>Input Pakan</h4>
+                                <h4>Tambah Data Pakan</h4>
                             </div>
                         </div>
                     </div>
@@ -28,88 +28,10 @@
                         <form class="form-vertical" action="#">
                             <div class="box-wrap">
                                 <div class="form-group">
-                                    <label class="control-label">Nama Tambak:</label>
-                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
-                                    </multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Tanggal dan Jam Input:</label>
-                                    <div class="mb-0">
-                                        <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Merek Pakan:</label>
-                                    <input type="text" name="merek_pakana" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Harga Pakan:</label>
-                                    <input type="number" name="harga_pakana" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Kode Pakan:</label>
-                                    <input type="text" name="kode_pakana" class="form-control" />
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label">Asal Pakan:</label>
-                                    <multiselect
-                                        v-model="inputs['input2']"
-                                        :options="options2"
-                                        :searchable="true"
-                                        placeholder="Choose..."
-                                        selected-label=""
-                                        select-label=""
-                                        deselect-label=""
-                                    ></multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Pakan Batch Id:</label>
-                                    <input type="text" name="" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Jenis Butiran:</label>
-                                    <multiselect
-                                        v-model="inputs['input3']"
-                                        :options="options3"
-                                        :searchable="true"
-                                        placeholder="Choose..."
-                                        selected-label=""
-                                        select-label=""
-                                        deselect-label=""
-                                    ></multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Tanggal Beli:</label>
-                                    <div class="mb-0">
-                                        <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Ukuran (Kg) / karung:</label>
-                                    <input type="number" name="size" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Jumlah Karung:</label>
-                                    <input type="number" name="total_biomana" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Status:</label>
-                                    <multiselect
-                                        v-model="inputs['input4']"
-                                        :options="options4"
-                                        :searchable="true"
-                                        placeholder="Choose..."
-                                        selected-label=""
-                                        select-label=""
-                                        deselect-label=""
-                                    ></multiselect>
-                                </div>
-                                <div class="form-group">
-                                    <label for="fullName">Photo</label>
-                                    <div class="invoice-detail-title">
+                                    <label class="control-label">Photo:</label>
+                                    <div class="custom-file-container">
                                         <div class="invoice-logo">
-                                            <div class="upload pe-md-4">
+                                            <div class="upload pe-md-5">
                                                 <input ref="fl_profile" type="file" class="d-none" accept="image/*" @change="change_file" />
                                                 <img
                                                     v-if="selected_file"
@@ -118,7 +40,6 @@
                                                     class="profile-preview"
                                                     @click="$refs.fl_profile.click()"
                                                 />
-
                                                 <div v-else class="profile-preview upload-preview text-center border" @click="$refs.fl_profile.click()">
                                                     <div class="my-2">
                                                         <svg
@@ -146,7 +67,89 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" value="Submit" class="btn mt-3" />
+                            <div class="box-wrap">
+                                <div class="form-group">
+                                    <label class="control-label">Nama Tambak:</label>
+                                    <multiselect v-model="inputs['input1']" :options="options1" :searchable="true" placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                    </multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal dan Jam Input:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date2" :config="{ enableTime: true, dateFormat: 'Y-m-d H:i' }" class="form-control flatpickr active"></flat-pickr>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Asal Pakan:</label>
+                                    <multiselect
+                                        v-model="inputs['input2']"
+                                        :options="options2"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Merk Pakan:</label>
+                                    <input type="text" name="merek_pakana" class="form-control" placeholder="Masukan Merk Pakan" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Harga Pakan(Rp):</label>
+                                    <input type="number" name="harga_pakana" class="form-control" v-maska="'###################'" placeholder="Masukan Harga Pakan (Rp)" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Kode Pakan:</label>
+                                    <input type="text" name="kode_pakana" class="form-control" placeholder="Masukan Kode Pakan" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Pakan Batch Id:</label>
+                                    <input type="text" name="" class="form-control" placeholder="Masukan Pakan Batch ID" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jenis Butiran:</label>
+                                    <multiselect
+                                        v-model="inputs['input3']"
+                                        :options="options3"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Tanggal Beli:</label>
+                                    <div class="mb-0">
+                                        <flat-pickr v-model="date1" class="form-control flatpickr active"> </flat-pickr>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Ukuran (Kg) / karung:</label>
+                                    <input type="number" class="form-control" v-maska="'##########################'" placeholder="Masukan Ukuran(Kg) / Karung" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Jumlah Karung:</label>
+                                    <input type="number" name="" class="form-control" v-maska="'##########################'" placeholder="Masukan Jumlah Karung" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Status:</label>
+                                    <multiselect
+                                        v-model="inputs['input4']"
+                                        :options="options4"
+                                        :searchable="true"
+                                        placeholder="Choose..."
+                                        selected-label=""
+                                        select-label=""
+                                        deselect-label=""
+                                    ></multiselect>
+                                </div>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="Simpan" class="btn btn-submit mt-3" />
+                                <router-link to="/manage-pakan" @click="toggleMobileMenu" class="btn btn-kembali mt-3"> Kembali</router-link>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -180,9 +183,9 @@
         input4: [],
         input5: [],
     });
-    const options2 = ref(['Indonesi']);
+    const options2 = ref(['Indonesia']);
     const options3 = ref(['Mesh (tepung)', 'Crumble (granula)', 'Pelet']);
-    const options4 = ref(['Aktiv', 'Tidak aktiv']);
+    const options4 = ref(['Aktif', 'Tidak aktif']);
 
     const code_arr = ref([]);
     const form1 = ref({ name: '' });

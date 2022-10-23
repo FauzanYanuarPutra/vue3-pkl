@@ -17,115 +17,125 @@
         <!-- built files will be auto injected -->
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script>
-		// Add google map script if not exist; if already exist, return true
-window.checkAndAttachMapScript = function (callback) {
-   let scriptId = "map-api-script";
-   let mapAlreadyAttached = !!document.getElementById(scriptId);
+    <script>
+        // Add google map script if not exist; if already exist, return true
+        window.checkAndAttachMapScript = function (callback) {
+            let scriptId = 'map-api-script';
+            let mapAlreadyAttached = !!document.getElementById(scriptId);
 
-   if (mapAlreadyAttached) {
-      if (window.google) // Script attached but may not finished loading; so check for 'google' object.
-         callback();
-   }
-   else {
-      window.mapApiInitialized = callback;
+            if (mapAlreadyAttached) {
+                if (window.google)
+                    // Script attached but may not finished loading; so check for 'google' object.
+                    callback();
+            } else {
+                window.mapApiInitialized = callback;
 
-      let script = document.createElement('script');
-      script.id = scriptId;
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=_YOUR_KEY_HERE_&libraries=places,geometry&callback=mapApiInitialized';
-      document.body.appendChild(script);
-   }
+                let script = document.createElement('script');
+                script.id = scriptId;
+                script.src = 'https://maps.googleapis.com/maps/api/js?key=_YOUR_KEY_HERE_&libraries=places,geometry&callback=mapApiInitialized';
+                document.body.appendChild(script);
+            }
 
-   return mapAlreadyAttached;
-}
-	</script>
-	<script type="text/javascript">
+            return mapAlreadyAttached;
+        };
+    </script>
+    <script type="text/javascript">
+        var index = 0;
 
-		var index = 0;
+        function increment() {
+            var pembungkus = $('#pembungkus_nama');
+            var total_baris = 20;
 
-		function increment(){
-			
-			var pembungkus = $("#pembungkus_nama");
-			var total_baris = 20;
+            if (this.index < total_baris) {
+                index++;
 
-			if(this.index < total_baris){
+                var tambah_form =
+                    '<div id="hapus_baris_' +
+                    index +
+                    '">' +
+                    '<br><div class="multiple-input"><input type="text" name="nama_kincir" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Nama Kincir"><input type="text" name="jumlah_kincir" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Jumlah Kincir"><buttom class="btn btn-primary" onclick="decrement(' +
+                    index +
+                    ')">Hapus</buttom></div>';
 
-				index++;
+                $(pembungkus).append(tambah_form);
+            }
+        }
 
-				var tambah_form = '<div id="hapus_baris_'+ index +'">'
-                                    +'<br><div class="multiple-input"><input type="text" name="nama_kincir" class="form-control" id="nama_'+index+'" placeholder="Nama Kincir"><input type="text" name="jumlah_kincir" class="form-control" id="nama_'+index+'" placeholder="Jumlah Kincir"><buttom class="btn btn-primary" onclick="decrement('+index+')">Hapus</buttom></div>';
+        function decrement(index) {
+            var konfirmasi = true;
+            if (konfirmasi) {
+                $('#hapus_baris_' + index).remove();
+            } else {
+                return;
+            }
+        }
 
-				$(pembungkus).append(tambah_form);
-			}
-		}
+        function increment1() {
+            var pembungkus = $('#pembungkus_nama1');
+            var total_baris = 20;
 
-		function decrement(index){
+            if (this.index < total_baris) {
+                index++;
 
-			var konfirmasi = true;
-			if (konfirmasi) {
-				$("#hapus_baris_"+index).remove();
-			}else{
-				return;
-			}
+                var tambah_form =
+                    '<div id="hapus_baris_' +
+                    index +
+                    '">' +
+                    '<br><div class="multiple-input"><input type="text" name="nama_pompa" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Nama Pompa"/><input type="text" name="nama_pompa" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Jumlah Pompa"/><buttom class="btn btn-primary" onclick="decrement1(' +
+                    index +
+                    ')">Hapus</buttom></div>';
 
-			
-		}
+                $(pembungkus).append(tambah_form);
+            }
+        }
 
-        function increment1(){
-			
-			var pembungkus = $("#pembungkus_nama1");
-			var total_baris = 20;
+        function decrement1(index) {
+            var konfirmasi = true;
+            if (konfirmasi) {
+                $('#hapus_baris_' + index).remove();
+            } else {
+                return;
+            }
+        }
 
-			if(this.index < total_baris){
+        function increment2() {
+            var pembungkus = $('#pembungkus_nama2');
+            var total_baris = 20;
 
-				index++;
+            if (this.index < total_baris) {
+                index++;
 
-				var tambah_form = '<div id="hapus_baris_'+ index +'">'
-                                    +'<br><div class="multiple-input"><input type="text" name="nama_pompa" class="form-control" id="nama_'+index+'" placeholder="Nama Pompa"/><input type="text" name="nama_pompa" class="form-control" id="nama_'+index+'" placeholder="Jumlah Pompa"/><buttom class="btn btn-primary" onclick="decrement1('+index+')">Hapus</buttom></div>';
+                var tambah_form =
+                    '<div id="hapus_baris_' +
+                    index +
+                    '">' +
+                    '<br><div class="multiple-input"><input type="text" name="nama_autofeeder" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Nama Auto Feeder"/><input type="text" name="jumlah_autofeeder" class="form-control" id="nama_' +
+                    index +
+                    '" placeholder="Jumlah Auto Feeder"/><buttom class="btn btn-primary" onclick="decrement2(' +
+                    index +
+                    ')">Hapus</buttom></div>';
 
-				$(pembungkus).append(tambah_form);
-			}
-		}
+                $(pembungkus).append(tambah_form);
+            }
+        }
 
-		function decrement1(index){
-
-			var konfirmasi = true;
-			if (konfirmasi) {
-				$("#hapus_baris_"+index).remove();
-			}else{
-				return;
-			}
-
-			
-		}
-
-        function increment2(){
-			
-			var pembungkus = $("#pembungkus_nama2");
-			var total_baris = 20;
-
-			if(this.index < total_baris){
-
-				index++;
-
-				var tambah_form = '<div id="hapus_baris_'+ index +'">'
-                                    +'<br><div class="multiple-input"><input type="text" name="nama_autofeeder" class="form-control" id="nama_'+index+'" placeholder="Nama Auto Feeder"/><input type="text" name="jumlah_autofeeder" class="form-control" id="nama_'+index+'" placeholder="Jumlah Auto Feeder"/><buttom class="btn btn-primary" onclick="decrement2('+index+')">Hapus</buttom></div>';
-
-				$(pembungkus).append(tambah_form);
-			}
-		}
-
-		function decrement2(index){
-
-			var konfirmasi = true;
-			if (konfirmasi) {
-				$("#hapus_baris_"+index).remove();
-			}else{
-				return;
-			}
-
-			
-		}
-
-	</script>
+        function decrement2(index) {
+            var konfirmasi = true;
+            if (konfirmasi) {
+                $('#hapus_baris_' + index).remove();
+            } else {
+                return;
+            }
+        }
+    </script>
 </html>
