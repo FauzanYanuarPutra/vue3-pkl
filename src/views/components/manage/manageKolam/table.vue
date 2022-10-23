@@ -391,6 +391,7 @@ const view_row = (item) => {
         confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
+        confirmButtonClass: 'd-none',
 
         padding: '2em',
     });

@@ -96,7 +96,7 @@ const table_option = ref({
     perPage: 10,
     perPageValues: [5, 10, 20, 50],
     skin: 'table table-hover',
-    columnsClasses: { no: 'no text-end', actions: 'actions text-center', tanggal_Input: 'text-center' },
+    columnsClasses: { no: 'no text-end', actions: 'actions text-center', no_of_View: 'text-end', no_of_Like: 'text-end', tanggal_Input: 'text-center' },
     pagination: { nav: 'scroll', chunk: 5 },
     texts: {
         count: 'Showing {from} to {to} of {count}',
@@ -338,10 +338,11 @@ const view_row = (item) => {
         // BUKA KOMENTAR JIKA BUTUH LEBIH BANYAK DATA
         // DIAKHIR TIDAK MENGGUNAKAN tanda +
         showCloseButton: true,
-        focusConfirm: false,
+        focusConfirm: true,
         confirmButtonColor: '#1695DC',
         confirmButtonText: '<i class="flaticon-checked-1"></i> Oke',
         confirmButtonAriaLabel: 'Oke',
+        confirmButtonClass: 'd-none',
 
         padding: '2em',
     });
