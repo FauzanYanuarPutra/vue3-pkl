@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Nama Kolam</label>
                                     <input type="text" name="nama_kolam" class="form-control"
-                                        placeholder="Masukkan nama kolam" />
+                                        placeholder="Masukkan nama kolam" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tipe Kolam</label>
@@ -48,12 +48,13 @@
                                 <div class="form-group">
                                     <label class="control-label">Luas Kolam (Meter Persegi)</label>
                                     <input type="number" name="luas_kolam" class="form-control"
-                                        placeholder="Masukkan luas kolam" />
+                                        v-maska="'###########################'" placeholder="Masukkan luas kolam"
+                                        required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tinggi Kolam (Meter)</label>
                                     <input type="text" name="tinggi_kolam" class="form-control"
-                                        placeholder="Masukkan tinggi kolam" />
+                                        v-maska="'###################'" placeholder="Masukkan tinggi kolam" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Jenis Kolam</label>
@@ -65,7 +66,7 @@
                                     <strong><label class="control-label">Pilih Kincir</label></strong>
                                     <div class="multiple-input">
                                         <input type="text" name="nama_kincir" class="form-control" id="nama_0"
-                                            placeholder="Nama Kincir">
+                                            placeholder="Nama Kincir" required>
                                         <input type="number" name="jumlah_kincir" class="form-control" id="nama_0"
                                             placeholder="Jumlah Kincir">
                                         <buttom class="btn btn-primary" onclick="increment()">Tambah</buttom>

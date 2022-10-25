@@ -31,7 +31,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Nama Tambak:</label>
                                     <input type="text" name="nama_tambak" class="form-control"
-                                        placeholder="Masukkan nama tambak" />
+                                        placeholder="Masukkan nama tambak" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Tanggal dan Jam Input:</label>
@@ -44,18 +44,19 @@
                                 <div class="form-group">
                                     <label class="control-label">Kategori:</label>
                                     <multiselect v-model="inputs['input3']" :options="options1" :searchable="true"
-                                        placeholder="Choose..." selected-label="" select-label="" deselect-label="">
+                                        placeholder="Choose..." selected-label="" select-label="" deselect-label=""
+                                        rules="required">
                                     </multiselect>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Jenis:</label>
                                     <input type="text" name="jenis" class="form-control"
-                                        placeholder="Contoh data, Vit C, Vit A, pupuk amonia" />
+                                        placeholder="Contoh data, Vit C, Vit A, pupuk amonia" required />
                                 </div>
                                 <div class="form-group w-100">
                                     <label class="control-label">Keterangan:</label>
                                     <input type="text" name="keterangan" class="form-control"
-                                        placeholder="Beri keterangan" />
+                                        placeholder="Beri keterangan" required />
                                 </div>
 
                                 <div class="form-group">

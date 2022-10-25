@@ -67,11 +67,11 @@
                                 <div class="form-group">
                                     <label class="control-label">Upload Video</label>
                                     <input type="file" name="video" class="form-control"
-                                        placeholder="Masukkan nama tambak" />
+                                        placeholder="Masukkan nama tambak" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Upload File (PDF)</label>
-                                    <input type="file" name="pdf" class="form-control" />
+                                    <input type="file" name="pdf" class="form-control" required />
                                 </div>
                             </div>
                             <div class="box-wrap">
@@ -96,7 +96,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Deskripsi</label>
                                     <input type="text" name="deskripsi" class="form-control"
-                                        placeholder="Beri deskripsi" />
+                                        placeholder="Beri deskripsi" required />
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label">Status</label>
